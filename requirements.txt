@@ -16,3 +16,4 @@ rdkit==2023.9.6
 dgl -f https://data.dgl.ai/wheels/torch-2.3/cu121/repo.html
 dgllife
 ipykernel
+jupyter
