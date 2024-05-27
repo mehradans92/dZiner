@@ -1,5 +1,11 @@
 # dZiner
+
 Chemist AI Agent for Materials Inverse Design
+
+<img src="https://github.com/mehradans92/dZiner/assets/51170839/f3411ff2-5da8-421b-b917-3b01467f3a0d" width="320">
+
+
+
 
 ## Installation
 
