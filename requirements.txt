@@ -19,3 +19,4 @@ ipykernel
 jupyter
 tensorboard
 pymatgen
+dockstring
