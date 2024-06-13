@@ -7,14 +7,11 @@ pandas==2.2.2
 matplotlib==3.8.4
 matplotlib-inline==0.1.7
 scipy==1.13.0
-torch==2.3.0
 transformers==4.40.2
 PyYAML==6.0.1
 google-search-results
 pypdf
 rdkit==2023.9.6
-dgl -f https://data.dgl.ai/wheels/torch-2.3/cu121/repo.html
-dgllife
 ipykernel
 jupyter
 tensorboard
