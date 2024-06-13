@@ -20,9 +20,9 @@ conda install -c pytorch/label/nightly -c nvidia faiss-gpu=1.8.0
 python -m ipykernel install --user --name dziner --display-name "dziner"
 ```
 
-### Surrogate Model
+### Surrogate Models
 
-Make sure you follow additional installation of packages for different surrogate models.
+Make sure you follow additional installation of packages for different surrogate models. Requirements can be found in each folder.
 
 ```bash
 cd surrogates/YOUR_MODEL_OF_INTEREST
