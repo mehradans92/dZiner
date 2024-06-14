@@ -12,30 +12,30 @@ class dZiner:
     def __init__(
         self,
         tools,
-        property_name,
-        agent_llm="text-davinci-003",
+        property,
+        model="text-davinci-003",
         temp=0.1,
         get_cost=False,
         max_iterations=40,
         agent_type=AgentType.CONVERSATIONAL_REACT_DESCRIPTION,
         **kwargs,
     ):
-        self.property_name = property_name
+        self.property = property
         # keeping the variables the same so they are updated later in langchain.
-        formatted_suffix = suffix.format(property_name=self.property_name,
+        formatted_suffix = suffix.format(property=self.property,
                                          tool_desc="{tool_desc}",
                                         input="{input}",
                                         agent_scratchpad="{agent_scratchpad}")
-        formatted_prefix = prefix.format(property_name=self.property_name,
-                                         tool_names="{tool_names}")
+        # formatted_prefix = prefix.format(property=self.property,
+        #                                  tool_names="{tool_names}")
         self.suffix = kwargs.get('suffix', formatted_suffix)
-        self.prefix = kwargs.get('prefix', formatted_prefix)
+        self.prefix = kwargs.get('prefix', prefix)
 
-        self.agent_llm = agent_llm
-        if agent_llm.startswith("gpt-3.5-turbo") or agent_llm.startswith("gpt-4"):
-            self.agent_llm = ChatOpenAI(
+        self.model = model
+        if model.startswith("gpt-3.5-turbo") or model.startswith("gpt-4"):
+            self.model = ChatOpenAI(
                 temperature=temp,
-                model_name=agent_llm,
+                model_name=model,
                 request_timeout=1000,
                 max_tokens=4096,
             )
@@ -54,7 +54,7 @@ class dZiner:
         chat_history = MessagesPlaceholder(variable_name="chat_history")
         self.agent = initialize_agent(
             tools=tools,
-            llm=self.agent_llm,
+            llm=self.model,
             agent_type=agent_type,
             verbose=self.verbose,
             memory=memory,
