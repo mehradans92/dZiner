@@ -18,8 +18,8 @@ class dZiner:
         get_cost=False,
         max_iterations=40,
         agent_type=AgentType.CONVERSATIONAL_REACT_DESCRIPTION,
-        n_design_iterations=1
-        **kwargs,
+        n_design_iterations=1,
+        **kwargs
     ):
         self.property = property
         self.n_design_iterations = n_design_iterations
