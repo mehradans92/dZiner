@@ -25,7 +25,7 @@ suffix = """Lookup and summarize design guidelines. Make sure to add citations (
     If the molecule is invalid, revert change to the previous valid SMILES and try something else and re-evaluate validity. If the molecule is valid, visualize it.
     Do not visualize the final molecule.
     Do not use "\n" after the SMILES.
-    Iterate for 1 new molecule candidates and then stop. 
+    Iterate for {n_design_iterations} new molecule candidates and then stop. 
     When you have a response to say to the Human, or if you do not need to use a tool, you MUST use the format:
     '''
     Thought: Here's your final answer:

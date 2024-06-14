@@ -18,14 +18,17 @@ class dZiner:
         get_cost=False,
         max_iterations=40,
         agent_type=AgentType.CONVERSATIONAL_REACT_DESCRIPTION,
+        n_design_iterations=1
         **kwargs,
     ):
         self.property = property
+        self.n_design_iterations = n_design_iterations
         # keeping the variables the same so they are updated later in langchain.
         formatted_suffix = suffix.format(property=self.property,
                                          tool_desc="{tool_desc}",
                                         input="{input}",
-                                        agent_scratchpad="{agent_scratchpad}")
+                                        agent_scratchpad="{agent_scratchpad}",
+                                        n_design_iterations=self.n_design_iterations)
         # formatted_prefix = prefix.format(property=self.property,
         #                                  tool_names="{tool_names}")
         self.suffix = kwargs.get('suffix', formatted_suffix)
