@@ -5,7 +5,7 @@ from langchain.callbacks import get_openai_callback
 from langchain.agents import AgentType
 from langchain_core.prompts import MessagesPlaceholder
 from langchain_openai import ChatOpenAI
-from .prompts import prefix, suffix
+from .prompts import SUFFIX, PREFIX, FORMAT_INSTRUCTIONS
 
 
 class dZiner:
@@ -24,15 +24,24 @@ class dZiner:
         self.property = property
         self.n_design_iterations = n_design_iterations
         # keeping the variables the same so they are updated later in langchain.
-        formatted_suffix = suffix.format(property=self.property,
+        # formatted_suffix = SUFFIX.format(property=self.property,
+        #                                  tool_desc="{tool_desc}",
+        #                                 input="{input}",
+        #                                 agent_scratchpad="{agent_scratchpad}",
+        #                                 n_design_iterations=self.n_design_iterations)
+        # formatted_prefix = PREFIX.format(property=self.property)
+        # formatted_prefix = prefix.format(property=self.property,
+        #                                  tool_names="{tool_names}")
+        self.suffix = kwargs.get('suffix',
+                                 SUFFIX.format(property=self.property,
                                          tool_desc="{tool_desc}",
                                         input="{input}",
                                         agent_scratchpad="{agent_scratchpad}",
-                                        n_design_iterations=self.n_design_iterations)
-        # formatted_prefix = prefix.format(property=self.property,
-        #                                  tool_names="{tool_names}")
-        self.suffix = kwargs.get('suffix', formatted_suffix)
-        self.prefix = kwargs.get('prefix', prefix)
+                                        n_design_iterations=self.n_design_iterations))
+        self.prefix = kwargs.get('prefix',
+                                 PREFIX.format(property=self.property))
+        self.format_instructions = kwargs.get('format_instructions',
+                                                FORMAT_INSTRUCTIONS.format(tool_names="{tool_names}"))
 
         self.model = model
         if model.startswith("gpt-3.5-turbo") or model.startswith("gpt-4"):
@@ -66,6 +75,7 @@ class dZiner:
             agent_kwargs={
                 "prefix": self.prefix,
                 "suffix": self.suffix,
+                "format_instructions": self.format_instructions,
                 "memory_prompts": [chat_history],
                 "input_variables": [
                     "input",
