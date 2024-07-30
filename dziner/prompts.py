@@ -16,7 +16,7 @@ FORMAT_INSTRUCTIONS = """Use the following format:
     When you have a final response to say to the Human, you MUST use the format:
     '''
     Thought: Here's your final answer:
-    Final Answer: [your response here]
+    Final Answer: make sure your response here is in a valid json format
     '''
 
     Use the exact SMILES without any "\n" or any extra "()".
