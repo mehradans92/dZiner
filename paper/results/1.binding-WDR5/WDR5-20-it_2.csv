@@ -1,0 +1,21 @@
+Iteration,SMILES,Modification,Docking Score,SA Score,QED Score,Molecular Weight,Validity
+0,c1ccc2c(cc(s2)C(=O)N)c1,Initial molecule,-5.3,1.91,0.71,177.23,Valid
+1,c1ccc2c(cc(s2)C(=O)Nc3ccccc3)c1,Added a phenyl group to the existing structure,-7.1,1.6,0.73,253.33,Valid
+2,c1ccc2c(cc(s2)C(=O)Nc3ccc(cc3)C(=O)NCCCCN)c1,Added a 4-aminobutanamido group to the phenyl ring,-7.0,1.94,0.56,367.47,Valid
+3,c1ccc2c(cc(s2)C(=O)Nc3ccc(cc3O)C(=O)NCCCCN)c1,Added a hydroxyl group to the phenyl ring,-7.2,2.16,0.37,383.47,Valid
+4,c1ccc2c(cc(s2)C(=O)Nc3ccc(cc3OCCO)C(=O)NCCCCN)c1,Added a long linker (ethylene glycol) to the phenyl ring,-6.9,2.24,0.37,427.53,Valid
+5,c1ccc2c(cc(s2)C(=O)Nc3ccc4ccccc4c3)c1,Added a naphthalene ring to the existing structure,-7.9,1.76,0.53,303.39,Valid
+6,c1ccc2c(cc(s2)C(=O)Nc3ccc4ccccc4c3OC)c1,Added a methoxy group to the naphthalene ring,-6.9,2.02,0.55,333.41,Valid
+7,c1ccc2c(cc(s2)C(=O)Nc3ccc4ccccc4c3F)c1,Added a fluorine atom to the naphthalene ring,-7.9,1.98,0.52,321.38,Valid
+8,c1ccc2c(cc(s2)C(=O)Nc3ccc4ccccc4c3Cl)c1,Added a chlorine atom to the naphthalene ring,-7.2,1.98,0.48,337.83,Valid
+9,c1ccc2c(cc(s2)C(=O)Nc3ccc4ccccc4c3C(F)(F)F)c1,Added a trifluoromethyl group to the naphthalene ring,-7.5,2.21,0.44,371.38,Valid
+10,c1ccc2c(cc(s2)C(=O)Nc3ccc4ccccc4c3[N+](=O)[O-])c1,Added a nitro group to the naphthalene ring,-7.0,2.14,0.41,348.38,Valid
+11,c1ccc2c(cc(s2)C(=O)Nc3ccc4ccccc4c3C#N)c1,Added a cyano group to the naphthalene ring,-7.0,2.13,0.55,328.4,Valid
+12,c1ccc2c(cc(s2)C(=O)Nc3ccc4ccccc4c3C)c1,Added a methyl group to the naphthalene ring,-7.5,1.9,0.51,317.41,Valid
+13,c1ccc2c(cc(s2)C(=O)Nc3ccc4ccccc4c3CC)c1,Added an ethyl group to the naphthalene ring,-7.0,2.02,0.5,331.44,Valid
+14,c1ccc2c(cc(s2)C(=O)Nc3ccc4ccccc4c3CCC)c1,Added a propyl group to the naphthalene ring,-7.2,2.06,0.46,345.47,Valid
+15,c1ccc2c(cc(s2)C(=O)Nc3ccc4ccccc4c3C(C)(C)C)c1,Added a tert-butyl group to the naphthalene ring,-7.3,2.19,0.43,359.49,Valid
+16,c1ccc2c(cc(s2)C(=O)Nc3ccc4cc5OCOc5cc4c3)c1,Added a methylenedioxy group to the naphthalene ring,-7.9,2.14,0.55,347.4,Valid
+17,c1ccc2c(cc(s2)C(=O)Nc3ccc4ccccc4c3S(=O)(=O)N)c1,Added a sulfonamide group to the naphthalene ring,-7.4,2.21,0.56,382.47,Valid
+18,c1ccc2c(cc(s2)C(=O)Nc3ccc4ccccc4c3C(=O)O)c1,Added a carboxyl group to the naphthalene ring,-7.1,2.02,0.55,347.4,Valid
+19,c1ccc2c(cc(s2)C(=O)Nc3ccc4ccccc4c3S(=O)2)c1,Added a sulfone group to the naphthalene ring,0.0,0.0,0.0,0.0,Invalid
