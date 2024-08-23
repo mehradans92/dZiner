@@ -1,0 +1,22 @@
+Iteration,SMILES,Modification,Docking Score,SA Score,QED Score,Molecular Weight,Validity
+0,c1ccc2c(cc(s2)C(=O)N)c1,Initial SMILES,-5.3,1.91,0.71,177.23,Valid
+1,c1ccc2c(cc(s2)C(=O)Nc3ccccc3)c1,Added an aromatic ring to the initial SMILES to enhance π-π stacking interactions.,-7.1,1.6,0.73,253.33,Valid
+2,c1ccc2c(cc(s2)C(=O)Nc3ccc(cc3)C(=O)NCCCC)c1,Added a 4-aminobutanamido group to the aromatic ring to potentially enhance binding affinity.,-8.1,1.83,0.63,352.46,Valid
+3,c1ccc2c(cc(s2)C(=O)Nc3ccc(cc3)C(=O)NCCOCC)c1,Introduced a linker to the molecule to potentially improve the positioning of functional groups within the binding site.,-6.9,1.95,0.62,368.46,Valid
+4,c1ccc2c(cc(s2)C(=O)Nc3ccc(cc3)OC)c1,Added a methoxy group to the aromatic ring to potentially enhance binding affinity.,-7.3,1.66,0.78,283.35,Valid
+5,c1ccc2c(cc(s2)C(=O)Nc3ccc(cc3)C(F)(F)F)c1,Added a trifluoromethyl group to the aromatic ring to potentially enhance binding affinity.,-7.4,1.87,0.69,321.32,Valid
+6,c1ccc2c(cc(s2)C(=O)Nc3ccc(cc3)[N+](=O)[O-])c1,Added a nitro group to the aromatic ring to potentially enhance binding affinity.,-6.7,1.84,0.59,298.32,Valid
+7,c1ccc2c(cc(s2)C(=O)Nc3ccc(cc3)O)c1,Added a hydroxyl group to the aromatic ring to potentially enhance binding affinity.,-7.5,1.76,0.69,269.33,Valid
+8,c1ccc2c(cc(s2)C(=O)Nc3ccc(cc3)C#N)c1,Added a cyano group to the aromatic ring to potentially enhance binding affinity.,-7,1.86,0.77,278.34,Valid
+9,c1ccc2c(cc(s2)C(=O)Nc3ccc(cc3)C(=O)O)c1,Added a carboxyl group to the aromatic ring to potentially enhance binding affinity.,-6.9,1.74,0.77,297.34,Valid
+10,c1ccc2c(cc(s2)C(=O)Nc3ccc(cc3)S(=O)(=O)N)c1,Added a sulfonamide group to the aromatic ring to potentially enhance binding affinity.,-6.8,1.87,0.77,332.41,Valid
+11,c1ccc2c(cc(s2)C(=O)Nc3ccc(cc3)c4ccccc4)c1,Added a phenyl group to the aromatic ring to potentially enhance binding affinity.,-8.1,1.69,0.5,329.42,Valid
+12,c1ccc2c(cc(s2)C(=O)Nc3ccc(cc3)c4ccncc4)c1,Added a pyridine ring to the aromatic ring to potentially enhance binding affinity.,-7.7,1.88,0.56,330.41,Valid
+13,c1ccc2c(cc(s2)C(=O)Nc3ccc(cc3)c4cccs4)c1,Added a thiophene ring to the aromatic ring to potentially enhance binding affinity.,-7.3,1.92,0.5,335.45,Valid
+14,c1ccc2c(cc(s2)C(=O)Nc3ccc(cc3)c4ccco4)c1,Added a furan ring to the aromatic ring to potentially enhance binding affinity.,-7.5,1.93,0.55,319.39,Valid
+15,c1ccc2c(cc(s2)C(=O)Nc3ccc(cc3)Cc4ccccc4)c1,Added a benzyl group to the aromatic ring to potentially enhance binding affinity.,-7.8,1.76,0.5,343.45,Valid
+16,c1ccc2c(cc(s2)C(=O)Nc3ccc(cc3)c4cccc5ccccc45)c1,Added a naphthyl group to the aromatic ring to potentially enhance binding affinity.,-8.5,1.87,0.36,379.48,Valid
+17,c1ccc2c(cc(s2)C(=O)Nc3ccc(cc3)c4cccnc4)c1,Added a pyrimidine ring to the aromatic ring to potentially enhance binding affinity.,-7.7,1.87,0.56,330.41,Valid
+18,c1ccc2c(cc(s2)C(=O)Nc3ccc(cc3)c4cccnc5ccccc45)c1,Added a quinoline ring to the aromatic ring to potentially enhance binding affinity.,0,0,0,0,Invalid
+19,c1ccc2c(cc(s2)C(=O)Nc3ccc(cc3)c4ccn[nH]4)c1,Added a pyrazole ring to the aromatic ring to potentially enhance binding affinity.,-7.3,2.1,0.58,319.39,Valid
+20,c1ccc2c(cc(s2)C(=O)Nc3ccc(cc3)c4oc5ccccc5n4)c1,Added a benzoxazole ring to the aromatic ring to potentially enhance binding affinity.,-8.9,2,0.43,370.43,Valid

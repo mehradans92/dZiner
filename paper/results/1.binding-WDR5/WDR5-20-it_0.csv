@@ -1,0 +1,22 @@
+Iteration,SMILES,Modification,Docking Score,SA Score,QED Score,Molecular Weight,Validity
+0,c1ccc2c(cc(s2)C(=O)N)c1,Initial SMILES,-5.3,1.91,0.71,177.23,Valid
+1,c1ccc2c(cc(s2)C(=O)Nc3ccccc3)c1,Added a phenyl ring to the amide group to enhance π-π stacking interactions.,-7.1,1.6,0.73,253.33,Valid
+2,c1ccc2c(cc(s2)C(=O)Nc3ccc(cc3)C(=O)NCCCC)c1,Added a 4-aminobutanamido group to the aromatic ring to enhance binding affinity.,-8.1,1.83,0.63,352.46,Valid
+3,c1ccc2c(cc(s2)C(=O)Nc3ccc(cc3)C(=O)NCCCCN)c1,Added an amine group at the end of the 4-aminobutanamido chain to interact with solvent-exposed regions.,-7.0,1.94,0.56,367.47,Valid
+4,c1ccc2c(cc(s2)C(=O)Nc3ccc(cc3)C(=O)NCCOCC)c1,Added an ethylene glycol linker to allow for additional functional groups.,-6.9,1.95,0.62,368.46,Valid
+5,c1ccc2c(cc(s2)C(=O)Nc3ccc(cc3OC)C(=O)NCCCC)c1,Added a methoxy group to the aromatic ring to form additional interactions.,-7.3,1.97,0.58,382.49,Valid
+6,c1ccc2c(cc(s2)C(=O)Nc3ccc(cc3F)C(=O)NCCCC)c1,Added a fluorine atom to the aromatic ring to form additional interactions.,-7.3,1.98,0.61,370.45,Valid
+7,c1ccc2c(cc(s2)C(=O)Nc3ccc(cc3C(F)(F)F)C(=O)NCCCC)c1,Added a trifluoromethyl group to the aromatic ring to form additional interactions.,-7.7,2.16,0.5,420.46,Valid
+8,c1ccc2c(cc(s2)C(=O)Nc3ccc(cc3O)C(=O)NCCCC)c1,Added a hydroxyl group to the aromatic ring to form hydrogen bonds.,-7.5,2.06,0.45,368.46,Valid
+9,c1ccc2c(cc(s2)C(=O)Nc3ccc(cc3[N+](=O)[O-])C(=O)NCCCC)c1,Added a nitro group to the aromatic ring to form additional interactions.,-7.4,2.1,0.35,397.46,Valid
+10,c1ccc2c(cc(s2)C(=O)Nc3ccc(cc3C#N)C(=O)NCCCC)c1,Added a cyano group to the aromatic ring to form additional interactions.,-6.7,2.15,0.62,377.47,Valid
+11,c1ccc2c(cc(s2)C(=O)Nc3ccc(cc3C)C(=O)NCCCC)c1,Added a methyl group to the aromatic ring to form additional interactions.,-7.0,1.93,0.6,366.49,Valid
+12,c1ccc2c(cc(s2)C(=O)Nc3ccc(cc3Cl)C(=O)NCCCC)c1,Added a chlorine atom to the aromatic ring to form additional interactions.,-6.9,1.98,0.56,386.9,Valid
+13,c1ccc2c(cc(s2)C(=O)Nc3ccc(cc3Br)C(=O)NCCCC)c1,Added a bromine atom to the aromatic ring to form additional interactions.,-7.0,2.03,0.51,431.36,Valid
+14,c1ccc2c(cc(s2)C(=O)Nc3ccc(cc3CC)C(=O)NCCCC)c1,Added an ethyl group to the aromatic ring to form additional interactions.,-7.3,2.07,0.55,380.51,Valid
+15,c1ccc2c(cc(s2)C(=O)Nc3ccc(cc3C(C)(C)C)C(=O)NCCCC)c1,Added a tert-butyl group to the aromatic ring to form additional interactions.,-7.7,2.18,0.49,408.57,Valid
+16,c1ccc2c(cc(s2)C(=O)Nc3ccc(cc3OCO)C(=O)NCCCC)c1,Added a methylenedioxy group to the aromatic ring to form additional interactions.,-7.1,2.22,0.4,398.48,Valid
+17,c1ccc2c(cc(s2)C(=O)Nc3ccc(nc3)C(=O)NCCCC)c1,Added a pyridine ring to the aromatic ring to form additional interactions.,-7.4,2.07,0.66,353.45,Valid
+18,c1ccc2c(cc(s2)C(=O)Nc3ccc(c3)C(=O)NCCCC)c1,Added a thiophene ring to the aromatic ring to form additional interactions.,0.0,0.0,0.0,0.0,Invalid
+19,c1ccc2c(cc(s2)C(=O)Nc3ccc(o3)C(=O)NCCCC)c1,Added a furan ring to the aromatic ring to form additional interactions.,-6.7,2.3,0.66,342.42,Valid
+20,c1ccc2c(cc(s2)C(=O)Nc3ccc(cc3)C(=O)NCCCC)c1,Reverted to previous valid SMILES with best docking score.,-8.1,1.83,0.63,352.46,Valid
