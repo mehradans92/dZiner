@@ -70,7 +70,7 @@ class dZiner:
             agent_type=agent_type,
             verbose=self.verbose,
             memory=memory,
-            # stop=["\nObservation:"],
+            stop=["\nAction:", "\nObservation:"],
             early_stopping_method='generate',
             handle_parsing_errors=True,
             agent_kwargs={
