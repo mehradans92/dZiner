@@ -22,6 +22,12 @@ conda install -c pytorch/label/nightly -c nvidia faiss-gpu=1.8.0
 python -m ipykernel install --user --name dziner --display-name "dziner"
 ```
 
+You need to have a valid OPENAI API key. If you are on a windows machine you can add `OPENAI_API_KEY` in your Environment Variables. For linux systems set the key by adding this line to `~/.bashrc`:
+
+```bash
+export OPENAI_API_KEY=your_api_key_here
+```
+
 ### Surrogate Models
 
 Make sure you follow additional installation of packages for different surrogate models. Requirements can be found in each folder.
