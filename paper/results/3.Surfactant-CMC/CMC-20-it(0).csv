@@ -1,0 +1,22 @@
+Iteration,SMILES,Modification,logCMC,SA Score,Molecular Weight,Validity
+0,CCCCCCCCCC(=O)CC(=O)NC1CCOC1=O,Initial molecule,1.785,2.804,297.395,Valid
+1,CCCCCCCCCCCC(=O)CC(=O)NC1CCOC1=O,Increased the length of the hydrophobic tail from 10 to 12 carbons,1.054,2.805,325.449,Valid
+2,CCC(C)CCCCCCCC(=O)CC(=O)NC1CCOC1=O,Introduced branching in the hydrophobic tail,2.225,3.223,325.449,Valid
+3,CCCCCCCCCCC(F)(=O)CC(=O)NC1CCOC1=O,Added a fluorine atom to the hydrophobic tail,,,,Invalid
+4,CCCCCCCCCCC[Si](C)(C)CC(=O)NC1CCOC1=O,Added a siloxane group to the hydrophobic tail,2.486,3.21,355.595,Valid
+5,CCCCCCCCCCCCC(=O)CC(=O)NC1CCOC1=O,Increased the length of the hydrophobic tail further to 13 carbons,0.743,2.81,339.476,Valid
+6,CCCCCCCCCCCC(OH)(=O)CC(=O)NC1CCOC1=O,Added a polar group to the hydrophobic tail,,,,Invalid
+7,CCCCCCCCCCCCC(=O)CC(=O)N(CCO)C1CCOC1=O,Added an ethylene oxide unit to the hydrophilic head group,1.084,3.167,383.529,Valid
+8,CCCCCCCCCCCC(OH)C(=O)CC(=O)NC1CCOC1=O,Added a hydroxyl group to the hydrophobic tail,,,,Invalid
+9,CCCCCCCCCCCCC(=O)CC(=O)N(C)C1CCOC1=O,Added a methyl group to the hydrophilic head group,0.699,3.067,353.503,Valid
+10,CCCCCCCCC=CC(=O)CC(=O)NC1CCOC1=O,Introduced a double bond in the hydrophobic tail,1.58,3.039,309.406,Valid
+11,CCCCCCCCCCC(C1=CC=CC=C1)C(=O)CC(=O)NC1CCOC1=O,Added a benzene ring to the hydrophobic tail,1.696,3.173,401.547,Valid
+12,CCCCCCCCCCCC(=O)OCC(=O)NC1CCOC1=O,Added a carboxyl group to the hydrophobic tail,0.933,2.638,341.448,Valid
+13,CCCCCCCCCCCC(SO3)C(=O)CC(=O)NC1CCOC1=O,Added a sulfonate group to the hydrophobic tail,,,,Invalid
+14,CCCCCCCCCCCC(PO4)C(=O)CC(=O)NC1CCOC1=O,Added a phosphate group to the hydrophobic tail,,,,Invalid
+15,CCCCCCCCCCCC(NH2)C(=O)CC(=O)NC1CCOC1=O,Added an amine group to the hydrophobic tail,,,,Invalid
+16,CCCCCCCCCCC(C1CCCCC1)C(=O)CC(=O)NC1CCOC1=O,Added a cyclohexane ring to the hydrophobic tail,-0.764,3.376,407.595,Valid
+17,CCCCCCCCCCC(C1CCCCC1)(C2CCCCC2)C(=O)CC(=O)NC1CCOC1=O,Added a second cyclohexane ring to the hydrophobic tail,-0.959,3.429,489.741,Valid
+18,CCCCCCCCCCC(C1CCCCC1)(C2CCCCC2)C(=O)CC(=O)N(CO)C1CCOC1=O,Added a hydroxyl group to the hydrophilic head group,-0.997,3.746,519.767,Valid
+19,CCCCCCCCCCC(C1CCCCC1)(C2CCCCC2)C(=O)CC(=O)N(CO)(CO)C1CCOC1=O,Added a second hydroxyl group to the hydrophilic head group,,,,Invalid
+20,CCCCCCCCCCC(C1CCCCC1)(C2CCCCC2)C(=O)CC(=O)N(COC)C1CCOC1=O,Added a methoxy group to the hydrophilic head group,-0.044,3.786,533.794,Valid
