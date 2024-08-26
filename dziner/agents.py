@@ -24,14 +24,6 @@ class dZiner:
         self.property = property
         self.n_design_iterations = n_design_iterations
         # keeping the variables the same so they are updated later in langchain.
-        # formatted_suffix = SUFFIX.format(property=self.property,
-        #                                  tool_desc="{tool_desc}",
-        #                                 input="{input}",
-        #                                 agent_scratchpad="{agent_scratchpad}",
-        #                                 n_design_iterations=self.n_design_iterations)
-        # formatted_prefix = PREFIX.format(property=self.property)
-        # formatted_prefix = prefix.format(property=self.property,
-        #                                  tool_names="{tool_names}")
         self.suffix = kwargs.get('suffix',
                                  SUFFIX.format(property=self.property,
                                          tool_desc="{tool_desc}",
@@ -43,14 +35,19 @@ class dZiner:
         self.format_instructions = kwargs.get('format_instructions',
                                                 FORMAT_INSTRUCTIONS.format(tool_names="{tool_names}"))
 
-        self.model = model
-        if model.startswith("gpt-3.5-turbo") or model.startswith("gpt-4"):
-            self.model = ChatOpenAI(
-                temperature=temp,
-                model_name=model,
-                request_timeout=1000,
-                max_tokens=4096,
-            )
+        if type(model) == str:
+            if model.startswith("gpt"):
+                self.model = ChatOpenAI(
+                    temperature=temp,
+                    model_name=model,
+                    request_timeout=1000,
+                    max_tokens=4096,
+                )
+            else:
+                # TODO: Implement support for non-OpenAI models
+                raise NotImplementedError("None-OpenAI models are not implemented yet.")
+        else: 
+            self.model = model
         self.get_cost = get_cost
         self.max_iterations = max_iterations
 
