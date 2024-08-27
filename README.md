@@ -8,7 +8,7 @@ Chemist AI Agent for Materials Inverse Design
 
 
 
-## Installation
+## Installation (GPU)
 
 You can clone the source code and install in developer mode:
 
@@ -22,11 +22,26 @@ conda install -c pytorch/label/nightly -c nvidia faiss-gpu=1.8.0
 python -m ipykernel install --user --name dziner --display-name "dziner"
 ```
 
+## Installation (CPU)
+
+If you do not have a gpu in your machine (OSX for example) you will need to execute the following instead:
+
+```bash
+conda create -n dziner python=3.11.9
+conda activate dziner
+
+git clone https://github.com/mehradans92/dziner.git && cd dziner
+pip install -e .
+conda install -c pytorch/label/nightly faiss-cpu
+python -m ipykernel install --user --name dziner --display-name "dziner"
+```
+
 You need to have a valid OPENAI API key. If you are on a windows machine you can add `OPENAI_API_KEY` in your Environment Variables. For linux systems set the key by adding this line to `~/.bashrc`:
 
 ```bash
 export OPENAI_API_KEY=your_api_key_here
 ```
+If you are using the jupyter notebook examples in this repo you may need to restart your kernel after adding the key to your environment
 
 ### Surrogate Models
 
