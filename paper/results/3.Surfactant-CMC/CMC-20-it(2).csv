@@ -1,0 +1,22 @@
+Iteration,SMILES,Modification,logCMC,SA Score,Molecular Weight,Validity
+0,CCCCCCCCCC(=O)CC(=O)NC1CCOC1=O,Initial SMILES,1.785,2.8,297.4,Valid
+1,CCCCCCCCCCCC(=O)CC(=O)NC1CCOC1=O,Increased the hydrophobic tail length by adding two more carbon atoms.,1.054,2.81,325.45,Valid
+2,CCC(C)CCCCCCCCCCC(=O)CC(=O)NC1CCOC1=O,Introduced branching in the hydrophobic tail by adding a methyl group to the third carbon.,1.126,3.22,367.53,Valid
+3,CCC(C)CCCCCCCCCCCC(=O)CC(=O)NC1CCOC1=O,Added a methyl group to the end of the hydrophobic tail.,0.831,3.23,381.56,Valid
+4,CCC(C)CCCCCCCCCCCC(=O)CC(=O)N(C1CCOC1=O)CCO,Added an ethylene oxide unit to the hydrophilic head group.,1.135,3.55,425.61,Valid
+5,CCC(C)CCCC(C)CCCCCCCC(=O)CC(=O)NC1CCOC1=O,Added a second branching methyl group.,2.287,3.55,395.58,Valid
+6,CCC(C)CCCCCCCCCCCC(=O)CC(=O)N(C1CCOC1=O)CC,Added an ethyl group to the hydrophilic head.,0.47,3.51,409.61,Valid
+7,CCC(C)CCCCCCCCCCCC(=O)CC(=O)N(C1CCOC1=O)CO,Added a hydroxyl group to the hydrophilic head.,0.656,3.64,411.58,Valid
+8,CCC(C)CCCCCCCCCCCC(=O)CC(=O)N(C1CCOC1=O)C(O)O,Added a second hydroxyl group to the hydrophilic head.,0.93,3.73,427.58,Valid
+9,CCC(C)CCCCCCCCCCCC(=O)CC(=O)N(C1CCOC1=O)P(=O)(O)O,Added a phosphate group to the hydrophilic head.,0.779,3.85,461.54,Valid
+10,CCC(C)CCCCCCCCCCCC(=O)CC(=O)N(C1CCOC1=O)S,Added a thiol group to the hydrophilic head.,0.735,3.7,413.62,Valid
+11,CCC(C)CCCCCCCCCCCC(=O)CC(=O)N(C1CCOC1=O)[N+](=O)[O-],Added a nitro group to the hydrophilic head.,3.019,3.79,426.55,Valid
+12,CCC(C)CCCCCCCCCCCC(=O)CC(=O)N(C1CCOC1=O)C(F)(F)F,Added a trifluoromethyl group to the hydrophilic head.,0.495,3.75,449.55,Valid
+13,CCC(C)CCCCCCCCCCCC(=O)CC(=O)N(C1CCOC1=O)C(C)(C)C,Added a tert-butyl group to the hydrophilic head.,1.363,3.62,437.67,Valid
+14,CCC(C)CCCCCCCCCCCC(=O)CC(=O)N(C1CCOC1=O)C,Added a methyl group to the hydrophilic head.,0.806,3.46,395.58,Valid
+15,CCC(C)CCCCCCCCCCCC(=O)CC(=O)N(C1CCOC1=O)CO,Added a hydroxyl group to the hydrophilic head.,0.656,3.64,411.58,Valid
+16,CCC(C)CCCCCCCCCCCC(=O)CC(=O)N(C1CCOC1=O)N,Added an amine group to the hydrophilic head.,1.038,3.63,396.57,Valid
+17,CCC(C)CCCCCCCCCCCC(=O)CC(=O)N(C1CCOC1=O)S(=O)(=O)O,Added a sulfonate group to the hydrophilic head.,1.021,3.73,461.62,Valid
+18,CCC(C)CCCCCCCCCCCC(=O)CC(=O)N(C1CCOC1=O)P(=O)(O)O,Added a phosphate group to the hydrophilic head.,0.779,3.85,461.54,Valid
+19,CCC(C)CCCCCCCCCCCC(=O)CC(=O)N(C1CCOC1=O)CCOCC,Added an ethylene glycol unit to the hydrophilic head.,0.546,3.59,453.66,Valid
+20,CCC(C)CCCCCCCCCCCC(=O)CC(=O)N(C1CCOC1=O)CCOCCC,Added a propylene glycol unit to the hydrophilic head.,0.546,3.61,467.69,Valid

@@ -1,0 +1,21 @@
+Iteration,SMILES,Modification,logCMC,SA Score,Molecular Weight,Validity
+0,CCCCCCCCCC(=O)CC(=O)NC1CCOC1=O,Initial SMILES,1.785,2.804,297.395,Valid
+1,CCCCCCCCCCCC(=O)CC(=O)NC1CCOC1=O,Extended the hydrophobic tail by two carbon atoms.,1.054,2.805,325.449,Valid
+2,CCC(C)CCCCCCCC(=O)CC(=O)NC1CCOC1=O,Introduced a methyl branch in the hydrophobic tail.,2.225,3.223,325.449,Valid
+3,CCCCCCCCCC(F)(F)CC(=O)NC1CCOC1=O,Replaced some hydrogen atoms in the hydrophobic tail with fluorine atoms.,1.022,3.068,319.392,Valid
+4,CCCCCCCCCC[Si](C)(C)CC(=O)NC1CCOC1=O,Replaced part of the hydrophobic tail with a siloxane backbone.,2.773,3.225,341.568,Valid
+5,CCCCCCCCCCCC(=O)CC(=O)N(C1CCOC1=O)C2CCOCC2,Introduced a polar group to the hydrophilic head.,-0.178,3.291,409.567,Valid
+6,CCCCCCCCCCCCCC(=O)CC(=O)N(C1CCOC1=O)C2CCOCC2,Extended the hydrophobic tail by two more carbon atoms.,-0.617,3.295,437.621,Valid
+7,CCC(C)CCCCCCCCCC(=O)CC(=O)N(C1CCOC1=O)C2CCOCC2,Introduced a methyl branch in the hydrophobic tail.,0.225,3.668,437.621,Valid
+8,CCCCCCCCCCCC(F)(F)CC(=O)N(C1CCOC1=O)C2CCOCC2,Replaced some hydrogen atoms in the hydrophobic tail with fluorine atoms.,-0.386,3.441,431.564,Valid
+9,CCCCCCCCCCC[Si](C)(C)CC(=O)N(C1CCOC1=O)C2CCOCC2,Introduced a siloxane backbone to the hydrophobic tail.,1.335,3.536,439.713,Valid
+10,CCCCCCCCCCCC(=O)CC(=O)N(C1CCOC1=O)C2CCOCC2C(=O)O,Introduced an additional polar group to the hydrophilic head.,0.485,3.941,453.576,Valid
+11,CCCCCCCCCCCC(=O)CC(=O)N(C1CCOC1=O)C2CCOCC2N,Introduced an additional polar group to the hydrophilic head.,1.132,4.017,424.582,Valid
+12,CCCCCCCCCCCC(=O)CC(=O)N(C1CCOC1=O)C2CCOCC2OH,Introduced a hydroxyl group to the hydrophilic head.,0.0,0.0,0.0,Invalid
+13,CCCCCCCCCCCC(=O)CC(=O)N(C1CCOC1=O)C2CCOCC2NH2,Introduced an amine group to the hydrophilic head.,0.0,0.0,0.0,Invalid
+14,CCCCCCCCCCCC(=O)CC(=O)N(C1CCOC1=O)C2CCOCC2C(=O)OH,Introduced a carboxyl group to the hydrophilic head.,0.0,0.0,0.0,Invalid
+15,CCCCCCCCCCCC(=O)CC(=O)N(C1CCOC1=O)C2CCOCC2S(=O)(=O)O,Introduced a sulfonic acid group to the hydrophilic head.,0.549,4.149,489.631,Valid
+16,CCCCCCCCCCCC(=O)CC(=O)N(C1CCOC1=O)C2CCOCC2P(=O)(O)O,Introduced a phosphate group to the hydrophilic head.,0.466,4.289,489.546,Valid
+17,CCCCCCCCCCCC(=O)CC(=O)N(C1CCOC1=O)C2CCOCC2C#N,Introduced a nitrile group to the hydrophilic head.,0.444,4.114,434.577,Valid
+18,CCCCCCCCCCCC(=O)CC(=O)N(C1CCOC1=O)C2CCOCC2OH,Introduced a hydroxyl group to the hydrophilic head.,0.0,0.0,0.0,Invalid
+19,CCCCCCCCCCCC(=O)CC(=O)N(C1CCOC1=O)C2CCOCC2S(=O)(=O)N,Introduced a sulfonamide group to the hydrophilic head.,0.549,4.173,488.647,Valid

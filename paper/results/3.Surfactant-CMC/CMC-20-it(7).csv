@@ -1,0 +1,11 @@
+Iteration,SMILES,Modification,logCMC,SA Score,Molecular Weight,Validity
+0,CCCCCCCCCC(=O)CC(=O)NC1CCOC1=O,Initial molecule,1.785,2.80403143711424,297.39500000000004,Valid
+1,CCCCCCCCCCCC(=O)CC(=O)NC1CCOC1=O,Increased hydrophobic tail length,1.054,2.8052551515855004,325.4490000000001,Valid
+2,CC(C)CCCCCCCC(=O)CC(=O)NC1CCOC1=O,Introduced branching in the hydrophobic tail,2.583,2.882822392797163,311.4220000000001,Valid
+3,CCCCCCCCCCCC(=O)CC(=O)NC1CC(O)OC1=O,Added a polar group (hydroxyl) to the head group,1.317,3.38608198101862,341.4480000000001,Valid
+4,CCCC(C)CCCCCCC(=O)CC(=O)NC1CCOC1=O,Introduced a different branching in the hydrophobic tail,2.66,3.2401295391241343,325.4490000000001,Valid
+5,CCCCCCCCCC(C)C(=O)CC(=O)NC1CCOC1=O,Added a methyl group to the hydrophobic tail,1.36,3.2136833852779825,325.4490000000001,Valid
+6,CCCCCCCCCC(O)C(=O)CC(=O)NC1CCOC1=O,Added a polar group (hydroxyl) to the tail,1.216,3.285562231431827,327.42100000000016,Valid
+7,CCCCCC(C)CCCCCC(=O)CC(=O)NC1CCOC1=O,Introduced a different branching in the hydrophobic tail,2.602,3.2179545412941657,339.4760000000001,Valid
+8,CCCCCCCCCCCC(=O)CC(=O)NC1CC(N)OC1=O,Added an amine group to the head group,1.68,3.426277158974992,340.4640000000001,Valid
+9,CCCCCCCCCC(C(=O)O)C(=O)CC(=O)NC1CCOC1=O,Added a carboxyl group to the tail,1.747,3.3423462176279477,355.4310000000001,Valid

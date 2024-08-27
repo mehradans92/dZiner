@@ -1,0 +1,8 @@
+Iteration,SMILES,Modification,logCMC,SA Score,Molecular Weight,Validity
+0,CCCCCCCCCC(=O)CC(=O)NC1CCOC1=O,Initial molecule,1.785,2.80403143711424,297.39500000000004,Valid
+1,CCCCCCCCCCCC(=O)CC(=O)NC1CCOC1=O,Increased the length of the hydrophobic tail from 10 to 12 carbons,1.054,2.8052551515855004,325.4490000000001,Valid
+2,CCC(C)CCCCCCCC(=O)CC(=O)NC1CCOC1=O,Introduced branching in the hydrophobic tail,2.225,3.2232653564318277,325.4490000000001,Valid
+3,CCCCCCCCCCCC(=O)CC(=O)NC1CC(O)OC1=O,Added a polar functional group (hydroxyl group),1.317,3.38608198101862,341.4480000000001,Valid
+4,CCCCCCCCCCCC(=O)CC(=O)NC1CC[Si](C)(C)OC1=O,Added a siloxane backbone,1.805,3.515282560383019,383.6050000000002,Valid
+5,CCCCCCCCCCCCC(=O)CC(=O)NC1CCOC1=O,Further increased the length of the hydrophobic tail from 12 to 13 carbons,0.743,2.8100385898415023,339.4760000000001,Valid
+6,CCCCCCCCCCC(F)(F)CC(=O)CC(=O)NC1CCOC1=O,Introduced a fluorinated group to the hydrophobic tail,1.128,3.2137229449984037,375.45600000000013,Valid

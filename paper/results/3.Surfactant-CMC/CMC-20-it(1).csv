@@ -1,0 +1,22 @@
+Iteration,SMILES,Modification,logCMC,SA Score,Molecular Weight,Validity
+0,CCCCCCCCCC(=O)CC(=O)NC1CCOC1=O,Initial molecule,1.785,2.804,297.395,Valid
+1,CCCCCCCCCCCC(=O)CC(=O)NC1CCOC1=O,Increased the hydrophobic tail length by adding two more carbon atoms,1.054,2.805,325.449,Valid
+2,CCCCCCCCC(C)CCC(=O)CC(=O)NC1CCOC1=O,Introduced branching at the end of the hydrophobic tail by adding a methyl group,2.488,3.233,339.476,Valid
+3,CCCCCCCCCCF(=O)CC(=O)NC1CCOC1=O,Added a fluorine atom to the hydrophobic tail,0.0,0.0,0.0,Invalid
+4,CCCCCCCCCCCC(=O)CC(=O)NCC1CCOC1=O,Added an ethylene oxide unit to the hydrophilic head group,1.175,2.939,339.476,Valid
+5,CCCCCCCCCC1CCCCC1(=O)CC(=O)NC1CCOC1=O,Introduced a cyclohexane ring to the hydrophobic tail,0.0,0.0,0.0,Invalid
+6,CCCCCCCCCCCC(=O)CC(=O)NC(C)C1CCOC1=O,Added a methyl group to the hydrophilic head group,1.144,3.304,353.503,Valid
+7,CCCCCCCCCCCC(=O)CC(=O)NCCOCC1CCOC1=O,Added a second ethylene oxide unit to the hydrophilic head group,1.053,3.022,383.529,Valid
+8,CCCCCCCCCCC1=CC=CC=C1(=O)CC(=O)NC1CCOC1=O,Introduced a benzene ring to the hydrophobic tail,0.0,0.0,0.0,Invalid
+9,CCCCCCCCCCC(O)CC(=O)NC1CCOC1=O,Added a hydroxyl group to the hydrophobic tail,1.247,3.049,313.438,Valid
+10,CCCCCCCCC(C)(C)CCC(=O)CC(=O)NC1CCOC1=O,Introduced a second branching methyl group to the hydrophobic tail,3.417,3.1,353.503,Valid
+11,CCCCCCCCC1CCC1(=O)CC(=O)NC1CCOC1=O,Added a cyclopropyl group to the hydrophobic tail,0.0,0.0,0.0,Invalid
+12,CCCCCCCCCCCC(=O)CC(=O)NC(CO)C1CCOC1=O,Added a second hydroxyl group to the hydrophilic head group,1.219,3.447,369.502,Valid
+13,CCCCCCCCCCCC(=O)CC(=O)NCCOCC1CCOC1=O,Added a second ethylene oxide unit to the hydrophilic head group,1.053,3.022,383.529,Valid
+14,CCCCCCCCCCCC(C)(C)C(=O)CC(=O)NC1CCOC1=O,Introduced a tert-butyl group to the hydrophobic tail,1.245,3.059,367.53,Valid
+15,CCCCCCCCCCCC(=O)CC(=O)NC(C)(C)C1CCOC1=O,Added a second methyl group to the hydrophilic head group,1.141,3.254,367.53,Valid
+16,CCCCCCCCCCCC(=O)CC(=O)NC(CO)C1CCOC1=O,Added a second hydroxyl group to the hydrophilic head group,1.219,3.447,369.502,Valid
+17,CCCCCCCCCCCC(=O)CC(=O)NCCOCC1CCOC1=O,Added a second ethylene oxide unit to the hydrophilic head group,1.053,3.022,383.529,Valid
+18,CCCCCCCCCCCC(C)(C)C(=O)CC(=O)NC1CCOC1=O,Introduced a tert-butyl group to the hydrophobic tail,1.245,3.059,367.53,Valid
+19,CCCCCCCCCCCC(=O)CC(=O)NC(C)(C)C1CCOC1=O,Added a second methyl group to the hydrophilic head group,1.141,3.254,367.53,Valid
+20,CCCCCCCCCCCC(=O)CC(=O)NC(CO)C1CCOC1=O,Added a second hydroxyl group to the hydrophilic head group,1.219,3.447,369.502,Valid
