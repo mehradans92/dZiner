@@ -35,6 +35,7 @@ pip install -e .
 conda install -c pytorch/label/nightly faiss-cpu
 python -m ipykernel install --user --name dziner --display-name "dziner"
 ```
+## Adding an API Key
 
 You need to have a valid OPENAI API key. If you are on a windows machine you can add `OPENAI_API_KEY` in your Environment Variables. For linux systems set the key by adding this line to `~/.bashrc`:
 
