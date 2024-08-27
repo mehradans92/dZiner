@@ -61,6 +61,7 @@ class dZiner:
 
         self.verbose = kwargs.get('verbose', False)
         chat_history = MessagesPlaceholder(variable_name="chat_history")
+        self.tools = tools
         self.agent = initialize_agent(
             tools=tools,
             llm=self.model,
@@ -87,7 +88,8 @@ class dZiner:
 
     def __call__(self, prompt):
         with get_openai_callback() as cb:
-            result = self.agent.invoke({"input":prompt})
+            tool_desc = [tool.description for tool in self.tools]
+            result = self.agent.invoke({"input":prompt, "tool_desc": tool_desc})
         if self.get_cost:
             print(cb)
         return result
