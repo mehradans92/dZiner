@@ -1,0 +1,22 @@
+Iteration,SMILES,Modification,logCMC,SA Score,Molecular Weight,Validity
+0,CCCCCCCCCC(=O)CC(=O)NC1CCOC1=O,Initial SMILES,1.785,2.804,297.395,Valid
+1,CCCCCCCCCCCC(=O)CC(=O)NC1CCOC1=O,Increased the hydrophobic tail length by adding two more carbon atoms to the tail.,1.054,2.805,325.449,Valid
+2,CCCCCCCCC(C)CCC(=O)CC(=O)NC1CCOC1=O,Introduced branching at the chain termini by adding a methyl group to the end of the hydrophobic tail.,2.488,3.233,339.476,Valid
+3,CCCCCCCCCC(F)(F)CC(=O)CC(=O)NC1CCOC1=O,Introduced fluorination by replacing hydrogen atoms with fluorine in the hydrophobic tail.,1.41,3.222,361.429,Valid
+4,CCCCCCCCCC[Si](C)(C)CC(=O)CC(=O)NC1CCOC1=O,Introduced a siloxane backbone by replacing a segment of the hydrophobic tail with a siloxane group.,2.851,3.36,383.605,Valid
+5,CCCCCCCCCCC(C)(C)CC(=O)CC(=O)NC1CCOC1=O,"Introduced a bulky group to the hydrophobic tail, creating a hedgehog structure.",2.792,3.108,367.53,Valid
+6,CCCCCCCCCCC1=CC=CC=C1CC(=O)CC(=O)NC1CCOC1=O,Introduced an aromatic ring to the hydrophobic tail.,1.729,2.903,401.547,Valid
+7,CCCCCCCCCCFCC(=O)CC(=O)NC1CCOC1=O,Replaced the terminal carbon with a fluorine atom to enhance hydrophobicity.,0.0,0.0,0.0,Invalid
+8,CCCCCCCCCCOCC(=O)CC(=O)NC1CCOC1=O,Introduced an ether group to the hydrophobic tail to modify the hydrophilic-lipophilic balance.,1.097,2.928,341.448,Valid
+9,CCCCCCCCCCOHCC(=O)CC(=O)NC1CCOC1=O,Introduced a hydroxyl group to the hydrophobic tail to modify the hydrophilic-lipophilic balance.,0.0,0.0,0.0,Invalid
+10,CCCCCCCCC=CC(=O)CC(=O)NC1CCOC1=O,Introduced a double bond in the hydrophobic tail to modify the hydrophilic-lipophilic balance.,1.58,3.039,309.406,Valid
+11,CCCCCCCCC1CCCCC1CC(=O)CC(=O)NC1CCOC1=O,Introduced a cyclohexane ring in the hydrophobic tail to decrease polarity.,-0.221,3.542,379.541,Valid
+12,CCCCCCCCC1CCCCC1C1CCCCC1CC(=O)CC(=O)NC1CCOC1=O,Introduced another cyclohexane ring to the hydrophobic tail.,-1.023,4.026,461.687,Valid
+13,CCCCCCCCCC[Si](C)(C)C1CCCCC1CC(=O)CC(=O)NC1CCOC1=O,Introduced a siloxane group to the hydrophobic tail.,0.968,4.011,465.751,Valid
+14,CCCCCCCCC1CCCCC1OHCC(=O)CC(=O)NC1CCOC1=O,Introduced a hydroxyl group to the cyclohexane ring to modify the hydrophilic-lipophilic balance.,0.0,0.0,0.0,Invalid
+15,CCCCCCCCC1=CCCCC1CC(=O)CC(=O)NC1CCOC1=O,Introduced a double bond in the cyclohexane ring to modify the hydrophilic-lipophilic balance.,0.873,3.62,377.525,Valid
+16,CCCCCCCCC1CCOC1CC(=O)CC(=O)NC1CCOC1=O,Introduced an ether group to the cyclohexane ring to modify the hydrophilic-lipophilic balance.,0.732,3.78,367.486,Valid
+17,CCCCCCCCC1CC(F)CCC1CC(=O)CC(=O)NC1CCOC1=O,Introduced a fluorine atom to the cyclohexane ring to enhance hydrophobicity.,0.317,3.969,397.531,Valid
+18,CCCCCCCCC1CC(OH)CCC1CC(=O)CC(=O)NC1CCOC1=O,Introduced a hydroxyl group to the cyclohexane ring to modify the hydrophilic-lipophilic balance.,0.0,0.0,0.0,Invalid
+19,CCCCCCCCC1CC(C)CCC1CC(=O)CC(=O)NC1CCOC1=O,Introduced a methyl group to the cyclohexane ring to modify the hydrophobicity.,1.343,3.805,393.568,Valid
+20,CCCCCCCCC1=CC=CCC1CC(=O)CC(=O)NC1CCOC1=O,Introduced a second double bond in the cyclohexane ring to modify the hydrophilic-lipophilic balance.,1.487,3.744,375.509,Valid
