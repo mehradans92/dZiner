@@ -1,0 +1,21 @@
+Iteration,SMILES,Modification,Docking Score,SA Score,QED Score,Molecular Weight,Validity
+0,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C([N+]([O-])=O)C=C2)CC1,Initial SMILES,-6.7,1.97,0.66,374.83,Valid
+1,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C([N+]([O-])=O)C=C2C4=CC=CC=C4)CC1,Add an aromatic ring to increase hydrophobic interactions.,-7.2,2.28,0.44,450.93,Valid
+2,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C([N+]([O-])=O)C=C2C4=CC=CC=C4)CC1C(=O)NCCCCN,Add a 4-aminobutanamido group to optimize solvent-exposed substituents.,-7.1,3.13,0.19,565.07,Valid
+3,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C([N+]([O-])=O)C=C2C4=CC=CC=C4)CC1CCO,Introduce a rational linker to extend into solvent-exposed regions.,-7.3,2.99,0.37,494.98,Valid
+4,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C([N+]([O-])=O)C=C2C4=CC=CC=C4)CC1CCOCC(=O)NCCCC[C@@H](C(=O)N)NC(=O)CCCCC(=O)N,Add a biotin tag to facilitate immobilization and detection.,-5.7,3.99,0.06,807.35,Valid
+5,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C([N+]([O-])=O)C=C2C4=CC=CC=C4)CC1CCOC,Revert to the best SMILES from Iteration 3 and add a methoxy group to increase hydrophobic interactions.,-6.9,3.02,0.33,509.01,Valid
+6,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C([N+]([O-])=O)C=C2C4=CC=CC=C4F)CC1,Add a fluorine atom to the aromatic ring to increase hydrophobic interactions.,-7.6,2.38,0.42,468.92,Valid
+7,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C([N+]([O-])=O)C=C2C4=CC=CC=C4C(F)(F)F)CC1,Add a trifluoromethyl group to the aromatic ring to further increase hydrophobic interactions.,-7.1,2.54,0.33,518.92,Valid
+8,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C([N+]([O-])=O)C=C2C4=CC=CC=C4OH)CC1,Add a hydroxyl group to the aromatic ring to explore potential hydrogen bonding interactions.,0.0,0.0,0.0,0.0,Invalid
+9,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C([N+]([O-])=O)C=C2C4=CC=CC=C4OC)CC1,Revert to the best SMILES from Iteration 6 and add a methoxy group to the aromatic ring.,-7.3,2.38,0.4,480.95,Valid
+10,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C([N+]([O-])=O)C=C2C4=CC=CC=C4C)CC1,Add a methyl group to the aromatic ring to increase hydrophobic interactions.,-7.5,2.36,0.41,464.95,Valid
+11,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C([N+]([O-])=O)C=C2C4=CC=CC=C4[N+]([O-])=O)CC1,Add a nitro group to the aromatic ring to explore potential electronic effects.,-7.3,2.51,0.38,495.92,Valid
+12,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C([N+]([O-])=O)C=C2C4=CC=CC=C4CC)CC1,Add an ethyl group to the aromatic ring to increase hydrophobic interactions.,-7.3,2.43,0.37,478.98,Valid
+13,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C([N+]([O-])=O)C=C2C4=CC=CC=C4C#N)CC1,Add a cyano group to the aromatic ring to explore potential electronic effects.,-6.8,2.5,0.42,475.94,Valid
+14,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C([N+]([O-])=O)C=C2C4=CC=CC=C4Cl)CC1,Add a chlorine atom to the aromatic ring to increase hydrophobic interactions.,-7.0,2.37,0.38,485.37,Valid
+15,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C([N+]([O-])=O)C=C2C4=CC=CC=C4OCC)CC1,Add an ethoxy group to the aromatic ring to explore potential hydrophobic and electronic effects.,-6.6,2.42,0.35,494.98,Valid
+16,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C([N+]([O-])=O)C=C2C4=CC=CC=C4C(C)C)CC1,Add an isopropyl group to the aromatic ring to increase hydrophobic interactions.,-7.1,2.49,0.33,493.01,Valid
+17,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C([N+]([O-])=O)C=C2C4=CC=CC=C4C6=CC=CC=C6)CC1,Add a phenyl group to the aromatic ring to increase hydrophobic interactions.,-8.0,2.41,0.23,527.02,Valid
+18,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C([N+]([O-])=O)C=C2C4=CC=CC=N4)CC1,Add a pyridine ring to the aromatic ring to explore potential hydrogen bonding interactions.,-7.0,2.44,0.46,451.91,Valid
+19,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C([N+]([O-])=O)C=C2C4=CC1OC1=CC=C4)CC1,Add a methylenedioxy group to the aromatic ring to explore potential electronic effects.,-8.3,5.42,0.5,478.94,Valid
