@@ -1,0 +1,725 @@
+
+
+[1m> Entering new AgentExecutor chain...[0m
+[32;1m[1;3mThought: To begin, I need to research design guidelines for molecules with higher binding affinity against WDR5. This will help me understand the structural features that enhance binding affinity.
+
+Action: lookup_papers
+Action Input: Design guidelines for molecules with higher binding affinity against WDR5[0m
+Observation: [36;1m[1;3mThe design guidelines for scaffold hopping to enhance the binding affinity of a molecule against the WDR5 target involve several key strategies:
+
+1. **Hydrophobic Interactions**: Introducing aromatic rings that can occupy the hydrophobic groove of WDR5, as seen with the aromatic ring A in compound 30, which interacts with sidechains of Phe133, Phe149, and Tyr191 through π-π stacking interactions with Tyr191.
+
+2. **Solvent-Exposed Regions**: Modifying substituents at positions that are solvent-exposed to improve binding affinity without disrupting the core interactions. For example, adding a 4-aminobutanamido group to compound 30 enhanced binding affinity significantly.
+
+3. **Linker Optimization**: Using rationally designed linkers to attach functional groups or tags (e.g., biotin) to the molecule without affecting the binding activity. This approach was used to develop the biotinylated probe LC001, which maintained high binding affinity.
+
+4. **Docking Studies**: Utilizing molecular docking to predict and confirm the binding orientation and interactions of the modified molecules with WDR5, ensuring that modifications do not interfere with critical binding interactions.
+
+These guidelines are summarized from the paper titled "Design, synthesis, and initial evaluation of affinity-based small molecular probe for detection of WDR5," published in Bioorganic Chemistry in 2018. The DOI for this paper is 10.1016/j.bioorg.2017.11.018.[0m
+Thought:[32;1m[1;3mBased on the design guidelines, I will evaluate the initial SMILES for its binding affinity and validity. This will serve as the baseline for further modifications.
+
+Action: check_validity
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C([N+]([O-])=O)C=C2)CC1[0m
+Observation: [33;1m[1;3m('Valid SMILES', 1.9734562544794656, 0.6560834603688163, 374.82800000000015, 'CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C([N+]([O-])=O)C=C2)CC1')[0m
+Thought:[32;1m[1;3mThe initial SMILES is valid, with a synthetic accessibility (SA) score of 1.97, a quantitative estimate of drug-likeness (QED) score of 0.66, and a molecular weight of 374.83 g/mol. Next, I will predict its docking score to WDR5 to establish a baseline for binding affinity.
+
+Action: predict_docking_score
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C([N+]([O-])=O)C=C2)CC1[0m
+Observation: [38;5;200m[1;3m-6.7[0m
+Thought:[32;1m[1;3mThe initial SMILES has a docking score of -6.7, which will serve as the baseline for binding affinity. Based on the design guidelines, I will make modifications to the molecule to enhance its binding affinity.
+
+### Iteration 1:
+**Modification**: Introduce an aromatic ring to enhance hydrophobic interactions. Replace the nitro group with a phenyl group.
+
+**New SMILES**: CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4)C=C2)CC1
+
+Action: check_validity
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4)C=C2)CC1[0m
+Observation: [33;1m[1;3m('Valid SMILES', 1.8839390973454009, 0.66218732986274, 405.92900000000014, 'CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4)C=C2)CC1')[0m
+Thought:[32;1m[1;3mThe new SMILES is valid, with an SA score of 1.88, a QED score of 0.66, and a molecular weight of 405.93 g/mol. Next, I will predict its docking score to WDR5 to assess the impact of the modification on binding affinity.
+
+Action: predict_docking_score
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4)C=C2)CC1[0m
+Observation: [38;5;200m[1;3m-8.3[0m
+Thought:[32;1m[1;3mThe first modification has resulted in a significant improvement in the docking score, indicating enhanced binding affinity. I will continue making modifications based on the design guidelines to further optimize the molecule.
+
+### Iteration 2:
+**Modification**: Add a 4-aminobutanamido group to the solvent-exposed region to improve binding affinity.
+
+**New SMILES**: CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4)C(=O)NCCCCN)CC1
+
+Action: check_validity
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4)C(=O)NCCCCN)CC1[0m
+Observation: [33;1m[1;3m('Invalid SMILES', 0, 0, 0, 'CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4)C(=O)NCCCCN)CC1')[0m
+Thought:[32;1m[1;3mThe new SMILES is invalid. I will revert to the previous valid SMILES and try a different modification.
+
+### Iteration 3:
+**Modification**: Introduce a methoxy group to the aromatic ring to enhance hydrophobic interactions.
+
+**New SMILES**: CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4OC)C=C2)CC1
+
+Action: check_validity
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4OC)C=C2)CC1[0m
+Observation: [33;1m[1;3m('Valid SMILES', 2.0008926405081873, 0.6107914396384437, 435.9550000000002, 'CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4OC)C=C2)CC1')[0m
+Thought:[32;1m[1;3mThe new SMILES is valid, with an SA score of 2.00, a QED score of 0.61, and a molecular weight of 435.96 g/mol. Next, I will predict its docking score to WDR5 to assess the impact of the modification on binding affinity.
+
+Action: predict_docking_score
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4OC)C=C2)CC1[0m
+Observation: [38;5;200m[1;3m-7.9[0m
+Thought:[32;1m[1;3mThe third modification resulted in a valid SMILES with a docking score of -7.9, which is an improvement but not as significant as the first modification. I will continue making modifications based on the design guidelines to further optimize the molecule.
+
+### Iteration 4:
+**Modification**: Introduce a fluorine atom to the aromatic ring to enhance hydrophobic interactions and potentially improve binding affinity.
+
+**New SMILES**: CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4F)C=C2)CC1
+
+Action: check_validity
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4F)C=C2)CC1[0m
+Observation: [33;1m[1;3m('Valid SMILES', 1.9949468413249534, 0.6299227218004781, 423.91900000000015, 'CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4F)C=C2)CC1')[0m
+Thought:[32;1m[1;3mThe new SMILES is valid, with an SA score of 1.99, a QED score of 0.63, and a molecular weight of 423.92 g/mol. Next, I will predict its docking score to WDR5 to assess the impact of the modification on binding affinity.
+
+Action: predict_docking_score
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4F)C=C2)CC1[0m
+Observation: [38;5;200m[1;3m-8.3[0m
+Thought:[32;1m[1;3mThe fourth modification resulted in a valid SMILES with a docking score of -8.3, matching the best result so far. I will continue making modifications based on the design guidelines to further optimize the molecule.
+
+### Iteration 5:
+**Modification**: Introduce a trifluoromethyl group to the aromatic ring to enhance hydrophobic interactions and potentially improve binding affinity.
+
+**New SMILES**: CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4C(F)(F)F)C=C2)CC1
+
+Action: check_validity
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4C(F)(F)F)C=C2)CC1[0m
+Observation: [33;1m[1;3m('Valid SMILES', 2.180617224058169, 0.5022553546553244, 473.92600000000016, 'CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4C(F)(F)F)C=C2)CC1')[0m
+Thought:[32;1m[1;3mThe new SMILES is valid, with an SA score of 2.18, a QED score of 0.50, and a molecular weight of 473.93 g/mol. Next, I will predict its docking score to WDR5 to assess the impact of the modification on binding affinity.
+
+Action: predict_docking_score
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4C(F)(F)F)C=C2)CC1[0m
+Observation: [38;5;200m[1;3m-8.0[0m
+Thought:[32;1m[1;3mThe fifth modification resulted in a valid SMILES with a docking score of -8.0, which is slightly less effective than the best results so far. I will continue making modifications based on the design guidelines to further optimize the molecule.
+
+### Iteration 6:
+**Modification**: Introduce a methyl group to the aromatic ring to enhance hydrophobic interactions and potentially improve binding affinity.
+
+**New SMILES**: CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4C)C=C2)CC1
+
+Action: check_validity
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4C)C=C2)CC1[0m
+Observation: [33;1m[1;3m('Valid SMILES', 1.9817157143124309, 0.6212239468443111, 419.9560000000002, 'CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4C)C=C2)CC1')[0m
+Thought:[32;1m[1;3mThe new SMILES is valid, with an SA score of 1.98, a QED score of 0.62, and a molecular weight of 419.96 g/mol. Next, I will predict its docking score to WDR5 to assess the impact of the modification on binding affinity.
+
+Action: predict_docking_score
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4C)C=C2)CC1[0m
+Observation: [38;5;200m[1;3m-8.2[0m
+Thought:[32;1m[1;3mThe sixth modification resulted in a valid SMILES with a docking score of -8.2, which is slightly less effective than the best results so far. I will continue making modifications based on the design guidelines to further optimize the molecule.
+
+### Iteration 7:
+**Modification**: Introduce a 4-aminobutanamido group to another position to improve binding affinity.
+
+**New SMILES**: CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4)C(=O)NCCCCN)CC1
+
+Action: check_validity
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4)C(=O)NCCCCN)CC1[0m
+Observation: [33;1m[1;3m('Invalid SMILES', 0, 0, 0, 'CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4)C(=O)NCCCCN)CC1')[0m
+Thought:[32;1m[1;3mThe new SMILES is invalid. I will revert to the previous valid SMILES and try a different modification.
+
+### Iteration 8:
+**Modification**: Introduce a hydroxyl group to the aromatic ring to enhance hydrophobic interactions and potentially improve binding affinity.
+
+**New SMILES**: CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4O)C=C2)CC1
+
+Action: check_validity
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4O)C=C2)CC1[0m
+Observation: [33;1m[1;3m('Valid SMILES', 2.0537446946344335, 0.6397784512417084, 421.92800000000017, 'CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4O)C=C2)CC1')[0m
+Thought:[32;1m[1;3mThe new SMILES is valid, with an SA score of 2.05, a QED score of 0.64, and a molecular weight of 421.93 g/mol. Next, I will predict its docking score to WDR5 to assess the impact of the modification on binding affinity.
+
+Action: predict_docking_score
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4O)C=C2)CC1[0m
+Observation: [38;5;200m[1;3m-7.5[0m
+Thought:[32;1m[1;3mThe eighth modification resulted in a valid SMILES with a docking score of -7.5, which is less effective than the best results so far. I will continue making modifications based on the design guidelines to further optimize the molecule.
+
+### Iteration 9:
+**Modification**: Introduce a cyano group to the aromatic ring to enhance hydrophobic interactions and potentially improve binding affinity.
+
+**New SMILES**: CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4C#N)C=C2)CC1
+
+Action: check_validity
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4C#N)C=C2)CC1[0m
+Observation: [33;1m[1;3m('Valid SMILES', 2.1302421651408583, 0.6402381573933813, 430.9390000000002, 'CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4C#N)C=C2)CC1')[0m
+Thought:[32;1m[1;3mThe new SMILES is valid, with an SA score of 2.13, a QED score of 0.64, and a molecular weight of 430.94 g/mol. Next, I will predict its docking score to WDR5 to assess the impact of the modification on binding affinity.
+
+Action: predict_docking_score
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4C#N)C=C2)CC1[0m
+Observation: [38;5;200m[1;3m-7.5[0m
+Thought:[32;1m[1;3mThe ninth modification resulted in a valid SMILES with a docking score of -7.5, which is less effective than the best results so far. I will continue making modifications based on the design guidelines to further optimize the molecule.
+
+### Iteration 10:
+**Modification**: Introduce a nitro group to the aromatic ring to enhance hydrophobic interactions and potentially improve binding affinity.
+
+**New SMILES**: CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4[N+](=O)[O-])C=C2)CC1
+
+Action: check_validity
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4[N+](=O)[O-])C=C2)CC1[0m
+Observation: [33;1m[1;3m('Valid SMILES', 2.1521443290400626, 0.44062162103949537, 450.9260000000002, 'CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4[N+](=O)[O-])C=C2)CC1')[0m
+Thought:[32;1m[1;3mThe new SMILES is valid, with an SA score of 2.15, a QED score of 0.44, and a molecular weight of 450.93 g/mol. Next, I will predict its docking score to WDR5 to assess the impact of the modification on binding affinity.
+
+Action: predict_docking_score
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4[N+](=O)[O-])C=C2)CC1[0m
+Observation: [38;5;200m[1;3m-7.7[0m
+Thought:[32;1m[1;3mThe tenth modification resulted in a valid SMILES with a docking score of -7.7, which is less effective than the best results so far. I will continue making modifications based on the design guidelines to further optimize the molecule.
+
+### Iteration 11:
+**Modification**: Introduce a pyridine ring to replace the aromatic ring to enhance hydrophobic interactions and potentially improve binding affinity.
+
+**New SMILES**: CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CN=C4)C=C2)CC1
+
+Action: check_validity
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CN=C4)C=C2)CC1[0m
+Observation: [33;1m[1;3m('Valid SMILES', 2.0377368995432015, 0.6969487444895069, 406.91700000000014, 'CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CN=C4)C=C2)CC1')[0m
+Thought:[32;1m[1;3mThe new SMILES is valid, with an SA score of 2.04, a QED score of 0.70, and a molecular weight of 406.92 g/mol. Next, I will predict its docking score to WDR5 to assess the impact of the modification on binding affinity.
+
+Action: predict_docking_score
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CN=C4)C=C2)CC1[0m
+Observation: [38;5;200m[1;3m-8.0[0m
+Thought:[32;1m[1;3mThe eleventh modification resulted in a valid SMILES with a docking score of -8.0, which is slightly less effective than the best results so far. I will continue making modifications based on the design guidelines to further optimize the molecule.
+
+### Iteration 12:
+**Modification**: Introduce a methylenedioxy group to the aromatic ring to enhance hydrophobic interactions and potentially improve binding affinity.
+
+**New SMILES**: CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC1OC1=CC=C4)C=C2)CC1
+
+Action: check_validity
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC1OC1=CC=C4)C=C2)CC1[0m
+Observation: [33;1m[1;3m('Valid SMILES', 5.3293750287687205, 0.7291034846659864, 433.9390000000002, 'CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC1OC1=CC=C4)C=C2)CC1')[0m
+Thought:[32;1m[1;3mThe new SMILES is valid, with an SA score of 5.33, a QED score of 0.73, and a molecular weight of 433.94 g/mol. Next, I will predict its docking score to WDR5 to assess the impact of the modification on binding affinity.
+
+Action: predict_docking_score
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC1OC1=CC=C4)C=C2)CC1[0m
+Observation: [38;5;200m[1;3mInvalid molecule[0m
+Thought:[32;1m[1;3mIt appears that the last modification resulted in an invalid molecule for docking. I will revert to the previous valid SMILES and try a different modification.
+
+### Iteration 13:
+**Modification**: Introduce a trifluoromethoxy group to the aromatic ring to enhance hydrophobic interactions and potentially improve binding affinity.
+
+**New SMILES**: CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4OC(F)(F)F)C=C2)CC1
+
+Action: check_validity
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4OC(F)(F)F)C=C2)CC1[0m
+Observation: [33;1m[1;3m('Valid SMILES', 2.2432416693460944, 0.4837188848698204, 489.9250000000002, 'CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4OC(F)(F)F)C=C2)CC1')[0m
+Thought:[32;1m[1;3mThe new SMILES is valid, with an SA score of 2.24, a QED score of 0.48, and a molecular weight of 489.93 g/mol. Next, I will predict its docking score to WDR5 to assess the impact of the modification on binding affinity.
+
+Action: predict_docking_score
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4OC(F)(F)F)C=C2)CC1[0m
+Observation: [38;5;200m[1;3m-7.7[0m
+Thought:[32;1m[1;3mThe thirteenth modification resulted in a valid SMILES with a docking score of -7.7, which is less effective than the best results so far. I will continue making modifications based on the design guidelines to further optimize the molecule.
+
+### Iteration 14:
+**Modification**: Introduce a dimethylamino group to the aromatic ring to enhance hydrophobic interactions and potentially improve binding affinity.
+
+**New SMILES**: CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4N(C)C)C=C2)CC1
+
+Action: check_validity
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4N(C)C)C=C2)CC1[0m
+Observation: [33;1m[1;3m('Valid SMILES', 2.1727659689386254, 0.5905593407936848, 448.9980000000002, 'CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4N(C)C)C=C2)CC1')[0m
+Thought:[32;1m[1;3mThe new SMILES is valid, with an SA score of 2.17, a QED score of 0.59, and a molecular weight of 449.00 g/mol. Next, I will predict its docking score to WDR5 to assess the impact of the modification on binding affinity.
+
+Action: predict_docking_score
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4N(C)C)C=C2)CC1[0m
+Observation: [38;5;200m[1;3m-7.6[0m
+Thought:[32;1m[1;3m### Iteration 14 (continued):
+The fourteenth modification resulted in a valid SMILES with a docking score of -7.6, which is less effective than the best results so far. I will continue making modifications based on the design guidelines to further optimize the molecule.
+
+### Iteration 15:
+**Modification**: Introduce a sulfonamide group to the aromatic ring to enhance hydrophobic interactions and potentially improve binding affinity.
+
+**New SMILES**: CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4S(=O)(=O)N)C=C2)CC1
+
+Action: check_validity
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4S(=O)(=O)N)C=C2)CC1[0m
+Observation: [33;1m[1;3m('Valid SMILES', 2.1876266533385653, 0.5758499792723352, 485.00900000000024, 'CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4S(=O)(=O)N)C=C2)CC1')[0m
+Thought:[32;1m[1;3mThe new SMILES is valid, with an SA score of 2.19, a QED score of 0.58, and a molecular weight of 485.01 g/mol. Next, I will predict its docking score to WDR5 to assess the impact of the modification on binding affinity.
+
+Action: predict_docking_score
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4S(=O)(=O)N)C=C2)CC1[0m
+Observation: [38;5;200m[1;3m-7.1[0m
+Thought:[32;1m[1;3m### Iteration 15 (continued):
+The fifteenth modification resulted in a valid SMILES with a docking score of -7.1, which is less effective than the best results so far. I will continue making modifications based on the design guidelines to further optimize the molecule.
+
+### Iteration 16:
+**Modification**: Introduce a benzyl group to the aromatic ring to enhance hydrophobic interactions and potentially improve binding affinity.
+
+**New SMILES**: CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4C6=CC=CC=C6)C=C2)CC1
+
+Action: check_validity
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4C6=CC=CC=C6)C=C2)CC1[0m
+Observation: [33;1m[1;3m('Valid SMILES', 2.061054786771228, 0.3451450975994321, 482.0270000000002, 'CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4C6=CC=CC=C6)C=C2)CC1')[0m
+Thought:[32;1m[1;3mThe new SMILES is valid, with an SA score of 2.06, a QED score of 0.35, and a molecular weight of 482.03 g/mol. Next, I will predict its docking score to WDR5 to assess the impact of the modification on binding affinity.
+
+Action: predict_docking_score
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4C6=CC=CC=C6)C=C2)CC1[0m
+Observation: [38;5;200m[1;3m-8.9[0m
+Thought:[32;1m[1;3mThe sixteenth modification resulted in a valid SMILES with a docking score of -8.9, which is the best result so far. I will continue making modifications based on the design guidelines to further optimize the molecule.
+
+### Iteration 17:
+**Modification**: Introduce a cyclopropyl group to the aromatic ring to enhance hydrophobic interactions and potentially improve binding affinity.
+
+**New SMILES**: CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4C1CC1)C=C2)CC1
+
+Action: check_validity
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4C1CC1)C=C2)CC1[0m
+Observation: [33;1m[1;3m('Valid SMILES', 4.288626904017702, 0.5069913085033968, 445.99400000000026, 'CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4C1CC1)C=C2)CC1')[0m
+Thought:[32;1m[1;3mThe new SMILES is valid, with an SA score of 4.29, a QED score of 0.51, and a molecular weight of 445.99 g/mol. Next, I will predict its docking score to WDR5 to assess the impact of the modification on binding affinity.
+
+Action: predict_docking_score
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4C1CC1)C=C2)CC1[0m
+Observation: [38;5;200m[1;3mInvalid molecule[0m
+Thought:[32;1m[1;3mThe seventeenth modification resulted in an invalid molecule for docking. I will revert to the previous valid SMILES and try a different modification.
+
+### Iteration 18:
+**Modification**: Introduce a tert-butyl group to the aromatic ring to enhance hydrophobic interactions and potentially improve binding affinity.
+
+**New SMILES**: CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4C(C)(C)C)C=C2)CC1
+
+Action: check_validity
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4C(C)(C)C)C=C2)CC1[0m
+Observation: [33;1m[1;3m('Valid SMILES', 2.177087199244273, 0.49418699368359625, 462.03700000000026, 'CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4C(C)(C)C)C=C2)CC1')[0m
+Thought:[32;1m[1;3mThe new SMILES is valid, with an SA score of 2.18, a QED score of 0.49, and a molecular weight of 462.04 g/mol. Next, I will predict its docking score to WDR5 to assess the impact of the modification on binding affinity.
+
+Action: predict_docking_score
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4C(C)(C)C)C=C2)CC1[0m
+Observation: [38;5;200m[1;3m-7.2[0m
+Thought:[32;1m[1;3m### Iteration 18 (continued):
+The eighteenth modification resulted in a valid SMILES with a docking score of -7.2, which is less effective than the best results so far. I will continue making modifications based on the design guidelines to further optimize the molecule.
+
+### Iteration 19:
+**Modification**: Introduce a phenylsulfonyl group to the aromatic ring to enhance hydrophobic interactions and potentially improve binding affinity.
+
+**New SMILES**: CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4S(=O)(=O)C6=CC=CC=C6)C=C2)CC1
+
+Action: check_validity
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4S(=O)(=O)C6=CC=CC=C6)C=C2)CC1[0m
+Observation: [33;1m[1;3m('Valid SMILES', 2.280137801749209, 0.3292900896374157, 546.0920000000001, 'CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4S(=O)(=O)C6=CC=CC=C6)C=C2)CC1')[0m
+Thought:[32;1m[1;3m### Iteration 19 (continued):
+The new SMILES is valid, with an SA score of 2.28, a QED score of 0.33, and a molecular weight of 546.09 g/mol. Next, I will predict its docking score to WDR5 to assess the impact of the modification on binding affinity.
+
+Action: predict_docking_score
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4S(=O)(=O)C6=CC=CC=C6)C=C2)CC1[0m
+Observation: [38;5;200m[1;3m-8.2[0m
+Thought:[32;1m[1;3mI have completed 20 iterations of modifying the initial SMILES to optimize its binding affinity against WDR5. Below are the results of each iteration:
+
+```json
+[
+  {
+    "Iteration": 0,
+    "SMILES": "CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C([N+]([O-])=O)C=C2)CC1",
+    "Modification": "Initial SMILES",
+    "Docking Score": -6.7,
+    "SA Score": 1.97,
+    "QED Score": 0.66,
+    "Molecular Weight": 374.83,
+    "Validity": "Valid"
+  },
+  {
+    "Iteration": 1,
+    "SMILES": "CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4)C=C2)CC1",
+    "Modification": "Replace the nitro group with a phenyl group",
+    "Docking Score": -8.3,
+    "SA Score": 1.88,
+    "QED Score": 0.66,
+    "Molecular Weight": 405.93,
+    "Validity": "Valid"
+  },
+  {
+    "Iteration": 2,
+    "SMILES": "CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4)C(=O)NCCCCN)CC1",
+    "Modification": "Add a 4-aminobutanamido group",
+    "Docking Score": 0,
+    "SA Score": 0,
+    "QED Score": 0,
+    "Molecular Weight": 0,
+    "Validity": "Invalid"
+  },
+  {
+    "Iteration": 3,
+    "SMILES": "CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4OC)C=C2)CC1",
+    "Modification": "Introduce a methoxy group",
+    "Docking Score": -7.9,
+    "SA Score": 2.00,
+    "QED Score": 0.61,
+    "Molecular Weight": 435.96,
+    "Validity": "Valid"
+  },
+  {
+    "Iteration": 4,
+    "SMILES": "CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4F)C=C2)CC1",
+    "Modification": "Introduce a fluorine atom",
+    "Docking Score": -8.3,
+    "SA Score": 1.99,
+    "QED Score": 0.63,
+    "Molecular Weight": 423.92,
+    "Validity": "Valid"
+  },
+  {
+    "Iteration": 5,
+    "SMILES": "CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4C(F)(F)F)C=C2)CC1",
+    "Modification": "Introduce a trifluoromethyl group",
+    "Docking Score": -8.0,
+    "SA Score": 2.18,
+    "QED Score": 0.50,
+    "Molecular Weight": 473.93,
+    "Validity": "Valid"
+  },
+  {
+    "Iteration": 6,
+    "SMILES": "CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4C)C=C2)CC1",
+    "Modification": "Introduce a methyl group",
+    "Docking Score": -8.2,
+    "SA Score": 1.98,
+    "QED Score": 0.62,
+    "Molecular Weight": 419.96,
+    "Validity": "Valid"
+  },
+  {
+    "Iteration": 7,
+    "SMILES": "CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4)C(=O)NCCCCN)CC1",
+    "Modification": "Introduce a 4-aminobutanamido group to another position",
+    "Docking Score": 0,
+    "SA Score": 0,
+    "QED Score": 0,
+    "Molecular Weight": 0,
+    "Validity": "Invalid"
+  },
+  {
+    "Iteration": 8,
+    "SMILES": "CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4O)C=C2)CC1",
+    "Modification": "Introduce a hydroxyl group",
+    "Docking Score": -7.5,
+    "SA Score": 2.05,
+    "QED Score": 0.64,
+    "Molecular Weight": 421.93,
+    "Validity": "Valid"
+  },
+  {
+    "Iteration": 9,
+    "SMILES": "CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4C#N)C=C2)CC1",
+    "Modification": "Introduce a cyano group",
+    "Docking Score": -7.5,
+    "SA Score": 2.13,
+    "QED Score": 0.64,
+    "Molecular Weight": 430.94,
+    "Validity": "Valid"
+  },
+  {
+    "Iteration": 10,
+    "SMILES": "CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4[N+](=O)[O-])C=C2)CC1",
+    "Modification": "Introduce a nitro group",
+    "Docking Score": -7.7,
+    "SA Score": 2.15,
+    "QED Score": 0.44,
+    "Molecular Weight": 450.93,
+    "Validity": "Valid"
+  },
+  {
+    "Iteration": 11,
+    "SMILES": "CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CN=C4)C=C2)CC1",
+    "Modification": "Introduce a pyridine ring",
+    "Docking Score": -8.0,
+    "SA Score": 2.04,
+    "QED Score": 0.70,
+    "Molecular Weight": 406.92,
+    "Validity": "Valid"
+  },
+  {
+    "Iteration": 12,
+    "SMILES": "CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC1OC1=CC=C4)C=C2)CC1",
+    "Modification": "Introduce a methylenedioxy group",
+    "Docking Score": 0,
+    "SA Score": 5.33,
+    "QED Score": 0.73,
+    "Molecular Weight": 433.94,
+    "Validity": "Invalid"
+  },
+  {
+    "Iteration": 13,
+    "SMILES": "CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4OC(F)(F)F)C=C2)CC1",
+    "Modification": "Introduce a trifluoromethoxy group",
+    "Docking Score": -7.7,
+    "SA Score": 2.24,
+    "QED Score": 0.48,
+    "Molecular Weight": 489.93,
+    "Validity": "Valid"
+  },
+  {
+    "Iteration": 14,
+    "SMILES": "CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4N(C)C)C=C2)CC1",
+    "Modification": "Introduce a dimethylamino group",
+    "Docking Score": -7.6,
+    "SA Score": 2.17,
+    "QED Score": 0.59,
+    "Molecular Weight": 449.00,
+    "Validity": "Valid"
+  },
+  {
+    "Iteration": 15,
+    "SMILES": "CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4S(=O)(=O)N)C=C2)CC1",
+    "Modification": "Introduce a sulfonamide group",
+    "Docking Score": -7.1,
+    "SA Score": 2.19,
+    "QED Score": 0.58,
+    "Molecular Weight": 485.01,
+    "Validity": "Valid"
+  },
+  {
+    "Iteration": 16,
+    "SMILES": "CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4C6=CC=CC=C6)C=C2)CC1",
+    "Modification": "Introduce a benzyl group",
+    "Docking Score": -8.9,
+    "SA Score": 2.06,
+    "QED Score": 0.35,
+    "Molecular Weight": 482.03,
+    "Validity": "Valid"
+  },
+  {
+    "Iteration": 17,
+    "SMILES": "CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4C1CC1)C=C2)CC1",
+    "Modification": "Introduce a cyclopropyl group",
+    "Docking Score": 0,
+    "SA Score": 4.29,
+    "QED Score": 0.51,
+    "Molecular Weight": 445.99,
+    "Validity": "Invalid"
+  },
+  {
+    "Iteration": 18,
+    "SMILES": "CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4C(C)(C)C)C=C2)CC1",
+    "Modification": "Introduce a tert-butyl group",
+    "Docking Score": -7.2,
+    "SA Score": 2.18,
+    "QED Score": 0.49,
+    "Molecular Weight": 462.04,
+    "Validity": "Valid"
+  },
+  {
+    "Iteration": 19,
+    "SMILES": "CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4S(=O)(=O)C6=CC=CC=C6)C=C2)CC1",
+    "Modification": "Introduce a phenylsulfonyl group",
+    "Docking Score": -8.2,
+    "SA Score": 2.28,
+    "QED Score": 0.33,
+    "Molecular Weight": 546.09,
+    "Validity": "Valid"
+  }
+]
+```[0m
+Observation: Invalid Format: Missing 'Action:' after 'Thought:
+Thought:[32;1m[1;3mThought: I need to provide the final answer in the correct JSON format, summarizing all iterations and their results.
+
+Action: Summarize the iterations and format the final answer as JSON.
+
+Final Answer:
+```json
+[
+  {
+    "Iteration": 0,
+    "SMILES": "CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C([N+]([O-])=O)C=C2)CC1",
+    "Modification": "Initial SMILES",
+    "Docking Score": -6.7,
+    "SA Score": 1.97,
+    "QED Score": 0.66,
+    "Molecular Weight": 374.83,
+    "Validity": "Valid"
+  },
+  {
+    "Iteration": 1,
+    "SMILES": "CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4)C=C2)CC1",
+    "Modification": "Replace the nitro group with a phenyl group",
+    "Docking Score": -8.3,
+    "SA Score": 1.88,
+    "QED Score": 0.66,
+    "Molecular Weight": 405.93,
+    "Validity": "Valid"
+  },
+  {
+    "Iteration": 2,
+    "SMILES": "CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4)C(=O)NCCCCN)CC1",
+    "Modification": "Add a 4-aminobutanamido group",
+    "Docking Score": 0,
+    "SA Score": 0,
+    "QED Score": 0,
+    "Molecular Weight": 0,
+    "Validity": "Invalid"
+  },
+  {
+    "Iteration": 3,
+    "SMILES": "CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4OC)C=C2)CC1",
+    "Modification": "Introduce a methoxy group",
+    "Docking Score": -7.9,
+    "SA Score": 2.00,
+    "QED Score": 0.61,
+    "Molecular Weight": 435.96,
+    "Validity": "Valid"
+  },
+  {
+    "Iteration": 4,
+    "SMILES": "CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4F)C=C2)CC1",
+    "Modification": "Introduce a fluorine atom",
+    "Docking Score": -8.3,
+    "SA Score": 1.99,
+    "QED Score": 0.63,
+    "Molecular Weight": 423.92,
+    "Validity": "Valid"
+  },
+  {
+    "Iteration": 5,
+    "SMILES": "CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4C(F)(F)F)C=C2)CC1",
+    "Modification": "Introduce a trifluoromethyl group",
+    "Docking Score": -8.0,
+    "SA Score": 2.18,
+    "QED Score": 0.50,
+    "Molecular Weight": 473.93,
+    "Validity": "Valid"
+  },
+  {
+    "Iteration": 6,
+    "SMILES": "CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4C)C=C2)CC1",
+    "Modification": "Introduce a methyl group",
+    "Docking Score": -8.2,
+    "SA Score": 1.98,
+    "QED Score": 0.62,
+    "Molecular Weight": 419.96,
+    "Validity": "Valid"
+  },
+  {
+    "Iteration": 7,
+    "SMILES": "CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4)C(=O)NCCCCN)CC1",
+    "Modification": "Introduce a 4-aminobutanamido group to another position",
+    "Docking Score": 0,
+    "SA Score": 0,
+    "QED Score": 0,
+    "Molecular Weight": 0,
+    "Validity": "Invalid"
+  },
+  {
+    "Iteration": 8,
+    "SMILES": "CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4O)C=C2)CC1",
+    "Modification": "Introduce a hydroxyl group",
+    "Docking Score": -7.5,
+    "SA Score": 2.05,
+    "QED Score": 0.64,
+    "Molecular Weight": 421.93,
+    "Validity": "Valid"
+  },
+  {
+    "Iteration": 9,
+    "SMILES": "CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4C#N)C=C2)CC1",
+    "Modification": "Introduce a cyano group",
+    "Docking Score": -7.5,
+    "SA Score": 2.13,
+    "QED Score": 0.64,
+    "Molecular Weight": 430.94,
+    "Validity": "Valid"
+  },
+  {
+    "Iteration": 10,
+    "SMILES": "CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4[N+](=O)[O-])C=C2)CC1",
+    "Modification": "Introduce a nitro group",
+    "Docking Score": -7.7,
+    "SA Score": 2.15,
+    "QED Score": 0.44,
+    "Molecular Weight": 450.93,
+    "Validity": "Valid"
+  },
+  {
+    "Iteration": 11,
+    "SMILES": "CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CN=C4)C=C2)CC1",
+    "Modification": "Introduce a pyridine ring",
+    "Docking Score": -8.0,
+    "SA Score": 2.04,
+    "QED Score": 0.70,
+    "Molecular Weight": 406.92,
+    "Validity": "Valid"
+  },
+  {
+    "Iteration": 12,
+    "SMILES": "CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC1OC1=CC=C4)C=C2)CC1",
+    "Modification": "Introduce a methylenedioxy group",
+    "Docking Score": 0,
+    "SA Score": 5.33,
+    "QED Score": 0.73,
+    "Molecular Weight": 433.94,
+    "Validity": "Invalid"
+  },
+  {
+    "Iteration": 13,
+    "SMILES": "CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4OC(F)(F)F)C=C2)CC1",
+    "Modification": "Introduce a trifluoromethoxy group",
+    "Docking Score": -7.7,
+    "SA Score": 2.24,
+    "QED Score": 0.48,
+    "Molecular Weight": 489.93,
+    "Validity": "Valid"
+  },
+  {
+    "Iteration": 14,
+    "SMILES": "CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4N(C)C)C=C2)CC1",
+    "Modification": "Introduce a dimethylamino group",
+    "Docking Score": -7.6,
+    "SA Score": 2.17,
+    "QED Score": 0.59,
+    "Molecular Weight": 449.00,
+    "Validity": "Valid"
+  },
+  {
+    "Iteration": 15,
+    "SMILES": "CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4S(=O)(=O)N)C=C2)CC1",
+    "Modification": "Introduce a sulfonamide group",
+    "Docking Score": -7.1,
+    "SA Score": 2.19,
+    "QED Score": 0.58,
+    "Molecular Weight": 485.01,
+    "Validity": "Valid"
+  },
+  {
+    "Iteration": 16,
+    "SMILES": "CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4C6=CC=CC=C6)C=C2)CC1",
+    "Modification": "Introduce a benzyl group",
+    "Docking Score": -8.9,
+    "SA Score": 2.06,
+    "QED Score": 0.35,
+    "Molecular Weight": 482.03,
+    "Validity": "Valid"
+  },
+  {
+    "Iteration": 17,
+    "SMILES": "CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4C1CC1)C=C2)CC1",
+    "Modification": "Introduce a cyclopropyl group",
+    "Docking Score": 0,
+    "SA Score": 4.29,
+    "QED Score": 0.51,
+    "Molecular Weight": 445.99,
+    "Validity": "Invalid"
+  },
+  {
+    "Iteration": 18,
+    "SMILES": "CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4C(C)(C)C)C=C2)CC1",
+    "Modification": "Introduce a tert-butyl group",
+    "Docking Score": -7.2,
+    "SA Score": 2.18,
+    "QED Score": 0.49,
+    "Molecular Weight": 462.04,
+    "Validity": "Valid"
+  },
+  {
+    "Iteration": 19,
+    "SMILES": "CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4S(=O)(=O)C6=CC=CC=C6)C=C2)CC1",
+    "Modification": "Introduce a phenylsulfonyl group",
+    "Docking Score": -8.2,
+    "SA Score": 2.28,
+    "QED Score": 0.33,
+    "Molecular Weight": 546.09,
+    "Validity": "Valid"
+  }
+]
+```[0m
+
+[1m> Finished chain.[0m
