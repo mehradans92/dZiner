@@ -1,0 +1,21 @@
+Iteration,SMILES,Modification,Docking Score,SA Score,QED Score,Molecular Weight,Validity
+0,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C([N+]([O-])=O)C=C2)CC1,Initial SMILES,-6.7,1.97,0.66,374.83,Valid
+1,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C([N+]([O-])=O)C=C2)CC1C4=CC=CC=C4,Added a phenyl group to the nitrogen of the piperazine ring to enhance hydrophobic interactions.,-7.9,2.67,0.44,450.93,Valid
+2,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(NCCCC(N)=O)C=C2)CC1C4=CC=CC=C4,Replaced the nitro group with a 4-aminobutanamido group to enhance binding affinity.,-8.4,2.83,0.36,506.05,Valid
+3,CN(CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(NCCCC(N)=O)C=C2)CC)C4=CC=CC=C4,Replaced the piperazine ring with an ethylenediamine linker to optimize binding properties.,-7.4,2.47,0.28,508.07,Valid
+4,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(NCCCC(N)=O)C=C2)CC1C4=CC5=CC=CC=C5C=C4,Replaced the phenyl group with a naphthalene group to enhance hydrophobic interactions.,-9.3,2.98,0.22,556.11,Valid
+5,CN1CCN(C2=C(NC(C3=CC=CC=C3F)=O)C=C(NCCCC(N)=O)C=C2)CC1C4=CC5=CC=CC=C5C=C4,Replaced the chlorine atom with a fluorine atom on the benzene ring to modify solvent-exposed region.,-8.7,2.99,0.25,539.66,Valid
+6,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(NCCCC(N)=O)C=C2)CC1C4=CC5=CC=CC=C5CCC4,Replaced the ethylenediamine linker with a propylamine linker to enhance binding properties.,-9.0,3.25,0.28,572.15,Valid
+7,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(NCCCC(N)=O)C=C2)CC1C4=CC5=CC=CS5C=C4,Replaced the phenyl group with a thiophene group to enhance hydrophobic interactions.,-8.9,4.27,0.25,564.16,Valid
+8,CN1CCN(C2=C(NC(C3=CC=CC=C3C(F)(F)F)=O)C=C(NCCCC(N)=O)C=C2)CC1C4=CC5=CC=CC=C5C=C4,Replaced the chlorine atom with a trifluoromethyl group on the benzene ring to enhance hydrophobic interactions.,-8.8,3.15,0.2,589.66,Valid
+9,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(NCCCC(N)=O)C=C2)CC1C4=CC5=CC=CN5C=C4,Replaced the phenyl group with a pyridine ring to enhance hydrophobic interactions.,-9.2,3.31,0.26,545.09,Valid
+10,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(NCCCC(N)=O)C=C2)CC1C4=CC5=CCOCO5C=C4,Replaced the phenyl group with a benzodioxole ring to enhance hydrophobic interactions.,0.0,0.0,0.0,0.0,Invalid
+11,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(NCCCC(N)=O)C=C2)CC1C4=CC5=CC=CS5C=C4,Replaced the phenyl group with a benzothiazole ring to enhance hydrophobic interactions.,-8.9,4.27,0.25,564.16,Valid
+12,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(NCCCC(N)=O)C=C2)CC1C4=CC5=CC=CO5C=C4,Replaced the phenyl group with a benzofuran ring to enhance hydrophobic interactions.,0.0,0.0,0.0,0.0,Invalid
+13,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(NCCCC(N)=O)C=C2)CC1C4=CC5=CC=NO5C=C4,Replaced the phenyl group with a benzoxazole ring to enhance hydrophobic interactions.,0.0,0.0,0.0,0.0,Invalid
+14,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(NCCCC(N)=O)C=C2)CC1C4=CC5=CC=NO5C=C4,Replaced the phenyl group with a benzoxazole ring to enhance hydrophobic interactions.,0.0,0.0,0.0,0.0,Invalid
+15,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(NCCCC(N)=O)C=C2)CC1C4=CC5=NNN=C5C=C4,Replaced the phenyl group with a benzotriazole ring to enhance hydrophobic interactions.,-8.6,3.21,0.23,547.06,Valid
+16,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(NCCCC(N)=O)C=C2)CC1C4=CC5=CC=CS5C=C4,Replaced the phenyl group with a benzothiazole ring to enhance hydrophobic interactions.,-8.9,4.27,0.25,564.16,Valid
+17,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(NCCCC(N)=O)C=C2)CC1C4=CC5=CC=CC=C5S4,Replaced the phenyl group with a benzothiophene ring to enhance hydrophobic interactions.,-8.8,3.14,0.22,562.14,Valid
+18,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(NCCCC(N)=O)C=C2)CC1C4=CC5=CCOCO5C=C4,Replaced the phenyl group with a benzodioxole ring to enhance hydrophobic interactions.,0.0,0.0,0.0,0.0,Invalid
+19,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(NCCCC(N)=O)C=C2)CC1C4=CC5=CCOCC5C=C4,Replaced the phenyl group with a benzodioxane ring to enhance hydrophobic interactions.,-8.6,3.94,0.39,562.11,Valid

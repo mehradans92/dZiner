@@ -1,0 +1,21 @@
+Iteration,SMILES,Modification,Docking Score,SA Score,QED Score,Molecular Weight,Validity
+0,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C([N+]([O-])=O)C=C2)CC1,Initial molecule,-6.7,1.97,0.66,374.83,Valid
+1,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4)C=C2)CC1,Replaced nitro group with phenyl group to enhance hydrophobic interactions.,-8.3,1.88,0.66,405.93,Valid
+2,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4C(=O)NCCCCN)C=C2)CC1,Added 4-aminobutanamido group to a solvent-exposed region.,-7.6,2.28,0.36,520.08,Valid
+3,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4C(=O)NCCN)C=C2)CC1,Replaced 4-aminobutanamido group with a shorter linker (NCCN).,-7.8,2.23,0.47,492.02,Valid
+4,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4C5=CC=CC=C5)C=C2)CC1,Introduced an additional aromatic ring (C5=CC=CC=C5) to enhance hydrophobic interactions.,-8.9,2.06,0.35,482.03,Valid
+5,CN1CCN(C2=C(NC(C3=CC=CC=C3F)=O)C=C(C4=CC=CC=C4C5=CC=CC=C5)C=C2)CC1,Replaced chlorine atom with fluorine to enhance binding affinity through halogen bonding.,-9.0,2.07,0.38,465.57,Valid
+6,CN1CCN(C2=C(NC(C3=CC=CC=C3F)=O)C=C(C4=CC=CC=C4OC5=CC=CC=C5)C=C2)CC1,Introduced a methoxy group (OC5=CC=CC=C5) to enhance hydrogen bonding interactions.,-8.2,2.15,0.35,481.57,Valid
+7,CN1CCN(C2=C(NC(C3=CC=CC=C3F)=O)C=C(C4=CC=CC=C4OH)C=C2)CC1,Replaced methoxy group with hydroxyl group (OH) to enhance hydrogen bonding interactions.,0.0,0.0,0.0,0.0,Invalid
+8,CN1CCN(C2=C(NC(C3=CC=CC=C3F)=O)C=C(C4=CC=CC=C4C(F)(F)F)C=C2)CC1,Introduced trifluoromethyl group (C(F)(F)F) to enhance hydrophobic interactions.,-8.0,2.19,0.52,457.47,Valid
+9,CN1CCN(C2=C(NC(C3=CC=CC=C3F)=O)C=C(C4=CC=CC=C4C#N)C=C2)CC1,Introduced cyano group (C#N) to enhance hydrogen bonding interactions.,-7.5,2.15,0.69,414.48,Valid
+10,CN1CCN(C2=C(NC(C3=CC=CC=C3F)=O)C=C(C4=CC=CC=C4C)C=C2)CC1,Introduced methyl group (C) to enhance hydrophobic interactions.,-8.2,1.99,0.68,403.5,Valid
+11,CN1CCN(C2=C(NC(C3=CC=CC=C3F)=O)C=C(C4=CC=CC=C4CC)C=C2)CC1,Introduced ethyl group (CC) to enhance hydrophobic interactions.,-8.2,2.07,0.63,417.53,Valid
+12,CN1CCN(C2=C(NC(C3=CC=CC=C3F)=O)C=C(C4=CC=CC=C4OCCO)C=C2)CC1,Introduced methylenedioxy group (OCCO) to enhance hydrogen bonding interactions.,-7.7,2.17,0.57,449.53,Valid
+13,CN1CCN(C2=C(NC(C3=CC=CC=C3F)=O)C=C(C4=CC=NC=C4)C=C2)CC1,Introduced pyridine ring (C4=CC=NC=C4) to enhance hydrogen bonding interactions.,-8.5,2.06,0.73,390.46,Valid
+14,CN1CCN(C2=C(NC(C3=CC=CC=C3F)=O)C=C(C4=CC=NC=C4C(F)(F)F)C=C2)CC1,Introduced trifluoromethyl group (C(F)(F)F) to enhance hydrophobic interactions.,-7.9,2.38,0.56,458.46,Valid
+15,CN1CCN(C2=C(NC(C3=CC=CC=C3F)=O)C=C(C4=CC=NC=C4OH)C=C2)CC1,Introduced hydroxyl group (OH) to enhance hydrogen bonding interactions.,0.0,0.0,0.0,0.0,Invalid
+16,CN1CCN(C2=C(NC(C3=CC=CC=C3F)=O)C=C(C4=CC=NC=C4OCH3)C=C2)CC1,Introduced methoxy group (OCH3) to enhance hydrogen bonding interactions.,0.0,0.0,0.0,0.0,Invalid
+17,CN1CCN(C2=C(NC(C3=CC=CC=C3F)=O)C=C(C4=CC=NC=C4C)C=C2)CC1,Introduced methyl group (C) to pyridine ring to enhance hydrophobic interactions.,-7.9,2.19,0.71,404.49,Valid
+18,CN1CCN(C2=C(NC(C3=CC=CC=C3F)=O)C=C(C4=CC=NC=C4[N+]([O-])=O)C=C2)CC1,Introduced nitro group (N+([O-])=O) to pyridine ring to enhance hydrogen bonding interactions.,-7.5,2.35,0.48,435.46,Valid
+19,CN1CCN(C2=C(NC(C3=CC=CC=C3F)=O)C=C(C4=CC=NC=C4C(=O)O)C=C2)CC1,Introduced carboxyl group (C(=O)O) to pyridine ring to enhance hydrogen bonding interactions.,-7.5,2.26,0.64,434.47,Valid
