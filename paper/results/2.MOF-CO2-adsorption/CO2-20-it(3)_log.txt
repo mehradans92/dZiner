@@ -1,0 +1,515 @@
+
+
+[1m> Entering new AgentExecutor chain...[0m
+[32;1m[1;3mThought: To begin, I need to research design guidelines for organic linkers with higher CO2 adsorption. This will help me understand the structural features that enhance CO2 adsorption.
+
+Action: lookup_papers
+Action Input: Design guidelines for organic linkers with higher CO2 adsorption.[0m
+Observation: [36;1m[1;3mTo design organic linkers that adsorb CO2 better, the following guidelines can be considered:
+
+1. **Functional Group Introduction**: Introducing functional groups such as -OSO3H, -NO2, -OH, -NH2, and other polar groups like -N=C(R)-, -N=N- can significantly enhance CO2 adsorption due to their ability to interact strongly with CO2 molecules.
+
+2. **Pore Size Optimization**: Adjusting the pore size and window to match the kinetic diameter of CO2 can improve selective adsorption. This involves precise engineering of the pore structures to enhance the interaction potential between the adsorbent and CO2.
+
+3. **Acidity-Basicity Balance**: Since CO2 is an acidic gas, designing MOFs with appropriate acidity-basicity properties can prevent structural ruptures and ensure stability. This can be achieved by doping with metals or modifying the organic linkers to balance the acidity.
+
+4. **Stability Under Moist Conditions**: Functional groups that improve water stability should be considered, as flue gas often contains water vapor which can affect CO2 uptake.
+
+5. **Pre-synthetic and Post-synthetic Modifications**: Modifying the organic linkers either before or after MOF synthesis can enhance CO2 capture efficiency. This includes changing the organic linker or adding functional groups that improve CO2 interaction.
+
+Reference:
+- Title: "Advanced Strategies in Metal-Organic Frameworks for CO2 Capture and Separation"
+- DOI: 10.1002/tcr.202100230
+- Journal: The Chemical Record, 2022 To enhance CO2 adsorption in metal-organic frameworks (MOFs) through modifications to the organic linker, several design guidelines can be followed:
+
+1. **Incorporation of Polar Functional Groups**: Adding polar functionalities such as aromatic amines can increase the interaction between the linker and CO2 molecules. For example, the use of 2-aminoterephthalate in CAU-1 enhances CO2 uptake due to the polar nature of the amine group.
+
+2. **Heteroatomic Functionalization**: Introducing heteroatoms like nitrogen into the linker can create additional sites for CO2 interaction. For instance, using linkers like 5-bis(5-tetrazolo)-3-oxapentane (btz) where non-coordinating nitrogen atoms are present can improve CO2 capture.
+
+3. **Grafting Alkylamines**: Tethering alkylamines (primary, secondary, or tertiary) to the linker can significantly enhance CO2 adsorption through chemisorption. An example is the use of N,N-dimethylethylenediamine (mmen) in mmen-Mg-IRMOF-74-II, which shows high CO2 uptake and selectivity.
+
+4. **Defect Engineering**: Creating defects within the MOF structure can increase the number of active sites for CO2 adsorption. Missing linker defects, for example, have been shown to increase CO2 uptake capacity.
+
+5. **Hydrophobicity and Pore Metrics**: Adjusting the hydrophobicity and pore size of the MOF can help in selectively capturing CO2 in the presence of water. Hydrophobic frameworks like ZIF-301 are designed to exclude water while capturing CO2.
+
+These guidelines are summarized from the review article titled "The chemistry and applications of metal-organic frameworks" published in *Science* in 2013 (DOI: 10.1126/science.1230444).
+
+For more detailed information, refer to:
+- Title: "The chemistry and applications of metal-organic frameworks"
+- DOI: 10.1126/science.1230444
+- Journal: *Science*
+- Year: 2013 To design an organic linker that adsorbs CO₂ better, the following guidelines can be considered:
+
+1. **Increase the Density of Open Metal Sites**: By using smaller ligands, the density of open metal sites can be increased, which enhances the interaction between CO₂ molecules and the framework.
+2. **Use of Aliphatic Ligands**: Aliphatic ligands, which are generally cheaper and smaller than aromatic ligands, can be used to reduce the overall cost and increase the density of open metal sites.
+3. **Functional Groups**: Introducing functional groups that can interact strongly with CO₂, such as hydroxyl groups, can improve CO₂ adsorption.
+4. **Pore Size and Geometry**: Designing the framework with optimal pore size and geometry that matches the kinetic diameter of CO₂ can enhance adsorption capacity.
+5. **Metal Selection**: The choice of metal can influence the binding energy and interaction strength with CO₂. Metals that form stronger bonds with CO₂ should be preferred.
+
+These guidelines are based on the study titled "Rational Design of a Low-Cost, High-Performance Metal−Organic Framework for Hydrogen Storage and Carbon Capture," published in *The Journal of Physical Chemistry C* in 2017. The DOI for this paper is 10.1021/acs.jpcc.6b10363. To design organic linkers that adsorb CO₂ more effectively, the following guidelines can be considered:
+
+1. **Metal Decoration**: Decorating the linkers with metals such as lithium (Li) can significantly enhance the binding strength of CO₂ due to increased electrostatic interactions and polarization energy components.
+
+2. **Functionalization with Fluorine and Chlorine**: Incorporating fluorinated and chlorinated functional groups into the linkers can improve CO₂ adsorption by increasing the electrostatic interactions and the quadrupole moment of CO₂.
+
+3. **Hydrophobic Nature**: Designing hydrophobic linkers can help in CO₂ capture in humid environments by minimizing competitive water adsorption.
+
+4. **Surface Area and Pore Volume**: Increasing the length of the organic linkers can result in a higher surface area and pore volume, which enhances gas adsorption. However, this must be balanced with maintaining the stability of the MOFs.
+
+5. **Thermal and Chemical Stability**: Selecting linkers that contribute to the overall thermal and chemical stability of the MOFs is crucial for practical applications, especially in harsh conditions.
+
+These guidelines are based on the findings from the paper titled "Designing organic bridging linkers of metal–organic frameworks for enhanced carbon dioxide adsorption," published in the New Journal of Chemistry, 2024, DOI: 10.1039/d4nj01197j.[0m
+Thought:[32;1m[1;3mBased on the design guidelines, I will now evaluate the initial SMILES for its CO2 adsorption and validity.
+
+Action: check_validity
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N[0m
+Observation: [33;1m[1;3m('Valid SMILES', 3.3603779392727047, 391.38700000000017, 'Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N')[0m
+Thought:[32;1m[1;3mThe initial SMILES is valid, with a synthetic accessibility (SA) score of 3.36 and a molecular weight of 391.39. Next, I will predict its CO2 adsorption.
+
+Action: predict_CO2_adsoprtion
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N[0m
+Observation: [38;5;200m[1;3m(1.036, 0.08)[0m
+Thought:[32;1m[1;3mThe initial SMILES has a CO2 adsorption value of 1.036 with a standard deviation of 0.08. Based on the design guidelines, I will now make modifications to the molecule to enhance its CO2 adsorption.
+
+### Iteration 1:
+**Modification**: Introduce a hydroxyl group (-OH) to the aromatic ring to increase polarity and interaction with CO2.
+
+Action: Modify SMILES
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N to Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(O)[0m
+Observation: Modify SMILES is not a valid tool, try one of [lookup_papers, check_validity, predict_CO2_adsoprtion].
+Thought:[32;1m[1;3mI need to manually modify the SMILES string to introduce a hydroxyl group (-OH) to the aromatic ring. Let's proceed with this modification.
+
+Action: Modify SMILES
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N to Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(O)[0m
+Observation: Modify SMILES is not a valid tool, try one of [lookup_papers, check_validity, predict_CO2_adsoprtion].
+Thought:[32;1m[1;3mIt seems I made an error in the tool usage. I need to manually modify the SMILES string and then check its validity and predict its CO2 adsorption.
+
+### Iteration 1:
+**Modification**: Introduce a hydroxyl group (-OH) to the aromatic ring to increase polarity and interaction with CO2.
+
+Action: check_validity
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(O)[0m
+Observation: [33;1m[1;3m('Valid SMILES', 3.5001389900031485, 407.38600000000014, 'Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(O)')[0m
+Thought:[32;1m[1;3mThe modified SMILES is valid with a synthetic accessibility (SA) score of 3.50 and a molecular weight of 407.39. Next, I will predict its CO2 adsorption.
+
+Action: predict_CO2_adsoprtion
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(O)[0m
+Observation: [38;5;200m[1;3m(0.997, 0.088)[0m
+Thought:[32;1m[1;3mThe modified SMILES has a CO2 adsorption value of 0.997 with a standard deviation of 0.088, which is lower than the initial value. I will revert to the initial SMILES and try another modification.
+
+### Iteration 2:
+**Modification**: Introduce an amino group (-NH2) to the aromatic ring to increase polarity and interaction with CO2.
+
+Action: check_validity
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(N)[0m
+Observation: [33;1m[1;3m('Valid SMILES', 3.457181725045883, 406.40200000000016, 'Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(N)')[0m
+Thought:[32;1m[1;3mThe modified SMILES is valid with a synthetic accessibility (SA) score of 3.46 and a molecular weight of 406.40. Next, I will predict its CO2 adsorption.
+
+Action: predict_CO2_adsoprtion
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(N)[0m
+Observation: [38;5;200m[1;3m(0.984, 0.062)[0m
+Thought:[32;1m[1;3mThe modified SMILES has a CO2 adsorption value of 0.984 with a standard deviation of 0.062, which is still lower than the initial value. I will revert to the initial SMILES and try another modification.
+
+### Iteration 3:
+**Modification**: Introduce a nitro group (-NO2) to the aromatic ring to increase polarity and interaction with CO2.
+
+Action: check_validity
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(N(=O)=O)[0m
+Observation: [33;1m[1;3m('Valid SMILES', 3.6061234597483525, 436.3840000000002, 'Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(N(=O)=O)')[0m
+Thought:[32;1m[1;3mThe modified SMILES is valid with a synthetic accessibility (SA) score of 3.61 and a molecular weight of 436.38. Next, I will predict its CO2 adsorption.
+
+Action: predict_CO2_adsoprtion
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(N(=O)=O)[0m
+Observation: [38;5;200m[1;3m(0.909, 0.09)[0m
+Thought:[32;1m[1;3mThe modified SMILES has a CO2 adsorption value of 0.909 with a standard deviation of 0.09, which is still lower than the initial value. I will revert to the initial SMILES and try another modification.
+
+### Iteration 4:
+**Modification**: Introduce a sulfonic acid group (-SO3H) to the aromatic ring to increase polarity and interaction with CO2.
+
+Action: check_validity
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(S(=O)(=O)O)[0m
+Observation: [33;1m[1;3m('Valid SMILES', 3.4893013600834344, 471.4510000000002, 'Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(S(=O)(=O)O)')[0m
+Thought:[32;1m[1;3mThe modified SMILES is valid with a synthetic accessibility (SA) score of 3.49 and a molecular weight of 471.45. Next, I will predict its CO2 adsorption.
+
+Action: predict_CO2_adsoprtion
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(S(=O)(=O)O)[0m
+Observation: [38;5;200m[1;3m(0.898, 0.08)[0m
+Thought:[32;1m[1;3mThe modified SMILES has a CO2 adsorption value of 0.898 with a standard deviation of 0.08, which is still lower than the initial value. I will revert to the initial SMILES and try another modification.
+
+### Iteration 5:
+**Modification**: Introduce a carboxyl group (-COOH) to the aromatic ring to increase polarity and interaction with CO2.
+
+Action: check_validity
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C(=O)O)[0m
+Observation: [33;1m[1;3m('Valid SMILES', 3.3713554812152573, 435.3960000000002, 'Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C(=O)O)')[0m
+Thought:[32;1m[1;3mThe modified SMILES is valid with a synthetic accessibility (SA) score of 3.37 and a molecular weight of 435.40. Next, I will predict its CO2 adsorption.
+
+Action: predict_CO2_adsoprtion
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C(=O)O)[0m
+Observation: [38;5;200m[1;3m(0.97, 0.097)[0m
+Thought:[32;1m[1;3mThe modified SMILES has a CO2 adsorption value of 0.97 with a standard deviation of 0.097, which is still lower than the initial value. I will revert to the initial SMILES and try another modification.
+
+### Iteration 6:
+**Modification**: Introduce a fluorine atom to the aromatic ring to increase polarity and interaction with CO2.
+
+Action: check_validity
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(F)[0m
+Observation: [33;1m[1;3m('Valid SMILES', 3.591390272054431, 409.3770000000001, 'Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(F)')[0m
+Thought:[32;1m[1;3mThe modified SMILES is valid with a synthetic accessibility (SA) score of 3.59 and a molecular weight of 409.38. Next, I will predict its CO2 adsorption.
+
+Action: predict_CO2_adsoprtion
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(F)[0m
+Observation: [38;5;200m[1;3m(1.522, 0.3)[0m
+Thought:[32;1m[1;3mThe modified SMILES with a fluorine atom has a CO2 adsorption value of 1.522 with a standard deviation of 0.3, which is significantly higher than the initial value. I will continue making modifications to further optimize CO2 adsorption.
+
+### Iteration 7:
+**Modification**: Introduce a chlorine atom to the aromatic ring to increase polarity and interaction with CO2.
+
+Action: check_validity
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(Cl)[0m
+Observation: [33;1m[1;3m('Valid SMILES', 3.6027509558151145, 425.8320000000001, 'Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(Cl)')[0m
+Thought:[32;1m[1;3mThe modified SMILES is valid with a synthetic accessibility (SA) score of 3.60 and a molecular weight of 425.83. Next, I will predict its CO2 adsorption.
+
+Action: predict_CO2_adsoprtion
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(Cl)[0m
+Observation: [38;5;200m[1;3m(1.176, 0.097)[0m
+Thought:[32;1m[1;3mThe modified SMILES with a chlorine atom has a CO2 adsorption value of 1.176 with a standard deviation of 0.097, which is higher than the initial value but lower than the fluorine modification. I will continue making modifications to further optimize CO2 adsorption.
+
+### Iteration 8:
+**Modification**: Introduce an alkylamine group (-NHCH3) to the aromatic ring to increase interaction with CO2.
+
+Action: check_validity
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)N[0m
+Observation: [33;1m[1;3m('Valid SMILES', 3.5949050011000807, 420.4290000000002, 'Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)N')[0m
+Thought:[32;1m[1;3mThe modified SMILES is valid with a synthetic accessibility (SA) score of 3.59 and a molecular weight of 420.43. Next, I will predict its CO2 adsorption.
+
+Action: predict_CO2_adsoprtion
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)N[0m
+Observation: [38;5;200m[1;3m(1.0, 0.064)[0m
+Thought:[32;1m[1;3mThe modified SMILES with an alkylamine group has a CO2 adsorption value of 1.0 with a standard deviation of 0.064, which is not higher than the fluorine modification. I will continue making modifications to further optimize CO2 adsorption.
+
+### Iteration 9:
+**Modification**: Introduce a trifluoromethyl group (-CF3) to the aromatic ring to increase polarity and interaction with CO2.
+
+Action: check_validity
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C(F)(F)F)[0m
+Observation: [33;1m[1;3m('Valid SMILES', 3.5820501363072115, 459.3840000000001, 'Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C(F)(F)F)')[0m
+Thought:[32;1m[1;3mThe modified SMILES is valid with a synthetic accessibility (SA) score of 3.58 and a molecular weight of 459.38. Next, I will predict its CO2 adsorption.
+
+Action: predict_CO2_adsoprtion
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C(F)(F)F)[0m
+Observation: [38;5;200m[1;3m(1.819, 0.267)[0m
+Thought:[32;1m[1;3mThe modified SMILES with a trifluoromethyl group has a CO2 adsorption value of 1.819 with a standard deviation of 0.267, which is significantly higher than the initial value and the fluorine modification. I will continue making modifications to further optimize CO2 adsorption.
+
+### Iteration 10:
+**Modification**: Introduce a cyano group (-CN) to the aromatic ring to increase polarity and interaction with CO2.
+
+Action: check_validity
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C#N)[0m
+Observation: [33;1m[1;3m('Valid SMILES', 3.6000476596463535, 416.39700000000016, 'Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C#N)')[0m
+Thought:[32;1m[1;3mThe modified SMILES is valid with a synthetic accessibility (SA) score of 3.60 and a molecular weight of 416.40. Next, I will predict its CO2 adsorption.
+
+Action: predict_CO2_adsoprtion
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C#N)[0m
+Observation: [38;5;200m[1;3m(0.877, 0.034)[0m
+Thought:[32;1m[1;3mThe modified SMILES with a cyano group has a CO2 adsorption value of 0.877 with a standard deviation of 0.034, which is lower than the initial value. I will revert to the previous best modification (trifluoromethyl group) and continue making further modifications.
+
+### Iteration 11:
+**Modification**: Introduce a methoxy group (-OCH3) to the aromatic ring to increase polarity and interaction with CO2.
+
+Action: check_validity
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(OCH3)[0m
+Observation: [33;1m[1;3m('Invalid SMILES', 0, 0, 'Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(OCH3)')[0m
+Thought:[32;1m[1;3mThe modified SMILES with a methoxy group is invalid. I will revert to the previous best modification (trifluoromethyl group) and continue making further modifications.
+
+### Iteration 12:
+**Modification**: Introduce a hydroxyl group (-OH) to the aromatic ring to increase polarity and interaction with CO2.
+
+Action: check_validity
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(OH)[0m
+Observation: [33;1m[1;3m('Invalid SMILES', 0, 0, 'Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(OH)')[0m
+Thought:[32;1m[1;3mThe modified SMILES with a hydroxyl group is invalid. I will revert to the previous best modification (trifluoromethyl group) and continue making further modifications.
+
+### Iteration 13:
+**Modification**: Introduce a methyl group (-CH3) to the aromatic ring to increase interaction with CO2.
+
+Action: check_validity
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)[0m
+Observation: [33;1m[1;3m('Valid SMILES', 3.399612494276653, 405.41400000000016, 'Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)')[0m
+Thought:[32;1m[1;3mThe modified SMILES is valid with a synthetic accessibility (SA) score of 3.40 and a molecular weight of 405.41. Next, I will predict its CO2 adsorption.
+
+Action: predict_CO2_adsoprtion
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)[0m
+Observation: [38;5;200m[1;3m(1.056, 0.075)[0m
+Thought:[32;1m[1;3mThe modified SMILES with a methyl group has a CO2 adsorption value of 1.056 with a standard deviation of 0.075, which is higher than the initial value but lower than the trifluoromethyl modification. I will continue making modifications to further optimize CO2 adsorption.
+
+### Iteration 14:
+**Modification**: Introduce a phenyl group to the aromatic ring to increase interaction with CO2.
+
+Action: check_validity
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(c1ccccc1)[0m
+Observation: [33;1m[1;3m('Valid SMILES', 3.2008805972857592, 467.4850000000002, 'Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(c1ccccc1)')[0m
+Thought:[32;1m[1;3mThe modified SMILES is valid with a synthetic accessibility (SA) score of 3.20 and a molecular weight of 467.49. Next, I will predict its CO2 adsorption.
+
+Action: predict_CO2_adsoprtion
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(c1ccccc1)[0m
+Observation: [38;5;200m[1;3m(0.993, 0.068)[0m
+Thought:[32;1m[1;3mThe modified SMILES with a phenyl group has a CO2 adsorption value of 0.993 with a standard deviation of 0.068, which is lower than the initial value. I will revert to the previous best modification (trifluoromethyl group) and continue making further modifications.
+
+### Iteration 15:
+**Modification**: Introduce a pyridine ring to the aromatic ring to increase interaction with CO2.
+
+Action: check_validity
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(c1ncccc1)[0m
+Observation: [33;1m[1;3m('Valid SMILES', 3.3403056567623652, 468.4730000000002, 'Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(c1ncccc1)')[0m
+Thought:[32;1m[1;3mThe modified SMILES is valid with a synthetic accessibility (SA) score of 3.34 and a molecular weight of 468.47. Next, I will predict its CO2 adsorption.
+
+Action: predict_CO2_adsoprtion
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(c1ncccc1)[0m
+Observation: [38;5;200m[1;3m(0.926, 0.059)[0m
+Thought:[32;1m[1;3mThe modified SMILES with a pyridine ring has a CO2 adsorption value of 0.926 with a standard deviation of 0.059, which is lower than the initial value. I will revert to the previous best modification (trifluoromethyl group) and continue making further modifications.
+
+### Iteration 16:
+**Modification**: Introduce a benzyl group to the aromatic ring to increase interaction with CO2.
+
+Action: check_validity
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(c1ccccc1C)[0m
+Observation: [33;1m[1;3m('Valid SMILES', 3.2501613052674987, 481.5120000000002, 'Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(c1ccccc1C)')[0m
+Thought:[32;1m[1;3mThe modified SMILES is valid with a synthetic accessibility (SA) score of 3.25 and a molecular weight of 481.51. Next, I will predict its CO2 adsorption.
+
+Action: predict_CO2_adsoprtion
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(c1ccccc1C)[0m
+Observation: [38;5;200m[1;3m(1.011, 0.065)[0m
+Thought:[32;1m[1;3mThe modified SMILES with a benzyl group has a CO2 adsorption value of 1.011 with a standard deviation of 0.065, which is higher than the initial value but lower than the trifluoromethyl modification. I will continue making modifications to further optimize CO2 adsorption.
+
+### Iteration 17:
+**Modification**: Introduce an ethyl group (-CH2CH3) to the aromatic ring to increase interaction with CO2.
+
+Action: check_validity
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C(C)C)[0m
+Observation: [33;1m[1;3m('Valid SMILES', 3.403468898031, 433.4680000000002, 'Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C(C)C)')[0m
+Thought:[32;1m[1;3mThe modified SMILES is valid with a synthetic accessibility (SA) score of 3.40 and a molecular weight of 433.47. Next, I will predict its CO2 adsorption.
+
+Action: predict_CO2_adsoprtion
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C(C)C)[0m
+Observation: [38;5;200m[1;3m(1.092, 0.07)[0m
+Thought:[32;1m[1;3mThe modified SMILES with an ethyl group has a CO2 adsorption value of 1.092 with a standard deviation of 0.07, which is higher than the initial value but lower than the trifluoromethyl modification. I will continue making modifications to further optimize CO2 adsorption.
+
+### Iteration 18:
+**Modification**: Introduce a propyl group (-CH2CH2CH3) to the aromatic ring to increase interaction with CO2.
+
+Action: check_validity
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C(C)CC)[0m
+Observation: [33;1m[1;3m('Valid SMILES', 3.8281814542604344, 447.49500000000023, 'Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C(C)CC)')[0m
+Thought:[32;1m[1;3mThe modified SMILES is valid with a synthetic accessibility (SA) score of 3.83 and a molecular weight of 447.50. Next, I will predict its CO2 adsorption.
+
+Action: predict_CO2_adsoprtion
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C(C)CC)[0m
+Observation: [38;5;200m[1;3m(1.109, 0.071)[0m
+Thought:[32;1m[1;3mThe modified SMILES with a propyl group has a CO2 adsorption value of 1.109 with a standard deviation of 0.071, which is higher than the initial value but still lower than the trifluoromethyl modification. I will continue making modifications to further optimize CO2 adsorption.
+
+### Iteration 19:
+**Modification**: Introduce a butyl group (-CH2CH2CH2CH3) to the aromatic ring to increase interaction with CO2.
+
+Action: check_validity
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C(C)CCC)[0m
+Observation: [33;1m[1;3m('Valid SMILES', 3.8329768054828435, 461.5220000000003, 'Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C(C)CCC)')[0m
+Thought:[32;1m[1;3mThe modified SMILES is valid with a synthetic accessibility (SA) score of 3.83 and a molecular weight of 461.52. Next, I will predict its CO2 adsorption.
+
+Action: predict_CO2_adsoprtion
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C(C)CCC)[0m
+Observation: [38;5;200m[1;3m(1.126, 0.071)[0m
+Thought:[32;1m[1;3mThe modified SMILES with a butyl group has a CO2 adsorption value of 1.126 with a standard deviation of 0.071, which is higher than the initial value but still lower than the trifluoromethyl modification. I will now document all the changes made and finalize the results.
+
+Final Answer:
+```json
+[
+    {
+        "Iteration": 0,
+        "SMILES": "Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N",
+        "Modification": "Initial SMILES",
+        "CO2 Adsorption": 1.036,
+        "SA Score": 3.36,
+        "Molecular Weight": 391.39,
+        "Validity": "Valid"
+    },
+    {
+        "Iteration": 1,
+        "SMILES": "Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(O)",
+        "Modification": "Introduced a hydroxyl group (-OH) to the aromatic ring.",
+        "CO2 Adsorption": 0.997,
+        "SA Score": 3.50,
+        "Molecular Weight": 407.39,
+        "Validity": "Valid"
+    },
+    {
+        "Iteration": 2,
+        "SMILES": "Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(N)",
+        "Modification": "Introduced an amino group (-NH2) to the aromatic ring.",
+        "CO2 Adsorption": 0.984,
+        "SA Score": 3.46,
+        "Molecular Weight": 406.40,
+        "Validity": "Valid"
+    },
+    {
+        "Iteration": 3,
+        "SMILES": "Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(N(=O)=O)",
+        "Modification": "Introduced a nitro group (-NO2) to the aromatic ring.",
+        "CO2 Adsorption": 0.909,
+        "SA Score": 3.61,
+        "Molecular Weight": 436.38,
+        "Validity": "Valid"
+    },
+    {
+        "Iteration": 4,
+        "SMILES": "Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(S(=O)(=O)O)",
+        "Modification": "Introduced a sulfonic acid group (-SO3H) to the aromatic ring.",
+        "CO2 Adsorption": 0.898,
+        "SA Score": 3.49,
+        "Molecular Weight": 471.45,
+        "Validity": "Valid"
+    },
+    {
+        "Iteration": 5,
+        "SMILES": "Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C(=O)O)",
+        "Modification": "Introduced a carboxyl group (-COOH) to the aromatic ring.",
+        "CO2 Adsorption": 0.97,
+        "SA Score": 3.37,
+        "Molecular Weight": 435.40,
+        "Validity": "Valid"
+    },
+    {
+        "Iteration": 6,
+        "SMILES": "Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(F)",
+        "Modification": "Introduced a fluorine atom to the aromatic ring.",
+        "CO2 Adsorption": 1.522,
+        "SA Score": 3.59,
+        "Molecular Weight": 409.38,
+        "Validity": "Valid"
+    },
+    {
+        "Iteration": 7,
+        "SMILES": "Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(Cl)",
+        "Modification": "Introduced a chlorine atom to the aromatic ring.",
+        "CO2 Adsorption": 1.176,
+        "SA Score": 3.60,
+        "Molecular Weight": 425.83,
+        "Validity": "Valid"
+    },
+    {
+        "Iteration": 8,
+        "SMILES": "Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)N",
+        "Modification": "Introduced an alkylamine group (-NHCH3) to the aromatic ring.",
+        "CO2 Adsorption": 1.0,
+        "SA Score": 3.59,
+        "Molecular Weight": 420.43,
+        "Validity": "Valid"
+    },
+    {
+        "Iteration": 9,
+        "SMILES": "Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C(F)(F)F)",
+        "Modification": "Introduced a trifluoromethyl group (-CF3) to the aromatic ring.",
+        "CO2 Adsorption": 1.819,
+        "SA Score": 3.58,
+        "Molecular Weight": 459.38,
+        "Validity": "Valid"
+    },
+    {
+        "Iteration": 10,
+        "SMILES": "Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C#N)",
+        "Modification": "Introduced a cyano group (-CN) to the aromatic ring.",
+        "CO2 Adsorption": 0.877,
+        "SA Score": 3.60,
+        "Molecular Weight": 416.40,
+        "Validity": "Valid"
+    },
+    {
+        "Iteration": 11,
+        "SMILES": "Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(OCH3)",
+        "Modification": "Introduced a methoxy group (-OCH3) to the aromatic ring.",
+        "CO2 Adsorption": 0,
+        "SA Score": 0,
+        "Molecular Weight": 0,
+        "Validity": "Invalid"
+    },
+    {
+        "Iteration": 12,
+        "SMILES": "Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(OH)",
+        "Modification": "Introduced a hydroxyl group (-OH) to the aromatic ring.",
+        "CO2 Adsorption": 0,
+        "SA Score": 0,
+        "Molecular Weight": 0,
+        "Validity": "Invalid"
+    },
+    {
+        "Iteration": 13,
+        "SMILES": "Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)",
+        "Modification": "Introduced a methyl group (-CH3) to the aromatic ring.",
+        "CO2 Adsorption": 1.056,
+        "SA Score": 3.40,
+        "Molecular Weight": 405.41,
+        "Validity": "Valid"
+    },
+    {
+        "Iteration": 14,
+        "SMILES": "Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(c1ccccc1)",
+        "Modification": "Introduced a phenyl group to the aromatic ring.",
+        "CO2 Adsorption": 0.993,
+        "SA Score": 3.20,
+        "Molecular Weight": 467.49,
+        "Validity": "Valid"
+    },
+    {
+        "Iteration": 15,
+        "SMILES": "Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(c1ncccc1)",
+        "Modification": "Introduced a pyridine ring to the aromatic ring.",
+        "CO2 Adsorption": 0.926,
+        "SA Score": 3.34,
+        "Molecular Weight": 468.47,
+        "Validity": "Valid"
+    },
+    {
+        "Iteration": 16,
+        "SMILES": "Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(c1ccccc1C)",
+        "Modification": "Introduced a benzyl group to the aromatic ring.",
+        "CO2 Adsorption": 1.011,
+        "SA Score": 3.25,
+        "Molecular Weight": 481.51,
+        "Validity": "Valid"
+    },
+    {
+        "Iteration": 17,
+        "SMILES": "Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C(C)C)",
+        "Modification": "Introduced an ethyl group (-CH2CH3) to the aromatic ring.",
+        "CO2 Adsorption": 1.092,
+        "SA Score": 3.40,
+        "Molecular Weight": 433.47,
+        "Validity": "Valid"
+    },
+    {
+        "Iteration": 18,
+        "SMILES": "Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C(C)CC)",
+        "Modification": "Introduced a propyl group (-CH2CH2CH3) to the aromatic ring.",
+        "CO2 Adsorption": 1.109,
+        "SA Score": 3.83,
+        "Molecular Weight": 447.50,
+        "Validity": "Valid"
+    },
+    {
+        "Iteration": 19,
+        "SMILES": "Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C(C)CCC)",
+        "Modification": "Introduced a butyl group (-CH2CH2CH2CH3) to the aromatic ring.",
+        "CO2 Adsorption": 1.126,
+        "SA Score": 3.83,
+        "Molecular Weight": 461.52,
+        "Validity": "Valid"
+    }
+]
+```[0m
+
+[1m> Finished chain.[0m
+Tokens Used: 269175
+	Prompt Tokens: 260580
+	Completion Tokens: 8595
+Successful Requests: 46
+Total Cost (USD): $1.4318250000000001

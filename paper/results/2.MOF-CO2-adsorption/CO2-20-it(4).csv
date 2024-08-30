@@ -1,0 +1,22 @@
+Iteration,SMILES,Modification,CO2 Adsorption,SA Score,Molecular Weight,Validity
+0,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N,Initial SMILES,1.036,3.3603779392727047,391.38700000000017,Valid
+1,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(O),Introduced a hydroxyl group (-OH) to increase polarity and interaction with CO2.,0.997,3.5001389900031485,407.38600000000014,Valid
+2,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(N),Introduced an amine group (-NH2) to increase polarity and interaction with CO2.,0.984,3.457181725045883,406.40200000000016,Valid
+3,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(N(=O)=O),Introduced a nitro group (-NO2) to increase polarity and interaction with CO2.,0.909,3.6061234597483525,436.3840000000002,Valid
+4,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(S(=O)(=O)O),Introduced a sulfonic acid group (-SO3H) to increase polarity and interaction with CO2.,0.898,3.4893013600834344,471.4510000000002,Valid
+5,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C(=O)O),Introduced a carboxyl group (-COOH) to increase polarity and interaction with CO2.,0.97,3.3713554812152573,435.3960000000002,Valid
+6,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(F),Introduced a fluorine atom (-F) to increase polarity and interaction with CO2.,1.522,3.591390272054431,409.3770000000001,Valid
+7,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(Cl),Introduced a chlorine atom (-Cl) to increase polarity and interaction with CO2.,1.176,3.6027509558151145,425.8320000000001,Valid
+8,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C),Introduced a methyl group (-CH3) to increase hydrophobicity and interaction with CO2.,1.056,3.399612494276653,405.41400000000016,Valid
+9,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(CC),Introduced an ethyl group (-C2H5) to increase hydrophobicity and interaction with CO2.,1.074,3.372298209096904,419.4410000000002,Valid
+10,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C(F)(F)F),Introduced a trifluoromethyl group (-CF3) to increase polarity and interaction with CO2.,1.819,3.5820501363072115,459.3840000000001,Valid
+11,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C#N),Introduced a cyano group (-CN) to increase polarity and interaction with CO2.,0.877,3.6000476596463535,416.39700000000016,Valid
+12,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(OCH3),Introduced a methoxy group (-OCH3) to increase polarity and interaction with CO2.,0.0,0.0,0.0,Invalid
+13,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(OC2H5),Introduced an ethoxy group (-OC2H5) to increase polarity and interaction with CO2.,0.0,0.0,0.0,Invalid
+14,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(NO),Introduced a nitroso group (-NO) to increase polarity and interaction with CO2.,0.952,3.650666890415584,422.4010000000001,Valid
+15,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(SH),Introduced a thiol group (-SH) to increase polarity and interaction with CO2.,0.0,0.0,0.0,Invalid
+16,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(S(=O)(=O)N),Introduced a sulfonamide group (-SO2NH2) to increase polarity and interaction with CO2.,0.878,3.4916158705729456,470.4670000000002,Valid
+17,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(S(=O)(=O)C(F)(F)F),Introduced a trifluoromethanesulfonyl group (-SO2CF3) to increase polarity and interaction with CO2.,1.419,3.5374586479248418,523.4490000000002,Valid
+18,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(Cc1ccccc1),Introduced a benzyl group (-CH2C6H5) to increase interaction with CO2.,1.011,3.1902538786940715,481.5120000000002,Valid
+19,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C6H5),Introduced a phenyl group (-C6H5) to increase interaction with CO2.,0.0,0.0,0.0,Invalid
+20,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C(=O)C6H5),Introduced a benzoyl group (-C(O)C6H5) to increase interaction with CO2.,0.0,0.0,0.0,Invalid

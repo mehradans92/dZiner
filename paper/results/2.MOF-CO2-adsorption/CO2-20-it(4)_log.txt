@@ -1,0 +1,698 @@
+
+
+[1m> Entering new AgentExecutor chain...[0m
+[32;1m[1;3mThought: To begin, I need to research design guidelines for organic linkers with higher CO2 adsorption. This will provide a foundation for making informed modifications to the initial SMILES.
+
+Action: lookup_papers(prompt)
+Action Input: Design guidelines for organic linkers with higher CO2 adsorption.[0m
+Observation: lookup_papers(prompt) is not a valid tool, try one of [lookup_papers, check_validity, predict_CO2_adsoprtion].
+Thought:[32;1m[1;3mTo begin, I need to research design guidelines for organic linkers with higher CO2 adsorption. This will provide a foundation for making informed modifications to the initial SMILES.
+
+Action: lookup_papers
+Action Input: Design guidelines for organic linkers with higher CO2 adsorption.[0m
+Observation: [36;1m[1;3mTo enhance the CO2 adsorption capabilities of organic linkers in Metal-Organic Frameworks (MOFs), several design guidelines can be followed:
+
+1. **Functional Group Introduction**: Incorporate functional groups such as -OSO3H, -NO2, -OH, -NH2, and other polar groups like -N=C(R)-, -N=N- into the organic linkers. These groups improve the selective adsorption of CO2 over other gases and enhance the stability of the framework.
+
+2. **Pore Size Optimization**: Design the pore size and shape to match the kinetic diameter of CO2 molecules. This can be achieved by precise pore engineering to maximize adsorption selectivity and capacity.
+
+3. **Acidity-Basicity Balance**: Ensure the MOF structure has an appropriate balance of acidity and basicity to stabilize CO2 within the framework. This helps in preventing structural ruptures and maintaining the integrity of the MOF under acidic conditions.
+
+4. **Doping Strategies**: Explore the use of dopants such as Ni, La, Cd, etc., to create better Lewis sites for CO2 capture. This can enhance the chemical stability and retention of structural integrity.
+
+5. **Pre-synthetic and Post-synthetic Modifications**: Modify the organic linker before or after MOF synthesis to introduce desired functionalities and improve CO2 capture efficiency.
+
+These guidelines are summarized from the paper titled "Advanced Strategies in Metal-Organic Frameworks for CO2 Capture and Separation," published in *The Chemical Record* in 2022. The DOI for this paper is 10.1002/tcr.202100230. To enhance the CO2 adsorption capabilities of the organic linker in metal-organic frameworks (MOFs), several design strategies can be employed:
+
+1. **Incorporation of Polar Functional Groups**: Adding polar functional groups such as aromatic amines can increase the interaction between the linker and CO2 molecules. For example, the use of aromatic amines in CAU-1 has shown to improve CO2 capture.
+
+2. **Heteroatomic Functionalization**: Introducing heteroatoms like nitrogen into the linker can create additional sites for CO2 interaction. For instance, using heteroatomic amines in Zn(btz) (btz = 5-bis(5-tetrazolo)-3-oxapentane) enhances CO2 uptake due to the presence of non-coordinating nitrogen atoms.
+
+3. **Grafting Alkylamines**: Tethering alkylamines, either primary, secondary, or tertiary, to the linker can significantly improve CO2 adsorption. This approach has been demonstrated with mmen-Mg-IRMOF-74-II, where N,N-dimethylethylenediamine (mmen) is grafted onto the linker, resulting in higher CO2 uptake.
+
+4. **Defect Engineering**: Introducing defects in the MOF structure can create additional active sites for CO2 adsorption. For example, missing linker defects in USTC-253-TFA have been shown to increase CO2 uptake capacity by 167%.
+
+5. **Hydrophobicity and Pore Metrics**: Designing the linker to have hydrophobic properties and optimizing pore metrics can help in selectively capturing CO2 in the presence of water. An example is the hydrophobic ZIF-301, which is effective in CO2 capture under humid conditions.
+
+These strategies are summarized in the review article titled "The chemistry and applications of metal-organic frameworks" by Furukawa et al., published in Science in 2013 (DOI: 10.1126/science.1230444). To design an organic linker that adsorbs CO2 better, the following guidelines can be considered:
+
+1. **Increase the Density of Open Metal Sites**: By using smaller ligands, the density of open metal sites can be increased, which enhances the interaction with CO2 molecules.
+2. **Use of Aliphatic Ligands**: Aliphatic ligands, which are generally cheaper and smaller than aromatic ligands, can be used to reduce the overall cost and increase the density of adsorption sites.
+3. **Functional Groups**: Incorporate functional groups that can form strong interactions with CO2, such as hydroxyl groups, which can enhance the binding energetics.
+4. **Pore Size Optimization**: Design the pore size to be optimal for CO2 adsorption, ensuring that the pores are not too large to avoid dilution of adsorption sites.
+
+These guidelines are based on the findings from the paper titled "Rational Design of a Low-Cost, High-Performance Metal−Organic Framework for Hydrogen Storage and Carbon Capture," published in *The Journal of Physical Chemistry C* in 2017. The DOI for this paper is 10.1021/acs.jpcc.6b10363. To design organic linkers that adsorb CO₂ more effectively, the following guidelines can be considered:
+
+1. **Metal Decoration**: Decorating the linkers with metals such as lithium (Li) can significantly enhance the binding strength due to increased electrostatic interactions and polarization energy components.
+2. **Functionalization**: Introducing functional groups like fluorine (F) and chlorine (Cl) can improve the physisorption behavior of CO₂ on the linkers.
+3. **Surface Area and Pore Volume**: Increasing the length of the organic linkers can result in a higher surface area and pore volume, which enhances gas adsorption. However, this must be balanced with maintaining the stability of the MOFs.
+4. **Hydrophobicity**: Designing hydrophobic linkers can help in CO₂ capture in humid environments by minimizing competitive water adsorption.
+5. **Thermal and Chemical Stability**: Selecting linkers known for their high chemical and thermal stability is crucial for practical applications.
+
+These guidelines are based on the study titled "Designing organic bridging linkers of metal–organic frameworks for enhanced carbon dioxide adsorption," published in the New Journal of Chemistry in 2024. DOI: 10.1039/d4nj01197j.[0m
+Thought:[32;1m[1;3mBased on the design guidelines, I will evaluate the initial SMILES for its CO2 adsorption and validity. Then, I will make modifications to the SMILES string to enhance its CO2 adsorption by incorporating functional groups, optimizing pore size, and considering other strategies mentioned in the guidelines.
+
+Action: check_validity
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N[0m
+Observation: [33;1m[1;3m('Valid SMILES', 3.3603779392727047, 391.38700000000017, 'Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N')[0m
+Thought:[32;1m[1;3mThe initial SMILES string is valid. Next, I will predict its CO2 adsorption to establish a baseline before making any modifications.
+
+Action: predict_CO2_adsoprtion
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N[0m
+Observation: [38;5;200m[1;3m(1.036, 0.08)[0m
+Thought:[32;1m[1;3mThe initial SMILES string is valid and has a CO2 adsorption of 1.036 with a standard deviation of 0.08. Based on the design guidelines, I will now make modifications to the SMILES string to enhance its CO2 adsorption. I will start by introducing polar functional groups and optimizing the structure to increase interaction with CO2 molecules.
+
+### Iteration 1:
+**Modification**: Introduce a hydroxyl group (-OH) to increase polarity and interaction with CO2.
+
+Action: check_validity
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(O)[0m
+Observation: [33;1m[1;3m('Valid SMILES', 3.5001389900031485, 407.38600000000014, 'Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(O)')[0m
+Thought:[32;1m[1;3mThe modified SMILES string is valid. Next, I will predict its CO2 adsorption to see if the introduction of the hydroxyl group has improved the adsorption capacity.
+
+Action: predict_CO2_adsoprtion
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(O)[0m
+Observation: [38;5;200m[1;3m(0.997, 0.088)[0m
+Thought:[32;1m[1;3mThe introduction of the hydroxyl group did not improve the CO2 adsorption, as it decreased slightly. I will revert to the initial SMILES and try another modification.
+
+### Iteration 2:
+**Modification**: Introduce an amine group (-NH2) to increase polarity and interaction with CO2.
+
+Action: check_validity
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(N)[0m
+Observation: [33;1m[1;3m('Valid SMILES', 3.457181725045883, 406.40200000000016, 'Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(N)')[0m
+Thought:[32;1m[1;3mThe modified SMILES string with an amine group is valid. Next, I will predict its CO2 adsorption to see if the introduction of the amine group has improved the adsorption capacity.
+
+Action: predict_CO2_adsoprtion
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(N)[0m
+Observation: [38;5;200m[1;3m(0.984, 0.062)[0m
+Thought:[32;1m[1;3mThe introduction of the amine group also did not improve the CO2 adsorption, as it decreased slightly. I will revert to the initial SMILES and try another modification.
+
+### Iteration 3:
+**Modification**: Introduce a nitro group (-NO2) to increase polarity and interaction with CO2.
+
+Action: check_validity
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(N(=O)=O)[0m
+Observation: [33;1m[1;3m('Valid SMILES', 3.6061234597483525, 436.3840000000002, 'Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(N(=O)=O)')[0m
+Thought:[32;1m[1;3mThe modified SMILES string with a nitro group is valid. Next, I will predict its CO2 adsorption to see if the introduction of the nitro group has improved the adsorption capacity.
+
+Action: predict_CO2_adsoprtion
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(N(=O)=O)[0m
+Observation: [38;5;200m[1;3m(0.909, 0.09)[0m
+Thought:[32;1m[1;3mThe introduction of the nitro group also did not improve the CO2 adsorption, as it decreased. I will revert to the initial SMILES and try another modification.
+
+### Iteration 4:
+**Modification**: Introduce a sulfonic acid group (-SO3H) to increase polarity and interaction with CO2.
+
+Action: check_validity
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(S(=O)(=O)O)[0m
+Observation: [33;1m[1;3m('Valid SMILES', 3.4893013600834344, 471.4510000000002, 'Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(S(=O)(=O)O)')[0m
+Thought:[32;1m[1;3mThe modified SMILES string with a sulfonic acid group is valid. Next, I will predict its CO2 adsorption to see if the introduction of the sulfonic acid group has improved the adsorption capacity.
+
+Action: predict_CO2_adsoprtion
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(S(=O)(=O)O)[0m
+Observation: [38;5;200m[1;3m(0.898, 0.08)[0m
+Thought:[32;1m[1;3mThe introduction of the sulfonic acid group also did not improve the CO2 adsorption, as it decreased. I will revert to the initial SMILES and try another modification.
+
+### Iteration 5:
+**Modification**: Introduce a carboxyl group (-COOH) to increase polarity and interaction with CO2.
+
+Action: check_validity
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C(=O)O)[0m
+Observation: [33;1m[1;3m('Valid SMILES', 3.3713554812152573, 435.3960000000002, 'Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C(=O)O)')[0m
+Thought:[32;1m[1;3mThe modified SMILES string with a carboxyl group is valid. Next, I will predict its CO2 adsorption to see if the introduction of the carboxyl group has improved the adsorption capacity.
+
+Action: predict_CO2_adsoprtion
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C(=O)O)[0m
+Observation: [38;5;200m[1;3m(0.97, 0.097)[0m
+Thought:[32;1m[1;3mThe introduction of the carboxyl group also did not improve the CO2 adsorption, as it decreased. I will revert to the initial SMILES and try another modification.
+
+### Iteration 6:
+**Modification**: Introduce a fluorine atom (-F) to increase polarity and interaction with CO2.
+
+Action: check_validity
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(F)[0m
+Observation: [33;1m[1;3m('Valid SMILES', 3.591390272054431, 409.3770000000001, 'Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(F)')[0m
+Thought:[32;1m[1;3mThe modified SMILES string with a fluorine atom is valid. Next, I will predict its CO2 adsorption to see if the introduction of the fluorine atom has improved the adsorption capacity.
+
+Action: predict_CO2_adsoprtion
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(F)[0m
+Observation: [38;5;200m[1;3m(1.522, 0.3)[0m
+Thought:[32;1m[1;3mThe introduction of the fluorine atom significantly improved the CO2 adsorption to 1.522. I will continue making modifications to further enhance the CO2 adsorption.
+
+### Iteration 7:
+**Modification**: Introduce a chlorine atom (-Cl) to increase polarity and interaction with CO2.
+
+Action: check_validity
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(Cl)[0m
+Observation: [33;1m[1;3m('Valid SMILES', 3.6027509558151145, 425.8320000000001, 'Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(Cl)')[0m
+Thought:[32;1m[1;3mThe modified SMILES string with a chlorine atom is valid. Next, I will predict its CO2 adsorption to see if the introduction of the chlorine atom has improved the adsorption capacity.
+
+Action: predict_CO2_adsoprtion
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(Cl)[0m
+Observation: [38;5;200m[1;3m(1.176, 0.097)[0m
+Thought:[32;1m[1;3mThe introduction of the chlorine atom improved the CO2 adsorption to 1.176, but it is still lower than the fluorine-modified SMILES. I will continue making modifications to further enhance the CO2 adsorption.
+
+### Iteration 8:
+**Modification**: Introduce a methyl group (-CH3) to increase hydrophobicity and interaction with CO2.
+
+Action: check_validity
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)[0m
+Observation: [33;1m[1;3m('Valid SMILES', 3.399612494276653, 405.41400000000016, 'Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)')[0m
+Thought:[32;1m[1;3mThe modified SMILES string with a methyl group is valid. Next, I will predict its CO2 adsorption to see if the introduction of the methyl group has improved the adsorption capacity.
+
+Action: predict_CO2_adsoprtion
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)[0m
+Observation: [38;5;200m[1;3m(1.056, 0.075)[0m
+Thought:[32;1m[1;3mThe introduction of the methyl group slightly improved the CO2 adsorption to 1.056, but it is still lower than the fluorine-modified SMILES. I will continue making modifications to further enhance the CO2 adsorption.
+
+### Iteration 9:
+**Modification**: Introduce an ethyl group (-C2H5) to increase hydrophobicity and interaction with CO2.
+
+Action: check_validity
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(CC)[0m
+Observation: [33;1m[1;3m('Valid SMILES', 3.372298209096904, 419.4410000000002, 'Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(CC)')[0m
+Thought:[32;1m[1;3mThe modified SMILES string with an ethyl group is valid. Next, I will predict its CO2 adsorption to see if the introduction of the ethyl group has improved the adsorption capacity.
+
+Action: predict_CO2_adsoprtion
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(CC)[0m
+Observation: [38;5;200m[1;3m(1.074, 0.073)[0m
+Thought:[32;1m[1;3mThe introduction of the ethyl group slightly improved the CO2 adsorption to 1.074, but it is still lower than the fluorine-modified SMILES. I will continue making modifications to further enhance the CO2 adsorption.
+
+### Iteration 10:
+**Modification**: Introduce a trifluoromethyl group (-CF3) to increase polarity and interaction with CO2.
+
+Action: check_validity
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C(F)(F)F)[0m
+Observation: [33;1m[1;3m('Valid SMILES', 3.5820501363072115, 459.3840000000001, 'Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C(F)(F)F)')[0m
+Thought:[32;1m[1;3mThe modified SMILES string with a trifluoromethyl group is valid. Next, I will predict its CO2 adsorption to see if the introduction of the trifluoromethyl group has improved the adsorption capacity.
+
+Action: predict_CO2_adsoprtion
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C(F)(F)F)[0m
+Observation: [38;5;200m[1;3m(1.819, 0.267)[0m
+Thought:[32;1m[1;3mThe introduction of the trifluoromethyl group significantly improved the CO2 adsorption to 1.819. I will continue making modifications to further enhance the CO2 adsorption.
+
+### Iteration 11:
+**Modification**: Introduce a cyano group (-CN) to increase polarity and interaction with CO2.
+
+Action: check_validity
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C#N)[0m
+Observation: [33;1m[1;3m('Valid SMILES', 3.6000476596463535, 416.39700000000016, 'Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C#N)')[0m
+Thought:[32;1m[1;3mThe modified SMILES string with a cyano group is valid. Next, I will predict its CO2 adsorption to see if the introduction of the cyano group has improved the adsorption capacity.
+
+Action: predict_CO2_adsoprtion
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C#N)[0m
+Observation: [38;5;200m[1;3m(0.877, 0.034)[0m
+Thought:[32;1m[1;3mThe introduction of the cyano group did not improve the CO2 adsorption, as it decreased. I will revert to the previous best SMILES and try another modification.
+
+### Iteration 12:
+**Modification**: Introduce a methoxy group (-OCH3) to increase polarity and interaction with CO2.
+
+Action: check_validity
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(OCH3)[0m
+Observation: [33;1m[1;3m('Invalid SMILES', 0, 0, 'Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(OCH3)')[0m
+Thought:[32;1m[1;3mThe introduction of the methoxy group resulted in an invalid SMILES. I will revert to the previous best SMILES and try another modification.
+
+### Iteration 13:
+**Modification**: Introduce an ethoxy group (-OC2H5) to increase polarity and interaction with CO2.
+
+Action: check_validity
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(OC2H5)[0m
+Observation: [33;1m[1;3m('Invalid SMILES', 0, 0, 'Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(OC2H5)')[0m
+Thought:[32;1m[1;3mThe introduction of the ethoxy group resulted in an invalid SMILES. I will revert to the previous best SMILES and try another modification.
+
+### Iteration 14:
+**Modification**: Introduce a nitroso group (-NO) to increase polarity and interaction with CO2.
+
+Action: check_validity
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(NO)[0m
+Observation: [33;1m[1;3m('Valid SMILES', 3.650666890415584, 422.4010000000001, 'Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(NO)')[0m
+Thought:[32;1m[1;3mThe modified SMILES string with a nitroso group is valid. Next, I will predict its CO2 adsorption to see if the introduction of the nitroso group has improved the adsorption capacity.
+
+Action: predict_CO2_adsoprtion
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(NO)[0m
+Observation: [38;5;200m[1;3m(0.952, 0.069)[0m
+Thought:[32;1m[1;3mThe introduction of the nitroso group did not improve the CO2 adsorption, as it decreased. I will revert to the previous best SMILES and try another modification.
+
+### Iteration 15:
+**Modification**: Introduce a thiol group (-SH) to increase polarity and interaction with CO2.
+
+Action: check_validity
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(SH)[0m
+Observation: [33;1m[1;3m('Invalid SMILES', 0, 0, 'Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(SH)')[0m
+Thought:[32;1m[1;3mThe introduction of the thiol group resulted in an invalid SMILES. I will revert to the previous best SMILES and try another modification.
+
+### Iteration 16:
+**Modification**: Introduce a sulfonamide group (-SO2NH2) to increase polarity and interaction with CO2.
+
+Action: check_validity
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(S(=O)(=O)N)[0m
+Observation: [33;1m[1;3m('Valid SMILES', 3.4916158705729456, 470.4670000000002, 'Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(S(=O)(=O)N)')[0m
+Thought:[32;1m[1;3mThe modified SMILES string with a sulfonamide group is valid. Next, I will predict its CO2 adsorption to see if the introduction of the sulfonamide group has improved the adsorption capacity.
+
+Action: predict_CO2_adsoprtion
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(S(=O)(=O)N)[0m
+Observation: [38;5;200m[1;3m(0.878, 0.08)[0m
+Thought:[32;1m[1;3mThe introduction of the sulfonamide group did not improve the CO2 adsorption, as it decreased. I will revert to the previous best SMILES and try another modification.
+
+### Iteration 17:
+**Modification**: Introduce a trifluoromethanesulfonyl group (-SO2CF3) to increase polarity and interaction with CO2.
+
+Action: check_validity
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(S(=O)(=O)C(F)(F)F)[0m
+Observation: [33;1m[1;3m('Valid SMILES', 3.5374586479248418, 523.4490000000002, 'Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(S(=O)(=O)C(F)(F)F)')[0m
+Thought:[32;1m[1;3mThe modified SMILES string with a trifluoromethanesulfonyl group is valid. Next, I will predict its CO2 adsorption to see if the introduction of the trifluoromethanesulfonyl group has improved the adsorption capacity.
+
+Action: predict_CO2_adsoprtion
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(S(=O)(=O)C(F)(F)F)[0m
+Observation: [38;5;200m[1;3m(1.419, 0.205)[0m
+Thought:[32;1m[1;3mThe introduction of the trifluoromethanesulfonyl group improved the CO2 adsorption to 1.419. I will continue making modifications to further enhance the CO2 adsorption.
+
+### Iteration 18:
+**Modification**: Introduce a benzyl group (-CH2C6H5) to increase interaction with CO2.
+
+Action: check_validity
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(Cc1ccccc1)[0m
+Observation: [33;1m[1;3m('Valid SMILES', 3.1902538786940715, 481.5120000000002, 'Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(Cc1ccccc1)')[0m
+Thought:[32;1m[1;3mThe modified SMILES string with a benzyl group is valid. Next, I will predict its CO2 adsorption to see if the introduction of the benzyl group has improved the adsorption capacity.
+
+Action: predict_CO2_adsoprtion
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(Cc1ccccc1)[0m
+Observation: [38;5;200m[1;3m(1.011, 0.065)[0m
+Thought:[32;1m[1;3mThe introduction of the benzyl group did not improve the CO2 adsorption, as it decreased. I will revert to the previous best SMILES and try another modification.
+
+### Iteration 19:
+**Modification**: Introduce a phenyl group (-C6H5) to increase interaction with CO2.
+
+Action: check_validity
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C6H5)[0m
+Observation: [33;1m[1;3m('Invalid SMILES', 0, 0, 'Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C6H5)')[0m
+Thought:[32;1m[1;3mThe introduction of the phenyl group resulted in an invalid SMILES. I will revert to the previous best SMILES and try another modification.
+
+### Iteration 20:
+**Modification**: Introduce a benzoyl group (-C(O)C6H5) to increase interaction with CO2.
+
+Action: check_validity
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C(=O)C6H5)[0m
+Observation: [33;1m[1;3m('Invalid SMILES', 0, 0, 'Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C(=O)C6H5)')[0m
+Thought:[32;1m[1;3mI have completed 20 iterations of modifications to the initial SMILES string to enhance its CO2 adsorption. Below are the details of each iteration:
+
+```json
+[
+  {
+    "Iteration": 0,
+    "SMILES": "Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N",
+    "Modification": "Initial SMILES",
+    "CO2 Adsorption": 1.036,
+    "SA Score": 3.3603779392727047,
+    "Molecular Weight": 391.38700000000017,
+    "Validity": "Valid"
+  },
+  {
+    "Iteration": 1,
+    "SMILES": "Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(O)",
+    "Modification": "Introduced a hydroxyl group (-OH) to increase polarity and interaction with CO2.",
+    "CO2 Adsorption": 0.997,
+    "SA Score": 3.5001389900031485,
+    "Molecular Weight": 407.38600000000014,
+    "Validity": "Valid"
+  },
+  {
+    "Iteration": 2,
+    "SMILES": "Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(N)",
+    "Modification": "Introduced an amine group (-NH2) to increase polarity and interaction with CO2.",
+    "CO2 Adsorption": 0.984,
+    "SA Score": 3.457181725045883,
+    "Molecular Weight": 406.40200000000016,
+    "Validity": "Valid"
+  },
+  {
+    "Iteration": 3,
+    "SMILES": "Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(N(=O)=O)",
+    "Modification": "Introduced a nitro group (-NO2) to increase polarity and interaction with CO2.",
+    "CO2 Adsorption": 0.909,
+    "SA Score": 3.6061234597483525,
+    "Molecular Weight": 436.3840000000002,
+    "Validity": "Valid"
+  },
+  {
+    "Iteration": 4,
+    "SMILES": "Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(S(=O)(=O)O)",
+    "Modification": "Introduced a sulfonic acid group (-SO3H) to increase polarity and interaction with CO2.",
+    "CO2 Adsorption": 0.898,
+    "SA Score": 3.4893013600834344,
+    "Molecular Weight": 471.4510000000002,
+    "Validity": "Valid"
+  },
+  {
+    "Iteration": 5,
+    "SMILES": "Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C(=O)O)",
+    "Modification": "Introduced a carboxyl group (-COOH) to increase polarity and interaction with CO2.",
+    "CO2 Adsorption": 0.97,
+    "SA Score": 3.3713554812152573,
+    "Molecular Weight": 435.3960000000002,
+    "Validity": "Valid"
+  },
+  {
+    "Iteration": 6,
+    "SMILES": "Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(F)",
+    "Modification": "Introduced a fluorine atom (-F) to increase polarity and interaction with CO2.",
+    "CO2 Adsorption": 1.522,
+    "SA Score": 3.591390272054431,
+    "Molecular Weight": 409.3770000000001,
+    "Validity": "Valid"
+  },
+  {
+    "Iteration": 7,
+    "SMILES": "Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(Cl)",
+    "Modification": "Introduced a chlorine atom (-Cl) to increase polarity and interaction with CO2.",
+    "CO2 Adsorption": 1.176,
+    "SA Score": 3.6027509558151145,
+    "Molecular Weight": 425.8320000000001,
+    "Validity": "Valid"
+  },
+  {
+    "Iteration": 8,
+    "SMILES": "Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)",
+    "Modification": "Introduced a methyl group (-CH3) to increase hydrophobicity and interaction with CO2.",
+    "CO2 Adsorption": 1.056,
+    "SA Score": 3.399612494276653,
+    "Molecular Weight": 405.41400000000016,
+    "Validity": "Valid"
+  },
+  {
+    "Iteration": 9,
+    "SMILES": "Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(CC)",
+    "Modification": "Introduced an ethyl group (-C2H5) to increase hydrophobicity and interaction with CO2.",
+    "CO2 Adsorption": 1.074,
+    "SA Score": 3.372298209096904,
+    "Molecular Weight": 419.4410000000002,
+    "Validity": "Valid"
+  },
+  {
+    "Iteration": 10,
+    "SMILES": "Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C(F)(F)F)",
+    "Modification": "Introduced a trifluoromethyl group (-CF3) to increase polarity and interaction with CO2.",
+    "CO2 Adsorption": 1.819,
+    "SA Score": 3.5820501363072115,
+    "Molecular Weight": 459.3840000000001,
+    "Validity": "Valid"
+  },
+  {
+    "Iteration": 11,
+    "SMILES": "Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C#N)",
+    "Modification": "Introduced a cyano group (-CN) to increase polarity and interaction with CO2.",
+    "CO2 Adsorption": 0.877,
+    "SA Score": 3.6000476596463535,
+    "Molecular Weight": 416.39700000000016,
+    "Validity": "Valid"
+  },
+  {
+    "Iteration": 12,
+    "SMILES": "Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(OCH3)",
+    "Modification": "Introduced a methoxy group (-OCH3) to increase polarity and interaction with CO2.",
+    "CO2 Adsorption": 0,
+    "SA Score": 0,
+    "Molecular Weight": 0,
+    "Validity": "Invalid"
+  },
+  {
+    "Iteration": 13,
+    "SMILES": "Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(OC2H5)",
+    "Modification": "Introduced an ethoxy group (-OC2H5) to increase polarity and interaction with CO2.",
+    "CO2 Adsorption": 0,
+    "SA Score": 0,
+    "Molecular Weight": 0,
+    "Validity": "Invalid"
+  },
+  {
+    "Iteration": 14,
+    "SMILES": "Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(NO)",
+    "Modification": "Introduced a nitroso group (-NO) to increase polarity and interaction with CO2.",
+    "CO2 Adsorption": 0.952,
+    "SA Score": 3.650666890415584,
+    "Molecular Weight": 422.4010000000001,
+    "Validity": "Valid"
+  },
+  {
+    "Iteration": 15,
+    "SMILES": "Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(SH)",
+    "Modification": "Introduced a thiol group (-SH) to increase polarity and interaction with CO2.",
+    "CO2 Adsorption": 0,
+    "SA Score": 0,
+    "Molecular Weight": 0,
+    "Validity": "Invalid"
+  },
+  {
+    "Iteration": 16,
+    "SMILES": "Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(S(=O)(=O)N)",
+    "Modification": "Introduced a sulfonamide group (-SO2NH2) to increase polarity and interaction with CO2.",
+    "CO2 Adsorption": 0.878,
+    "SA Score": 3.4916158705729456,
+    "Molecular Weight": 470.4670000000002,
+    "Validity": "Valid"
+  },
+  {
+    "Iteration": 17,
+    "SMILES": "Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(S(=O)(=O)C(F)(F)F)",
+    "Modification": "Introduced a trifluoromethanesulfonyl group (-SO2CF3) to increase polarity and interaction with CO2.",
+    "CO2 Adsorption": 1.419,
+    "SA Score": 3.5374586479248418,
+    "Molecular Weight": 523.4490000000002,
+    "Validity": "Valid"
+  },
+  {
+    "Iteration": 18,
+    "SMILES": "Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(Cc1ccccc1)",
+    "Modification": "Introduced a benzyl group (-CH2C6H5) to increase interaction with CO2.",
+    "CO2 Adsorption": 1.011,
+    "SA Score": 3.1902538786940715,
+    "Molecular Weight": 481.5120000000002,
+    "Validity": "Valid"
+  },
+  {
+    "Iteration": 19,
+    "SMILES": "Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C6H5)",
+    "Modification": "Introduced a phenyl group (-C6H5) to increase interaction with CO2.",
+    "CO2 Adsorption": 0,
+    "SA Score": 0,
+    "Molecular Weight": 0,
+    "Validity": "Invalid"
+  },
+  {
+    "Iteration": 20,
+    "SMILES": "Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C(=O)C6H5)",
+    "Modification": "Introduced a benzoyl group (-C(O)C6H5) to increase interaction with CO2.",
+    "CO2 Adsorption": 0,
+    "SA Score": 0,
+    "Molecular Weight": 0,
+    "Validity": "Invalid"
+  }
+]
+```
+
+The best modification was the introduction of a trifluoromethyl group (-CF3) in Iteration 10, which resulted in the highest CO2 adsorption of 1.819.[0m
+Observation: Invalid Format: Missing 'Action:' after 'Thought:
+Thought:[32;1m[1;3mI will format the final answer correctly in JSON format, including all iterations and the best modification.
+
+Final Answer:
+```json
+[
+  {
+    "Iteration": 0,
+    "SMILES": "Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N",
+    "Modification": "Initial SMILES",
+    "CO2 Adsorption": 1.036,
+    "SA Score": 3.3603779392727047,
+    "Molecular Weight": 391.38700000000017,
+    "Validity": "Valid"
+  },
+  {
+    "Iteration": 1,
+    "SMILES": "Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(O)",
+    "Modification": "Introduced a hydroxyl group (-OH) to increase polarity and interaction with CO2.",
+    "CO2 Adsorption": 0.997,
+    "SA Score": 3.5001389900031485,
+    "Molecular Weight": 407.38600000000014,
+    "Validity": "Valid"
+  },
+  {
+    "Iteration": 2,
+    "SMILES": "Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(N)",
+    "Modification": "Introduced an amine group (-NH2) to increase polarity and interaction with CO2.",
+    "CO2 Adsorption": 0.984,
+    "SA Score": 3.457181725045883,
+    "Molecular Weight": 406.40200000000016,
+    "Validity": "Valid"
+  },
+  {
+    "Iteration": 3,
+    "SMILES": "Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(N(=O)=O)",
+    "Modification": "Introduced a nitro group (-NO2) to increase polarity and interaction with CO2.",
+    "CO2 Adsorption": 0.909,
+    "SA Score": 3.6061234597483525,
+    "Molecular Weight": 436.3840000000002,
+    "Validity": "Valid"
+  },
+  {
+    "Iteration": 4,
+    "SMILES": "Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(S(=O)(=O)O)",
+    "Modification": "Introduced a sulfonic acid group (-SO3H) to increase polarity and interaction with CO2.",
+    "CO2 Adsorption": 0.898,
+    "SA Score": 3.4893013600834344,
+    "Molecular Weight": 471.4510000000002,
+    "Validity": "Valid"
+  },
+  {
+    "Iteration": 5,
+    "SMILES": "Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C(=O)O)",
+    "Modification": "Introduced a carboxyl group (-COOH) to increase polarity and interaction with CO2.",
+    "CO2 Adsorption": 0.97,
+    "SA Score": 3.3713554812152573,
+    "Molecular Weight": 435.3960000000002,
+    "Validity": "Valid"
+  },
+  {
+    "Iteration": 6,
+    "SMILES": "Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(F)",
+    "Modification": "Introduced a fluorine atom (-F) to increase polarity and interaction with CO2.",
+    "CO2 Adsorption": 1.522,
+    "SA Score": 3.591390272054431,
+    "Molecular Weight": 409.3770000000001,
+    "Validity": "Valid"
+  },
+  {
+    "Iteration": 7,
+    "SMILES": "Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(Cl)",
+    "Modification": "Introduced a chlorine atom (-Cl) to increase polarity and interaction with CO2.",
+    "CO2 Adsorption": 1.176,
+    "SA Score": 3.6027509558151145,
+    "Molecular Weight": 425.8320000000001,
+    "Validity": "Valid"
+  },
+  {
+    "Iteration": 8,
+    "SMILES": "Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)",
+    "Modification": "Introduced a methyl group (-CH3) to increase hydrophobicity and interaction with CO2.",
+    "CO2 Adsorption": 1.056,
+    "SA Score": 3.399612494276653,
+    "Molecular Weight": 405.41400000000016,
+    "Validity": "Valid"
+  },
+  {
+    "Iteration": 9,
+    "SMILES": "Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(CC)",
+    "Modification": "Introduced an ethyl group (-C2H5) to increase hydrophobicity and interaction with CO2.",
+    "CO2 Adsorption": 1.074,
+    "SA Score": 3.372298209096904,
+    "Molecular Weight": 419.4410000000002,
+    "Validity": "Valid"
+  },
+  {
+    "Iteration": 10,
+    "SMILES": "Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C(F)(F)F)",
+    "Modification": "Introduced a trifluoromethyl group (-CF3) to increase polarity and interaction with CO2.",
+    "CO2 Adsorption": 1.819,
+    "SA Score": 3.5820501363072115,
+    "Molecular Weight": 459.3840000000001,
+    "Validity": "Valid"
+  },
+  {
+    "Iteration": 11,
+    "SMILES": "Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C#N)",
+    "Modification": "Introduced a cyano group (-CN) to increase polarity and interaction with CO2.",
+    "CO2 Adsorption": 0.877,
+    "SA Score": 3.6000476596463535,
+    "Molecular Weight": 416.39700000000016,
+    "Validity": "Valid"
+  },
+  {
+    "Iteration": 12,
+    "SMILES": "Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(OCH3)",
+    "Modification": "Introduced a methoxy group (-OCH3) to increase polarity and interaction with CO2.",
+    "CO2 Adsorption": 0,
+    "SA Score": 0,
+    "Molecular Weight": 0,
+    "Validity": "Invalid"
+  },
+  {
+    "Iteration": 13,
+    "SMILES": "Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(OC2H5)",
+    "Modification": "Introduced an ethoxy group (-OC2H5) to increase polarity and interaction with CO2.",
+    "CO2 Adsorption": 0,
+    "SA Score": 0,
+    "Molecular Weight": 0,
+    "Validity": "Invalid"
+  },
+  {
+    "Iteration": 14,
+    "SMILES": "Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(NO)",
+    "Modification": "Introduced a nitroso group (-NO) to increase polarity and interaction with CO2.",
+    "CO2 Adsorption": 0.952,
+    "SA Score": 3.650666890415584,
+    "Molecular Weight": 422.4010000000001,
+    "Validity": "Valid"
+  },
+  {
+    "Iteration": 15,
+    "SMILES": "Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(SH)",
+    "Modification": "Introduced a thiol group (-SH) to increase polarity and interaction with CO2.",
+    "CO2 Adsorption": 0,
+    "SA Score": 0,
+    "Molecular Weight": 0,
+    "Validity": "Invalid"
+  },
+  {
+    "Iteration": 16,
+    "SMILES": "Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(S(=O)(=O)N)",
+    "Modification": "Introduced a sulfonamide group (-SO2NH2) to increase polarity and interaction with CO2.",
+    "CO2 Adsorption": 0.878,
+    "SA Score": 3.4916158705729456,
+    "Molecular Weight": 470.4670000000002,
+    "Validity": "Valid"
+  },
+  {
+    "Iteration": 17,
+    "SMILES": "Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(S(=O)(=O)C(F)(F)F)",
+    "Modification": "Introduced a trifluoromethanesulfonyl group (-SO2CF3) to increase polarity and interaction with CO2.",
+    "CO2 Adsorption": 1.419,
+    "SA Score": 3.5374586479248418,
+    "Molecular Weight": 523.4490000000002,
+    "Validity": "Valid"
+  },
+  {
+    "Iteration": 18,
+    "SMILES": "Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(Cc1ccccc1)",
+    "Modification": "Introduced a benzyl group (-CH2C6H5) to increase interaction with CO2.",
+    "CO2 Adsorption": 1.011,
+    "SA Score": 3.1902538786940715,
+    "Molecular Weight": 481.5120000000002,
+    "Validity": "Valid"
+  },
+  {
+    "Iteration": 19,
+    "SMILES": "Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C6H5)",
+    "Modification": "Introduced a phenyl group (-C6H5) to increase interaction with CO2.",
+    "CO2 Adsorption": 0,
+    "SA Score": 0,
+    "Molecular Weight": 0,
+    "Validity": "Invalid"
+  },
+  {
+    "Iteration": 20,
+    "SMILES": "Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C(=O)C6H5)",
+    "Modification": "Introduced a benzoyl group (-C(O)C6H5) to increase interaction with CO2.",
+    "CO2 Adsorption": 0,
+    "SA Score": 0,
+    "Molecular Weight": 0,
+    "Validity": "Invalid"
+  }
+]
+```[0m
+
+[1m> Finished chain.[0m
+Tokens Used: 253643
+	Prompt Tokens: 242523
+	Completion Tokens: 11120
+Successful Requests: 45
+Total Cost (USD): $1.3794149999999998
