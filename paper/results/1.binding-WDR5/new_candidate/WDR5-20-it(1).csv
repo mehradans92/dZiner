@@ -1,0 +1,21 @@
+Iteration,SMILES,Modification,Docking Score,SA Score,QED Score,Molecular Weight,Validity
+0,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C([N+]([O-])=O)C=C2)CC1,Initial SMILES,-6.7,1.97,0.66,374.83,Valid
+1,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4)C=C2)CC1,Replace the nitro group with a phenyl group,-8.3,1.88,0.66,405.93,Valid
+2,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4)C(=O)NCCCCN)CC1,Add a 4-aminobutanamido group,0.0,0.0,0.0,0.0,Invalid
+3,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4OC)C=C2)CC1,Introduce a methoxy group,-7.9,2.0,0.61,435.96,Valid
+4,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4F)C=C2)CC1,Introduce a fluorine atom,-8.3,1.99,0.63,423.92,Valid
+5,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4C(F)(F)F)C=C2)CC1,Introduce a trifluoromethyl group,-8.0,2.18,0.5,473.93,Valid
+6,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4C)C=C2)CC1,Introduce a methyl group,-8.2,1.98,0.62,419.96,Valid
+7,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4)C(=O)NCCCCN)CC1,Introduce a 4-aminobutanamido group to another position,0.0,0.0,0.0,0.0,Invalid
+8,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4O)C=C2)CC1,Introduce a hydroxyl group,-7.5,2.05,0.64,421.93,Valid
+9,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4C#N)C=C2)CC1,Introduce a cyano group,-7.5,2.13,0.64,430.94,Valid
+10,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4[N+](=O)[O-])C=C2)CC1,Introduce a nitro group,-7.7,2.15,0.44,450.93,Valid
+11,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CN=C4)C=C2)CC1,Introduce a pyridine ring,-8.0,2.04,0.7,406.92,Valid
+12,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC1OC1=CC=C4)C=C2)CC1,Introduce a methylenedioxy group,0.0,5.33,0.73,433.94,Invalid
+13,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4OC(F)(F)F)C=C2)CC1,Introduce a trifluoromethoxy group,-7.7,2.24,0.48,489.93,Valid
+14,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4N(C)C)C=C2)CC1,Introduce a dimethylamino group,-7.6,2.17,0.59,449.0,Valid
+15,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4S(=O)(=O)N)C=C2)CC1,Introduce a sulfonamide group,-7.1,2.19,0.58,485.01,Valid
+16,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4C6=CC=CC=C6)C=C2)CC1,Introduce a benzyl group,-8.9,2.06,0.35,482.03,Valid
+17,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4C1CC1)C=C2)CC1,Introduce a cyclopropyl group,0.0,4.29,0.51,445.99,Invalid
+18,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4C(C)(C)C)C=C2)CC1,Introduce a tert-butyl group,-7.2,2.18,0.49,462.04,Valid
+19,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4S(=O)(=O)C6=CC=CC=C6)C=C2)CC1,Introduce a phenylsulfonyl group,-8.2,2.28,0.33,546.09,Valid

@@ -56,7 +56,7 @@ class dZiner:
             memory_key="chat_history",
             input_key='input',
             output_key="output",
-            return_messages=True
+            s_messages=True
         )
 
         self.verbose = kwargs.get('verbose', False)
@@ -68,7 +68,7 @@ class dZiner:
             agent_type=agent_type,
             verbose=self.verbose,
             memory=memory,
-            stop=["\nAction:", "\nObservation:"],
+            stop=["\nAction:", "\nObservation:", "\nFinal Answer:"],
             early_stopping_method='generate',
             handle_parsing_errors=True,
             agent_kwargs={
