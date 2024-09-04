@@ -1,0 +1,22 @@
+Iteration,SMILES,Modification,logCMC,SA Score,Molecular Weight,Validity
+0,CCCCCCCCCC(=O)CC(=O)NC1CCOC1=O,Initial SMILES,1.785,2.80403143711424,297.39500000000004,Valid
+1,CCCCCCCCCCCC(=O)CC(=O)NC1CCOC1=O,Increased the length of the hydrophobic tail by adding two more carbon atoms to the alkyl chain.,1.054,2.8052551515855004,325.4490000000001,Valid
+2,CCCCCCCCC(C)CCC(=O)CC(=O)NC1CCOC1=O,Introduced branching at the end of the hydrophobic tail.,2.488,3.232813324302202,339.4760000000001,Valid
+3,CCCCCCCCCCC(F)CC(=O)NC1CCOC1=O,Introduced fluorination in the hydrophobic tail.,0.633,3.24664459821299,315.4290000000001,Valid
+4,CCCCCCCCCCC[Si](C)(C)OCC(=O)NC1CCOC1=O,Incorporated a siloxane backbone.,1.681,3.1626503510520454,371.5940000000001,Valid
+5,CCCCCCCCCCC(C)C(=O)CC(=O)NC1CCOC1=O,Introduced a bulky group at the end of the hydrophobic tail.,1.01,3.2107338753929024,339.4760000000001,Valid
+6,CCCCCCCCCCC(F)FCC(=O)NC1CCOC1=O,Added an additional fluorine atom to the hydrophobic tail.,0.0,0.0,0.0,Invalid
+7,CCCCCCCCCCC(=O)CC(=O)N(C1CCOC1=O)C2CCOCC2,Introduced a polar head group modification.,0.102,3.292765615582022,395.54000000000025,Valid
+8,CCCCCCCCCCCC(=O)CC(=O)N(C1CCOC1=O)C2CCOCC2,Increased the length of the hydrophobic tail further.,-0.424,3.291791772709428,423.5940000000003,Valid
+9,CCCCCCCCCCCC(=O)CC(=O)N(C1CCOC1=O)C2CCOCC2O,Introduced another polar head group modification.,0.384,3.961507397888667,439.59300000000025,Valid
+10,CCCCCCCCCCCC(=O)CC(=O)N(C1CCOC1=O)C2CC(C)OCC2,Introduced a different bulky group at the end of the hydrophobic tail.,0.284,3.884008272014542,437.62100000000027,Valid
+11,CCCCCCCCCCCC(=O)CC(=O)N(C1CCOC1=O)C2CCNCC2,Introduced a different polar head group modification.,0.62,3.3146347065198034,422.61000000000024,Valid
+12,CCCCCCCCCCC(F)CC(F)(=O)NC1CCOC1=O,Introduced another fluorine atom in the hydrophobic tail.,0.0,0.0,0.0,Invalid
+13,CCCCCCCCCCCC(=O)CC(=O)N(C1CCOC1=O)C2CC(CO)OCC2,Introduced a different polar head group modification.,0.168,3.9279022882921346,453.6200000000003,Valid
+14,CCCCCCCCCCCC(=O)CC(=O)N(C1CCOC1=O)C2CC(CF3)OCC2,Introduced a different bulky group at the end of the hydrophobic tail.,0.0,0.0,0.0,Invalid
+15,CCCCCCCCCCCC(=O)CC(=O)N(C1CCOC1=O)C2CC(CN)OCC2,Introduced a different polar head group modification.,0.747,3.9641046551560413,452.6360000000003,Valid
+16,CCCCCCCCCCCC(=O)CC(=O)N(C1CCOC1=O)C2CC(CF)OCC2,Introduced a different bulky group at the end of the hydrophobic tail.,-0.122,4.013298061749447,455.6110000000003,Valid
+17,CCCCCCCCCCCC(=O)CC(=O)N(C1CCOC1=O)C2CC(CO)OCC2,Introduced a different polar head group modification.,0.168,3.9279022882921346,453.6200000000003,Valid
+18,CCCCCCCCCCCC(=O)CC(=O)N(C1CCOC1=O)C2CC(CF)OCC2,Introduced a different bulky group at the end of the hydrophobic tail.,-0.122,4.013298061749447,455.6110000000003,Valid
+19,CCCCCCCCCCCC(=O)CC(=O)N(C1CCOC1=O)C2CC(CO)OCC2,Introduced a different polar head group modification.,0.168,3.9279022882921346,453.6200000000003,Valid
+20,CCCCCCCCCCCC(=O)CC(=O)N(C1CCOC1=O)C2CC(CF)OCC2,Introduced a different bulky group at the end of the hydrophobic tail.,-0.122,4.013298061749447,455.6110000000003,Valid

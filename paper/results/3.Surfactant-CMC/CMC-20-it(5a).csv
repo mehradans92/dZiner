@@ -1,0 +1,22 @@
+Iteration,SMILES,Modification,logCMC,SA Score,Molecular Weight,Validity
+0,CCCCCCCCCC(=O)CC(=O)NC1CCOC1=O,Initial SMILES,1.785,2.804,297.395,Valid
+1,CCCCCCCCCCCC(=O)CC(=O)NC1CCOC1=O,Added two carbon atoms to the hydrophobic tail to decrease the CMC.,1.054,2.805,325.449,Valid
+2,CCCCCCCCCCC(C)C(=O)CC(=O)NC1CCOC1=O,Introduced a methyl branch at the end of the hydrophobic tail to decrease the CMC.,1.01,3.211,339.476,Valid
+3,CCCCCCCCCC(CF)C(=O)CC(=O)NC1CCOC1=O,Introduced a fluorine atom in the hydrophobic tail to decrease the CMC.,1.033,3.474,343.439,Valid
+4,CCCCCCCCCCCCCC(CF)C(=O)CC(=O)NC1CCOC1=O,Increased the hydrophobic tail length by adding two more carbon atoms to the existing structure.,-0.166,3.449,399.547,Valid
+5,CCCCCCCCCCCCCC(F)C(F)C(=O)CC(=O)NC1CCOC1=O,Introduced fluorine atoms at different positions in the hydrophobic tail.,-0.021,3.75,417.537,Valid
+6,CCCCCCCCCCCCCC(F)C(F)C(F)C(=O)CC(=O)NC1CCOC1=O,Introduced additional fluorine atoms at different positions in the hydrophobic tail.,-0.011,4.055,449.554,Valid
+7,CCCCCCCCCCCCCC(F)C(F)C(F)C(F)C(=O)CC(=O)NC1CCOC1=O,Introduced additional fluorine atoms at different positions in the hydrophobic tail.,0.013,4.338,481.571,Valid
+8,CCCCCCCCCCCCCCC(F)C(F)C(F)C(F)C(=O)CC(=O)NC1CCOC1=O,Added an additional carbon atom to the hydrophobic tail while maintaining the fluorine atoms.,-0.172,4.334,495.598,Valid
+9,CCCCCCCCCCCCCCC(F)C(F)C(F)C(F)C(F)C(=O)CC(=O)NC1CCOC1=O,Introduced additional fluorine atoms at different positions in the hydrophobic tail.,-0.133,4.588,527.615,Valid
+10,CCCCCCCCCCCCCCCC(F)C(F)C(F)C(F)C(F)C(=O)CC(=O)NC1CCOC1=O,Added another carbon atom to the hydrophobic tail while maintaining the fluorine atoms.,-0.286,4.585,541.642,Valid
+11,CCCCCCCCCCCCCCCC(F)C(F)C(F)C(F)C(F)C(F)C(=O)CC(=O)NC1CCOC1=O,Introduced an additional fluorine atom in the hydrophobic tail.,-0.237,4.818,573.659,Valid
+12,CCCCCCCCCCCCCCC(C)C(F)C(F)C(F)C(F)C(F)C(F)C(=O)CC(=O)NC1CCOC1=O,Introduced a methyl group and fluorine atoms in the hydrophobic tail.,0.29,4.983,587.686,Valid
+13,CCCCCCCCCCCCCC(C)(C)C(F)C(F)C(F)C(F)C(F)C(F)C(=O)CC(=O)NC1CCOC1=O,Introduced additional methyl groups and fluorine atoms in the hydrophobic tail.,0.975,4.968,587.686,Valid
+14,CCCCCCCCCCCCCCOCC(F)C(F)C(F)C(F)C(F)C(F)C(=O)CC(=O)NC1CCOC1=O,Introduced an ethylene oxide unit and fluorine atoms in the hydrophobic tail.,-0.038,4.89,589.658,Valid
+15,CCCCCCCCCCCCCCOCCOCC(F)C(F)C(F)C(F)C(F)C(F)C(=O)CC(=O)NC1CCOC1=O,Introduced an additional ethylene oxide unit and fluorine atoms in the hydrophobic tail.,-0.062,4.942,633.711,Valid
+16,CCCCCCCCCCCCCCOCCOCC(F)C(F)C(F)C(F)C(F)C(F)C(F)C(=O)CC(=O)NC1CCOC1=O,Introduced an additional fluorine atom and ethylene oxide units in the hydrophobic tail.,-0.035,5.152,665.728,Valid
+17,CCCCCCCCCCCCCCOCCOCCOCC(F)C(F)C(F)C(F)C(F)C(F)C(F)C(=O)CC(=O)NC1CCOC1=O,Introduced an additional ethylene oxide unit and fluorine atoms in the hydrophobic tail.,-0.062,5.209,709.781,Valid
+18,CCCCCCCCCCCCCCOCCOCCOCC(F)C(F)C(F)C(F)C(F)C(F)C(F)C(F)C(=O)CC(=O)NC1CCOC1=O,Introduced an additional fluorine atom and ethylene oxide units in the hydrophobic tail.,-0.037,5.405,741.798,Valid
+19,CCCCCCCCCCCCCCOCCOCCOCCOCC(F)C(F)C(F)C(F)C(F)C(F)C(F)C(F)C(=O)CC(=O)NC1CCOC1=O,Introduced an additional ethylene oxide unit and fluorine atoms in the hydrophobic tail.,-0.051,5.467,785.851,Valid
+20,CCCCCCCCCCCCCCOCCOCCOCCOCC(F)C(F)C(F)C(F)C(F)C(F)C(F)C(F)C(F)C(=O)CC(=O)NC1CCOC1=O,Introduced an additional fluorine atom and ethylene oxide units in the hydrophobic tail.,-0.025,5.652,817.868,Valid
