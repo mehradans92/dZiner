@@ -1,0 +1,22 @@
+Iteration,SMILES,Modification,logCMC,SA Score,Molecular Weight,Validity
+0,CCCCCCCCCC(=O)CC(=O)NC1CCOC1=O,Initial SMILES,1.785,2.80403143711424,297.39500000000004,Valid
+1,CCCCCCCCCCCC(=O)CC(=O)NC1CCOC1=O,Increased the hydrophobic tail length by adding two more carbon atoms to the tail.,1.054,2.8052551515855004,325.4490000000001,Valid
+2,CCCCCCCC(C)CCC(=O)CC(=O)NC1CCOC1=O,Introduced branching in the hydrophobic tail.,2.74,3.236797808354904,325.4490000000001,Valid
+3,CCCCCCCCCCCC(=O)CC(=O)NC1CC(O)OC1=O,Added a polar group to the hydrophilic head.,1.317,3.38608198101862,341.4480000000001,Valid
+4,CCCCCCCCCC(F)CC(=O)CC(=O)NC1CCOC1=O,Introduced a fluorine atom in the hydrophobic tail.,1.317,3.4294328420978406,343.4390000000001,Valid
+5,CCCCCCCCCCCC(=O)CC(=O)NC1CC(OCC)OC1=O,Added an ethylene oxide unit to the head group.,0.982,3.3705474333010015,369.5020000000002,Valid
+6,CCCCCCCCCCCCCC(=O)CC(=O)NC1CC(OCC)OC1=O,Increased the hydrophobic tail length by adding two more carbon atoms.,0.441,3.3711090288022545,397.5560000000001,Valid
+7,CCCCCCCCCCCCCC(=O)CC(=O)NC1CC(OSi(CH3)2)OC1=O,Introduced a siloxane backbone.,0.0,0.0,0.0,Invalid
+8,CCCCCCCCCC(O)CCCC(=O)CC(=O)NC1CC(OCC)OC1=O,Added a hydroxyl group to the hydrophobic tail.,1.3,3.731347986436866,413.5550000000002,Valid
+9,CCCCCCCCCCC=CC(=O)CC(=O)NC1CC(OCC)OC1=O,Introduced a double bond in the hydrophobic tail.,0.945,3.5615485088587686,381.5130000000002,Valid
+10,CCCCCCCCCC1=CC=CC=C1CC(=O)CC(=O)NC1CC(OCC)OC1=O,Added an aromatic ring to the hydrophobic tail.,1.83,3.425252014333119,431.57300000000026,Valid
+11,CCCCCCCCCCCC(=O)CC(=O)NC1CC(OCC)(C)OC1=O,Added a methyl group to the hydrophilic head.,1.169,3.5700673914498626,383.5290000000002,Valid
+12,CCCCCCCCCCCC(=O)CC(=O)NC1CC(OSO3)OC1=O,Added a sulfonate group to the hydrophilic head.,0.0,0.0,0.0,Invalid
+13,CCCCCCCCCCCC(=O)CC(=O)NC1CC(NH2)OC1=O,Added an amine group to the hydrophilic head.,0.0,0.0,0.0,Invalid
+14,CCCCCCCCCCCC(=O)CC(=O)NC1CC(C(=O)O)OC1=O,Added a carboxyl group to the hydrophilic head.,1.625,3.33878968830627,369.45800000000014,Valid
+15,CCCCCCCCCCClCCCC(=O)CC(=O)NC1CC(OCC)OC1=O,Added a chlorine atom to the hydrophobic tail.,0.0,0.0,0.0,Invalid
+16,CCCCCCCCCCCC(=O)CC(=O)NC1CC(O)OC1=O,Added a hydroxyl group to the hydrophilic head.,1.317,3.38608198101862,341.4480000000001,Valid
+17,CCCCCCCCCCCC(=O)CC(=O)NC1CC(OC)OC1=O,Added a methoxy group to the hydrophilic head.,1.514,3.3761597866676034,355.47500000000014,Valid
+18,CCCCCCCCCCCC(=O)CC(=O)NC1CC(C#N)OC1=O,Added a nitrile group to the hydrophilic head.,1.526,3.5179661602939776,350.4590000000001,Valid
+19,CCCCCCCCCCCC(=O)CC(=O)NC1CC(C6H5)OC1=O,Added a phenyl group to the hydrophilic head.,0.0,0.0,0.0,Invalid
+20,CCCCCCCCCCCC(=O)CC(=O)NC1CC(OCC)OC1=O,Added an ethyl group to the hydrophilic head.,0.982,3.3705474333010015,369.5020000000002,Valid

@@ -1,0 +1,22 @@
+Iteration,SMILES,Modification,logCMC,SA Score,Molecular Weight,Validity
+0,CCCCCCCCCC(=O)CC(=O)NC1CCOC1=O,Initial molecule,1.785,2.8,297.4,Valid
+1,CCCCCCCCCCCC(=O)CC(=O)NC1CCOC1=O,Increased the length of the hydrophobic tail by adding two more carbon atoms.,1.054,2.81,325.45,Valid
+2,CCC(C)CCCCCCCC(=O)CC(=O)NC1CCOC1=O,Introduced branching in the hydrophobic tail by adding a methyl group to the third carbon.,2.225,3.22,325.45,Valid
+3,CCCCCCCCCCC(F)(=O)CC(=O)NC1CCOC1=O,Add a fluorine atom to the hydrophobic tail to enhance hydrophobicity.,0.0,0.0,0.0,Invalid
+4,CCCCCCCCC[Si](C)(C)CC(=O)NC1CCOC1=O,Replace the terminal carbon in the hydrophobic tail with a siloxane group.,3.099,3.24,327.54,Valid
+5,CCCCCCCCCCCC(=O)CC(=O)N(C1CCOC1=O)CCO,Add an ethylene oxide unit to the hydrophilic head group to increase polarity.,1.348,3.17,369.5,Valid
+6,CCCCCCCCCCCC(=O)CC(=O)OC1CCOC1=O,Replace the amide group with an ether group to reduce polarity.,0.54,2.86,326.43,Valid
+7,CCCCCCCCCCC1CCCCC1(=O)CC(=O)NC2CCOC2=O,Replace the terminal carbon in the hydrophobic tail with a cyclohexane group to reduce polarity.,0.0,0.0,0.0,Invalid
+8,CCCCCCCCCCCC(=O)CC(=O)NC1CCOC1=OCCCCCCCCCC,Add a second hydrophobic tail to increase hydrophobic interactions.,0.0,0.0,0.0,Invalid
+9,CCCCCCCCC=CCC(=O)CC(=O)NC1CCOC1=O,Introduce a double bond in the hydrophobic tail to increase rigidity.,1.53,3.13,323.43,Valid
+10,CCCCCCCCCCCC(=O)CC(=O)N(C1CCOC1=O)CO,Add a hydroxyl group to the hydrophilic head group to increase polarity.,0.827,3.28,355.48,Valid
+11,CCCCCCCCCCC(C1=CC=CC=C1)(=O)CC(=O)NC2CCOC2=O,Replace the terminal carbon in the hydrophobic tail with a benzene ring to increase hydrophobic interactions.,0.0,0.0,0.0,Invalid
+12,CCCCCCCCCCCC(=O)CC(=O)N(C1CCOC1=O)C,Add a methyl group to the hydrophilic head group to increase polarity.,0.99,3.07,339.48,Valid
+13,CCCCCCCCCCC(C)(C)(C)(=O)CC(=O)NC1CCOC1=O,Replace the terminal carbon in the hydrophobic tail with a tert-butyl group to increase hydrophobic interactions.,0.0,0.0,0.0,Invalid
+14,CCCCCCCCCCCC(=O)CC(=O)N(C1CCOC1=O)OCH3,Add a methoxy group to the hydrophilic head group to increase polarity.,0.0,0.0,0.0,Invalid
+15,CCCCCCCCCCCC(=O)CC(=O)NC1CCOC1=OCC(=O)N,Add a second amide group to the hydrophilic head group to increase polarity.,0.0,0.0,0.0,Invalid
+16,CCCCCCCCCCCC(=O)CC(=O)NC1CCOC1=OC2=CC=CC=C2,Replace the terminal carbon in the hydrophobic tail with a phenyl group to increase hydrophobic interactions.,0.0,0.0,0.0,Invalid
+17,CCCCCCCCCCCC(=O)CC(=O)N(C1CCOC1=O)CC,Add an ethyl group to the hydrophilic head group to increase polarity.,0.694,3.12,353.5,Valid
+18,CCCCCCCCCCCC(=O)CC(=O)NC1CCOC1=OCl,Add a chlorine atom to the hydrophobic tail to enhance hydrophobicity.,0.0,0.0,0.0,Invalid
+19,CCCCCCCCCCCC(=O)CC(=O)N(C1CCOC1=O)CCC,Add a propyl group to the hydrophilic head group to increase polarity.,2.043,3.12,367.53,Valid
+20,CCCCCCCCCCCC(=O)CC(=O)NC1CCOC1=OCC,Replace the terminal carbon in the hydrophobic tail with an ethyl group to increase hydrophobic interactions.,0.0,0.0,0.0,Invalid
