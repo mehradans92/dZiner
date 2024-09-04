@@ -1,22 +1,22 @@
-Iteration,SMILES,Modification,CO2 Adsorption,SA Score,Molecular Weight,Validity
-0,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N,Initial SMILES,1.036,3.36,391.39,Valid
-1,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(O),Introduced -OH group,0.997,3.5,407.39,Valid
-2,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(N),Introduced -NH2 group,0.984,3.46,406.4,Valid
-3,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(F),Introduced -F group,1.522,3.59,409.38,Valid
-4,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(NO2),Introduced -NO2 group,0.0,0.0,0.0,Invalid
-5,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(O)1,Introduced -OH group at a different position,0.0,0.0,0.0,Invalid
-6,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C(=O)O),Introduced -COOH group,0.97,3.37,435.4,Valid
-7,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)N,Introduced -NHCH3 group,1.0,3.59,420.43,Valid
-8,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(S(=O)(=O)O),Introduced -SO3H group,0.898,3.49,471.45,Valid
-9,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(F)O,Introduced -OH group at a different position,1.44,3.7,425.38,Valid
-10,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(Cl),Introduced -Cl group,1.176,3.6,425.83,Valid
-11,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(OCH3),Introduced -OCH3 group,0.0,0.0,0.0,Invalid
-12,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(NO2),Introduced -NO2 group,0.0,0.0,0.0,Invalid
-13,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(CN),Introduced -CN group,1.0,3.52,420.43,Valid
-14,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(CF3),Introduced -CF3 group,0.0,0.0,0.0,Invalid
-15,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C2H5),Introduced -CH2CH3 group,0.0,0.0,0.0,Invalid
-16,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(CH3),Introduced -CH3 group,0.0,0.0,0.0,Invalid
-17,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(Cl)O,Introduced -OH group at a different position,1.127,3.69,441.83,Valid
-18,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(CF3),Introduced -CF3 group,0.0,0.0,0.0,Invalid
-19,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(Cl)(C(=O)O),Introduced -COOH group at a different position,1.078,3.69,469.84,Valid
-20,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(Cl)(S(=O)(=O)O),Introduced -SO3H group at a different position,0.955,3.75,505.9,Valid
+Iteration,SMILES,Modification,CO2 Adsorption,Uncertainty,SA Score,Molecular Weight,Validity
+0,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N,Initial SMILES,1.036,0.08,3.36,391.39,Valid
+1,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(O),Introduced -OH group,0.997,0.088,3.5,407.39,Valid
+2,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(N),Introduced -NH2 group,0.984,0.062,3.46,406.4,Valid
+3,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(F),Introduced -F group,1.522,0.3,3.59,409.38,Valid
+4,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(NO2),Introduced -NO2 group,0,0,0,0,Invalid
+5,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(O)1,Introduced -OH group at a different position,0,0,0,0,Invalid
+6,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C(=O)O),Introduced -COOH group,0.97,0.097,3.37,435.4,Valid
+7,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)N,Introduced -NHCH3 group,1,0.064,3.59,420.43,Valid
+8,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(S(=O)(=O)O),Introduced -SO3H group,0.898,0.08,3.49,471.45,Valid
+9,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(F)O,Introduced -OH group at a different position,1.44,0.281,3.7,425.38,Valid
+10,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(Cl),Introduced -Cl group,1.176,0.097,3.6,425.83,Valid
+11,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(OCH3),Introduced -OCH3 group,0,0,0,0,Invalid
+12,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(NO2),Introduced -NO2 group,0,0,0,0,Invalid
+13,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(CN),Introduced -CN group,1,0.064,3.52,420.43,Valid
+14,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(CF3),Introduced -CF3 group,0,0,0,0,Invalid
+15,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C2H5),Introduced -CH2CH3 group,0,0,0,0,Invalid
+16,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(CH3),Introduced -CH3 group,0,0,0,0,Invalid
+17,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(Cl)O,Introduced -OH group at a different position,1.127,0.105,3.69,441.83,Valid
+18,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(CF3),Introduced -CF3 group,0,0,0,0,Invalid
+19,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(Cl)(C(=O)O),Introduced -COOH group at a different position,1.078,0.093,3.69,469.84,Valid
+20,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(Cl)(S(=O)(=O)O),Introduced -SO3H group at a different position,0.955,0.107,3.75,505.9,Valid
