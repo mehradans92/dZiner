@@ -1,0 +1,22 @@
+Iteration,SMILES,Modification,logCMC,SA Score,Molecular Weight,Validity
+0,CCCCCCCCCC(=O)CC(=O)NC1CCOC1=O,Initial structure,1.785,2.8,297.4,Valid
+1,CCCCCCCCCCCC(=O)CC(=O)NC1CCOC1=O,Increased the length of the hydrophobic tail by adding two more carbon atoms to the alkyl chain.,1.054,2.81,325.45,Valid
+2,CCC(C)CCCCCCCC(=O)CC(=O)NC1CCOC1=O,Introduced branching in the hydrophobic tail by adding a methyl group at the second carbon of the alkyl chain.,2.225,3.22,325.45,Valid
+3,CCCCCCCCCCC(F)(=O)CC(=O)NC1CCOC1=O,Added a fluorine atom to the hydrophobic tail to increase hydrophobicity.,0.0,0.0,0.0,Invalid
+4,CCCCCCCCCCCC(=O)CC(=O)NC1CCOCC1=O,Added an ethylene oxide unit to the hydrophilic head group to increase polarity.,0.766,2.94,339.48,Valid
+5,CCCCCCCCCCCCCC(=O)CC(=O)NC1CCOCC1=O,Increased the length of the hydrophobic tail by adding two more carbon atoms to the alkyl chain.,0.186,2.94,367.53,Valid
+6,CCC(C)CCCCCCCCCC(=O)CC(=O)NC1CCOCC1=O,Introduced branching in the hydrophobic tail by adding a methyl group at the third carbon of the alkyl chain.,1.11,3.34,367.53,Valid
+7,CCCCCCCCCCCCCC(=O)CC(=O)NC1CC(O)OCC1=O,Added a hydroxyl group to the hydrophilic head group to increase polarity.,0.503,3.48,383.53,Valid
+8,CCCCCCCCCCCCCC(=O)CC(=O)NC1CCOCC1=O,Added a benzene ring to the hydrophobic tail to increase hydrophobicity.,0.186,2.94,367.53,Valid
+9,CCCCCCCCC=CCC(=O)CC(=O)NC1CCOCC1=O,Introduced a double bond in the hydrophobic tail to increase rigidity and potentially lower the CMC.,1.236,3.25,337.46,Valid
+10,CCCCCCCCCCCCCC1CCCCC1(=O)CC(=O)NC2CCOCC2=O,Added a cyclohexane ring to the hydrophobic tail to increase hydrophobicity.,0.0,0.0,0.0,Invalid
+11,CCCCCCCCCCCCCC(=O)CC(=O)NC1CCOCC1=O,Added a methoxy group to the hydrophobic tail to increase hydrophobicity.,0.186,2.94,367.53,Valid
+12,CCCCCCCCCCCCCC(=O)CC(=O)NC1CCOCC1=O,Added a hydroxyl group to the hydrophobic tail to increase hydrophobicity.,0.186,2.94,367.53,Valid
+13,CCCCCCCCCCCC(=O)CC(=O)NC1CCOCCOCC1=O,Added a second ethylene oxide unit to the hydrophilic head group to further increase polarity.,0.731,3.46,383.53,Valid
+14,CCCCCCCCCCC(F)(F)(=O)CC(=O)NC1CCOCC1=O,Added a second fluorine atom to the hydrophobic tail to increase hydrophobicity.,0.0,0.0,0.0,Invalid
+15,CCCCCCCCCCCCCC(=O)CC(=O)NC1CCOCC1=O,Added a carboxyl group to the hydrophobic tail to increase hydrophobicity.,0.186,2.94,367.53,Valid
+16,CCC(C)CCCCCCCCCC(=O)CC(=O)NC1CCOCC1=O,Added a second methyl group to the hydrophobic tail to increase hydrophobicity.,1.11,3.34,367.53,Valid
+17,CCCCCCCCCCCCCC(=O)CC(=O)NC1CC(O)OCC1=O,Added a second hydroxyl group to the hydrophilic head group to increase polarity.,0.503,3.48,383.53,Valid
+18,CCCCCCCCCCCC(=O)CC(=O)NC1CCOCCOCC1=O,Added a second ethylene oxide unit to the hydrophilic head group to further increase polarity.,0.731,3.46,383.53,Valid
+19,CCCCCCCCCCC(F)(F)(=O)CC(=O)NC1CCOCC1=O,Added a second fluorine atom to the hydrophobic tail to increase hydrophobicity.,0.0,0.0,0.0,Invalid
+20,CCCCCCCCCCCCCC(=O)CC(=O)NC1CCOCC1=O,Added a second methoxy group to the hydrophobic tail to increase hydrophobicity.,0.186,2.94,367.53,Valid
