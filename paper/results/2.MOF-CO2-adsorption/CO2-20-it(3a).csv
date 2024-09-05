@@ -1,0 +1,21 @@
+Iteration,SMILES,Modification,CO2 Adsorption,Uncertainty,SA Score,Molecular Weight,Validity
+0,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C#N,Initial SMILES,0.885,0.033,3.69,430.424,Valid
+1,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C#N.O,Add an -OH group to the aromatic ring to enhance CO2 interaction.,0.89,0.036,3.76,448.439,Valid
+2,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1nc(c(c1N)N)C(=O)[O-])N(C)C#N,Replace a carbon atom in the aromatic ring with a nitrogen atom to enhance CO2 interaction.,0.0,0.0,0.0,0.0,Invalid
+3,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C#N.O.N,Add an -NH2 group to the aromatic ring to increase polarity and potential hydrogen bonding.,0.88,0.041,3.83,465.47,Valid
+4,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C#N.O.[Li+],Add a lithium atom to the structure to increase electrostatic interaction with CO2.,0.933,0.07,3.84,455.38,Valid
+5,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C#N.O.[Li+].N(=O)=O,Add a -NO2 group to the aromatic ring to increase polarity and potential hydrogen bonding.,0.0,0.0,0.0,0.0,Invalid
+6,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C#N.O.[Li+].C,Introduce a smaller aliphatic chain to potentially reduce pore size and enhance CO2 adsorption.,0.971,0.08,3.92,471.423,Valid
+7,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C#N.O.[Li+].C.O,Add an -OH group to the aromatic ring to increase polarity and potential hydrogen bonding.,0.979,0.092,3.99,489.438,Valid
+8,Nc1cc(C(=O)[O-])c(cc1c1ncc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C#N.O.[Li+].C.O,Replace another carbon atom in the aromatic ring with a nitrogen atom to enhance CO2 interaction.,0.937,0.074,4.15,490.426,Valid
+9,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C#N.O.[Li+].C.O.N,Add an -NH2 group to the aromatic ring to increase polarity and potential hydrogen bonding.,0.96,0.093,4.06,506.469,Valid
+10,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C#N.O.[Li+].C.O.N.[Na+],Add a sodium atom to the structure to increase electrostatic interaction with CO2.,0.984,0.104,4.16,529.459,Valid
+11,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C#N.O.[Li+].C.O.N.[Na+].C(=O)O,Add a -COOH group to the aromatic ring to increase polarity and potential hydrogen bonding.,0.957,0.106,4.25,575.484,Valid
+12,Nc1cc(C(=O)[O-])c(cc1c1scc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C#N.O.[Li+].C.O.N.[Na+],Replace a carbon atom in the aromatic ring with a sulfur atom to enhance CO2 interaction.,0.0,0.0,0.0,0.0,Invalid
+13,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C#N.O.[Li+].C.O.N.[Na+].S(=O)(=O)O,Add a -SO3H group to the aromatic ring to increase polarity and potential hydrogen bonding.,0.912,0.069,4.45,611.539,Valid
+14,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C#N.O.[Li+].C.O.N.[Na+].C#N,Add a -CN group to the aromatic ring to increase polarity and potential hydrogen bonding.,0.944,0.096,4.25,556.485,Valid
+15,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C#N.O.[Li+].C.O.N.[Na+].O,Add an -OH group to the aromatic ring to increase polarity and potential hydrogen bonding.,0.982,0.107,4.22,547.474,Valid
+16,Nc1cc(C(=O)[O-])c(cc1c1ncc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C#N.O.[Li+].C.O.N.[Na+].O,Replace another carbon atom in the aromatic ring with a nitrogen atom to enhance CO2 interaction.,0.943,0.088,4.38,548.462,Valid
+17,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C#N.O.[Li+].C.O.N.[Na+].O.N,Add an -NH2 group to the aromatic ring to increase polarity and potential hydrogen bonding.,0.965,0.107,4.29,564.505,Valid
+18,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C#N.O.[Li+].C.O.N.[Na+].O.N.[K+],Add a potassium atom to the structure to increase electrostatic interaction with CO2.,0.977,0.11,4.38,603.603,Valid
+19,Nc1cc(C(=O)[O-])c(cc1c1pcc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C#N.O.[Li+].C.O.N.[Na+].O.N.[K+],Replace a carbon atom in the aromatic ring with a phosphorus atom to enhance CO2 interaction.,0.979,0.114,5.07,621.558,Valid

@@ -1,0 +1,21 @@
+Iteration,SMILES,Modification,CO2 Adsorption,Uncertainty,SA Score,Molecular Weight,Validity
+0,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C#N,Initial structure,0.885,0.033,3.69,430.424,Valid
+1,Nc1cc(NC(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C#N,Added an amine group to the aromatic ring to increase polarity and potential binding sites for CO2.,0.858,0.035,3.71,445.439,Valid
+2,Nc1cc(NC(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])O,Added a hydroxyl group to the aromatic ring to further increase polarity and potential binding sites for CO2.,0.997,0.09,3.37,407.386,Valid
+3,Nc1cc(NC(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])S(=O)(=O)O,Added a sulphonate group to the aromatic ring to increase polarity and potential binding sites for CO2.,0.895,0.079,3.44,471.451,Valid
+4,Nc1cc(NC(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(=O)=O,Added a nitro group to the aromatic ring to increase polarity and potential binding sites for CO2.,0.911,0.094,3.39,436.384,Valid
+5,Nc1cc(NC(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])C1=NN=N[N]1,Added a tetrazole group to the aromatic ring to introduce heteroatomic functionalities and increase potential binding sites for CO2.,0.861,0.044,4.02,458.418,Valid
+6,Nc1cc(NC(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])c2cccnc2,Added a pyridine ring to the aromatic ring to introduce heteroatomic functionalities and increase potential binding sites for CO2.,1.27,0.05,3.35,468.473,Valid
+7,Nc1cc(NC(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])C(=O)O,Added a carboxyl group to the aromatic ring to increase potential binding sites for CO2.,0.974,0.099,3.31,435.396,Valid
+8,Nc1cc(NC(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])S,Added a thiol group to the aromatic ring to increase potential binding sites for CO2.,0.999,0.089,3.59,423.454,Valid
+9,Nc1cc(NC(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])P(=O)(O)O,Added a phosphonate group to the aromatic ring to increase potential binding sites for CO2.,1.1,0.127,3.66,471.366,Valid
+10,Nc1cc(NC(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])C#N,Added a cyano group to the aromatic ring to increase potential binding sites for CO2.,0.867,0.031,3.43,416.397,Valid
+11,Nc1cc(NC(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])OC,Added a methoxy group to the aromatic ring to increase potential binding sites for CO2.,1.018,0.085,3.26,421.413,Valid
+12,Nc1cc(NC(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])OCC,Added an ethoxy group to the aromatic ring to increase potential binding sites for CO2.,1.039,0.085,3.28,435.44,Valid
+13,Nc1cc(NC(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])C,Added a methyl group to the aromatic ring to increase potential binding sites for CO2.,1.054,0.076,3.28,405.414,Valid
+14,Nc1cc(NC(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])C=C,Added a vinyl group to the aromatic ring to increase potential binding sites for CO2.,1.06,0.084,3.51,417.425,Valid
+15,Nc1cc(NC(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])C=CC,Added an allyl group to the aromatic ring to increase potential binding sites for CO2.,1.076,0.083,3.52,431.452,Valid
+16,Nc1cc(NC(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])CCC,Added a propyl group to the aromatic ring to increase potential binding sites for CO2.,1.091,0.075,3.38,433.468,Valid
+17,Nc1cc(NC(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])C(C)C,Added an isopropyl group to the aromatic ring to increase potential binding sites for CO2.,1.091,0.073,3.4,433.468,Valid
+18,Nc1cc(NC(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])CCCC,Added a butyl group to the aromatic ring to increase potential binding sites for CO2.,1.109,0.076,3.36,447.495,Valid
+19,Nc1cc(NC(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])C(C)(C)C,Added a tert-butyl group to the aromatic ring to increase potential binding sites for CO2.,1.109,0.071,3.44,447.495,Valid
