@@ -1,0 +1,21 @@
+Iteration,SMILES,Modification,CO2 Adsorption,Uncertainty,SA Score,Molecular Weight,Validity
+0,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C#N,"Initial structure, no changes yet.",0.885,0.033,3.69,430.424,Valid
+1,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)O,Added a carboxylate group to enhance CO2 interaction.,0.99,0.095,3.49,449.423,Valid
+2,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)O(O),Added a hydroxyl group to enhance CO2 interaction.,0.959,0.086,3.66,465.422,Valid
+3,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)OS(=O)(=O)O,Added a sulfonate group to enhance CO2 interaction.,0.866,0.069,3.73,529.487,Valid
+4,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)O[N+](=O)[O-],Added a nitro group to enhance CO2 interaction.,1.086,0.132,3.76,494.42,Valid
+5,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)ON,Added an amine group to enhance CO2 interaction.,0.954,0.077,3.68,464.438,Valid
+6,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)OCN=C=O,Added an isocyanate group to enhance CO2 interaction.,0.95,0.084,3.88,504.459,Valid
+7,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)OS,Added a thiol group to enhance CO2 interaction.,0.955,0.071,3.74,481.49,Valid
+8,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)OP(=O)(O)O,Added a phosphonate group to enhance CO2 interaction.,1.026,0.102,3.75,529.402,Valid
+9,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)OS(=O)(=O)N,Added a sulfonamide group to enhance CO2 interaction.,0.848,0.07,3.76,528.503,Valid
+10,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)OC(=O)N,Added a carbamate group to enhance CO2 interaction.,0.939,0.08,3.67,492.448,Valid
+11,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)NC(=O)N,Added a urea group to enhance CO2 interaction.,0.926,0.067,3.61,491.464,Valid
+12,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)OS(=O)C,Added a sulfonyl group to enhance CO2 interaction.,0.931,0.07,4.26,511.516,Valid
+13,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)OS(=O)(=O)OC,Added a sulfonate ester group to enhance CO2 interaction.,0.881,0.067,3.82,543.514,Valid
+14,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)OP(=O)C,Added a phosphine oxide group to enhance CO2 interaction.,1.13,0.139,4.38,511.431,Valid
+15,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)OB(O)O,Added a boronate group to enhance CO2 interaction.,0.934,0.09,3.84,493.241,Valid
+16,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)OC#N,Added a cyano group to enhance CO2 interaction.,0.864,0.045,3.78,474.433,Valid
+17,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)OCC,Added an alkoxy group to enhance CO2 interaction.,1.027,0.092,3.48,477.477,Valid
+18,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)OS(=O)(=O)O,Added a sulfonic acid group to enhance CO2 interaction.,0.866,0.069,3.73,529.487,Valid
+19,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)OC(=O)C,Added an ester group to enhance CO2 interaction.,0.981,0.083,3.63,491.46,Valid
