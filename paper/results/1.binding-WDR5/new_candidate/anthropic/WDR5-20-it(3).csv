@@ -1,0 +1,22 @@
+Iteration,SMILES,Modification,Docking Score,SA Score,QED Score,Molecular Weight,Validity
+0,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C([N+]([O-])=O)C=C2)CC1,Initial SMILES,-6.7,1.97,0.66,374.83,Valid
+1,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C([N+]([O-])=O)C=C2C4=CC=CC=C4)CC1,Added an aromatic ring to potentially form π-π stacking interactions,-7.2,2.28,0.44,450.93,Valid
+2,CN1CCN(C2=C(NC(C3=CC=CC=C3NCCCCC(=O)N)=O)C=C([N+]([O-])=O)C=C2C4=CC=CC=C4)CC1,Replaced chlorine with 4-aminobutanamido group,-6.8,2.57,0.19,530.63,Valid
+3,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C([N+]([O-])=O)C=C2C4=CC=CC=C4)CC1CO,Added hydroxymethyl group to piperazine ring,-7.8,2.96,0.4,480.95,Valid
+4,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C(=O)O)C=C2C4=CC=CC=C4)CC1CO,Replaced nitro group with carboxyl group,-7.4,2.89,0.49,479.96,Valid
+5,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C([N+]([O-])=O)C=C2C4=CC=C(F)C=C4)CC1CO,Added fluorine to phenyl ring,-7.0,3.01,0.39,498.94,Valid
+6,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C([N+]([O-])=O)C=C2C4=CC=NC=C4)CC1CO,Replaced phenyl ring with pyridine ring,-6.3,3.09,0.41,481.94,Valid
+7,CN1CCC(O)CC1C2=C(NC(C3=CC=CC=C3Cl)=O)C=C([N+]([O-])=O)C=C2C4=CC=CC=C4,Replaced piperazine with piperidine and added hydroxyl group,-6.9,3.17,0.39,465.94,Valid
+8,CN1CCN(C2=C(NC(C3=CC=CC(O)=C3Cl)=O)C=C([N+]([O-])=O)C=C2C4=CC=CC=C4)CC1CO,Added hydroxyl group to chlorophenyl part,-6.7,3.15,0.35,496.95,Valid
+9,CN1CCN(C2=C(NC(C3=CC=CC=C3F)=O)C=C([N+]([O-])=O)C=C2C4=CC=CC=C4)CC1CO,Replaced chlorine with fluorine,-7.7,2.97,0.43,464.5,Valid
+10,CN1CCN(C2=C(NC(C3=CC=CC=C3F)=O)C=C([N+]([O-])=O)C=C2C4=CC=C(OC)C=C4)CC1CO,Added methoxy group to phenyl ring,-6.9,3.02,0.38,494.52,Valid
+11,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C#N)C=C2C4=CC=CC=C4)CC1CO,Replaced nitro group with cyano group,-7.2,2.97,0.59,460.97,Valid
+12,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C([N+]([O-])=O)C=C2C4=CC=C(O)C=C4)CC1CO,Added hydroxyl group to phenyl ring,-6.9,3.06,0.35,496.95,Valid
+13,CN1CCN(C2=C(NC(C3=CC=CC(C(F)(F)F)=C3Cl)=O)C=C([N+]([O-])=O)C=C2C4=CC=CC=C4)CC1CO,Added trifluoromethyl group to chlorophenyl part,-7.2,3.24,0.32,548.95,Valid
+14,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C([N+]([O-])=O)C=C2C4=CC=C(F)C=C4)CC1CO,Added fluorine to phenyl ring,-7.1,3.01,0.39,498.94,Valid
+15,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C([N+]([O-])=O)C=C2C4=CC=CC=C4F)CC1CO,Added fluorine to phenyl ring at different position,-7.3,3.01,0.39,498.94,Valid
+16,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C([N+]([O-])=O)C=C2C4=CC=CC(F)=C4)CC1CO,Added fluorine to phenyl ring at meta position,-7.0,3.01,0.39,498.94,Valid
+17,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C([N+]([O-])=O)C=C2C4=CC(F)=CC=C4)CC1CO,Added fluorine to phenyl ring at different meta position,-7.1,3.01,0.39,498.94,Valid
+18,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C([N+]([O-])=O)C=C2C4=C(F)C=CC=C4)CC1CO,Added fluorine to phenyl ring at ortho position,-7.2,3.01,0.39,498.94,Valid
+19,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C([N+]([O-])=O)C=C2C4=CC=CC=C4C)CC1CO,Added methyl group to phenyl ring,-7.0,3.01,0.38,494.99,Valid
+20,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C([N+]([O-])=O)C=C2C4=CC=CC(C)=C4)CC1CO,Added methyl group to phenyl ring at meta position,-7.1,3.01,0.38,494.99,Valid

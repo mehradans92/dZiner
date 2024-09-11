@@ -1,0 +1,20 @@
+Iteration,SMILES,Modification,Docking Score,SA Score,QED Score,Molecular Weight,Validity
+0,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C([N+]([O-])=O)C=C2)CC1,Initial SMILES,-6.7,1.97,0.66,374.83,Valid
+1,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=CC=C4)C=C2)CC1,Replaced nitro group with phenyl ring to enhance π-π stacking interactions,-8.3,1.88,0.66,405.93,Valid
+2,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=C(N)C=C4)C=C2)CC1,Added amino group to the phenyl ring to modify substituents,-7.8,2.03,0.61,420.94,Valid
+3,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=C(NCCCC(=O)O)C=C4)C=C2)CC1,Added 4-aminobutanoic acid group to explore solvent-exposed regions,-8.4,2.23,0.34,507.03,Valid
+4,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=C(NCCCC(=O)NC5CC5)C=C4)C=C2)CC1,Replaced carboxylic acid with cyclopropane amide to explore different functional groups,-8.2,2.36,0.29,546.12,Valid
+5,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=C(NC5=CC=CC=C5)C=C4)C=C2)CC1,Introduced aniline group to increase π-π stacking interactions,-8.9,2.1,0.31,497.04,Valid
+6,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=C(NC5=CC=C(F)C=C5)C=C4)C=C2)CC1,"Added fluorine to aniline group to explore effect of small, electronegative substituent",-8.9,2.16,0.29,515.03,Valid
+7,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=C(NC5=CC=NC=C5)C=C4)C=C2)CC1,Replaced phenyl ring with pyridine ring to introduce nitrogen into aromatic system,-8.2,2.24,0.33,498.03,Valid
+8,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=C(NCCCNC5=CC=CC=C5)C=C4)C=C2)CC1,Introduced longer linker (NCCCN) between aromatic rings for flexibility,-8.9,2.31,0.19,554.14,Valid
+9,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=C(NCCCNC5=CC=C(O)C=C5)C=C4)C=C2)CC1,Added hydroxyl group to terminal phenyl ring for potential hydrogen bonding,-9.1,2.41,0.13,570.14,Valid
+10,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=C(NCCCNC5=CC=C(OC)C=C5)C=C4)C=C2)CC1,Replaced hydroxyl with methoxy group to explore effect of larger H-bond acceptor,-8.5,2.38,0.17,584.16,Valid
+11,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=C(NCCCNC5=CC=C(O)C=C5)C=C4)N=C2)CC1,Replaced carbon with nitrogen in central ring to create pyridine-like structure,-8.9,2.54,0.14,571.13,Valid
+12,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=C(NCCCNC5=CC=C(O)C=C5F)C=C4)C=C2)CC1,Added fluorine adjacent to hydroxyl group on terminal phenyl ring,-7.4,2.52,0.12,588.13,Valid
+13,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=C(NCCOC5=CC=C(O)C=C5)C=C4)C=C2)CC1,Replaced one carbon in linker with oxygen to create ether linkage,-8.9,2.33,0.21,557.09,Valid
+14,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=C(NCCOC5=CC=C(O)C(F)=C5)C=C4)C=C2)CC1,Added fluorine ortho to hydroxyl group on terminal phenyl ring with ether linkage,-8.9,2.44,0.2,575.08,Valid
+15,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C4=CC=C(NCCSC5=CC=C(O)C=C5)C=C4)C=C2)CC1,Replaced oxygen with sulfur in linker to create thioether linkage,-7.4,2.43,0.15,573.16,Valid
+16,CN1CCN(C2=NC(NC(C3=CC=CC=C3Cl)=O)=C(C4=CC=C(NCCOC5=CC=C(O)C=C5)C=C4)C=C2)CC1,Changed central benzene to pyridine and adjusted amide position,-9.5,2.49,0.23,558.08,Valid
+17,CN1CCN(C2=NC(NC(C3=CC=CC=C3Cl)=O)=C(C4=CC=C(NCCOC5=CC=C(O)C(F)=C5)C=C4)C=C2)CC1,Combined pyridine core with fluorinated terminal phenyl ring,-9.3,2.6,0.22,576.07,Valid
+18,CN1CCN(C2=NC(NC(C3=CC=CC=C3Cl)=O)=C(C4=CC=C(NCCCOC5=CC=C(O)C=C5)C=C4)C=C2)CC1,Extended linker region with additional carbon atom,-7.4,2.52,0.2,572.11,Valid

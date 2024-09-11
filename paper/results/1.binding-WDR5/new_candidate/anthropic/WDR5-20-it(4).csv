@@ -1,0 +1,22 @@
+Iteration,SMILES,Modification,Docking Score,SA Score,QED Score,Molecular Weight,Validity
+0,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C([N+]([O-])=O)C=C2)CC1,Initial SMILES,-6.7,1.97,0.66,374.83,Valid
+1,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C([N+]([O-])=O)C4=CC=CC=C42)CC1,Added an aromatic ring to potentially form π-π stacking interactions,-7.9,2.29,0.5,424.89,Valid
+2,CN1CCN(C2=C(NC(C3=CC=CC=C3NCCCCC(N)=O)=O)C=C([N+]([O-])=O)C4=CC=CC=C42)CC1,Replaced chlorine with 4-aminobutanamido group,-8.0,2.58,0.22,504.59,Valid
+3,NCCN(C1=C(NC(C2=CC=CC=C2NCCCCC(N)=O)=O)C=C([N+]([O-])=O)C3=CC=CC=C31)CCN,Replaced piperazine ring with ethylenediamine linker,-6.5,2.81,0.13,507.6,Valid
+4,CN1CCN(C2=C(NC(C3=CC=CC=C3NCCCCC(N)=O)=O)C=C(C#N)C4=CC=CC=C42)CC1,Replaced nitro group with cyano group,-7.5,2.57,0.4,484.6,Valid
+5,CN1CCN(C2=C(NC(C3=CC=C(N4CCOCC4)C=C3NCCCCC(N)=O)=O)C=C([N+]([O-])=O)C4=CC=CC=C42)CC1,Added morpholine group to para position of phenyl ring,-7.2,2.86,0.17,589.7,Valid
+6,CN1CCN(C2=C(NC(C3=NC=CC=C3NCCCCC(N)=O)=O)C=C([N+]([O-])=O)C4=CC=CC=C42)CC1,Replaced benzene ring with pyridine ring,-7.3,2.76,0.22,505.58,Valid
+7,CN1CCN(C2=C(NC(C3=CC=C(O)C=C3NCCCCC(N)=O)=O)C=C([N+]([O-])=O)C4=CC=CC=C42)CC1,Added hydroxyl group to para position of benzene ring,-7.2,2.73,0.18,520.59,Valid
+8,CN1CCN(C2=C(NC(C3=CC=CC=C3NC4CCN(CC4)C(N)=O)=O)C=C([N+]([O-])=O)C5=CC=CC=C52)CC1,Replaced 4-aminobutanamido group with piperidine-4-carboxamide,-9.2,2.7,0.33,531.62,Valid
+9,CN1CCN(C2=C(NC(C3=CC(F)=CC=C3NC4CCN(CC4)C(N)=O)=O)C=C([N+]([O-])=O)C5=CC=CC=C52)CC1,Added fluorine atom at meta position of benzene ring,-8.5,2.79,0.31,549.61,Valid
+10,CCNCCN(C1=C(NC(C2=CC=CC=C2NC3CCN(CC3)C(N)=O)=O)C=C([N+]([O-])=O)C4=CC=CC=C41)CC,Replaced piperazine ring with ethylene linker,-8.0,2.87,0.16,547.66,Valid
+11,CN1CCN(C2=C(NC(C3=CC=C(OC)C=C3NC4CCN(CC4)C(N)=O)=O)C=C([N+]([O-])=O)C5=CC=CC=C52)CC1,Added methoxy group to para position of benzene ring,-9.0,2.78,0.29,561.64,Valid
+12,CN1CCN(C2=C(NC(C3=CC=CC=C3NC4CCN(CC4)C(N)=O)=O)C=C(C(F)(F)F)C5=CC=CC=C52)CC1,Replaced nitro group with trifluoromethyl group,-9.0,2.74,0.42,554.62,Valid
+13,CN1CCN(C2=C(NC(C3=NC=CC=C3NC4CCN(CC4)C(N)=O)=O)C=C([N+]([O-])=O)C5=CC=CC=C52)CC1,Replaced benzene ring with pyridine ring,-8.2,2.86,0.32,532.61,Valid
+14,CN1CCN(C2=C(NC(C3=CC=CC=C3NC4CCN(CC4=O)C(N)=O)=O)C=C([N+]([O-])=O)C5=CC=CC=C52)CC1,Replaced piperidine ring with morpholine ring,-8.2,3.32,0.32,545.6,Valid
+15,CN1CCN(C2=C(NC(C3=CC=CC=C3NC4CCN(CC4)C(N)=O)=O)C=C([N+]([O-])=O)C5=CC=C(F)C=C52)CC1,Added fluorine to para position of the fused benzene ring,-8.8,2.81,0.31,549.61,Valid
+16,CN1CCN(C2=C(NC(C3=CC=CC=C3NC4CCN(CC4)C(N)=O)=O)C=C([N+]([O-])=O)C5=CC=C(Cl)C=C52)CC1,Added chlorine to para position of the fused benzene ring,-8.9,2.79,0.3,566.06,Valid
+17,CN1CCN(C2=C(NC(C3=CC=CC=C3NC4CCN(CC4)C(N)=O)=O)C=C([N+]([O-])=O)C5=C(OC)C=CC=C52)CC1,Added methoxy group to the fused benzene ring,-8.7,2.83,0.29,561.64,Valid
+18,CN1CCN(C2=C(NC(C3=CC=CC=C3NC4CCN(CC4)C(N)=O)=O)C=C([N+]([O-])=O)C5=CC=C(N)C=C52)CC1,Added amino group to para position of the fused benzene ring,-8.6,2.85,0.28,546.63,Valid
+19,CN1CCN(C2=C(NC(C3=CC=CC=C3NC4CCN(CC4)C(N)=O)=O)C=C([N+]([O-])=O)C5=CC=C(CN)C=C52)CC1,Added aminomethyl group to para position of the fused benzene ring,-8.8,2.91,0.26,560.66,Valid
+20,CN1CCN(C2=C(NC(C3=CC=CC=C3NC4CCN(CC4)C(N)=O)=O)C=C([N+]([O-])=O)C5=CC=C(CO)C=C52)CC1,Added hydroxymethyl group to para position of the fused benzene ring,-8.9,2.88,0.27,561.63,Valid
