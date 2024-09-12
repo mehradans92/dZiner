@@ -1,0 +1,21 @@
+Iteration,SMILES,Modification,logCMC,uncertainty,SA Score,Molecular Weight,Validity
+0,CCCCCCCCCC(=O)CC(=O)NC1CCOC1=O,Initial SMILES,1.785,0.321,2.80403143711424,297.39500000000004,Valid
+1,CCCCCCCCCCCC(=O)CC(=O)NC1CCOC1=O,Extended hydrocarbon chain by two carbon atoms to increase hydrophobicity of the tail.,1.054,0.268,2.8052551515855004,325.4490000000001,Valid
+2,CCCCCCCCCCCC(C)(C)C(=O)CC(=O)NC1CCOC1=O,Added branching to the tail by introducing two methyl groups.,1.245,0.29,3.0591767911522503,367.5300000000001,Valid
+3,CCCCCCCCCCCC(=O)CC(=O)NC1CCOC1=O.c1ccccc1,"Attempted to add an aromatic group, but resulted in an invalid SMILES.",,,2.7021396328483682,403.56300000000016,Invalid
+4,CCCCCCCCCCCC(=O)CC(=O)NC1(c2ccccc2)CCOC1=O,Incorporated an aromatic group into the cyclic structure.,1.51,0.348,3.183216741282103,401.54700000000014,Valid
+5,CCCCCCCCCCCC(F)(F)C(=O)CC(=O)NC1CCOC1=O,Introduced fluorine atoms to increase hydrophobicity of the tail.,0.758,0.367,3.150232560383019,375.45600000000013,Valid
+6,CCCCCCCCCCCC(F)(F)C(F)(F)C(=O)CC(=O)NC1CCOC1=O,Added more fluorine atoms to further increase hydrophobicity.,0.85,0.371,3.288128459821305,425.4630000000002,Valid
+7,CCCCCCCCCCCC[Si](C)(C)C(=O)CC(=O)NC1CCOC1=O,Introduced a silicone-based group to optimize tail structure.,1.08,0.247,3.357662878911226,397.6320000000002,Valid
+8,CCCCCCCCCCCC(F)(F)C(=O)CC(=O)NC1CC(F)OC1=O,Added a fluorine atom to the cyclic structure.,0.864,0.429,3.7655356409301106,393.4460000000001,Valid
+9,CCCCCCCCCCCCCCCC(F)(F)C(=O)CC(=O)NC1CCOC1=O,Extended the hydrocarbon chain while maintaining fluorine atoms.,-0.154,0.551,3.1560957849762303,431.5640000000002,Valid
+10,CCCCCCCCCCCCCCCC(F)(F)C(F)(F)C(=O)CC(=O)NC1CCOC1=O,Added more fluorine atoms to the extended chain structure.,-0.017,0.591,3.2994994840266916,481.5710000000002,Valid
+11,CCCCCCCCCCCCCCCC(C)(C)C(=O)CC(=O)NC1CCOC1=O,Replaced fluorine atoms with methyl groups on the extended chain.,0.475,0.324,3.078047982778428,423.6380000000002,Valid
+12,CCCCCCCCCCCCCCCC(F)(F)C(=O)CC(=O)NC1CC(C)OC1=O,Added a methyl group to the cyclic structure while maintaining fluorinated tail.,0.166,0.524,3.5165887682768497,445.5910000000002,Valid
+13,CCCCCCCCCCCCCCCCCC(F)(F)C(=O)CC(=O)NC1CCOC1=O,Further extended the hydrocarbon chain while maintaining fluorine atoms.,-0.47,0.496,3.172009428699911,459.61800000000017,Valid
+14,CCCCCCCCCCCCCCCCCC(F)(F)C(F)(F)C(=O)CC(=O)NC1CCOC1=O,Added more fluorine atoms to the further extended chain structure.,-0.296,0.593,3.316957181289971,509.62500000000017,Valid
+15,CCCCCCCCCCCCCCCCCC(C)(C)C(=O)CC(=O)NC1CCOC1=O,Replaced fluorine atoms with methyl groups on the further extended chain.,0.138,0.466,3.099164813315295,451.69200000000023,Valid
+16,CCCCCCCCCCCCCCCCCC(F)(F)C(=O)CC(=O)NC1CC(F)OC1=O,Added a fluorine atom to the cyclic structure while maintaining extended fluorinated tail.,-0.384,0.587,3.7254371974179854,477.6080000000001,Valid
+17,CCCCCCCCCCCCCCCCCCCC(F)(F)C(=O)CC(=O)NC1CCOC1=O,Further extended the hydrocarbon chain by two more carbon atoms while maintaining fluorine atoms.,-0.744,0.339,3.1945745479577594,487.6720000000002,Valid
+18,CCCCCCCCCCCCCCCCCCCC(F)(F)C(F)(F)C(=O)CC(=O)NC1CCOC1=O,Added more fluorine atoms to the further extended chain structure.,-0.561,0.474,3.3405714121036567,537.6790000000002,Valid
+19,CCCCCCCCCCCCCCCCCCCC(C)(C)C(=O)CC(=O)NC1CCOC1=O,Replaced fluorine atoms with methyl groups on the further extended chain.,-0.195,0.485,3.1262827210346824,479.74600000000027,Valid

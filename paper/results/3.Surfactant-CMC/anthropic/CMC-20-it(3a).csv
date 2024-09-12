@@ -1,0 +1,21 @@
+Iteration,SMILES,Modification,logCMC,uncertainty,SA Score,Molecular Weight,Validity
+0,CCCCCCCCCC(=O)CC(=O)NC1CCOC1=O,Initial SMILES,1.785,0.321,2.8,297.4,Valid
+1,CCCCCCCCCCCCCC(=O)CC(=O)NC1CCOC1=O,Extended hydrophobic tail by adding four carbon atoms,0.449,0.345,2.82,353.5,Valid
+2,CC(C)CCCCCCCCCCCC(=O)CC(=O)NC1CCOC1=O,Introduced branching in the hydrophobic tail,1.458,0.354,2.89,367.53,Valid
+3,CCCCCCCCCCCCCC(=O)CC(=O)NCO,Reduced the size of the hydrophilic head group,1.304,0.472,2.27,299.45,Valid
+4,CCCCCCCCCCCCCC(=O)CC(=O)NC1=CC=CC=C1,Introduced an aromatic group in the head,1.792,0.378,1.91,345.53,Valid
+5,CCCCCCCCCCCCCC(=O)CC(=O)NC1COC1,Modified the cyclic head group to a smaller size,0.598,0.555,2.3,325.49,Valid
+6,CCCCCCCCCCCCCC(=O)C(C)C(=O)NC1CCOC1=O,Added a small branching near the head group,0.102,0.409,3.18,367.53,Valid
+7,CCCCCCCCCCCC(O)CC(=O)C(C)C(=O)NC1CCOC1=O,Introduced a small polar group in the tail,1.024,0.549,3.56,383.53,Valid
+8,CCCCCCCCCCCC(c1ccccc1)C(=O)C(C)C(=O)NC1CCOC1=O,Introduced a small aromatic group in the tail,1.364,0.352,3.44,429.6,Valid
+9,CCCCCCCCCCCCCC(=O)C(CF)C(=O)NC1CCOC1=O,Introduced a small fluorinated group,-0.182,0.335,3.37,385.52,Valid
+10,CCCCCCCCCCCCCC(=O)C(CF3)C(=O)NC1CCOC1=O,Attempted to extend the fluorinated part,,,,,Invalid
+11,CCCCCCCCCCCCCC(=O)C(C[Si](C)(C)C)C(=O)NC1CCOC1=O,Introduced a small siloxane group,2.202,0.8,3.52,439.71,Valid
+12,CCCCCCCCCCCC(OC)CC(=O)C(CF)C(=O)NC1CCOC1=O,Introduced a small ether group in the tail,0.703,0.394,3.79,415.55,Valid
+13,CCCCCCCCCCCC1CCC1C(=O)C(CF)C(=O)NC2CCOC2=O,Introduced a small cyclic structure in the tail,-0.704,0.299,3.97,411.56,Valid
+14,CCCCCCCCCCCC1CCC1C(=O)C(CF)C(=O)NC2COCC2,Modified the head group with a different cyclic structure,-0.673,0.412,3.92,397.58,Valid
+15,CCCCCCCCCCCC1C(C)CC1C(=O)C(CF)C(=O)NC2CCOC2=O,Introduced a small branching in the cyclic structure in the tail,0.255,0.493,4.19,425.59,Valid
+16,CCCCCCCCCCCC1CCC1C(=O)C(CF2)C(=O)NC2CCOC2=O,Attempted to introduce a second fluorine atom,,,,,Invalid
+17,CCCCCCCCCCCC1CCC1C(=O)C(CN)C(=O)NC2CCOC2=O,Introduced a small nitrogen-containing group,0.233,0.664,3.92,408.58,Valid
+18,CCCCCCCCCCCC1CCC1C(=O)C(CO)C(=O)NC2CCOC2=O,Introduced a small oxygen-containing group,-0.519,0.406,3.92,409.57,Valid
+19,CCCCCCCCCCCC1CCC1C(=O)C(CS)C(=O)NC2CCOC2=O,Introduced a small sulfur-containing group,-0.51,0.402,3.98,425.64,Valid

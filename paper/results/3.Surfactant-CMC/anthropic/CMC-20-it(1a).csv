@@ -1,0 +1,20 @@
+Iteration,SMILES,Modification,logCMC,SA Score,Molecular Weight,Validity
+0,CCCCCCCCCC(=O)CC(=O)NC1CCOC1=O,Initial SMILES,1.785,2.8,297.4,Valid
+1,CCCCCCCCCCCC(=O)CC(=O)NC1CCOC1=O,Extended hydrophobic tail by adding two carbon atoms,1.054,2.81,325.45,Valid
+2,CCCCCCCc1ccccc1C(=O)CC(=O)NC1CCOC1=O,Incorporated an aromatic ring into the structure,2.473,2.78,345.44,Valid
+3,CCCCCCCCCCCCCC(=O)CC(=O)NC1CCOC1=O,Further extended hydrophobic tail,0.449,2.82,353.5,Valid
+4,CC(C)CCCCCCCCCCCC(=O)CC(=O)NC1CCOC1=O,Introduced branching in the hydrophobic tail,1.458,2.89,367.53,Valid
+5,CCCCCCCCCCCCCC(=O)CC(=O)NC1CCOC1,Replaced ester group in cyclic part with ether group,0.462,2.75,339.52,Valid
+6,CCCCCCCCCCCCCC(=O)C(C)C(=O)NC1CCOC1=O,Introduced small branching near the head group,0.102,3.18,367.53,Valid
+7,CCCCCCCCCCCC(F)CC(=O)C(C)C(=O)NC1CCOC1=O,Introduced a fluorine atom in the hydrophobic tail,0.421,3.71,385.52,Valid
+8,CCCCCCCCCCCC(O)CC(=O)C(C)C(=O)NC1CCOC1=O,Introduced a hydroxyl group in the hydrophobic tail,1.024,3.56,383.53,Valid
+9,CCCCCCCCC=CCCC(=O)C(C)C(=O)NC1CCOC1=O,Introduced a double bond in the hydrophobic tail,1.157,3.43,351.49,Valid
+10,CCCCCCCC1CCCCC1CC(=O)C(C)C(=O)NC1CCOC1=O,Introduced a cyclic structure in the hydrophobic tail,-0.318,3.79,379.54,Valid
+11,CCCCCCCCCC1CCCC1C(=O)C(C)C(=O)NC1CCOC1=O,Moved the cyclic structure closer to the head group,-0.304,3.78,379.54,Valid
+12,CCCCCCCCCC1C(C)CCC1C(=O)C(C)C(=O)NC1CCOC1=O,Introduced a small branching in the cyclic structure,0.615,4.06,393.57,Valid
+13,CCCCCCCC1CCCC(C)C1CC(=O)C(C)C(=O)NC1CCOC1=O,Added a methyl group to the cyclic structure,0.586,4.08,393.57,Valid
+14,CCCCCCCC1CCCCCC1CC(=O)C(C)C(=O)NC1CCOC1=O,Changed cyclopentyl to cyclohexyl in the hydrophobic tail,-0.518,3.78,393.57,Valid
+15,CCCC1CCCCCC1CCCCCC(=O)C(C)C(=O)NC1CCOC1=O,Moved the cyclohexyl structure closer to the end of the hydrophobic tail,-0.515,3.8,393.57,Valid
+16,CCCCCCCC1CCCC(O)CC1CC(=O)C(C)C(=O)NC1CCOC1=O,Added a hydroxyl group to the cyclohexyl structure,0.65,4.1,409.57,Valid
+17,CCCCCCCC1CCC=CCC1CC(=O)C(C)C(=O)NC1CCOC1=O,Introduced a double bond in the cyclohexyl ring,0.395,4.07,391.55,Valid
+18,CCCCCCCCC1CCCCCC1CC(=O)C(C)C(=O)NC1CCOC1=O,Extended the alkyl chain attached to the cyclohexyl group,-0.68,3.78,407.6,Valid
