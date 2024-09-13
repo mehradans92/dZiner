@@ -1,0 +1,22 @@
+Iteration,SMILES,Modification,logCMC,SA Score,Molecular Weight,Validity
+0,CCCCCCCCCC(=O)CC(=O)NC1CCOC1=O,Initial SMILES,1.785,2.8,297.4,Valid
+1,CCCCCCCCCCCC(=O)CC(=O)NC1CCOC1=O,Increased hydrophobic tail length by adding two carbon atoms,1.054,2.81,325.45,Valid
+2,CCCCCCCCCC(=O)CC(=O)NC1C(c2ccccc2)COC1=O,Incorporated an aromatic ring into the cyclic ester structure,2.426,3.18,373.49,Valid
+3,CC(C)CCCCCCCC(=O)CC(=O)NC1CCOC1=O,Introduced branching at the beginning of the hydrophobic tail,2.583,2.88,311.42,Valid
+4,CCCCCCCCCC(=O)CC(=O)NCCO,Replaced cyclic ester with a simpler amide group,2.872,2.09,257.37,Valid
+5,FCCCCCCCCCC(=O)CC(=O)NC1CCOC1=O,Added a fluorine atom at the end of the hydrophobic tail,-0.564,3.03,315.39,Valid
+6,FCCCCCCCCCC(=O)CC(=O)NC1C(F)COC1=O,Added a second fluorine atom to the cyclic ester group,-0.523,3.66,333.38,Valid
+7,FCC(C)CCCCCCCC(=O)CC(=O)NC1CCOC1=O,Introduced branching near the fluorinated end of the hydrophobic tail,1.823,3.47,329.41,Valid
+8,FCCCCCCCCCCC(=O)CC(=O)NC1CCOC1=O,Increased hydrophobic tail length while keeping the fluorine atom,-0.779,3.02,329.41,Valid
+9,FCCCCCCCCCCC(=O)CC(=O)NC1C(O)COC1=O,Added a hydroxyl group to the cyclic ester,-0.321,3.49,345.41,Valid
+10,FCCCCCCCCCCC(=O)CC(=O)NC1C(C)COC1=O,Added a methyl group to the cyclic ester,-0.286,3.49,343.44,Valid
+11,FCCCCCCC=CCCC(=O)CC(=O)NC1CCOC1=O,Introduced a double bond in the middle of the hydrophobic tail,0.269,3.29,327.4,Valid
+12,FCCCCCCCCCCC(=O)CSC(=O)NC1CCOC1=O,Replaced a carbonyl group with a sulfur atom,-1.083,3.34,361.48,Valid
+13,FCCCCCCCCCCC(=O)CSC(=O)NC1C(F)COC1=O,Added a second fluorine atom to the cyclic ester group while keeping the sulfur atom,-0.976,3.93,379.47,Valid
+14,FCCCCCCCCCCC(=O)CSC(=O)NCCOC(=O)C,Replaced the cyclic ester with a simpler ester group,0.308,2.71,363.5,Valid
+15,FCCCCCCC(C)CCCC(=O)CSC(=O)NC1CCOC1=O,Introduced branching near the middle of the hydrophobic tail,1.254,3.75,375.51,Valid
+16,FCCCCCCCCCCC(=S)CSC(=O)NC1CCOC1=O,Replaced the remaining carbonyl group with a thiocarbonyl group,-1.076,3.56,377.55,Valid
+17,FCCCCCCCCCCCC(=O)CSC(=O)NC1CCOC1=O,Extended the hydrophobic tail by one carbon atom,-1.201,3.33,375.51,Valid
+18,FCCCCCCCCCCC(=O)CSC(=S)NC1CCOC1=O,Replaced the carbonyl group adjacent to the cyclic ester with a thiocarbonyl group,-0.989,3.56,377.55,Valid
+19,FCCCCCCCCCCC(=O)CSC(=O)NC1CSOC1=O,Replaced an oxygen atom in the cyclic ester with a sulfur atom,-0.957,3.58,377.55,Valid
+20,FCCCCCCCCCCCC(=O)CSC(=O)NC1CCOC1=O,Extended the hydrophobic tail by one more carbon atom,-1.315,3.32,389.53,Valid

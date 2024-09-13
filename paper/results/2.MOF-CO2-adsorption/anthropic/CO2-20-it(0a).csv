@@ -1,0 +1,20 @@
+Iteration,SMILES,Modification,CO2 Adsorption,Uncertainty,SA Score,Molecular Weight,Validity
+0,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C#N,Initial SMILES,0.885,0.033,3.69,430.42,Valid
+1,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)N,Replaced cyano group with urea group to increase polarity and basicity,0.977,0.071,3.54,448.44,Valid
+2,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(CCN)C(=O)N,Added aminoethyl group to increase basicity,0.958,0.066,3.61,477.48,Valid
+3,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(c2ccncc2)C(=O)N,Replaced aminoethyl group with pyridine ring to increase aromaticity,1.15,0.04,3.56,511.5,Valid
+4,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(c2ccncc2)C(=O)NC,Added methyl group to urea to increase hydrophobicity,1.144,0.046,3.61,525.53,Valid
+5,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(c2ccncc2)C(=O)NCO,Added hydroxyethyl group to increase polarity,1.098,0.059,3.71,541.52,Valid
+6,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(c2ccncc2F)C(=O)N,Added fluorine to pyridine ring to increase CO2 binding strength,1.47,0.169,3.67,529.49,Valid
+7,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(c2c(F)cncc2F)C(=O)N,Added second fluorine to pyridine ring to further increase CO2 binding strength,1.62,0.219,3.78,547.48,Valid
+8,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(c2c(F)cncc2F)C(=O)NCN,Added aminomethyl group to increase basicity,1.529,0.171,3.94,576.52,Valid
+9,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1O)c1c(N)cc(c(c1N)N)C(=O)[O-])N(c2c(F)cncc2F)C(=O)N,Added hydroxyl group to one of the existing aromatic rings to increase polarity,1.541,0.212,3.93,563.48,Valid
+10,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(c2c(F)cnc3ccccc23)C(=O)N,Replaced pyridine with quinoline to increase aromatic surface area,1.275,0.142,3.66,579.55,Valid
+11,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(c2c(F)cncc2F)C(=O)NCCN,Added ethylenediamine group to increase basicity,1.519,0.171,3.86,590.55,Valid
+12,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(c2c(F)cncc2F)C(=O)n1ccnn1,Added triazole ring to increase CO2 interactions,1.568,0.191,4.1,599.51,Valid
+13,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(c2c(F)cncc2F)C(=O)NCCNC,Added N-methylethylenediamine group to increase basicity,1.51,0.17,3.88,604.57,Valid
+14,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(c2c(F)cncc2F)C(=O)NCc1cccnc1,Added pyridylmethyl group to increase basicity and aromatic surface area,1.475,0.194,3.81,638.59,Valid
+15,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(c2c(F)cncc2F)C(=O)NCCCN,Added propylenediamine group to increase basicity,1.51,0.17,3.85,604.57,Valid
+16,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(c2c(F)cncc2F)C(=O)NCO,Added hydroxyethyl group to increase polarity,1.528,0.208,3.93,577.5,Valid
+17,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(c2c(F)cncc2F)C(=O)NCC(N)=O,Added glycinamide group to increase polarity and hydrogen bonding,1.444,0.181,3.87,604.53,Valid
+18,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(c2c(F)cncc2F)C(=O)NC(C)N,Added 1-aminoethyl group to increase basicity,1.526,0.169,4.38,590.55,Valid

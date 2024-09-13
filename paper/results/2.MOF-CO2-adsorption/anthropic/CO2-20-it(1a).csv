@@ -1,0 +1,20 @@
+Iteration,SMILES,Modification,CO2 Adsorption,Uncertainty,SA Score,Molecular Weight,Validity
+0,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C#N,Initial SMILES,0.885,0.033,3.69,430.42,Valid
+1,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)N,Replaced cyano group with amide group to increase polarity and introduce more hydrogen bonding sites,0.977,0.071,3.54,448.44,Valid
+2,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)c1cccnc1,Replaced amide group with pyridine ring to introduce a nitrogen-containing heterocycle as a Lewis basic site,0.945,0.06,3.47,482.5,Valid
+3,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)CCO,Replaced pyridine ring with ethanol group to introduce a hydroxyl group for increased polarity and hydrogen bonding,1.057,0.083,3.47,449.47,Valid
+4,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)CCF,Replaced hydroxyl group with fluorine atom to enhance electrostatic interactions,1.534,0.266,3.6,451.46,Valid
+5,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)c1ccc(F)cc1,Replaced fluoroethyl group with fluorobenzene ring to increase aromatic character,1.369,0.222,3.37,499.5,Valid
+6,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)c1cnc[nH]1,Replaced fluorobenzene ring with imidazole ring to introduce a nitrogen-containing heterocycle,0.969,0.054,3.74,471.48,Valid
+7,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)c1cn[nH]n1,Replaced imidazole ring with triazole ring to introduce more nitrogen atoms,0.957,0.051,3.76,472.47,Valid
+8,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)CC(F)C(=O)O,Added carboxyl group to fluoroethyl group to increase polarity and introduce more hydrogen bonding sites,1.358,0.196,4.1,495.47,Valid
+9,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)CCNC,Replaced fluoroethyl group with N-methylethylenediamine group to introduce additional amine functionality,1.052,0.067,3.51,462.51,Valid
+10,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(F)CF,Added another fluorine atom to enhance electrostatic interactions,1.713,0.287,4.21,469.45,Valid
+11,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(F)(F)CF,Added a third fluorine atom to further enhance electrostatic interactions,1.823,0.271,3.8,487.44,Valid
+12,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(O)(CF)CF,Added hydroxyl group to trifluoroethyl group to combine benefits of fluorine atoms and hydrogen bonding,1.642,0.275,3.95,499.47,Valid
+13,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(Cl)(CF)CF,Replaced hydroxyl group with chlorine atom to enhance electrostatic interactions,1.797,0.32,3.99,517.92,Valid
+14,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(CCN)C(F)(F)CF,Replaced methyl group with aminoethyl group while maintaining trifluoroethyl group,1.728,0.296,3.91,516.48,Valid
+15,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(c2ccccn2)C(F)(F)CF,Replaced methyl group with pyridine ring while maintaining trifluoroethyl group,1.862,0.252,3.84,550.5,Valid
+16,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(c2cnc[nH]2)C(F)(F)CF,Replaced pyridine ring with imidazole ring while maintaining trifluoroethyl group,1.945,0.228,4.05,539.47,Valid
+17,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(c2cn[nH]n2)C(F)(F)CF,Replaced imidazole ring with triazole ring while maintaining trifluoroethyl group,1.927,0.197,4.09,540.46,Valid
+18,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(c2nnn[nH]2)C(F)(F)CF,Replaced triazole ring with tetrazole ring while maintaining trifluoroethyl group,1.901,0.171,4.16,541.45,Valid

@@ -1,0 +1,21 @@
+Iteration,SMILES,Modification,Docking Score,SA Score,QED Score,Molecular Weight,Validity
+0,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C([N+]([O-])=O)C=C2)CC1,Initial SMILES,-6.7,1.97,0.66,374.83,Valid
+1,CN1CCN(C2=C(NC(C3=CC=CC=C3F)=O)C=C([N+]([O-])=O)C=C2)CC1,Replaced Cl with F on the phenyl ring,-6.6,1.99,0.67,358.37,Valid
+2,CN1CCN(C2=C(NC(C3=CC=CC4=CC=CC=C43)=O)C=C([N+]([O-])=O)C=C2)CC1,Replaced phenyl ring with naphthyl group,-7.6,2.04,0.54,390.44,Valid
+3,CN1CCN(C2=C(NC(C3=CC=CC4=CC=CC=C43)=O)C=C(C#N)C=C2)CC1,Replaced nitro group with cyano group,-7.6,2.06,0.76,370.46,Valid
+4,CN1CCN(C2=C(NC(C3=CC=CC4=CC=CC=C43)=O)C=C(C(=O)N)C=C2)CC1,Replaced cyano group with amide group,-8.4,1.99,0.72,388.47,Valid
+5,CN1CCN(C2=C(NC(C3=CC=CC4=CC=CC=C43)=O)C=C(C(=O)NC)C=C2)CC1,Added methyl group to amide,-8.3,2.02,0.7,402.5,Valid
+6,CN1CCN(CC(=O)N)CC1C2=C(NC(C3=CC=CC4=CC=CC=C43)=O)C=C(C(=O)N)C=C2,Added amide group to piperazine ring,-7.9,2.87,0.54,445.52,Valid
+7,CN1CCN(C2=C(NC(C3=C(F)C=CC4=CC=CC=C43)=O)C=C(C(=O)N)C=C2)CC1,Added fluorine to naphthyl group,-8.1,2.18,0.7,406.46,Valid
+8,CN1CCN(C2=C(NC(=O)CC3=CC=CC4=CC=CC=C43)C=C(C(=O)N)C=C2)CC1,Added methylene group between naphthyl and amide,-8.2,2.06,0.69,402.5,Valid
+9,CN1CCN(CC2=CC=C(NC(C3=CC=CC4=CC=CC=C43)=O)C(C(=O)N)=C2)CC1,Rearranged structure,-8.2,2.03,0.69,402.5,Valid
+10,CN1CCN(C2=C(NC(C3=CC=CC4=CC=CC=C43)=O)C=C(C(=O)NCCN)C=C2)CC1,Extended amide group with ethylenediamine,-8.2,2.12,0.56,431.54,Valid
+11,CCN1CCN(C2=C(NC(C3=CC=CC4=CC=CC=C43)=O)C=C(C(=O)N)C=C2)CC1,Replaced methyl with ethyl on piperazine,-7.9,2.02,0.69,402.5,Valid
+12,CN1CCN(C2=C(NC(C3=CC=CC4=CC=CC=C43)=O)C(F)=C(C(=O)N)C=C2)CC1,Added fluorine to central aromatic ring,-8.0,2.29,0.7,406.46,Valid
+13,CN1CCN(C2=C(NC(=N)C3=CC=CC4=CC=CC=C43)C=C(C(=O)N)C=C2)CC1,Replaced amide with imine on naphthyl,-7.9,2.38,0.47,387.49,Valid
+14,CN1CCN(C2=C(NC(C3=CC=CC4=CC=CC=C43)=O)C=C(C(=O)N)C=C2)C(C)C1,Added isopropyl group to piperazine,-8.7,2.66,0.7,402.5,Valid
+15,CN1CCN(C2=C(NC(C3=CC=CC4=CC=CC=C43)=O)C=C(C(=O)NC)C=C2)C(C)C1,Added isopropyl to piperazine and methyl to amide,-8.6,2.68,0.68,416.53,Valid
+16,CN1CCN(C2=C(NC(C3=CC=C(F)C4=CC=CC=C43)=O)C=C(C(=O)N)C=C2)C(C)C1,Added fluorine to naphthyl and isopropyl to piperazine,-8.8,2.79,0.68,420.49,Valid
+17,CN1CCN(C2=C(NC(C3=CC=C(Cl)C4=CC=CC=C43)=O)C=C(C(=O)N)C=C2)C(C)C1,Added chlorine to naphthyl and isopropyl to piperazine,-8.9,2.77,0.65,436.94,Valid
+18,CCN1CCN(C2=C(NC(C3=CC=C(Cl)C4=CC=CC=C43)=O)C=C(C(=O)N)C=C2)C(C)C1,"Added chlorine to naphthyl, isopropyl and ethyl to piperazine",-8.7,2.78,0.6,450.97,Valid
+19,CN1CCN(C2=C(NC(C3=CC=C(Cl)C4=CC=CC=C43)=O)C=C(C(=O)NCO)C=C2)C(C)C1,"Added chlorine to naphthyl, isopropyl to piperazine, and hydroxyethyl to amide",-8.3,2.92,0.5,466.97,Valid

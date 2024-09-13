@@ -1,0 +1,21 @@
+Iteration,SMILES,Modification,Docking Score,SA Score,QED Score,Molecular Weight,Validity
+0,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C([N+]([O-])=O)C=C2)CC1,Initial SMILES,-6.7,1.97,0.66,374.83,Valid
+1,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C([N+]([O-])=O)C=C2C4=CC=CC=C4)CC1,Added an aromatic ring to potentially form π-π stacking interactions with WDR5,-7.2,2.28,0.44,450.93,Valid
+2,CN1CCN(C2=C(NC(C3=CC=CC=C3NCCCCC(=O)N)=O)C=C([N+]([O-])=O)C=C2C4=CC=CC=C4)CC1,Replaced the chlorine atom with a 4-aminobutanamido group,-6.8,2.57,0.19,530.63,Valid
+3,CN1CCN(CC(O)C)C(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C([N+]([O-])=O)C=C2C4=CC=CC=C4)C1,Modified the piperazine ring by adding a hydroxyethyl group,-6.5,3.32,0.35,509.01,Valid
+4,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C#N)C=C2C4=CC=CC=C4)CC1,Replaced the nitro group with a cyano group,-7.4,2.29,0.64,430.94,Valid
+5,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C#N)C=C2C4=CC=C(F)C=C4)CC1,Introduced a fluorine atom on the newly added aromatic ring,-7.3,2.35,0.61,448.93,Valid
+6,CN1CCN(CC2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C#N)C=C2C4=CC=C(F)C=C4)CC1,Introduced a methylene group between the piperazine ring and the central aromatic system,-8.0,2.36,0.58,462.96,Valid
+7,CN1CCN(CC2=C(NC(C3=CC=CC=C3O)=O)C=C(C#N)C=C2C4=CC=C(F)C=C4)CC1,Replaced the chlorine with a hydroxyl group,-7.7,2.41,0.62,444.51,Valid
+8,CN1CCN(CC2=C(NC(C3=CC=CC=C3OC)=O)C=C(C#N)C=C2C4=CC=C(F)C=C4)CC1,Replaced the hydroxyl group with a methoxy group,-7.2,2.37,0.59,458.54,Valid
+9,CN1CCN(CC2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C#N)C=C2C4=CC=C(F)C=C4)C(=O)C1,Replaced one of the methylene groups in the piperazine with a carbonyl group to create a piperazinone,-8.0,2.56,0.59,476.94,Valid
+10,CN1CCN(CC2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C#N)C=C2C4=C(OC)C=C(F)C=C4)C(=O)C1,Added a methoxy group ortho to the fluorine on the fluorobenzene ring,-7.3,2.69,0.53,506.97,Valid
+11,CN1CCN(CC2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C(F)(F)F)C=C2C4=CC=C(F)C=C4)C(=O)C1,Replaced the cyano group with a trifluoromethyl group,-8.3,2.57,0.44,519.93,Valid
+12,CN1CCN(CC2=C(NC(C3=CC(OC)=CC=C3Cl)=O)C=C(C(F)(F)F)C=C2C4=CC=C(F)C=C4)C(=O)C1,Added a methoxy group meta to the chlorine on the chlorobenzene ring,-8.0,2.65,0.4,549.95,Valid
+13,CN1CCN(COC2=C(NC(C3=CC(OC)=CC=C3Cl)=O)C=C(C(F)(F)F)C=C2C4=CC=C(F)C=C4)C(=O)C1,Introduced an oxygen atom to create an ether linkage between the piperazinone and the central aromatic system,-7.7,2.73,0.38,565.95,Valid
+14,CN1CCN(CC2=C(NC(C3=CC=CC=C3Br)=O)C=C(C(F)(F)F)C=C2C4=CC=C(F)C=C4)C(=O)C1,Replaced the chlorine with a bromine on the benzene ring,-8.2,2.62,0.4,564.38,Valid
+15,CN1CCN(CC2=C(NC(C3=CC=CC=C3Br)=O)C=C(C(F)(F)F)C=C2C4=CC=C(F)C=C4OC)C(=O)C1,Added a methoxy group para to the fluorine on the fluorobenzene ring,-7.2,2.75,0.37,594.4,Valid
+16,CN1C(=O)CN(CC2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C(F)(F)F)C=C2C4=CC=C(F)C=C4)CCN1C,Introduced a methyl group on one of the nitrogen atoms of the piperazinone ring,-8.5,2.79,0.43,548.97,Valid
+17,CN1C(=O)CN(CC2=C(NC(C3=C(F)C=CC=C3Cl)=O)C=C(C(F)(F)F)C=C2C4=CC=C(F)C=C4)CCN1C,Added a fluorine atom ortho to the chlorine on the chlorobenzene ring,-7.7,2.92,0.4,566.96,Valid
+18,CN1C(=O)CN(COC2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C(F)(F)F)C=C2C4=CC=C(F)C=C4)CCN1C,Introduced an oxygen atom to create an ether linkage between the central aromatic system and the piperazinone ring,-8.3,2.88,0.41,564.97,Valid
+19,CN1C(=O)CN(CC2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C(F)(F)F)C=C2C4=CC(C#N)=C(F)C=C4)CCN1C,Added a cyano group meta to the fluorine on the fluorobenzene ring,-7.6,3.01,0.41,573.98,Valid

@@ -1,0 +1,649 @@
+
+
+[1m> Entering new AgentExecutor chain...[0m
+[32;1m[1;3mThought: To start this task, I need to research the design guidelines for organic linkers with higher CO2 adsorption. This will give me the necessary chemical intuition to make informed modifications to the given molecule.
+
+Action: lookup_papers
+Action Input: design guidelines for organic linkers with higher CO2 adsorption
+[0m
+Observation: [36;1m[1;3mBased on the context provided, there are several design guidelines for improving CO2 adsorption in the organic linkers of metal-organic frameworks (MOFs):
+
+1. Functionalization with polar groups: Introducing polar functional groups like -NH2, -OH, -NO2, -SO3H, etc. can enhance CO2 interactions and selectivity. This is supported by the paper "Functionalized Ligands in MOFs" (DOI not provided in the given context) which discusses how ligand functionalization improves selective CO2 adsorption.
+
+2. Introducing nitrogen-containing groups: Functional groups like N=C(R)-, -NH2, N=N- in the framework show substantial selective adsorption of CO2. This is mentioned in the same section of the context discussing functionalized ligands.
+
+3. Using sulphonate and phosphonate groups: These groups are suggested to be considered for improving CO2 adsorption, as mentioned in the context.
+
+4. Considering water stability: The functional groups should be chosen keeping in mind the water stability of the framework, as flue gas contains water vapor which can affect CO2 uptake.
+
+5. Tuning pore size and shape: While not directly related to the organic linker, the context mentions that pore size and shape optimization can improve CO2 adsorption and separation.
+
+6. Using flexible frameworks: The context mentions a study showing ultrahigh CO2/N2 selectivity in a flexible MOF [Zn(bpdc)(bpee)].2DMF. This suggests that designing linkers that allow for framework flexibility could be beneficial.
+
+To provide a specific citation as requested, one relevant paper mentioned in the context is:
+
+Title: "Single component gas isotherms for N2 (blue) and CO2 (red) for the flexible MOF [Zn(bpdc)(bpee)].2DMF showing the ultrahigh CO2/N2 selectivity governed by the flexible MOF"
+
+Journal: Not explicitly stated, but likely from a Wiley-VCH publication based on the copyright information
+
+Year: 2010
+
+DOI: Not provided in the given context
+
+This paper demonstrates the importance of framework flexibility in achieving high CO2 selectivity, which could inform organic linker design. Here are some key design guidelines for modifying organic linkers in MOFs to improve CO2 adsorption:
+
+1. Incorporate nitrogen-containing heterocycles: Introducing nitrogen atoms into aromatic rings (e.g. pyridine, triazole, tetrazole) can enhance CO2 binding through Lewis acid-base interactions.
+
+2. Add polar functional groups: Attaching groups like -NH2, -OH, -COOH can increase CO2 affinity through hydrogen bonding and dipole-dipole interactions. 
+
+3. Introduce alkylamines: Grafting primary, secondary or tertiary amines can enable chemisorption of CO2 through carbamate formation.
+
+4. Increase aromatic surface area: Expanding aromatic systems provides more surface for CO2 adsorption via π-π interactions.
+
+5. Tune pore size/shape: Designing linkers that create pores matching the kinetic diameter of CO2 (~3.3 Å) can enhance selectivity.
+
+6. Incorporate flexibility: Using flexible linkers can enable framework breathing and increased uptake at higher pressures.
+
+These guidelines are summarized from several key papers, including:
+
+"Carbon Dioxide Capture in Metal–Organic Frameworks" 
+Chemical Reviews, 2012
+DOI: 10.1021/cr2003272
+
+"The Chemistry and Applications of Metal-Organic Frameworks"
+Science, 2013
+DOI: 10.1126/science.1230444
+
+"Strategies for Enhancing the Maturity of Metal–Organic Frameworks for Carbon Capture"
+ACS Central Science, 2019
+DOI: 10.1021/acscentsci.9b00745 Based on the paper "Rational Design of a Low-Cost, High-Performance Metal−Organic Framework for Hydrogen Storage and Carbon Capture" (DOI: 10.1021/acs.jpcc.6b10363, published in The Journal of Physical Chemistry C in 2017), some key design guidelines for improving CO2 adsorption in the organic linker of metal-organic frameworks include:
+
+1. Using smaller aliphatic linkers instead of larger aromatic ones. This increases the density of open metal sites, leading to stronger CO2 binding.
+
+2. Reducing the channel diameter of the framework. This results in a higher volumetric density of adsorption sites.
+
+3. Decreasing the distance between adjacent open metal sites. This allows for stronger cooperative binding of CO2 molecules.
+
+4. Incorporating functional groups that can form hydrogen bonds with CO2, such as hydroxyl groups.
+
+5. Maintaining rigidity in the linker structure to preserve framework porosity.
+
+6. Balancing pore size - smaller pores increase binding strength but very small pores can limit uptake capacity.
+
+7. Considering cheaper, commercially available linkers to improve cost-effectiveness.
+
+The paper demonstrates these principles by designing a MOF with a 2,3-dihydroxyfumarate (DHFUMA) linker, which is smaller than the typical aromatic linkers used in MOF-74 analogues. This resulted in improved CO2 uptake and binding strength compared to the original MOF-74 structures. Based on the paper "Designing organic bridging linkers of metal–organic frameworks for enhanced carbon dioxide adsorption" published in New Journal of Chemistry in 2024 (DOI: 10.1039/d4nj01197j), the following design guidelines can be summarized for improving CO2 adsorption on organic linkers:
+
+1. Metal decoration: Decorating the linkers with metal atoms, particularly lithium (Li), significantly enhances CO2 adsorption through stronger physisorption. Li-decorated linkers showed improved affinity for CO2 compared to pristine linkers.
+
+2. Fluorination and chlorination: Incorporating fluorine and chlorine atoms into the linkers can improve CO2 adsorption. Fluorinated and chlorinated linkers exhibited favorable physisorption behavior.
+
+3. Aromatic ring modification: Replacing benzene rings with larger aromatic rings (e.g., naphthalene) can potentially increase the surface area and improve CO2 uptake.
+
+4. Functional group addition: Adding functional groups to the linkers, such as amino groups, can enhance CO2 adsorption through increased electrostatic interactions.
+
+5. Hydrophobic design: Creating hydrophobic linkers can help minimize competitive water adsorption, which is crucial for CO2 capture in humid environments.
+
+6. Linker size and geometry: Increasing the length of organic linkers can result in higher surface area and enhanced gas adsorption, but stability must be considered.
+
+7. Electron-withdrawing groups: Incorporating electron-withdrawing groups can increase the polarity of the linker surface, potentially improving CO2 interactions.
+
+These guidelines aim to enhance the electrostatic interactions, polarization, and overall binding enthalpy between CO2 and the organic linkers, leading to improved adsorption performance. The study emphasizes the importance of balancing adsorption strength, stability, and practical considerations when designing linkers for CO2 capture in metal-organic frameworks.[0m
+Thought:[32;1m[1;3mThought: Now that I have researched the design guidelines for improving CO2 adsorption in organic linkers, I need to evaluate the initial SMILES structure and then start making modifications based on these guidelines. Let's begin by checking the validity and CO2 adsorption of the initial SMILES.
+
+Action: check_validity
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C#N
+[0m
+Observation: [33;1m[1;3m('Valid SMILES', 3.6902790948109647, 430.4240000000002, 'Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C#N')[0m
+Thought:[32;1m[1;3mThought: The initial SMILES is valid, has an SA score of 3.69, and a molecular weight of 430.42 g/mol, which is below our target of 600 g/mol. Now, let's check its CO2 adsorption.
+
+Action: predict_CO2_adsoprtion
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C#N
+[0m
+Observation: [38;5;200m[1;3m(0.885, 0.033)[0m
+Thought:[32;1m[1;3mThought: The initial SMILES has a CO2 adsorption of 0.885 with an uncertainty of 0.033. Now that we have this baseline, we can start making modifications to improve CO2 adsorption based on the design guidelines. Let's start by adding a polar group to enhance CO2 interactions.
+
+Action: check_validity
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)N
+[0m
+Observation: [33;1m[1;3m('Valid SMILES', 3.5360163950484704, 448.43900000000025, 'Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)N')[0m
+Thought:[32;1m[1;3mThought: The modified SMILES is valid, with an SA score of 3.54 and a molecular weight of 448.44 g/mol, which is still below our target of 600 g/mol. Let's check its CO2 adsorption.
+
+Action: predict_CO2_adsoprtion
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)N
+[0m
+Observation: [38;5;200m[1;3m(0.977, 0.071)[0m
+Thought:[32;1m[1;3mThought: The modification has improved CO2 adsorption from 0.885 to 0.977, which is a positive change. Let's continue making modifications based on our design guidelines. This time, let's try introducing a nitrogen-containing heterocycle to enhance CO2 binding through Lewis acid-base interactions.
+
+Action: check_validity
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)c1nccnn1
+[0m
+Observation: [33;1m[1;3m('Valid SMILES', 3.7161515150577085, 484.4760000000002, 'Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)c1nccnn1')[0m
+Thought:[32;1m[1;3mThought: The modified SMILES is valid, with an SA score of 3.72 and a molecular weight of 484.48 g/mol, which is still below our target of 600 g/mol. Let's check its CO2 adsorption.
+
+Action: predict_CO2_adsoprtion
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)c1nccnn1
+[0m
+Observation: [38;5;200m[1;3m(0.925, 0.049)[0m
+Thought:[32;1m[1;3mThought: The modification with the nitrogen-containing heterocycle (tetrazole) has improved CO2 adsorption from 0.885 to 0.925, which is positive but not as significant as our previous modification. Let's try another approach by introducing a hydroxyl group, which can form hydrogen bonds with CO2.
+
+Action: check_validity
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)O)C(=O)[O-])N(C)C#N
+[0m
+Observation: [33;1m[1;3m('Valid SMILES', 3.7061071806785844, 431.4080000000002, 'Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)O)C(=O)[O-])N(C)C#N')[0m
+Thought:[32;1m[1;3mThought: The modified SMILES is valid, with an SA score of 3.71 and a molecular weight of 431.41 g/mol, which is still below our target of 600 g/mol. Let's check its CO2 adsorption.
+
+Action: predict_CO2_adsoprtion
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)O)C(=O)[O-])N(C)C#N
+[0m
+Observation: [38;5;200m[1;3m(0.909, 0.042)[0m
+Thought:[32;1m[1;3mThought: The modification with the hydroxyl group has improved CO2 adsorption from 0.885 to 0.909, which is positive but not as significant as our first modification. Let's try another approach by introducing a sulphonate group, which was mentioned in the design guidelines as potentially beneficial for CO2 adsorption.
+
+Action: check_validity
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)S(=O)(=O)[O-])C(=O)[O-])N(C)C#N
+[0m
+Observation: [33;1m[1;3m('Valid SMILES', 3.923206370481635, 494.46500000000026, 'Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)S(=O)(=O)[O-])C(=O)[O-])N(C)C#N')[0m
+Thought:[32;1m[1;3mThought: The modified SMILES with the sulphonate group is valid, with an SA score of 3.92 and a molecular weight of 494.47 g/mol, which is still below our target of 600 g/mol. Let's check its CO2 adsorption.
+
+Action: predict_CO2_adsoprtion
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)S(=O)(=O)[O-])C(=O)[O-])N(C)C#N
+[0m
+Observation: [38;5;200m[1;3m(1.026, 0.102)[0m
+Thought:[32;1m[1;3mThought: The modification with the sulphonate group has significantly improved CO2 adsorption from 0.885 to 1.026, which is the best result so far. This aligns with the design guidelines suggesting that sulphonate groups can enhance CO2 adsorption. Let's continue exploring other modifications based on our guidelines. Next, let's try introducing a phosphonate group, which was also mentioned as potentially beneficial.
+
+Action: check_validity
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)P(=O)([O-])[O-])C(=O)[O-])N(C)C#N
+[0m
+Observation: [33;1m[1;3m('Valid SMILES', 4.105543839464266, 493.37200000000024, 'Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)P(=O)([O-])[O-])C(=O)[O-])N(C)C#N')[0m
+Thought:[32;1m[1;3mThought: The modified SMILES with the phosphonate group is valid, with an SA score of 4.11 and a molecular weight of 493.37 g/mol, which is still below our target of 600 g/mol. Let's check its CO2 adsorption.
+
+Action: predict_CO2_adsoprtion
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)P(=O)([O-])[O-])C(=O)[O-])N(C)C#N
+[0m
+Observation: [38;5;200m[1;3m(1.394, 0.122)[0m
+Thought:[32;1m[1;3mThought: The modification with the phosphonate group has significantly improved CO2 adsorption from 0.885 to 1.394, which is the best result so far. This aligns with the design guidelines suggesting that phosphonate groups can enhance CO2 adsorption. Let's continue exploring other modifications based on our guidelines. Next, let's try introducing an additional aromatic ring to increase the aromatic surface area for CO2 adsorption via π-π interactions.
+
+Action: check_validity
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)c1ccccc1)C(=O)[O-])N(C)C#N
+[0m
+Observation: [33;1m[1;3m('Valid SMILES', 3.4948096143029552, 491.50700000000023, 'Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)c1ccccc1)C(=O)[O-])N(C)C#N')[0m
+Thought:[32;1m[1;3mThought: The modified SMILES with the additional aromatic ring is valid, with an SA score of 3.49 and a molecular weight of 491.51 g/mol, which is still below our target of 600 g/mol. Let's check its CO2 adsorption.
+
+Action: predict_CO2_adsoprtion
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)c1ccccc1)C(=O)[O-])N(C)C#N
+[0m
+Observation: [38;5;200m[1;3m(0.929, 0.04)[0m
+Thought:[32;1m[1;3mThought: The modification with the additional aromatic ring has improved CO2 adsorption from 0.885 to 0.929, which is positive but not as significant as our previous modifications with sulphonate and phosphonate groups. Let's continue exploring other modifications based on our guidelines. This time, let's try introducing a primary amine group, which can enable chemisorption of CO2 through carbamate formation.
+
+Action: check_validity
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)CN)C(=O)[O-])N(C)C#N
+[0m
+Observation: [33;1m[1;3m('Valid SMILES', 3.720200595959918, 444.45100000000025, 'Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)CN)C(=O)[O-])N(C)C#N')[0m
+Thought:[32;1m[1;3mThought: The modified SMILES with the primary amine group is valid, with an SA score of 3.72 and a molecular weight of 444.45 g/mol, which is still below our target of 600 g/mol. Let's check its CO2 adsorption.
+
+Action: predict_CO2_adsoprtion
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)CN)C(=O)[O-])N(C)C#N
+[0m
+Observation: [38;5;200m[1;3m(0.895, 0.033)[0m
+Thought:[32;1m[1;3mThought: The modification with the primary amine group has only slightly improved CO2 adsorption from 0.885 to 0.895, which is not as significant as we hoped. Let's try another approach by introducing a larger nitrogen-containing heterocycle, such as a pyridine ring, which can enhance CO2 binding through Lewis acid-base interactions.
+
+Action: check_validity
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)c1ccncc1)C(=O)[O-])N(C)C#N
+[0m
+Observation: [33;1m[1;3m('Valid SMILES', 3.6257820124930005, 492.49500000000023, 'Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)c1ccncc1)C(=O)[O-])N(C)C#N')[0m
+Thought:[32;1m[1;3mThought: The modified SMILES with the pyridine ring is valid, with an SA score of 3.63 and a molecular weight of 492.50 g/mol, which is still below our target of 600 g/mol. Let's check its CO2 adsorption.
+
+Action: predict_CO2_adsoprtion
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)c1ccncc1)C(=O)[O-])N(C)C#N
+[0m
+Observation: [38;5;200m[1;3m(0.859, 0.052)[0m
+Thought:[32;1m[1;3mThought: The modification with the pyridine ring has actually decreased CO2 adsorption from 0.885 to 0.859, which is not the desired outcome. Let's revisit our most successful modification so far, which was the phosphonate group, and try to combine it with another beneficial group. We'll add a hydroxyl group along with the phosphonate group to potentially enhance hydrogen bonding with CO2.
+
+Action: check_validity
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)P(=O)([O-])O)C(=O)[O-])N(C)C#N
+[0m
+Observation: [33;1m[1;3m('Valid SMILES', 4.445219615098265, 494.3800000000002, 'Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)P(=O)([O-])O)C(=O)[O-])N(C)C#N')[0m
+Thought:[32;1m[1;3mThought: The modified SMILES with both phosphonate and hydroxyl groups is valid, with an SA score of 4.45 and a molecular weight of 494.38 g/mol, which is still below our target of 600 g/mol. Let's check its CO2 adsorption.
+
+Action: predict_CO2_adsoprtion
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)P(=O)([O-])O)C(=O)[O-])N(C)C#N
+[0m
+Observation: [38;5;200m[1;3m(1.289, 0.121)[0m
+Thought:[32;1m[1;3mThought: The modification with both phosphonate and hydroxyl groups has improved CO2 adsorption from 0.885 to 1.289, which is a significant improvement but slightly lower than our best result of 1.394 with just the phosphonate group. Let's try another approach by introducing a fluorine atom, which was mentioned in the guidelines as potentially beneficial for CO2 adsorption.
+
+Action: check_validity
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)F)C(=O)[O-])N(C)C#N
+[0m
+Observation: [33;1m[1;3m('Valid SMILES', 3.673794121644595, 433.39900000000017, 'Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)F)C(=O)[O-])N(C)C#N')[0m
+Thought:[32;1m[1;3mThought: The modified SMILES with the fluorine atom is valid, with an SA score of 3.67 and a molecular weight of 433.40 g/mol, which is still below our target of 600 g/mol. Let's check its CO2 adsorption.
+
+Action: predict_CO2_adsoprtion
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)F)C(=O)[O-])N(C)C#N
+[0m
+Observation: [38;5;200m[1;3m(1.342, 0.27)[0m
+Thought:[32;1m[1;3mThought: The modification with the fluorine atom has significantly improved CO2 adsorption from 0.885 to 1.342, which is very close to our best result of 1.394 with the phosphonate group. This aligns with the design guidelines suggesting that fluorination can improve CO2 adsorption. Let's continue exploring other modifications. Next, let's try introducing a chlorine atom, which was also mentioned in the guidelines as potentially beneficial.
+
+Action: check_validity
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)Cl)C(=O)[O-])N(C)C#N
+[0m
+Observation: [33;1m[1;3m('Valid SMILES', 3.6986544078699968, 449.8540000000002, 'Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)Cl)C(=O)[O-])N(C)C#N')[0m
+Thought:[32;1m[1;3mThought: The modified SMILES with the chlorine atom is valid, with an SA score of 3.70 and a molecular weight of 449.85 g/mol, which is still below our target of 600 g/mol. Let's check its CO2 adsorption.
+
+Action: predict_CO2_adsoprtion
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)Cl)C(=O)[O-])N(C)C#N
+[0m
+Observation: [38;5;200m[1;3m(1.028, 0.055)[0m
+Thought:[32;1m[1;3mThought: The modification with the chlorine atom has improved CO2 adsorption from 0.885 to 1.028, which is a significant improvement but not as high as our best results with the phosphonate group (1.394) or the fluorine atom (1.342). Let's try combining our two best modifications so far: the phosphonate group and the fluorine atom.
+
+Action: check_validity
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)P(=O)([O-])F)C(=O)[O-])N(C)C#N
+[0m
+Observation: [33;1m[1;3m('Valid SMILES', 4.478420607654096, 496.3710000000002, 'Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)P(=O)([O-])F)C(=O)[O-])N(C)C#N')[0m
+Thought:[32;1m[1;3mThought: The modified SMILES with both phosphonate group and fluorine atom is valid, with an SA score of 4.48 and a molecular weight of 496.37 g/mol, which is still below our target of 600 g/mol. Let's check its CO2 adsorption.
+
+Action: predict_CO2_adsoprtion
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)P(=O)([O-])F)C(=O)[O-])N(C)C#N
+[0m
+Observation: [38;5;200m[1;3m(1.748, 0.157)[0m
+Thought:[32;1m[1;3mThought: The modification with both phosphonate group and fluorine atom has significantly improved CO2 adsorption from 0.885 to 1.748, which is our best result so far. This combination seems to leverage the benefits of both the phosphonate group and fluorination, as suggested by the design guidelines. Let's continue exploring other modifications to see if we can further improve the CO2 adsorption or find other high-performing candidates. Next, let's try introducing a larger aromatic system by replacing a benzene ring with a naphthalene ring, which was mentioned in the guidelines as potentially increasing the surface area for CO2 uptake.
+
+Action: check_validity
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)c1cccc2ccccc12)C(=O)[O-])N(C)C#N
+[0m
+Observation: [33;1m[1;3m('Valid SMILES', 3.5100822600001464, 541.5670000000001, 'Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)c1cccc2ccccc12)C(=O)[O-])N(C)C#N')[0m
+Thought:[32;1m[1;3mThought: The modified SMILES with the naphthalene ring is valid, with an SA score of 3.51 and a molecular weight of 541.57 g/mol, which is still below our target of 600 g/mol. Let's check its CO2 adsorption.
+
+Action: predict_CO2_adsoprtion
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)c1cccc2ccccc12)C(=O)[O-])N(C)C#N
+[0m
+Observation: [38;5;200m[1;3m(1.024, 0.04)[0m
+Thought:[32;1m[1;3mThought: The modification with the naphthalene ring has improved CO2 adsorption from 0.885 to 1.024, which is a significant improvement but not as high as our best result of 1.748 with the combination of phosphonate group and fluorine atom. Let's continue exploring other modifications. This time, let's try introducing a triazole ring, which is a nitrogen-containing heterocycle that could enhance CO2 binding through Lewis acid-base interactions.
+
+Action: check_validity
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)c1cn2nncn2)C(=O)[O-])N(C)C#N
+[0m
+Observation: [33;1m[1;3m('Invalid SMILES', 0, 0, 'Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)c1cn2nncn2)C(=O)[O-])N(C)C#N')[0m
+Thought:[32;1m[1;3mThought: I apologize for the error in the previous SMILES. It seems the triazole ring was not correctly represented. Let's try again with a correct representation of a triazole ring.
+
+Action: check_validity
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)c1cnnn1)C(=O)[O-])N(C)C#N
+[0m
+Observation: [33;1m[1;3m('Invalid SMILES', 0, 0, 'Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)c1cnnn1)C(=O)[O-])N(C)C#N')[0m
+Thought:[32;1m[1;3mThought: I apologize for the continued error. It seems there might be an issue with how I'm representing the triazole ring. Let's try a simpler modification by adding a triazole ring to one of the existing benzene rings instead of replacing it entirely.
+
+Action: check_validity
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)c1cnn[nH]1)C(=O)[O-])N(C)C#N
+[0m
+Observation: [33;1m[1;3m('Valid SMILES', 4.062715151421345, 482.4600000000002, 'Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)c1cnn[nH]1)C(=O)[O-])N(C)C#N')[0m
+Thought:[32;1m[1;3mThought: The modified SMILES with the triazole ring is valid, with an SA score of 4.06 and a molecular weight of 482.46 g/mol, which is still below our target of 600 g/mol. Let's check its CO2 adsorption.
+
+Action: predict_CO2_adsoprtion
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)c1cnn[nH]1)C(=O)[O-])N(C)C#N
+[0m
+Observation: [38;5;200m[1;3m(0.875, 0.059)[0m
+Thought:[32;1m[1;3mThought: The modification with the triazole ring has slightly decreased CO2 adsorption from 0.885 to 0.875, which is not the desired outcome. Let's revisit our most successful modification so far, which was the combination of phosphonate group and fluorine atom, and try to further enhance it. We'll add an additional amino group to potentially increase the number of binding sites for CO2.
+
+Action: check_validity
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)P(=O)([O-])F)C(=O)[O-])N(C)CN
+[0m
+Observation: [33;1m[1;3m('Valid SMILES', 4.415731773907198, 500.40300000000025, 'Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)P(=O)([O-])F)C(=O)[O-])N(C)CN')[0m
+Thought:[32;1m[1;3mThought: The modified SMILES with the phosphonate group, fluorine atom, and additional amino group is valid, with an SA score of 4.42 and a molecular weight of 500.40 g/mol, which is still below our target of 600 g/mol. Let's check its CO2 adsorption.
+
+Action: predict_CO2_adsoprtion
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)P(=O)([O-])F)C(=O)[O-])N(C)CN
+[0m
+Observation: [38;5;200m[1;3m(1.802, 0.156)[0m
+Thought:[32;1m[1;3mThought: The modification with the phosphonate group, fluorine atom, and additional amino group has further improved CO2 adsorption from 1.748 to 1.802, which is our best result so far. This combination seems to be very effective in enhancing CO2 adsorption. Let's continue exploring other modifications to see if we can further improve the CO2 adsorption or find other high-performing candidates. Next, let's try introducing a sulphonate group alongside our current best modification, as sulphonate groups were also mentioned in the guidelines as potentially beneficial for CO2 adsorption.
+
+Action: check_validity
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)P(=O)([O-])F)C(=O)[O-])N(C)CS(=O)(=O)[O-]
+[0m
+Observation: [33;1m[1;3m('Valid SMILES', 4.604549960883106, 564.4440000000003, 'Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)P(=O)([O-])F)C(=O)[O-])N(C)CS(=O)(=O)[O-]')[0m
+Thought:[32;1m[1;3mThought: The modified SMILES with the phosphonate group, fluorine atom, and sulphonate group is valid, with an SA score of 4.60 and a molecular weight of 564.44 g/mol, which is still below our target of 600 g/mol. Let's check its CO2 adsorption.
+
+Action: predict_CO2_adsoprtion
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)P(=O)([O-])F)C(=O)[O-])N(C)CS(=O)(=O)[O-]
+[0m
+Observation: [38;5;200m[1;3m(1.538, 0.192)[0m
+Thought:[32;1m[1;3mThought: The modification with the phosphonate group, fluorine atom, and sulphonate group has resulted in a CO2 adsorption of 1.538, which is lower than our previous best result of 1.802. However, it's still a significant improvement over the original molecule. Let's continue exploring other modifications. This time, let's try introducing a carboxylic acid group, which can form hydrogen bonds with CO2.
+
+Action: check_validity
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)P(=O)([O-])F)C(=O)[O-])N(C)CC(=O)O
+[0m
+Observation: [33;1m[1;3m('Valid SMILES', 4.261061867972337, 529.3970000000003, 'Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)P(=O)([O-])F)C(=O)[O-])N(C)CC(=O)O')[0m
+Thought:[32;1m[1;3mThought: The modified SMILES with the phosphonate group, fluorine atom, and carboxylic acid group is valid, with an SA score of 4.26 and a molecular weight of 529.40 g/mol, which is still below our target of 600 g/mol. Let's check its CO2 adsorption.
+
+Action: predict_CO2_adsoprtion
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)P(=O)([O-])F)C(=O)[O-])N(C)CC(=O)O
+[0m
+Observation: [38;5;200m[1;3m(1.674, 0.194)[0m
+Thought:[32;1m[1;3mThought: The modification with the phosphonate group, fluorine atom, and carboxylic acid group has resulted in a CO2 adsorption of 1.674, which is better than most of our previous attempts but still not as high as our best result of 1.802. Let's continue exploring other modifications. This time, let's try introducing a hydroxyl group alongside our best performing combination so far.
+
+Action: check_validity
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)P(=O)([O-])F)C(=O)[O-])N(C)CO
+[0m
+Observation: [33;1m[1;3m('Valid SMILES', 4.396390334701243, 501.3870000000002, 'Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)P(=O)([O-])F)C(=O)[O-])N(C)CO')[0m
+Thought:[32;1m[1;3mThought: The modified SMILES with the phosphonate group, fluorine atom, and hydroxyl group is valid, with an SA score of 4.40 and a molecular weight of 501.39 g/mol, which is still below our target of 600 g/mol. Let's check its CO2 adsorption.
+
+Action: predict_CO2_adsoprtion
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)P(=O)([O-])F)C(=O)[O-])N(C)CO
+[0m
+Observation: [38;5;200m[1;3m(1.766, 0.18)[0m
+Thought:[32;1m[1;3mThought: The modification with the phosphonate group, fluorine atom, and hydroxyl group has resulted in a CO2 adsorption of 1.766, which is very close to our best result of 1.802. This combination seems to be consistently effective in enhancing CO2 adsorption. Let's continue exploring other modifications to see if we can further improve the CO2 adsorption or find other high-performing candidates. Next, let's try introducing a second fluorine atom, as fluorination has shown to be beneficial in our previous attempts.
+
+Action: check_validity
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)P(=O)([O-])F)C(=O)[O-])N(C)CF
+[0m
+Observation: [33;1m[1;3m('Valid SMILES', 4.438342692021342, 503.3780000000002, 'Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)P(=O)([O-])F)C(=O)[O-])N(C)CF')[0m
+Thought:[32;1m[1;3mThought: The modified SMILES with the phosphonate group and two fluorine atoms is valid, with an SA score of 4.44 and a molecular weight of 503.38 g/mol, which is still below our target of 600 g/mol. Let's check its CO2 adsorption.
+
+Action: predict_CO2_adsoprtion
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)P(=O)([O-])F)C(=O)[O-])N(C)CF
+[0m
+Observation: [38;5;200m[1;3m(1.995, 0.151)[0m
+Thought:[32;1m[1;3mThought: The modification with the phosphonate group and two fluorine atoms has resulted in a CO2 adsorption of 1.995, which is our best result so far! This significant improvement aligns with our design guidelines suggesting that fluorination can enhance CO2 adsorption. Let's continue exploring other modifications to see if we can further improve the CO2 adsorption or find other high-performing candidates. Next, let's try introducing a third fluorine atom to see if we can further enhance this effect.
+
+Action: check_validity
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)P(=O)([O-])F)C(=O)[O-])N(C)C(F)F
+[0m
+Observation: [33;1m[1;3m('Valid SMILES', 4.452528358520313, 521.3680000000002, 'Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)P(=O)([O-])F)C(=O)[O-])N(C)C(F)F')[0m
+Thought:[32;1m[1;3mThought: The modified SMILES with the phosphonate group and three fluorine atoms is valid, with an SA score of 4.45 and a molecular weight of 521.37 g/mol, which is still below our target of 600 g/mol. Let's check its CO2 adsorption.
+
+Action: predict_CO2_adsoprtion
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)P(=O)([O-])F)C(=O)[O-])N(C)C(F)F
+[0m
+Observation: [38;5;200m[1;3m(2.073, 0.138)[0m
+Thought:[32;1m[1;3mThought: The modification with the phosphonate group and three fluorine atoms has resulted in a CO2 adsorption of 2.073, which is our best result yet! This further improvement confirms the positive effect of fluorination on CO2 adsorption. Let's continue exploring other modifications to see if we can further improve the CO2 adsorption or find other high-performing candidates. Next, let's try introducing a fourth fluorine atom to see if this trend continues.
+
+Action: check_validity
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)P(=O)([O-])F)C(=O)[O-])N(C)C(F)(F)F
+[0m
+Observation: [33;1m[1;3m('Valid SMILES', 4.422667501661181, 539.3580000000003, 'Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)P(=O)([O-])F)C(=O)[O-])N(C)C(F)(F)F')[0m
+Thought:[32;1m[1;3mThought: The modified SMILES with the phosphonate group and four fluorine atoms (trifluoromethyl group) is valid, with an SA score of 4.42 and a molecular weight of 539.36 g/mol, which is still below our target of 600 g/mol. Let's check its CO2 adsorption.
+
+Action: predict_CO2_adsoprtion
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)P(=O)([O-])F)C(=O)[O-])N(C)C(F)(F)F
+[0m
+Observation: [38;5;200m[1;3m(2.114, 0.127)[0m
+Thought:[32;1m[1;3mThought: The modification with the phosphonate group and four fluorine atoms (trifluoromethyl group) has resulted in a CO2 adsorption of 2.114, which is our best result so far! This further improvement continues to confirm the positive effect of fluorination on CO2 adsorption. However, we should be cautious about adding more fluorine atoms as it might lead to stability issues or exceed our molecular weight limit. Let's explore a different modification while keeping our successful elements. Let's try introducing a nitrogen-containing heterocycle, such as a pyridine ring, alongside our best performing combination so far.
+
+Action: check_validity
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)P(=O)([O-])F)C(=O)[O-])N(C)c1ccncc1
+[0m
+Observation: [33;1m[1;3m('Valid SMILES', 4.261324045763621, 548.4470000000002, 'Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)P(=O)([O-])F)C(=O)[O-])N(C)c1ccncc1')[0m
+Thought:[32;1m[1;3mThought: The modified SMILES with the phosphonate group, fluorine atom, and pyridine ring is valid, with an SA score of 4.26 and a molecular weight of 548.45 g/mol, which is still below our target of 600 g/mol. Let's check its CO2 adsorption.
+
+Action: predict_CO2_adsoprtion
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)P(=O)([O-])F)C(=O)[O-])N(C)c1ccncc1
+[0m
+Observation: [38;5;200m[1;3m(1.692, 0.188)[0m
+Thought:[32;1m[1;3mThought: The modification with the phosphonate group, fluorine atom, and pyridine ring has resulted in a CO2 adsorption of 1.692, which is lower than our best result of 2.114 with the trifluoromethyl group. It seems that the addition of the pyridine ring did not improve CO2 adsorption as much as the fluorine atoms did. Let's return to our best performing structure and try a different modification. This time, let's try introducing a second phosphonate group, as this has shown to be beneficial in our previous attempts.
+
+Action: check_validity
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)P(=O)([O-])F)C(=O)[O-])N(C)CP(=O)([O-])[O-]
+[0m
+Observation: [33;1m[1;3m('Valid SMILES', 4.730129037806181, 563.3510000000003, 'Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)P(=O)([O-])F)C(=O)[O-])N(C)CP(=O)([O-])[O-]')[0m
+Thought:[32;1m[1;3mThought: The modified SMILES with two phosphonate groups and a fluorine atom is valid, with an SA score of 4.73 and a molecular weight of 563.35 g/mol, which is still below our target of 600 g/mol. Let's check its CO2 adsorption.
+
+Action: predict_CO2_adsoprtion
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)P(=O)([O-])F)C(=O)[O-])N(C)CP(=O)([O-])[O-]
+[0m
+Observation: [38;5;200m[1;3m(1.648, 0.245)[0m
+Thought:[32;1m[1;3mThought: The modification with two phosphonate groups and a fluorine atom has resulted in a CO2 adsorption of 1.648, which is lower than our best result of 2.114 with the trifluoromethyl group. It seems that adding a second phosphonate group did not improve CO2 adsorption as much as the fluorine atoms did. Let's return to our best performing structure (with the trifluoromethyl group) and try a different modification. This time, let's try introducing an additional amino group, as this could potentially increase the number of binding sites for CO2.
+
+Action: check_validity
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)P(=O)([O-])F)C(=O)[O-])N(C)C(F)(F)F)CN
+[0m
+Observation: [33;1m[1;3m('Invalid SMILES', 0, 0, 'Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)P(=O)([O-])F)C(=O)[O-])N(C)C(F)(F)F)CN')[0m
+Thought:[32;1m[1;3mThought: I apologize for the error in the previous SMILES. There was an extra closing parenthesis that made it invalid. Let's correct that and try again with the additional amino group.
+
+Action: check_validity
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)P(=O)([O-])F)C(=O)[O-])N(C)C(F)(F)F)NCN
+[0m
+Observation: [33;1m[1;3m('Invalid SMILES', 0, 0, 'Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)P(=O)([O-])F)C(=O)[O-])N(C)C(F)(F)F)NCN')[0m
+Thought:[32;1m[1;3mThought: I apologize for the continued error. It seems I'm having trouble correctly adding the amino group to our best performing structure. Let's try a simpler modification by just adding an amino group directly to the trifluoromethyl group.
+
+Action: check_validity
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)P(=O)([O-])F)C(=O)[O-])N(C)C(F)(F)(CN)
+[0m
+Observation: [33;1m[1;3m('Valid SMILES', 4.559135960883105, 550.4100000000001, 'Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)P(=O)([O-])F)C(=O)[O-])N(C)C(F)(F)(CN)')[0m
+Thought:[32;1m[1;3mThought: The modified SMILES with the phosphonate group, trifluoromethyl group, and an additional amino group is valid, with an SA score of 4.56 and a molecular weight of 550.41 g/mol, which is still below our target of 600 g/mol. Let's check its CO2 adsorption.
+
+Action: predict_CO2_adsoprtion
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)P(=O)([O-])F)C(=O)[O-])N(C)C(F)(F)(CN)
+[0m
+Observation: [38;5;200m[1;3m(2.034, 0.13)[0m
+Thought:[32;1m[1;3mThought: The modification with the phosphonate group, trifluoromethyl group, and an additional amino group has resulted in a CO2 adsorption of 2.034, which is slightly lower than our best result of 2.114 with just the trifluoromethyl group. However, it's still a very good result and close to our best. Let's try one more modification to see if we can improve upon our best result. This time, let's try introducing a second fluorine atom on the phosphonate group, as fluorination has shown to be consistently beneficial in our attempts.
+
+Action: check_validity
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)P(=O)(F)F)C(=O)[O-])N(C)C(F)(F)F
+[0m
+Observation: [33;1m[1;3m('Valid SMILES', 3.9637344545324638, 542.3570000000002, 'Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)P(=O)(F)F)C(=O)[O-])N(C)C(F)(F)F')[0m
+Thought:[32;1m[1;3mThought: The modified SMILES with the difluorophosphonate group and trifluoromethyl group is valid, with an SA score of 3.96 and a molecular weight of 542.36 g/mol, which is still below our target of 600 g/mol. Let's check its CO2 adsorption.
+
+Action: predict_CO2_adsoprtion
+Action Input: Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)P(=O)(F)F)C(=O)[O-])N(C)C(F)(F)F
+[0m
+Observation: [38;5;200m[1;3m(2.041, 0.172)[0m
+Thought:[32;1m[1;3mThought: The modification with the difluorophosphonate group and trifluoromethyl group has resulted in a CO2 adsorption of 2.041, which is slightly lower than our best result of 2.114 with the monofluorophosphonate and trifluoromethyl groups. However, it's still a very good result and close to our best. 
+
+At this point, we have explored various modifications and generated 20 new SMILES candidates. We've seen that the combination of phosphonate groups and fluorine atoms, particularly the trifluoromethyl group, has been most effective in enhancing CO2 adsorption. Let's summarize our findings and present the final answer.
+
+Final Answer: 
+{
+  "Iteration": 0,
+  "SMILES": "Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C#N",
+  "Modification": "Initial SMILES",
+  "CO2 Adsorption": 0.885,
+  "Uncertainty": 0.033,
+  "SA Score": 3.69,
+  "Molecular Weight": 430.42,
+  "Validity": "Valid"
+},
+{
+  "Iteration": 1,
+  "SMILES": "Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)N",
+  "Modification": "Added a polar group (amide) to enhance CO2 interactions",
+  "CO2 Adsorption": 0.977,
+  "Uncertainty": 0.071,
+  "SA Score": 3.54,
+  "Molecular Weight": 448.44,
+  "Validity": "Valid"
+},
+{
+  "Iteration": 2,
+  "SMILES": "Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)c1nccnn1",
+  "Modification": "Introduced a nitrogen-containing heterocycle (tetrazole) to enhance CO2 binding through Lewis acid-base interactions",
+  "CO2 Adsorption": 0.925,
+  "Uncertainty": 0.049,
+  "SA Score": 3.72,
+  "Molecular Weight": 484.48,
+  "Validity": "Valid"
+},
+{
+  "Iteration": 3,
+  "SMILES": "Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)O)C(=O)[O-])N(C)C#N",
+  "Modification": "Introduced a hydroxyl group to form hydrogen bonds with CO2",
+  "CO2 Adsorption": 0.909,
+  "Uncertainty": 0.042,
+  "SA Score": 3.71,
+  "Molecular Weight": 431.41,
+  "Validity": "Valid"
+},
+{
+  "Iteration": 4,
+  "SMILES": "Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)S(=O)(=O)[O-])C(=O)[O-])N(C)C#N",
+  "Modification": "Introduced a sulphonate group to enhance CO2 adsorption",
+  "CO2 Adsorption": 1.026,
+  "Uncertainty": 0.102,
+  "SA Score": 3.92,
+  "Molecular Weight": 494.47,
+  "Validity": "Valid"
+},
+{
+  "Iteration": 5,
+  "SMILES": "Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)P(=O)([O-])[O-])C(=O)[O-])N(C)C#N",
+  "Modification": "Introduced a phosphonate group to enhance CO2 adsorption",
+  "CO2 Adsorption": 1.394,
+  "Uncertainty": 0.122,
+  "SA Score": 4.11,
+  "Molecular Weight": 493.37,
+  "Validity": "Valid"
+},
+{
+  "Iteration": 6,
+  "SMILES": "Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)c1ccccc1)C(=O)[O-])N(C)C#N",
+  "Modification": "Introduced an additional aromatic ring to increase aromatic surface area for CO2 adsorption",
+  "CO2 Adsorption": 0.929,
+  "Uncertainty": 0.04,
+  "SA Score": 3.49,
+  "Molecular Weight": 491.51,
+  "Validity": "Valid"
+},
+{
+  "Iteration": 7,
+  "SMILES": "Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)CN)C(=O)[O-])N(C)C#N",
+  "Modification": "Introduced a primary amine group to enable chemisorption of CO2 through carbamate formation",
+  "CO2 Adsorption": 0.895,
+  "Uncertainty": 0.033,
+  "SA Score": 3.72,
+  "Molecular Weight": 444.45,
+  "Validity": "Valid"
+},
+{
+  "Iteration": 8,
+  "SMILES": "Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)c1ccncc1)C(=O)[O-])N(C)C#N",
+  "Modification": "Introduced a pyridine ring to enhance CO2 binding through Lewis acid-base interactions",
+  "CO2 Adsorption": 0.859,
+  "Uncertainty": 0.052,
+  "SA Score": 3.63,
+  "Molecular Weight": 492.50,
+  "Validity": "Valid"
+},
+{
+  "Iteration": 9,
+  "SMILES": "Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)P(=O)([O-])O)C(=O)[O-])N(C)C#N",
+  "Modification": "Added a hydroxyl group to the phosphonate group to potentially enhance hydrogen bonding with CO2",
+  "CO2 Adsorption": 1.289,
+  "Uncertainty": 0.121,
+  "SA Score": 4.45,
+  "Molecular Weight": 494.38,
+  "Validity": "Valid"
+},
+{
+  "Iteration": 10,
+  "SMILES": "Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)F)C(=O)[O-])N(C)C#N",
+  "Modification": "Introduced a fluorine atom to potentially improve CO2 adsorption",
+  "CO2 Adsorption": 1.342,
+  "Uncertainty": 0.27,
+  "SA Score": 3.67,
+  "Molecular Weight": 433.40,
+  "Validity": "Valid"
+},
+{
+  "Iteration": 11,
+  "SMILES": "Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)Cl)C(=O)[O-])N(C)C#N",
+  "Modification": "Introduced a chlorine atom to potentially improve CO2 adsorption",
+  "CO2 Adsorption": 1.028,
+  "Uncertainty": 0.055,
+  "SA Score": 3.70,
+  "Molecular Weight": 449.85,
+  "Validity": "Valid"
+},
+{
+  "Iteration": 12,
+  "SMILES": "Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)P(=O)([O-])F)C(=O)[O-])N(C)C#N",
+  "Modification": "Combined phosphonate group with a fluorine atom to enhance CO2 adsorption",
+  "CO2 Adsorption": 1.748,
+  "Uncertainty": 0.157,
+  "SA Score": 4.48,
+  "Molecular Weight": 496.37,
+  "Validity": "Valid"
+},
+{
+  "Iteration": 13,
+  "SMILES": "Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)c1cccc2ccccc12)C(=O)[O-])N(C)C#N",
+  "Modification": "Introduced a naphthalene ring to increase aromatic surface area for CO2 uptake",
+  "CO2 Adsorption": 1.024,
+  "Uncertainty": 0.04,
+  "SA Score": 3.51,
+  "Molecular Weight": 541.57,
+  "Validity": "Valid"
+},
+{
+  "Iteration": 14,
+  "SMILES": "Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)c1cnn[nH]1)C(=O)[O-])N(C)C#N",
+  "Modification": "Introduced a triazole ring to enhance CO2 binding through Lewis acid-base interactions",
+  "CO2 Adsorption": 0.875,
+  "Uncertainty": 0.059,
+  "SA Score": 4.06,
+  "Molecular Weight": 482.46,
+  "Validity": "Valid"
+},
+{
+  "Iteration": 15,
+  "SMILES": "Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)P(=O)([O-])F)C(=O)[O-])N(C)CN",
+  "Modification": "Added an additional amino group to the best performing structure to increase binding sites for CO2",
+  "CO2 Adsorption": 1.802,
+  "Uncertainty": 0.156,
+  "SA Score": 4.42,
+  "Molecular Weight": 500.40,
+  "Validity": "Valid"
+},
+{
+  "Iteration": 16,
+  "SMILES": "Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)P(=O)([O-])F)C(=O)[O-])N(C)CF",
+  "Modification": "Introduced a second fluorine atom to further enhance CO2 adsorption",
+  "CO2 Adsorption": 1.995,
+  "Uncertainty": 0.151,
+  "SA Score": 4.44,
+  "Molecular Weight": 503.38,
+  "Validity": "Valid"
+},
+{
+  "Iteration": 17,
+  "SMILES": "Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)P(=O)([O-])F)C(=O)[O-])N(C)C(F)F",
+  "Modification": "Introduced a third fluorine atom to further enhance CO2 adsorption",
+  "CO2 Adsorption": 2.073,
+  "Uncertainty": 0.138,
+  "SA Score": 4.45,
+  "Molecular Weight": 521.37,
+  "Validity": "Valid"
+},
+{
+  "Iteration": 18,
+  "SMILES": "Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)P(=O)([O-])F)C(=O)[O-])N(C)C(F)(F)F",
+  "Modification": "Introduced a trifluoromethyl group to maximize the effect of fluorination on CO2 adsorption",
+  "CO2 Adsorption": 2.114,
+  "Uncertainty": 0.127,
+  "SA Score": 4.42,
+  "Molecular Weight": 539.36,
+  "Validity": "Valid"
+},
+{
+  "Iteration": 19,
+  "SMILES": "Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)P(=O)([O-])F)C(=O)[O-])N(C)c1ccncc1",
+  "Modification": "Introduced a pyridine ring alongside the phosphonate and fluorine groups to combine different CO2 binding mechanisms",
+  "CO2 Adsorption": 1.692,
+  "Uncertainty": 0.188,
+  "SA Score": 4.26,
+  "Molecular Weight": 548.45,
+  "Validity": "Valid"
+},
+{
+  "Iteration": 20,
+  "SMILES": "Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)P(=O)(F)F)C(=O)[O-])N(C)C(F)(F)F",
+  "Modification": "Introduced a difluorophosphonate group alongside the trifluoromethyl group to maximize fluorination effects",
+  "CO2 Adsorption": 2.041,
+  "Uncertainty": 0.172,
+  "SA Score": 3.96,
+  "Molecular Weight": 542.36,
+  "Validity": "Valid"
+}[0m
+
+[1m> Finished chain.[0m
+Tokens Used: 563415
+	Prompt Tokens: 548910
+	Completion Tokens: 14505
+Successful Requests: 62
+Total Cost (USD): $0.0

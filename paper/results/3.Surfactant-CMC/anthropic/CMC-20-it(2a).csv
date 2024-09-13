@@ -1,0 +1,21 @@
+Iteration,SMILES,Modification,logCMC,uncertainty,SA Score,Molecular Weight,Validity
+0,CCCCCCCCCC(=O)CC(=O)NC1CCOC1=O,Initial SMILES,1.785,0.321,2.8,297.4,Valid
+1,CCCCCCCCCCCC(=O)CC(=O)NC1CCOC1=O,Extended the alkyl chain by two carbon atoms to increase hydrophobicity,1.054,0.268,2.81,325.45,Valid
+2,c1ccccc1CCCCCCCCCC(=O)CC(=O)NC1CCOC1=O,Added a benzene ring to the end of the alkyl chain to incorporate aromatic groups,1.143,0.562,2.72,373.49,Valid
+3,CCCCCCCCCC(F)(F)C(=O)CC(=O)NC1CCOC1=O,Replaced two hydrogen atoms with fluorine atoms in the alkyl chain,1.308,0.362,3.16,347.4,Valid
+4,CCCCCCCCCCCC(F)(F)C(=O)CC(=O)NC1CCOC1=O,Combined extended alkyl chain with fluorination,0.758,0.367,3.15,375.46,Valid
+5,CCCCCCCC(C)CCC(F)(F)C(=O)CC(=O)NC1CCOC1=O,Added branching to the hydrophobic tail,2.229,0.501,3.59,375.46,Valid
+6,CCCCCCCCCCCC(F)(F)C(=O)CC(=O)NCCO,Replaced the cyclic structure with a simpler amide group,1.602,0.449,2.5,335.44,Valid
+7,CCCCCCCCCCCC(F)(F)C(=O)c1ccccc1C(=O)NC1CCOC1=O,Added a benzene ring near the head group,1.082,0.312,3.07,437.53,Valid
+8,CCCCCCCCCC(F)(F)C(F)(F)C(=O)CC(=O)NC1CCOC1=O,Increased fluorination in the alkyl chain,1.343,0.377,3.3,397.41,Valid
+9,CCCCCCCCCCCCC(F)(F)C(=O)CC(=O)NC1CCOC1=O,Extended the alkyl chain by one more carbon atom,0.491,0.433,3.15,389.48,Valid
+10,CCCCCCCCCCCC(F)(F)C(=O)CCC(=O)NC1CCOC1=O,Extended the carbon chain between the two carbonyl groups,0.633,0.492,3.1,389.48,Valid
+11,CCCCCCCCCCCC(F)(F)C(=O)CC(=O)NC1CCOCC1,Modified the cyclic head group to a six-membered ring,0.414,0.507,2.6,375.5,Valid
+12,CCCCCCCCCCCC(F)(F)C(=O)CC(=O)NC1CCOCCCC1,Expanded the cyclic head group to a seven-membered ring,0.067,0.627,3.02,403.55,Valid
+13,CCCCCCCCCCCC(F)(F)C(=O)CC(=O)NC1CCOCCC1,Modified the cyclic head group to a six-membered ring with repositioned oxygen,0.27,0.575,3.01,389.53,Valid
+14,CCCCCCCCCCCC(F)(F)C(=O)CC(=O)NC1CCNCC1,Replaced oxygen with nitrogen in the cyclic head group,1.092,0.624,2.65,374.52,Valid
+15,CCCCCCCCCCCC(F)(F)C(=O)CC(=O)NC1CCC(F)CC1,Added a fluorine atom to the cyclic head group,0.276,0.585,2.73,391.52,Valid
+16,CCCCCCCCCCCC(F)(F)C(=O)CC(=O)NC1CC(F)OCC1,Added a fluorine atom to the cyclic head group in a different position,0.484,0.541,3.67,393.49,Valid
+17,CCCCCCCCCCCC(F)(F)C(=O)CC(=O)NC1CCOCC1O,Added a hydroxyl group to the cyclic head group,0.958,0.391,3.47,391.5,Valid
+18,CCCCCCCCCCCC(F)(F)C(=O)CC(=O)NC1CCOC(C)C1,Added a methyl group to the cyclic head group,0.743,0.456,3.44,389.53,Valid
+19,CCCCCCCCCCCC(F)(F)C(=O)CC(=O)NC1CCOCC1C(F)(F)F,Added a trifluoromethyl group to the cyclic head group,0.469,0.522,3.7,443.5,Valid
