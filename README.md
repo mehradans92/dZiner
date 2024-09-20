@@ -40,7 +40,7 @@ python -m ipykernel install --user --name dziner --display-name "dziner"
 Make sure you follow additional installation of packages for different surrogate models. Requirements can be found in each folder.
 
 ```bash
-cd surrogates/YOUR_MODEL_OF_INTEREST
+cd dziner/surrogates/YOUR_MODEL_OF_INTEREST
 pip install -r requirements.txt
 ```
 
