@@ -48,3 +48,5 @@ sys.path.insert(0, os.path.abspath('..'))
 
 myst_enable_extensions = ["colon_fence", "substitution", "linkify", "html_admonition", "html_image"]
 
+master_doc = 'index'
+
