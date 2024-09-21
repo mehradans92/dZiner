@@ -5,8 +5,7 @@
 
 An agentic framework for rational inverse design of materials by replicating and incorporating the expertise of human domain experts across various design tasks and target properties.
 
-<img src="https://github.com/user-attachments/assets/5f90f247-b05a-4b89-bf09-047c885634bf" width="1000">
-
+<img src="https://github.com/user-attachments/assets/25068d83-5069-43c3-b7dd-49dec1d68250" width="1000">
 
 ## Installation (GPU)
 
