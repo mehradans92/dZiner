@@ -13,6 +13,8 @@ An agentic framework for rational inverse design of materials by replicating and
 
 <!--end-intro-->
 
+```{include} docs/source/installation.md
+```
 
 ## Adding an API Key
 
