@@ -1,47 +1,17 @@
+# dZiner
+
+<!--start-intro-->
+
 ![Tests](https://github.com/github/docs/actions/workflows/test.yml/badge.svg)
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-# dZiner
+
 
 An agentic framework for rational inverse design of materials by replicating and incorporating the expertise of human domain experts across various design tasks and target properties.
 
 <img src="https://github.com/user-attachments/assets/690d1732-a5fe-4ada-aa12-b2bba01eb723" width="1000">
 
-## Installation (GPU)
-
-You can clone the source code and install in developer mode:
-
-```bash
-conda create -n dziner python=3.11.9
-conda activate dziner
-
-git clone https://github.com/mehradans92/dziner.git && cd dziner
-pip install -e .
-conda install -c pytorch/label/nightly -c nvidia faiss-gpu=1.8.0
-python -m ipykernel install --user --name dziner --display-name "dziner"
-```
-
-## Installation (CPU)
-
-If you do not have a gpu in your machine (OSX for example) you will need to execute the following instead:
-
-```bash
-conda create -n dziner python=3.11.9
-conda activate dziner
-
-git clone https://github.com/mehradans92/dziner.git && cd dziner
-pip install -e .
-conda install -c pytorch/label/nightly faiss-cpu
-python -m ipykernel install --user --name dziner --display-name "dziner"
-```
-### Surrogate Models
-
-Make sure you follow additional installation of packages for different surrogate models. Requirements can be found in each folder.
-
-```bash
-cd dziner/surrogates/YOUR_MODEL_OF_INTEREST
-pip install -r requirements.txt
-```
+<!--end-intro-->
 
 
 ## Adding an API Key
