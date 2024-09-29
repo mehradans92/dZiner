@@ -39,7 +39,8 @@ extensions = [
     'sphinx.ext.autosectionlabel',
     'sphinx.ext.intersphinx',
     'sphinx.ext.githubpages',
-    'nbsphinx'
+    'nbsphinx',
+    'sphinx_book_theme'
 ]
 
 # -- Options for HTML output -------------------------------------------------
@@ -71,3 +72,4 @@ myst_enable_extensions = ["colon_fence", "substitution", "linkify", "html_admoni
 
 master_doc = 'index'
 
+pygments_style = 'sphinx'
