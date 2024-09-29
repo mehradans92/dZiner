@@ -3,3 +3,5 @@ myst-parser
 sphinx-autodoc-typehints
 sphinx-book-theme
 linkify-it-py
+nbsphinx
+nbconvert

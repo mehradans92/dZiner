@@ -23,6 +23,8 @@ jobs:
 
     - name: Build the documentation
       run: |
+        jupyter nbconvert --to rst examples/quick_start.ipynb
+        cp examples/quick_start.rst docs/source/quick_start.rst
         cd docs
         make html
 

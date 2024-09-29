@@ -1,11 +1,20 @@
+# dZiner
+
+<!--start-intro-->
+
 ![Tests](https://github.com/github/docs/actions/workflows/test.yml/badge.svg)
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-# dZiner
+
 
 An agentic framework for rational inverse design of materials by replicating and incorporating the expertise of human domain experts across various design tasks and target properties.
 
 <img src="https://github.com/user-attachments/assets/690d1732-a5fe-4ada-aa12-b2bba01eb723" width="1000">
+
+<!--end-intro-->
+
+
+# Installation
 
 ## Installation (GPU)
 
@@ -34,7 +43,7 @@ pip install -e .
 conda install -c pytorch/label/nightly faiss-cpu
 python -m ipykernel install --user --name dziner --display-name "dziner"
 ```
-### Surrogate Models
+## Surrogate Models
 
 Make sure you follow additional installation of packages for different surrogate models. Requirements can be found in each folder.
 
@@ -42,7 +51,6 @@ Make sure you follow additional installation of packages for different surrogate
 cd dziner/surrogates/YOUR_MODEL_OF_INTEREST
 pip install -r requirements.txt
 ```
-
 
 ## Adding an API Key
 
