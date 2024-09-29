@@ -23,6 +23,7 @@ jobs:
 
     - name: Build the documentation
       run: |
+        sudo apt-get install pandoc
         jupyter nbconvert --to rst examples/quick_start.ipynb
         cp examples/quick_start.rst docs/source/quick_start.rst
         cd docs
