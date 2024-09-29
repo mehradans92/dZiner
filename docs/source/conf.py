@@ -63,7 +63,7 @@ nb_execution_allow_errors = True
 source_suffix = {
     '.rst': 'restructuredtext',
     '.md': 'markdown',
-    '.ipynb': 'nbsphinx',
+    '.ipynb': 'myst_nb',
 }
 
 
