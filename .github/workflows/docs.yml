@@ -24,8 +24,8 @@ jobs:
     - name: Build the documentation
       run: |
         sudo apt-get install pandoc
-        jupyter nbconvert --to rst examples/quick_start.ipynb
-        cp examples/quick_start.rst docs/source/quick_start.rst
+        jupyter nbconvert --to markdown examples/quick_start.ipynb
+        cp examples/quick_start.md docs/source/quick_start.md
         cd docs
         make html
 
