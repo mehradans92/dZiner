@@ -1,10 +1,5 @@
 # dZiner
 
-<script>
-import installation from 'docs/source/installation.md'
-</script>
-
-
 <!--start-intro-->
 
 ![Tests](https://github.com/github/docs/actions/workflows/test.yml/badge.svg)
