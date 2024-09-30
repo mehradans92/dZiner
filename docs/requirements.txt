@@ -5,3 +5,4 @@ sphinx-book-theme
 linkify-it-py
 nbsphinx
 nbconvert
+sphinxcontrib-video

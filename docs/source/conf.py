@@ -41,7 +41,7 @@ extensions = [
     'sphinx.ext.githubpages',
     'nbsphinx',
     'sphinx_book_theme',
-    'sphinx_design'
+    'sphinxcontrib.video'
 ]
 
 # -- Options for HTML output -------------------------------------------------
@@ -74,3 +74,4 @@ myst_enable_extensions = ["colon_fence", "substitution", "linkify", "html_admoni
 master_doc = 'index'
 
 pygments_style = 'sphinx'
+video_enforce_extra_source = True
