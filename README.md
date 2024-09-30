@@ -11,11 +11,15 @@ An agentic framework for rational inverse design of materials by replicating and
 
 <img src="https://github.com/user-attachments/assets/690d1732-a5fe-4ada-aa12-b2bba01eb723" width="1000">
 
-## Human-in-the-loop
+## Human-in-the-loop Inverse Design
 
 Collaborative efforts between a human expert and AI agents hold significant promise. In the case of molecular design for WDR5 ligands, we examined human guidance to refine the modifications based on docking scores and structural generation.
 
 https://github.com/user-attachments/assets/84774f66-f54b-4919-864e-5601bb5db4d3
+
+## Closed-loop Inverse Design
+
+We applied dZiner to the rational inverse design of likely synthesizable organic linkers for metal-organic frameworks with high CO2 adsorption capacity at 0.5 bar of pressure. These MOFs come with pcu topology and three types of inorganic nodes: Cu paddlewheel, Zn paddlewheel, and Zn tetramer (three most frequent node-topology pairs in the hMOF dataset).
 
 <!--end-intro-->
 
