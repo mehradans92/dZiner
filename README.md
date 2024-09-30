@@ -15,7 +15,10 @@ An agentic framework for rational inverse design of materials by replicating and
 
 Collaborative efforts between a human expert and AI agents hold significant promise. In the case of molecular design for WDR5 ligands, we examined human guidance to refine the modifications based on docking scores and structural generation.
 
-https://github.com/user-attachments/assets/84774f66-f54b-4919-864e-5601bb5db4d3
+<video controls>
+  <source src="docs/source/_static/dziner_human-in-the-loop-animation.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ## Closed-loop Inverse Design
 
