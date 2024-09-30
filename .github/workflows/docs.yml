@@ -1,4 +1,4 @@
-name: Deploy Docs
+name: Deploy Docs 
 
 on:
   push:
@@ -33,4 +33,6 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
+        force_orphan: true
         publish_dir: docs/build/html
+        commit_message: "Deploy documentation: ${{ github.sha }}"
