@@ -1,20 +1,22 @@
 Iteration,SMILES,Modification,CO2 Adsorption,Uncertainty,SA Score,Molecular Weight,Validity
-0,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C#N,Initial SMILES,0.885,0.033,3.69,430.42,Valid
-1,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)N,Replaced cyano group with urea group to increase polarity and basicity,0.977,0.071,3.54,448.44,Valid
-2,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(CCN)C(=O)N,Added aminoethyl group to increase basicity,0.958,0.066,3.61,477.48,Valid
-3,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(c2ccncc2)C(=O)N,Replaced aminoethyl group with pyridine ring to increase aromaticity,1.15,0.04,3.56,511.5,Valid
-4,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(c2ccncc2)C(=O)NC,Added methyl group to urea to increase hydrophobicity,1.144,0.046,3.61,525.53,Valid
-5,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(c2ccncc2)C(=O)NCO,Added hydroxyethyl group to increase polarity,1.098,0.059,3.71,541.52,Valid
-6,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(c2ccncc2F)C(=O)N,Added fluorine to pyridine ring to increase CO2 binding strength,1.47,0.169,3.67,529.49,Valid
-7,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(c2c(F)cncc2F)C(=O)N,Added second fluorine to pyridine ring to further increase CO2 binding strength,1.62,0.219,3.78,547.48,Valid
-8,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(c2c(F)cncc2F)C(=O)NCN,Added aminomethyl group to increase basicity,1.529,0.171,3.94,576.52,Valid
-9,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1O)c1c(N)cc(c(c1N)N)C(=O)[O-])N(c2c(F)cncc2F)C(=O)N,Added hydroxyl group to one of the existing aromatic rings to increase polarity,1.541,0.212,3.93,563.48,Valid
-10,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(c2c(F)cnc3ccccc23)C(=O)N,Replaced pyridine with quinoline to increase aromatic surface area,1.275,0.142,3.66,579.55,Valid
-11,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(c2c(F)cncc2F)C(=O)NCCN,Added ethylenediamine group to increase basicity,1.519,0.171,3.86,590.55,Valid
-12,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(c2c(F)cncc2F)C(=O)n1ccnn1,Added triazole ring to increase CO2 interactions,1.568,0.191,4.1,599.51,Valid
-13,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(c2c(F)cncc2F)C(=O)NCCNC,Added N-methylethylenediamine group to increase basicity,1.51,0.17,3.88,604.57,Valid
-14,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(c2c(F)cncc2F)C(=O)NCc1cccnc1,Added pyridylmethyl group to increase basicity and aromatic surface area,1.475,0.194,3.81,638.59,Valid
-15,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(c2c(F)cncc2F)C(=O)NCCCN,Added propylenediamine group to increase basicity,1.51,0.17,3.85,604.57,Valid
-16,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(c2c(F)cncc2F)C(=O)NCO,Added hydroxyethyl group to increase polarity,1.528,0.208,3.93,577.5,Valid
-17,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(c2c(F)cncc2F)C(=O)NCC(N)=O,Added glycinamide group to increase polarity and hydrogen bonding,1.444,0.181,3.87,604.53,Valid
-18,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(c2c(F)cncc2F)C(=O)NC(C)N,Added 1-aminoethyl group to increase basicity,1.526,0.169,4.38,590.55,Valid
+0,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C#N,Initial SMILES structure,0.885,0.033,3.69,430.424,Valid
+1,Nc1cc(C(=O)[O-])c(cc1c1ccc(c(O)c1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C#N,Added -OH group to one benzene ring to enhance CO2 interactions through hydrogen bonding,0.879,0.038,3.856,446.423,Valid
+2,Nc1cc(C(=O)[O-])c(cc1c1ncc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C#N,Replaced one benzene ring with a pyridine group to act as a Lewis basic site for CO2 binding,0.867,0.06,3.864,431.412,Valid
+3,Nc1cc(C(=O)[O-])c(cc1c1ccc(c(F)c1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C#N,Added a fluorine atom to one benzene ring to enhance electrostatic interactions with CO2,1.288,0.297,3.8,448.414,Valid
+4,Nc1cc(C(=O)[O-])c(cc1c1ccc2ccccc2c1c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C#N,Replaced one benzene ring with a naphthalene group to increase aromatic content and improve π-π interactions with CO2,1.159,0.097,3.723,480.484,Valid
+5,Nc1cc(C(=O)[O-])c(cc1c1ccc(c(CN)c1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C#N,Added an alkylamine group (-CH2NH2) to one benzene ring to form strong carbamate species with CO2,0.876,0.039,3.888,459.466,Valid
+6,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)c1nnn[nH]1,Replaced cyano group with a triazole group to act as a Lewis basic site for CO2 binding,0.945,0.052,3.853,473.453,Valid
+7,Nc1cc(C(=O)[O-])c(cc1c1ccc2c(F)cccc2c1c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C#N,Combined fluorine atom and naphthalene group to increase both electrostatic interactions and aromatic content,1.569,0.319,3.808,498.474,Valid
+8,Nc1cc(C(=O)[O-])c(cc1c1ccc2c(F)c(O)ccc2c1c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C#N,Added a hydroxyl group to the fluorinated naphthalene structure to increase polar interactions with CO2,1.512,0.302,3.944,514.473,Valid
+9,Nc1cc(C(=O)[O-])c(cc1c1ccc2c(F)cc(F)cc2c1c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C#N,Added a second fluorine atom to the naphthalene structure to further enhance electrostatic interactions with CO2,1.689,0.315,3.89,516.464,Valid
+10,Nc1cc(C(=O)[O-])c(cc1c1ncc2c(F)cc(F)cc2c1c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C#N,Replaced one benzene ring with a pyridine ring in the difluorinated naphthalene structure to introduce a Lewis basic site,1.534,0.227,4.066,517.452,Valid
+11,Nc1cc(C(=O)[O-])c(cc1c1ccc2c(F)cc(F)c(N)c2c1c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C#N,Added an additional amine group to the difluorinated naphthalene structure to enhance CO2 binding through acid-base interactions,1.61,0.324,4.123,531.479,Valid
+12,Nc1cc(C(=O)[O-])c(cc1c1ccc2c(F)cc(F)c(C(=O)O)c2c1c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C#N,Added a carboxyl group to the difluorinated naphthalene structure to increase electrostatic interactions with CO2,1.516,0.27,4.103,560.473,Valid
+13,Nc1cc(C(=O)[O-])c(cc1c1ccc2c(F)cc(F)c(OC)c2c1c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C#N,Added a methoxy group to the difluorinated naphthalene structure to increase electron density and provide additional sites for weak interactions with CO2,1.609,0.285,4.046,546.49,Valid
+14,Nc1cc(C(=O)[O-])c(cc1c1ccc2c(F)cc(F)c(NC(=O)C)c2c1c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C#N,Added an acetamide group to the difluorinated naphthalene structure to introduce additional hydrogen bonding sites,1.542,0.291,4.215,572.515,Valid
+15,Nc1cc(C(=O)[O-])c(cc1c1ccc2c(F)cc(F)c(S(=O)(=O)N)c2c1c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C#N,Added a sulfonamide group to the difluorinated naphthalene structure to introduce additional polar interactions,1.498,0.268,4.332,595.539,Valid
+16,Nc1cc(C(=O)[O-])c(cc1c1ccc2c(F)cc(F)c(N3CCOCC3)c2c1c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C#N,Added a morpholine group to the difluorinated naphthalene structure to introduce a basic nitrogen and additional oxygen for CO2 interactions,1.576,0.301,4.189,601.569,Valid
+17,Nc1cc(C(=O)[O-])c(cc1c1ccc2c(F)cc(F)c(C#N)c2c1c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C#N,Added a cyano group to the difluorinated naphthalene structure to introduce additional polar interactions,1.623,0.308,4.012,541.474,Valid
+18,Nc1cc(C(=O)[O-])c(cc1c1ccc2c(F)cc(F)c(C(F)(F)F)c2c1c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C#N,Added a trifluoromethyl group to the difluorinated naphthalene structure to further enhance electrostatic interactions with CO2,1.657,0.322,3.978,584.454,Valid
+19,Nc1cc(C(=O)[O-])c(cc1c1ccc2c(F)cc(F)c(OCC(F)(F)F)c2c1c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C#N,Added a trifluoroethoxy group to the difluorinated naphthalene structure to combine ether oxygen interactions with fluorine-enhanced electrostatics,1.601,0.297,4.156,614.48,Valid
+20,Nc1cc(C(=O)[O-])c(cc1c1ccc2c(F)cc(F)c(N=C=S)c2c1c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C#N,Added an isothiocyanate group to the difluorinated naphthalene structure to introduce additional polar interactions and potential for hydrogen bonding,1.588,0.311,4.201,573.525,Valid

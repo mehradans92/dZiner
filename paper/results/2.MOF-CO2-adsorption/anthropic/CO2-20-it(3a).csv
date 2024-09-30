@@ -1,20 +1,22 @@
 Iteration,SMILES,Modification,CO2 Adsorption,Uncertainty,SA Score,Molecular Weight,Validity
-0,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C#N,Initial SMILES,0.885,0.033,3.69,430.42,Valid
-1,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)N,Replaced cyano group (-C#N) with an amide group (-C(=O)N) to increase polar functional groups and hydrogen bonding sites.,0.977,0.071,3.54,448.44,Valid
-2,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)NC,Added a methyl group to the amide (-C(=O)NC) to slightly increase the basicity of the nitrogen.,0.994,0.072,3.54,462.47,Valid
-3,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)NCO,Added a hydroxyl group (-OH) to increase polarity and hydrogen bonding capability.,0.973,0.078,3.64,478.47,Valid
-4,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)c1ccncc1,Introduced a pyridine ring to add a nitrogen-containing heterocycle.,0.945,0.06,3.48,482.5,Valid
-5,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)CCN,Added an additional amine group to increase the number of basic sites.,1.035,0.066,3.51,448.48,Valid
-6,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)CCNC,Added a methylated amine group to further increase the number of basic sites.,1.052,0.067,3.51,462.51,Valid
-7,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)CCNCC,Added an ethylamine group to further increase the number of basic sites and amine groups.,1.07,0.069,3.5,476.54,Valid
-8,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)CCNC(=O)C,Added an acetamide group to introduce a new polar group while maintaining amine functionality.,1.029,0.075,3.47,490.52,Valid
-9,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)c1ccccc1N,Added an aniline group to increase aromatic character and enhance π-π interactions with CO2.,0.967,0.054,3.46,496.53,Valid
-10,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)CCNCCCl,Added a chloroethylamine group to introduce a halogen atom while maintaining amine functionality.,1.183,0.107,3.59,510.98,Valid
-11,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)CCNC(F)CCl,Added both chlorine and fluorine atoms to enhance electrostatic interactions with CO2.,1.562,0.346,4.22,528.97,Valid
-12,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)CCNC(F)C,Removed chlorine atom and kept only fluorine to reduce uncertainty while maintaining enhanced electrostatic interactions.,1.477,0.284,4.13,494.53,Valid
-13,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)CCNCC(F),Changed the position of the fluorine atom to explore its effect on CO2 adsorption.,1.477,0.284,3.63,494.53,Valid
-14,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)CCNC(=O)CF,Introduced a fluoroacetamide group to combine polar amide functionality with a fluorine atom.,1.383,0.226,3.59,508.51,Valid
-15,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)CCNC(=O)CCF,Extended the carbon chain of the fluoroacetamide group to create a 3-fluoropropanamide group.,1.388,0.218,3.62,522.54,Valid
-16,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)CCNC(=O)CCBr,Replaced fluorine with bromine to explore the effect of a larger halogen atom.,1.046,0.094,3.58,583.44,Valid
-17,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)CCNC(=O)C(F)F,Introduced a difluoroacetamide group to increase electrostatic interactions.,1.546,0.267,3.61,526.5,Valid
-18,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)CCNC(=O)C(F)(F)F,Introduced a trifluoroacetamide group to further increase electrostatic interactions.,1.656,0.275,3.59,544.49,Valid
+0,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C#N,Initial structure,0.885,0.033,3.69,430.42,Valid
+1,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)N,Replaced cyano group with amide group to increase polar interactions,0.977,0.071,3.54,448.44,Valid
+2,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)NC,Added methylamino group to increase basic nitrogen-containing groups,0.994,0.072,3.54,462.47,Valid
+3,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)Nc1ccccc1,Added phenyl ring to increase aromatic content,0.951,0.065,3.34,524.54,Valid
+4,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)NCCn1ccnc1,Added imidazole group to increase basic nitrogen-containing groups,0.93,0.066,3.63,542.56,Valid
+5,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)NCO,Added hydroxyl group to increase polar interactions,0.973,0.078,3.64,478.47,Valid
+6,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)NCCO,Added ethanol group to increase polar interactions,0.991,0.08,3.54,492.49,Valid
+7,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)NCCOF,Added fluorine atom to increase polarity and CO2 affinity,1.318,0.218,3.74,510.48,Valid
+8,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)NCCN(C)C,Added dimethylamino group to increase basic nitrogen-containing groups,1.005,0.068,3.55,519.56,Valid
+9,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)NCCc1ccncc1,Added pyridine ring to introduce nitrogen-containing heterocycle,0.936,0.068,3.5,553.58,Valid
+10,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1O)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)NCCO,Added hydroxyl group to aromatic ring to increase polar interactions,0.974,0.081,3.7,508.49,Valid
+11,NNc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)NCCO,Replaced amine with hydrazine group to increase basic nitrogen-containing groups,0.96,0.071,3.63,507.51,Valid
+12,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1C(=O)[O-])c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)NCCO,Added carboxylate group to aromatic ring to increase polar interactions,1.06,0.092,3.92,535.49,Valid
+13,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1C(=O)[O-])c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)NCCOF,Added fluorine atom to increase polarity and CO2 affinity,1.448,0.221,4.1,553.48,Valid
+14,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1C(=O)[O-])c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)NCCn1cccn1,Added pyrazole ring to introduce nitrogen-containing heterocycle,1.005,0.043,3.97,585.56,Valid
+15,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1C(=O)[O-])c1c(N)cc(c(c1N)O)C(=O)[O-])N(C)C(=O)NCCOF,Added hydroxyl group to aromatic ring while maintaining carboxylate and fluorine,1.408,0.191,4.12,554.47,Valid
+16,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1C(=O)[O-])c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)NCCN,Added primary amine group to increase basic nitrogen-containing groups,1.049,0.061,3.95,534.51,Valid
+17,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1C(=O)[O-])c1c(N)cc(cc1N)C(=O)[O-])N(C)C(=O)NCCF,Removed one amine group and added fluorine atom to balance molecular weight,1.593,0.206,3.89,522.47,Valid
+18,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1C(=O)[O-])c1c(N)cc(c(O)c1N)C(=O)[O-])N(C)C(=O)NCCF,Added hydroxyl group to aromatic ring while maintaining carboxylate and fluorine,1.496,0.203,4.02,538.47,Valid
+19,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1C(=O)[O-])c1c(N)cc(c(NC)c1N)C(=O)[O-])N(C)C(=O)NCCF,Added methylamino group to aromatic ring while maintaining carboxylate and fluorine,1.527,0.221,4.05,551.51,Valid
+20,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(NC)c1N)C(=O)[O-])N(C)C(=O)NCCF,Removed one carboxylate group while maintaining fluorine and methylamino group,1.383,0.226,3.68,508.51,Valid

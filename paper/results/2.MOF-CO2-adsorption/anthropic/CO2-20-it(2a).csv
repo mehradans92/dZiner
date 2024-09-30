@@ -1,22 +1,22 @@
 Iteration,SMILES,Modification,CO2 Adsorption,Uncertainty,SA Score,Molecular Weight,Validity
 0,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C#N,Initial SMILES,0.885,0.033,3.69,430.42,Valid
-1,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)N,Added a polar group (amide) to enhance CO2 interactions,0.977,0.071,3.54,448.44,Valid
-2,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)c1nccnn1,Introduced a nitrogen-containing heterocycle (tetrazole) to enhance CO2 binding through Lewis acid-base interactions,0.925,0.049,3.72,484.48,Valid
-3,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)O)C(=O)[O-])N(C)C#N,Introduced a hydroxyl group to form hydrogen bonds with CO2,0.909,0.042,3.71,431.41,Valid
-4,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)S(=O)(=O)[O-])C(=O)[O-])N(C)C#N,Introduced a sulphonate group to enhance CO2 adsorption,1.026,0.102,3.92,494.47,Valid
-5,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)P(=O)([O-])[O-])C(=O)[O-])N(C)C#N,Introduced a phosphonate group to enhance CO2 adsorption,1.394,0.122,4.11,493.37,Valid
-6,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)c1ccccc1)C(=O)[O-])N(C)C#N,Introduced an additional aromatic ring to increase aromatic surface area for CO2 adsorption,0.929,0.04,3.49,491.51,Valid
-7,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)CN)C(=O)[O-])N(C)C#N,Introduced a primary amine group to enable chemisorption of CO2 through carbamate formation,0.895,0.033,3.72,444.45,Valid
-8,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)c1ccncc1)C(=O)[O-])N(C)C#N,Introduced a pyridine ring to enhance CO2 binding through Lewis acid-base interactions,0.859,0.052,3.63,492.5,Valid
-9,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)P(=O)([O-])O)C(=O)[O-])N(C)C#N,Added a hydroxyl group to the phosphonate group to potentially enhance hydrogen bonding with CO2,1.289,0.121,4.45,494.38,Valid
-10,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)F)C(=O)[O-])N(C)C#N,Introduced a fluorine atom to potentially improve CO2 adsorption,1.342,0.27,3.67,433.4,Valid
-11,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)Cl)C(=O)[O-])N(C)C#N,Introduced a chlorine atom to potentially improve CO2 adsorption,1.028,0.055,3.7,449.85,Valid
-12,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)P(=O)([O-])F)C(=O)[O-])N(C)C#N,Combined phosphonate group with a fluorine atom to enhance CO2 adsorption,1.748,0.157,4.48,496.37,Valid
-13,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)c1cccc2ccccc12)C(=O)[O-])N(C)C#N,Introduced a naphthalene ring to increase aromatic surface area for CO2 uptake,1.024,0.04,3.51,541.57,Valid
-14,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)c1cnn[nH]1)C(=O)[O-])N(C)C#N,Introduced a triazole ring to enhance CO2 binding through Lewis acid-base interactions,0.875,0.059,4.06,482.46,Valid
-15,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)P(=O)([O-])F)C(=O)[O-])N(C)CN,Added an additional amino group to the best performing structure to increase binding sites for CO2,1.802,0.156,4.42,500.4,Valid
-16,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)P(=O)([O-])F)C(=O)[O-])N(C)CF,Introduced a second fluorine atom to further enhance CO2 adsorption,1.995,0.151,4.44,503.38,Valid
-17,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)P(=O)([O-])F)C(=O)[O-])N(C)C(F)F,Introduced a third fluorine atom to further enhance CO2 adsorption,2.073,0.138,4.45,521.37,Valid
-18,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)P(=O)([O-])F)C(=O)[O-])N(C)C(F)(F)F,Introduced a trifluoromethyl group to maximize the effect of fluorination on CO2 adsorption,2.114,0.127,4.42,539.36,Valid
-19,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)P(=O)([O-])F)C(=O)[O-])N(C)c1ccncc1,Introduced a pyridine ring alongside the phosphonate and fluorine groups to combine different CO2 binding mechanisms,1.692,0.188,4.26,548.45,Valid
-20,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)P(=O)(F)F)C(=O)[O-])N(C)C(F)(F)F,Introduced a difluorophosphonate group alongside the trifluoromethyl group to maximize fluorination effects,2.041,0.172,3.96,542.36,Valid
+1,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=N)N,Replaced cyano group with guanidine group to increase nitrogen atoms and polar functional groups,0.964,0.061,3.63,447.46,Valid
+2,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=N)NO,Added hydroxyl group to guanidine to increase polarity and hydrogen bonding potential,0.943,0.064,3.8,463.45,Valid
+3,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)c2cccnc2,Replaced guanidine group with pyridine ring to introduce nitrogen-containing heterocycle,1.278,0.051,3.47,482.5,Valid
+4,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)c2nccnc2,Replaced pyridine ring with pyrazine ring to introduce additional nitrogen atom,1.288,0.061,3.58,483.49,Valid
+5,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)c2nc(O)cnc2,Added hydroxyl group to pyrazine ring to increase polarity,1.24,0.068,3.78,499.49,Valid
+6,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)c2ccc3ncccc3c2,Replaced pyrazine ring with quinoline ring to increase aromatic surface area,1.265,0.076,3.45,532.56,Valid
+7,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)S(=O)(=O)c2cccnc2,Introduced sulfonamide group connected to pyridine ring to increase polarity,1.02,0.12,3.48,546.57,Valid
+8,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)c2nncnn2,Replaced pyrazine ring with tetrazole ring to introduce more nitrogen atoms,1.264,0.089,3.85,485.46,Valid
+9,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)c2cnnn2C,"Introduced 1,2,3-triazole ring to increase number of nitrogen atoms while maintaining aromaticity",1.304,0.076,3.84,486.49,Valid
+10,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)c2c(O)nnn2C,Added hydroxyl group to triazole ring to increase polarity,1.263,0.078,3.85,502.49,Valid
+11,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)c2c(c3ccccc3)nnn2C,Added phenyl group to triazole ring to expand aromatic system,1.262,0.07,3.66,562.59,Valid
+12,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)c2c(C(=O)O)nnn2C,Added carboxyl group to triazole ring to increase polarity and hydrogen bonding potential,1.164,0.064,3.79,530.5,Valid
+13,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)c2nccn2C,Replaced triazole ring with imidazole ring to maintain nitrogen-rich heterocycle,1.305,0.057,3.67,485.5,Valid
+14,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)c2nc(CN)cn2C,Added aminomethyl group to imidazole ring to increase polarity and hydrogen bonding potential,1.268,0.061,3.86,514.55,Valid
+15,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)c2nc(F)cn2C,Added fluorine atom to imidazole ring to increase polarity,1.698,0.197,3.85,503.49,Valid
+16,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)c2nc(F)c(F)n2C,Added another fluorine atom to imidazole ring to further increase polarity,1.833,0.232,3.92,521.48,Valid
+17,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(CF)c2nc(F)c(C(F)(F)F)n2C,Added fluorine to connecting nitrogen and replaced one fluorine on imidazole with trifluoromethyl group,1.978,0.225,4.1,589.48,Valid
+18,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(CF)c2nc(F)c(C(F)(F)F)n2CF,Added fluoromethyl group to imidazole nitrogen to further increase fluorine content,2.002,0.214,4.24,607.47,Valid
+19,FC(F)(F)c1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(C(F)(F)F)cc(c(c1N)N)C(=O)[O-])N(CF)c2nc(F)c(C(F)(F)F)n2CF,Replaced some amino groups with trifluoromethyl groups to maximize fluorine content,2.289,0.227,4.32,713.44,Valid
+20,FC(F)(F)c1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(C(F)(F)F)cc(c(c1N)N)C(=O)[O-])N(CF)c2nc(F)c(C(F)(F)F)n2C(F)(F)F,Replaced fluoromethyl group on imidazole nitrogen with trifluoromethyl group,2.297,0.231,4.35,749.42,Valid

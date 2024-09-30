@@ -1,21 +1,20 @@
 Iteration,SMILES,Modification,CO2 Adsorption,Uncertainty,SA Score,Molecular Weight,Validity
-0,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C#N,Initial SMILES,0.885,0.033,3.69,430.42,Valid
+0,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C#N,Initial SMILES structure,0.885,0.033,3.69,430.42,Valid
 1,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)N,Replaced cyano group with amide group to increase polarity,0.977,0.071,3.54,448.44,Valid
-2,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)NO,Added hydroxylamine group to increase polarity,0.954,0.077,3.63,464.44,Valid
-3,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)c1ncc[nH]1,Added imidazole ring to increase aromatic character and incorporate nitrogen-containing heterocycle,0.969,0.054,3.73,471.48,Valid
-4,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)NCO,Added hydroxyethyl urea group to increase polarity and hydrogen bonding sites,0.973,0.078,3.64,478.47,Valid
-5,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)NCF,Replaced hydroxyl group with fluorine atom to enhance electrostatic interactions,1.372,0.244,3.72,480.46,Valid
-6,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)c1ncc(F)cn1,Incorporated fluorinated pyrazine ring to increase aromatic character and maintain fluorine atom,1.291,0.195,3.65,501.48,Valid
-7,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)c1ncc(O)cn1,Replaced fluorine with hydroxyl group on pyrazine ring to increase polarity,0.925,0.061,3.69,499.49,Valid
-8,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)c1nnc(F)nn1,Incorporated fluorinated tetrazine ring to increase nitrogen content and maintain fluorine atom,1.281,0.206,3.91,503.45,Valid
-9,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)c1nc(F)c(O)cn1,Incorporated pyridine ring with fluorine and hydroxyl groups to combine halogen and polar effects,1.256,0.193,3.81,517.48,Valid
-10,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)NCCN,Added ethylenediamine group to increase basicity and CO2 interaction sites,0.974,0.067,3.56,491.51,Valid
-11,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)NC(F)CN,Combined fluorine atom with additional amine group to balance halogen and basic effects,1.323,0.247,4.22,509.5,Valid
-12,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)c1nc(F)c(NCN)cn1,"Incorporated pyridine ring with fluorine and aminomethylamine group to combine aromatic, halogen, and basic effects",1.208,0.216,3.94,545.54,Valid
-13,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)c1ncc(F)c(N)n1,Incorporated pyrimidine ring with fluorine and amine group in different positions,1.247,0.217,3.69,516.49,Valid
-14,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)c1nc(F)c(N)c(F)n1,Incorporated pyrimidine ring with two fluorine atoms and an amine group,1.378,0.22,3.93,534.48,Valid
-15,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)c1nc(F)c(NC)c(F)n1,Added methylamine group to difluorinated pyrimidine ring to further increase basicity,1.387,0.219,3.96,548.51,Valid
-16,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)c1nc(F)c(NCCN)c(F)n1,Replaced methylamine with ethylenediamine group on difluorinated pyrimidine ring,1.334,0.221,4.0,577.55,Valid
-17,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)c1nc(F)c(N)c(NCF)n1,"Incorporated pyrimidine ring with one fluorine atom, an amine group, and a fluoromethylamine group",1.326,0.223,4.07,563.53,Valid
-18,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)c1nc(F)c(NCO)c(F)n1,Incorporated pyrimidine ring with two fluorine atoms and a hydroxyethylamine group,1.345,0.217,4.07,564.51,Valid
-19,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)c1nc(F)c(NCCO)c(F)n1,Incorporated pyrimidine ring with two fluorine atoms and a hydroxyethylethylamine group,1.352,0.215,3.98,578.54,Valid
+2,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)c2nccnc2,Replaced amide group with pyrimidine ring to increase aromatic content and nitrogen-containing groups,1.288,0.061,3.58,483.49,Valid
+3,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)c2nc(O)cnc2,Added hydroxyl group to pyrimidine ring to increase polarity,1.24,0.068,3.78,499.49,Valid
+4,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)c2cncnc2,Replaced pyrimidine ring with pyrazine ring to increase nitrogen content,1.288,0.061,3.61,483.49,Valid
+5,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)c2nncnn2,Replaced pyrazine ring with tetrazine ring to further increase nitrogen content,1.264,0.089,3.85,485.46,Valid
+6,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)c2nc(N)cnc2,Added amino group to pyrimidine ring to increase polarity,1.256,0.07,3.73,498.5,Valid
+7,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)c2ccncc2,Replaced pyrimidine ring with pyridine ring to simplify structure while maintaining aromatic content,1.278,0.051,3.48,482.5,Valid
+8,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)c2ccnnc2,Replaced pyridine ring with pyridazine ring to increase nitrogen content,1.288,0.061,3.66,483.49,Valid
+9,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)c2cncnc2N,Added amino group to pyrazine ring to increase polarity,1.238,0.057,3.69,498.5,Valid
+10,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)c2cnccn2,Replaced pyrazine ring with pyrimidine ring to maintain nitrogen content while changing aromatic structure,1.288,0.061,3.58,483.49,Valid
+11,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)c2nnccn2,"Replaced pyrimidine ring with 1,2,4-triazine ring to further increase nitrogen content",1.284,0.079,3.72,484.48,Valid
+12,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)c2nc(O)nc(N)n2,Introduced triazine ring with hydroxyl and amino substituents to increase nitrogen content and polar groups,1.211,0.075,3.81,515.49,Valid
+13,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)c2ccc(N)nc2,Introduced pyridine ring with amino substituent to maintain aromatic content while adding a polar group,1.253,0.054,3.56,497.52,Valid
+14,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)c2cnc(N)cn2,Introduced pyrimidine ring with amino substituent to maintain nitrogen content while adding a polar group,1.256,0.07,3.68,498.5,Valid
+15,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)c2cncnc2C,Introduced methyl group to pyrazine ring to affect electronic properties,1.276,0.043,3.68,497.52,Valid
+16,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)c2nccnc2C,Moved methyl group to different position on pyrimidine ring to explore effect on electronic properties,1.276,0.043,3.63,497.52,Valid
+17,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)c2nccnc2F,Introduced fluorine substituent on pyrimidine ring to affect electronic properties,1.661,0.187,3.69,501.48,Valid
+18,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)c2nc(F)cnc2F,Introduced two fluorine substituents on pyrimidine ring to further affect electronic properties,1.803,0.229,3.84,519.47,Valid
