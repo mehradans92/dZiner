@@ -16,7 +16,6 @@ Iteration,SMILES,Modification,logCMC,SA Score,Molecular Weight,Validity
 14,FCCCCCCCCCCC(=O)CSC(=O)NCCOC(=O)C,Replaced the cyclic ester with a simpler ester group,0.308,2.71,363.5,Valid
 15,FCCCCCCC(C)CCCC(=O)CSC(=O)NC1CCOC1=O,Introduced branching near the middle of the hydrophobic tail,1.254,3.75,375.51,Valid
 16,FCCCCCCCCCCC(=S)CSC(=O)NC1CCOC1=O,Replaced the remaining carbonyl group with a thiocarbonyl group,-1.076,3.56,377.55,Valid
-17,FCCCCCCCCCCCC(=O)CSC(=O)NC1CCOC1=O,Extended the hydrophobic tail by one carbon atom,-1.201,3.33,375.51,Valid
-18,FCCCCCCCCCCC(=O)CSC(=S)NC1CCOC1=O,Replaced the carbonyl group adjacent to the cyclic ester with a thiocarbonyl group,-0.989,3.56,377.55,Valid
-19,FCCCCCCCCCCC(=O)CSC(=O)NC1CSOC1=O,Replaced an oxygen atom in the cyclic ester with a sulfur atom,-0.957,3.58,377.55,Valid
-20,FCCCCCCCCCCCC(=O)CSC(=O)NC1CCOC1=O,Extended the hydrophobic tail by one more carbon atom,-1.315,3.32,389.53,Valid
+17,FCCCCCCCCCCCC(=O)CSC(=O)NC1CCOC1=O,Extended the hydrophobic tail by one carbon atom,-1.257,3.33,375.51,Valid
+18,FCCCCCCCCCCC(=O)CSC(=S)NC1CCOC1=O,Replaced the carbonyl group adjacent to the cyclic ester with a thiocarbonyl group,-0.959,3.56,377.55,Valid
+19,FCCCCCCCCCCC(=O)CSC(=O)NC1CSOC1=O,Replaced an oxygen atom in the cyclic ester with a sulfur atom,-0.803,3.58,377.55,Valid
