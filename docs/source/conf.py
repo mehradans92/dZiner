@@ -40,7 +40,8 @@ extensions = [
     'sphinx.ext.intersphinx',
     'sphinx.ext.githubpages',
     'nbsphinx',
-    'sphinx_book_theme'
+    'sphinx_book_theme',
+    'sphinx_design'
 ]
 
 # -- Options for HTML output -------------------------------------------------
