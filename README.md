@@ -19,7 +19,7 @@ https://github.com/user-attachments/assets/799d120a-bafb-4f20-a1c1-783d36bad2fd
 
 ## Closed-loop Inverse Design
 
-We applied dZiner to the rational inverse design of likely synthesizable organic linkers for metal-organic frameworks with high CO2 adsorption capacity at 0.5 bar of pressure. These MOFs come with pcu topology and three types of inorganic nodes: Cu paddlewheel, Zn paddlewheel, and Zn tetramer (three most frequent node-topology pairs in the hMOF dataset). Design constraints such as keeping molecular weight lower than 600 g/mol and excluding certain potentially unstable functional groups (nitrosylated, chloro-, fluoro-, or trifluoromethyl amines) are simply added to the model as natural language text. 
+We applied dZiner to the rational inverse design of likely synthesizable organic linkers for metal-organic frameworks with high CO2 adsorption capacity at 0.5 bar of pressure. These MOFs come with pcu topology and three types of inorganic nodes: Cu paddlewheel, Zn paddlewheel, and Zn tetramer (three most frequent node-topology pairs in the hMOF dataset). Design constraints such as keeping molecular weight lower than 600 g/mol and excluding certain potentially unstable functional groups (nitrosylated, chloro-, fluoro- amines) are simply added to the model as natural language text. 
 
 <img src="https://github.com/user-attachments/assets/efd29d20-4dd4-443e-a409-e0209804edae" width="1000">
 
