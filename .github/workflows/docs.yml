@@ -26,6 +26,8 @@ jobs:
         sudo apt-get install pandoc
         jupyter nbconvert --to markdown examples/quick_start.ipynb
         cp examples/quick_start.md docs/source/quick_start.md
+        jupyter nbconvert --to markdown examples/Co2_adorption_MOF.ipynb
+        cp examples/Co2_adorption_MOF.md docs/source/Co2_adorption_MOF.md
         cd docs
         make html
 
