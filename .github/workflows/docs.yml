@@ -28,6 +28,8 @@ jobs:
         cp examples/quick_start.md docs/source/quick_start.md
         jupyter nbconvert --to markdown examples/Co2_adorption_MOF.ipynb
         cp examples/Co2_adorption_MOF.md docs/source/Co2_adorption_MOF.md
+        jupyter nbconvert --to markdown examples/peptide-hemolytic.ipynb
+        cp examples/peptide-hemolytic.md docs/source/peptide-hemolytic.md
         cd docs
         make html
 

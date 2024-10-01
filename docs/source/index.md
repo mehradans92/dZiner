@@ -13,4 +13,5 @@ self
 installation
 quick_start
 Co2_adorption_MOF
+peptide-hemolytic
 ```
