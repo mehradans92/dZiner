@@ -30,6 +30,7 @@ dZiner can work with different textual representation for materials. You can eve
 - [Quick Start](https://mehradans92.github.io/dZiner/quick_start.html)
 - [Example 1 - MOF Organic Linker Design for CO2 Adsorption](https://mehradans92.github.io/dZiner/Co2_adorption_MOF.html)
 - [Example 2 - Desigining Peptides with a Lower Hemolytic Activity](https://mehradans92.github.io/dZiner/peptide-hemolytic.html)
+- [Example 3 - Low CMC Surfactant Design](https://mehradans92.github.io/dZiner/surfactant-cmc.html)
   
 <!--end-intro-->
 
