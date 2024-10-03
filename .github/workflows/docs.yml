@@ -21,15 +21,19 @@ jobs:
       run: |
         pip install -r docs/requirements.txt
 
+    - name: Install Pandoc
+      run: sudo apt-get install pandoc
+
+    - name: Convert selected Jupyter notebooks to markdown and copy to docs
+          run: |
+            notebooks=("quick_start" "Co2_adorption_MOF" "peptide-hemolytic" "surfactant-cmc")
+            for notebook in "${notebooks[@]}"; do
+              jupyter nbconvert --to markdown "examples/${notebook}.ipynb"
+              cp "examples/${notebook}.md" "docs/source/${notebook}.md"
+            done
+
     - name: Build the documentation
       run: |
-        sudo apt-get install pandoc
-        jupyter nbconvert --to markdown examples/quick_start.ipynb
-        cp examples/quick_start.md docs/source/quick_start.md
-        jupyter nbconvert --to markdown examples/Co2_adorption_MOF.ipynb
-        cp examples/Co2_adorption_MOF.md docs/source/Co2_adorption_MOF.md
-        jupyter nbconvert --to markdown examples/peptide-hemolytic.ipynb
-        cp examples/peptide-hemolytic.md docs/source/peptide-hemolytic.md
         cd docs
         make html
 
