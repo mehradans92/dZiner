@@ -22,7 +22,7 @@ https://github.com/user-attachments/assets/799d120a-bafb-4f20-a1c1-783d36bad2fd
 
 We applied dZiner to the rational inverse design of likely synthesizable organic linkers for metal-organic frameworks with high CO2 adsorption capacity at 0.5 bar of pressure. These MOFs come with pcu topology and three types of inorganic nodes: Cu paddlewheel, Zn paddlewheel, and Zn tetramer (three most frequent node-topology pairs in the hMOF dataset). Design constraints such as keeping molecular weight lower than 600 g/mol and excluding certain potentially unstable functional groups (nitrosylated, chloro-, fluoro- amines) are simply added to the model as natural language text. 
 
-<img src="https://github.com/user-attachments/assets/06206b2a-db94-41f6-bc67-1c5e5c4cc933" width="1000">
+<img src="https://github.com/user-attachments/assets/3480806e-43b5-423a-8322-5956a2d0c359" width="1000">
 
 ## How Can I Use dZiner for My Own Materials Inverse Design Problem?
 
