@@ -25,12 +25,12 @@ jobs:
       run: sudo apt-get install pandoc
 
     - name: Convert selected Jupyter notebooks to markdown and copy to docs
-          run: |
-            notebooks=("quick_start" "Co2_adorption_MOF" "peptide-hemolytic" "surfactant-cmc")
-            for notebook in "${notebooks[@]}"; do
-              jupyter nbconvert --to markdown "examples/${notebook}.ipynb"
-              cp "examples/${notebook}.md" "docs/source/${notebook}.md"
-            done
+      run: |
+        notebooks=("quick_start" "Co2_adorption_MOF" "peptide-hemolytic" "surfactant-cmc")
+        for notebook in "${notebooks[@]}"; do
+          jupyter nbconvert --to markdown "examples/${notebook}.ipynb"
+          cp "examples/${notebook}.md" "docs/source/${notebook}.md"
+        done
 
     - name: Build the documentation
       run: |
