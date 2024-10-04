@@ -16,10 +16,7 @@ The model starts by inputting the material's initial structure as a textual repr
 
 Collaborative efforts between a human expert and AI agents hold significant promise. In the case of molecular design for WDR5 ligands, we examined human guidance to refine the modifications based on docking scores and structural generation.
 
-<video width="1000" controls>
-  <source src="docs/source/_static/dziner_human-in-the-loop-animation.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+https://github.com/user-attachments/assets/01ee84a4-0357-4b9c-9305-2258304340a2
 
 ## Closed-loop Inverse Design
 
