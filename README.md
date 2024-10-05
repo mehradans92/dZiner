@@ -38,7 +38,7 @@ dZiner can work with different textual representation for materials. You can eve
 
 # Installation
 
-Note that with GPU installation, the wall-time of the domain-knowledge tool that uses RAG becomes much shorter.
+Note that with GPU installation, the wall-time of the domain-knowledge tool that uses RAG becomes much shorter. After this installation, you wiil need to install the surrogate model you want to use (see below).
 
 ## Installation - `pip`(GPU)
 
