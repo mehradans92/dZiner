@@ -37,7 +37,25 @@ dZiner can work with different textual representation for materials. You can eve
 
 # Installation
 
-## Installation (GPU)
+Note that with GPU installation, the wall-time of the domain-knowledge tool that uses RAG becomes much shorter.
+
+## Installation - `pip`(GPU)
+
+```bash
+pip install dziner
+conda install -c pytorch/label/nightly -c nvidia faiss-gpu=1.8.0
+python -m ipykernel install --user --name dziner --display-name "dziner"
+```
+
+## Installation - `pip`(CPU)
+
+```bash
+pip install dziner
+conda install -c pytorch/label/nightly faiss-cpu
+python -m ipykernel install --user --name dziner --display-name "dziner"
+```
+
+## Installation - dev mode (GPU)
 
 You can clone the source code and install in developer mode:
 
@@ -51,7 +69,7 @@ conda install -c pytorch/label/nightly -c nvidia faiss-gpu=1.8.0
 python -m ipykernel install --user --name dziner --display-name "dziner"
 ```
 
-## Installation (CPU)
+## Installation - dev mode (CPU)
 
 If you do not have a gpu in your machine (OSX for example) you will need to execute the following instead:
 
