@@ -4,6 +4,7 @@
 
 ![Tests](https://github.com/github/docs/actions/workflows/test.yml/badge.svg)
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![PyPI version](https://badge.fury.io/py/dziner.svg)](https://badge.fury.io/py/dziner)
 
 
 
