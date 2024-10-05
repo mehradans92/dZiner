@@ -21,7 +21,7 @@ setup(
     classifiers=[
         "Development Status :: 2 - Pre-Alpha",
         "Intended Audience :: Developers",
-        "License :: OSI Approved :: Apache-2.0 License",
+        "License :: OSI Approved :: Apache Software License",
         "Natural Language :: English",
         "Programming Language :: Python :: 3.11",
     ],
@@ -32,7 +32,7 @@ setup(
     dependency_links=[
         "https://data.dgl.ai/wheels/torch-2.3/cu121/dgl-2.2.1+cu121-cp311-cp311-manylinux1_x86_64.whl"
     ],
-    license="MIT license",
+    license="Apache-2.0",
     include_package_data=True,
     keywords="dziner",
     name="dziner",
