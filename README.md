@@ -33,8 +33,23 @@ dZiner can work with different textual representation for materials. You can eve
 - [Example 2 - Desigining Peptides with a Lower Hemolytic Activity](https://mehradans92.github.io/dZiner/peptide-hemolytic.html)
 - [Example 3 - Low CMC Surfactant Design](https://mehradans92.github.io/dZiner/surfactant-cmc.html)
   
-<!--end-intro-->
+# Citation
 
+For more details checkout [preprint](https://arxiv.org/abs/2410.03963) and if you are using our methodology, please consider citing us using the citation below:
+
+```bibtex
+@misc{ansari2024dzinerrationalinversedesign,
+      title={dZiner: Rational Inverse Design of Materials with AI Agents}, 
+      author={Mehrad Ansari and Jeffrey Watchorn and Carla E. Brown and Joseph S. Brown},
+      year={2024},
+      eprint={2410.03963},
+      archivePrefix={arXiv},
+      primaryClass={physics.chem-ph},
+      url={https://arxiv.org/abs/2410.03963}, 
+}
+```
+
+<!--end-intro-->
 
 # Installation
 
