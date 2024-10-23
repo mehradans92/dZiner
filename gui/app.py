@@ -1,4 +1,13 @@
 import streamlit as st
+st.set_page_config(layout="wide")
+
+col1, col2, col3 = st.columns([4.7, 5, 0.2])
+col2.image('logo_transparent.png', width=100)
+col1.title("`dZiner v0.1`")
+
+
+
+
 from langchain.document_loaders import PyPDFLoader
 from langchain_openai import ChatOpenAI
 from langchain.vectorstores import FAISS
@@ -13,6 +22,10 @@ from rdkit.Chem import QED, Descriptors, Draw
 from rdkit.Chem.Draw import rdMolDraw2D
 from PIL import Image
 import io
+from streamlit.components.v1 import html
+
+
+
 
 Embedding_model = 'text-embedding-3-large'  # You might want to verify this model
 RetrievalQA_prompt = "Design guidelines for molecules with higher binding affinity against WDR5"
@@ -108,8 +121,8 @@ if "history" not in st.session_state:
 
 
 # Streamlit App
-st.set_page_config(layout="wide")
-st.title("`dZiner v0.1`")
+
+
 
 # Create two columns
 col1, col2 = st.columns([1, 1])  # Two equally sized columns
@@ -167,50 +180,57 @@ DEFAULT_MOL = (
 # Left column (Molecule Editor using SMILES)
 with col1:
     st.header("Molecule Design Playground")
-    molecule = st.text_input("Enter SMILES", value=DEFAULT_MOL)
+    molecule = st.text_input("Initial Molecule", placeholder="Input SMILES" ,value=None)
     
-    # Check validity and display result
-    validity, sa_score, molecular_weight, qed_score, smiles = drug_chemical_feasibility(molecule)
+    if molecule:
+        # Check validity and display result
+        validity, sa_score, molecular_weight, qed_score, smiles = drug_chemical_feasibility(molecule)
 
-    if validity == "Invalid SMILES":
-        st.error(f"Error: {validity}. Please enter a valid SMILES.")
-    else:
-        smile_code = st_ketcher(molecule)
-        st.markdown(f"Smile code: `{smile_code}")
-        # Add the molecule and its data to the session state history
-        new_entry = {
-            "smiles": smiles,
-            "SA": sa_score,
-            "MW": molecular_weight,
-            "QED": qed_score,
-            "iteration": len(st.session_state["history"])
-        }
-        st.session_state["history"].append(new_entry)
+        if validity == "Invalid SMILES":
+            st.error(f"Error: {validity}. Please enter a valid SMILES.")
+        else:
+            smile_code = st_ketcher(molecule)
+            st.markdown(f"Smile code: `{smile_code}")
+            # Add the molecule and its data to the session state history
+            new_entry = {
+                "smiles": smiles,
+                "SA": sa_score,
+                "MW": molecular_weight,
+                "QED": qed_score,
+                "iteration": len(st.session_state["history"])
+            }
+            st.session_state["history"].append(new_entry)
 
 # Right column (Design History)
+
 with col2:
-    st.header("Design History")
+    if molecule:
+        st.header("Design History")
+        
+        # Container for scrollable content
+        with st.container(height=700):
+            
+            # Display each molecule one after another
+            for entry in st.session_state["history"]:
+                # Create two sub-columns within the right column: 50% for the image, 50% for the information
+                img_col, info_col = st.columns([0.5, 0.5])
 
-    # Display each molecule one after another
-    for entry in st.session_state["history"]:
-        # Create two sub-columns within the right column: 50% for the image, 50% for the information
-        img_col, info_col = st.columns([0.5, 0.5])
+                # Generate the PNG image for the SMILES
+                img_io = mol_to_img(entry["smiles"])
 
-        # Generate the PNG image for the SMILES
-        img_io = mol_to_img(entry["smiles"])
+                # Display the molecule image in the left sub-column
+                with img_col:
+                    if img_io:
+                        st.image(img_io, use_column_width=True)
+                    else:
+                        st.error("Unable to generate molecule image. Invalid SMILES string.")
 
-        # Display the molecule image in the left sub-column
-        with img_col:
-            if img_io:
-                st.image(img_io, use_column_width=True)
-            else:
-                st.error("Unable to generate molecule image. Invalid SMILES string.")
-
-        # Display molecular information in the right sub-column
-        with info_col:
-            st.markdown(f"**Iteration {entry['iteration']}**")
-            st.write(f"**SMILES**: {entry['smiles']}")
-            st.write(f"**SA Score**: {entry['SA']:.3f}")
-            st.write(f"**Molecular Weight**: {entry['MW']:.2f}")
-            st.write(f"**QED Score**: {entry['QED']:.3f}")
-        st.write("---")  # Separate each molecule iteration
+                # Display molecular information in the right sub-column
+                with info_col:
+                    st.markdown(f"**Iteration {entry['iteration']}**")
+                    st.write(f"**SMILES**: {entry['smiles']}")
+                    st.write(f"**SA Score**: {entry['SA']:.3f}")
+                    st.write(f"**Molecular Weight**: {entry['MW']:.2f}")
+                    st.write(f"**QED Score**: {entry['QED']:.3f}")
+                st.write("---")  # Separate each molecule iteration
+        
