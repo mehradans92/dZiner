@@ -16,4 +16,5 @@ Co2_adorption_MOF
 peptide-hemolytic
 surfactant-cmc
 docking_GNINA_vs_AutoDockVina
+inverse_design
 ```
