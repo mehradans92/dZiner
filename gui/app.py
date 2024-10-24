@@ -1,12 +1,9 @@
 import streamlit as st
 st.set_page_config(layout="wide")
 
-col1, col2, col3 = st.columns([4.7, 5, 0.2])
-col2.image('logo_transparent.png', width=100)
-col1.title("`dZiner v0.1`")
-
-
-
+api_key_url = (
+    "https://help.openai.com/en/articles/4936850-where-do-i-find-my-secret-api-key"
+)
 
 from langchain.document_loaders import PyPDFLoader
 from langchain_openai import ChatOpenAI
@@ -24,6 +21,30 @@ from PIL import Image
 import io
 from streamlit.components.v1 import html
 
+
+with st.sidebar:
+    col1, col2, col3 = st.columns(3)
+    col2.image('logo_transparent.png', width=150)
+    st.title("dZiner v0.1")
+    st.markdown(
+        "**Chemist AI Agent for Rational Inverse Design of Materials.**"
+    )
+    api_key = st.text_input(
+        "OpenAI API Key",
+        placeholder="sk-...",
+        help=f"['What is that?']({api_key_url})",
+        type="password",
+        value="",
+    )
+    os.environ["OPENAI_API_KEY"] = f"{api_key}"  #
+    if len(api_key) != 51:
+        st.warning("Please enter a valid OpenAI API key.", icon="⚠️")
+
+  
+    st.markdown(
+        "⚠️ Note that this is only a demo version of the module. You can probably get much better\
+                 results with your own customized prompts using the [software](https://github.com/mehradans92/dziner)."
+    )
 
 
 
@@ -234,3 +255,10 @@ with col2:
                     st.write(f"**QED Score**: {entry['QED']:.3f}")
                 st.write("---")  # Separate each molecule iteration
         
+if __name__ == "__main__":
+    with st.sidebar:
+        st.markdown("---")
+        st.markdown(
+            '<h6>Made in &nbsp<img src="https://streamlit.io/images/brand/streamlit-mark-color.png" alt="Streamlit logo" height="16">&nbsp by <a href="https://twitter.com/mehradansari">Mehrad Ansari</a></h6>',
+            unsafe_allow_html=True,
+        )
