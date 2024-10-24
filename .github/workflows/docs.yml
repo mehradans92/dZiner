@@ -26,7 +26,7 @@ jobs:
 
     - name: Convert selected Jupyter notebooks to markdown and copy to docs
       run: |
-        notebooks=("quick_start" "Co2_adorption_MOF" "peptide-hemolytic" "surfactant-cmc" "docking_GNINA_vs_AutoDockVina")
+        notebooks=("quick_start" "Co2_adorption_MOF" "peptide-hemolytic" "surfactant-cmc" "docking_GNINA_vs_AutoDockVina" "inverse_design")
         for notebook in "${notebooks[@]}"; do
           jupyter nbconvert --to markdown "examples/${notebook}.ipynb"
           cp "examples/${notebook}.md" "docs/source/${notebook}.md"
