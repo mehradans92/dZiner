@@ -35,7 +35,7 @@ dZiner can work with different textual representation for materials. You can eve
 - [Example 2 - Desigining Peptides with a Lower Hemolytic Activity](https://mehradans92.github.io/dZiner/peptide-hemolytic.html)
 - [Example 3 - Low CMC Surfactant Design](https://mehradans92.github.io/dZiner/surfactant-cmc.html)
 - [Example 4 - Different Choices of Surrorgate Models](https://mehradans92.github.io/dZiner/docking_GNINA_vs_AutoDockVina.html)
-- [Example 5 - Low CMC Surfactant Design](https://mehradans92.github.io/dZiner/inverse_design.html)
+- [Example 5 - WDR5 Ligand Inverse Design](https://mehradans92.github.io/dZiner/inverse_design.html)
   
 # Citation
 
