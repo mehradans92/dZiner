@@ -20,7 +20,7 @@ from rdkit.Chem.Draw import rdMolDraw2D
 from PIL import Image
 import io
 from streamlit.components.v1 import html
-
+import base64
 
 with st.sidebar:
     col1, col2, col3 = st.columns(3)
@@ -137,8 +137,8 @@ def lookup_papers(uploaded_file):
         # Clean up: Delete the temporary file after processing
         os.remove(temp_file_path)
 
-if "history" not in st.session_state:
-    st.session_state["history"] = []
+if "molecules_history" not in st.session_state:
+    st.session_state["molecules_history"] = []
 
 
 # Streamlit App
@@ -146,51 +146,51 @@ if "history" not in st.session_state:
 
 
 # Create two columns
-col1, col2 = st.columns([1, 1])  # Two equally sized columns
+with st.container(border=True):
+    col1, col2 = st.columns([1, 1])  # Two equally sized columns
 
-# Left column for PDF uploads
-with col1:
-    st.header("Upload Research Papers (PDF)")
-    uploaded_files = st.file_uploader("Drag and drop PDFs here", type="pdf", accept_multiple_files=True)
+    # Left column for PDF uploads
+    with col1:
+        st.header("Upload Research Papers (PDF)")
+        uploaded_files = st.file_uploader("Drag and drop PDFs here", type="pdf", accept_multiple_files=True)
 
-    # Add a process button to trigger processing of uploaded PDFs
-    process_button = st.button("Process PDFs")
+        # Add a process button to trigger processing of uploaded PDFs
+        process_button = st.button("Process PDFs")
 
-    # Display uploaded file names with icons indicating processing status
-    if uploaded_files:
-        status_dict = {file.name: "📄" for file in uploaded_files}  # Initialize status with document icon
-        status_placeholders = {file.name: st.empty() for file in uploaded_files}  # Placeholders for each file status
-        for file_name, placeholder in status_placeholders.items():
-            placeholder.markdown(f"{status_dict[file_name]} {file_name}")
+        # Display uploaded file names with icons indicating processing status
+        if uploaded_files:
+            status_dict = {file.name: "📄" for file in uploaded_files}  # Initialize status with document icon
+            status_placeholders = {file.name: st.empty() for file in uploaded_files}  # Placeholders for each file status
+            for file_name, placeholder in status_placeholders.items():
+                placeholder.markdown(f"{status_dict[file_name]} {file_name}")
 
-# If files are uploaded and the process button is clicked, process them and display in the right column
-with col2:
-    st.header("Extracted Guidelines")
+    # If files are uploaded and the process button is clicked, process them and display in the right column
+    with col2:
+        st.header("Extracted Guidelines")
 
-    if uploaded_files and process_button:
-        # Process each uploaded PDF and extract guidelines
-        for uploaded_file in uploaded_files:
-            # Update status to show a rotating arrow while processing
-            status_placeholders[uploaded_file.name].markdown(f"🔄 Processing {uploaded_file.name}...")
+        if uploaded_files and process_button:
+            # Process each uploaded PDF and extract guidelines
+            for uploaded_file in uploaded_files:
+                # Update status to show a rotating arrow while processing
+                status_placeholders[uploaded_file.name].markdown(f"🔄 Processing {uploaded_file.name}...")
 
-            with st.spinner(f"Processing {uploaded_file.name}..."):
-                guidelines, paper_info = lookup_papers(uploaded_file)
-            
-            # Display the extracted design guidelines after each PDF is processed
-            st.text_area(f"Paper: {paper_info}", value=guidelines, height=300)
+                with st.spinner(f"Processing {uploaded_file.name}..."):
+                    guidelines, paper_info = lookup_papers(uploaded_file)
+                
+                # Display the extracted design guidelines after each PDF is processed
+                st.text_area(f"Paper: {paper_info}", value=guidelines, height=300)
 
-            # Update status to show checkmark after processing is complete
-            status_placeholders[uploaded_file.name].markdown(f"✅ {uploaded_file.name} processed")
-            
-    elif uploaded_files and not process_button:
-        st.info("Click the 'Process PDFs' button to start processing the uploaded files.")
-    else:
-        st.info("Please upload one or more PDF files to extract design guidelines.")
+                # Update status to show checkmark after processing is complete
+                status_placeholders[uploaded_file.name].markdown(f"✅ {uploaded_file.name} processed")
+                
+        elif uploaded_files and not process_button:
+            st.info("Click the 'Process PDFs' button to start processing the uploaded files.")
+        else:
+            st.info("Please upload one or more PDF files to extract design guidelines.")
 
 from streamlit_ketcher import st_ketcher
 
 # Create two columns for the Molecule Editor and Design History, with fixed height alignment
-col1, col2 = st.columns([2, 1], gap="medium")
 
 # Default SMILES and molecule editor
 DEFAULT_MOL = (
@@ -198,43 +198,170 @@ DEFAULT_MOL = (
     "C(=C(/C5=CC=CC(C(N)=O)=C5)C5=CC=C2N5)C=C4)N3)C=C1"
 )
 
+if "input_locked" not in st.session_state:
+    st.session_state.input_locked = False
+if "initial_molecule" not in st.session_state:
+    st.session_state["initial_molecule"] = None
+
 # Left column (Molecule Editor using SMILES)
-with col1:
-    st.header("Molecule Design Playground")
-    molecule = st.text_input("Initial Molecule", placeholder="Input SMILES" ,value=None)
-    
-    if molecule:
-        # Check validity and display result
-        validity, sa_score, molecular_weight, qed_score, smiles = drug_chemical_feasibility(molecule)
+with st.container(border=True):
+    st.header("Molecule Design Playground") 
+    col1, col2 = st.columns([1, 1], gap="medium")
+    with col1:
+        st.write("Initial Molecule")
+        sub_col1, sub_col2 = st.columns([3,1], gap='medium')
+        with sub_col1:
+            molecule = st.text_input("Initial Molecule", placeholder="Input SMILES" ,value=st.session_state.get("initial_molecule", ""), 
+                                             label_visibility="collapsed", disabled=st.session_state.input_locked)
+            # Lock the input if a valid molecule is entered
+            if molecule and not st.session_state.input_locked:
+                st.session_state.initial_molecule = molecule
+                st.session_state.input_locked = True 
+                st.rerun() 
 
-        if validity == "Invalid SMILES":
-            st.error(f"Error: {validity}. Please enter a valid SMILES.")
-        else:
-            smile_code = st_ketcher(molecule)
-            st.markdown(f"Smile code: `{smile_code}")
-            # Add the molecule and its data to the session state history
-            new_entry = {
-                "smiles": smiles,
-                "SA": sa_score,
-                "MW": molecular_weight,
-                "QED": qed_score,
-                "iteration": len(st.session_state["history"])
-            }
-            st.session_state["history"].append(new_entry)
+        with sub_col2:
+            if st.button("Restart"):
+                st.session_state.initial_molecule = None  # Clear molecule in session state
+                st.session_state.input_locked = False  # Unlock the input field
+                st.session_state["molecules_history"] = []  # Clear history
+                st.session_state.chat_history = [st.session_state.chat_history[0]]
+                st.rerun() 
+        
+        if molecule:
+            # Check validity and display result
+            validity, sa_score, molecular_weight, qed_score, smiles = drug_chemical_feasibility(molecule)
 
-# Right column (Design History)
+            if validity == "Invalid SMILES":
+                st.error(f"Error: {validity}. Please enter a valid SMILES.")
+            else:
+                smile_code = st_ketcher(molecule, height=700)
+                st.markdown(f"Smile code: `{smile_code}")
+                # Add the molecule and its data to the session state history
+                new_entry = {
+                    "smiles": smiles,
+                    "SA": sa_score,
+                    "MW": molecular_weight,
+                    "QED": qed_score,
+                    "iteration": len(st.session_state["molecules_history"])
+                }
+                st.session_state["molecules_history"].append(new_entry)
 
+    # Right column (Chat Interface)
+    with col2:
+        if molecule:
+
+            st.subheader("Current Design")
+            with st.container(height=250):
+                # Display each molecule one after another
+                current_entry = st.session_state["molecules_history"][-1]
+                # Create two sub-columns within the right column: 50% for the image, 50% for the information
+                img_col, info_col = st.columns([0.8, 0.5], gap="small")
+
+                # Generate the PNG image for the SMILES
+                img_io = mol_to_img(current_entry["smiles"])
+
+                # Display the molecule image in the left sub-column
+                with img_col:
+                    if img_io:
+                        st.image(img_io, width=200)
+                    else:
+                        st.error("Unable to generate molecule image. Invalid SMILES string.")
+
+                # Display molecular information in the right sub-column
+                with info_col:
+                    st.markdown(f"**Iteration {current_entry['iteration']}**")
+                    st.write(f"**SMILES**: {current_entry['smiles']}")
+                    st.write(f"**SA Score**: {current_entry['SA']:.3f}")
+                    st.write(f"**Molecular Weight**: {current_entry['MW']:.2f}")
+                    st.write(f"**QED Score**: {current_entry['QED']:.3f}")
+
+            st.markdown("""
+                <style>
+                .stChatFloatingInputContainer {
+                    position: fixed !important;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 80%;
+                    padding: 1rem;
+                    background-color: var(--background-color);
+                    z-index: 999;
+                }
+                section[data-testid="stSidebar"] {
+                    z-index: 1000;
+                }
+                </style>
+            """, unsafe_allow_html=True)
+
+            st.subheader("dZiner")
+
+            # Main chat container with padding at bottom for input box
+            with st.container(height=500):
+                # Add padding at the bottom to prevent content from being hidden behind input
+                st.markdown('<div style="padding-bottom: 80px;">', unsafe_allow_html=True)
+                
+                # Initialize chat history and flag for first message if it doesn't exist
+                if "chat_history" not in st.session_state:
+                    st.session_state.chat_history = []
+                    
+                # Use a flag to track if the initial message has been added
+                if "initial_message_added" not in st.session_state:
+                    st.session_state.initial_message_added = False
+
+                # Add the initial message from Dziner only once
+                if not st.session_state.initial_message_added:
+                    st.session_state.chat_history.append({
+                        "role": "assistant", 
+                        "content": "Hi! I'm Dziner. How can I assist you with your molecule design?"
+                    })
+                    st.session_state.initial_message_added = True
+
+                # Load logo for assistant
+                assistant_avatar = "chat_icon.png"
+
+                # Display chat history
+                for message in st.session_state.chat_history:
+                    if message["role"] == "assistant":
+                        with st.chat_message("assistant", avatar=assistant_avatar):
+                            st.write(message["content"])
+                    else:
+                        with st.chat_message("user"):
+                            st.write(message["content"])
+
+                # Close padding div
+                st.markdown('</div>', unsafe_allow_html=True)
+                
+                # Chat input
+                if prompt := st.chat_input("Ask about your molecule..."):
+                    # Add user message to chat history
+                    st.session_state.chat_history.append({"role": "user", "content": prompt})
+                    
+                    # Generate assistant response based on user input
+                    context = f"""
+                    Current molecule SMILES: {st.session_state.get('current_smiles', '')}
+                    SA Score: {st.session_state.get('current_sa', '')}
+                    Molecular Weight: {st.session_state.get('current_mw', '')}
+                    QED Score: {st.session_state.get('current_qed', '')}
+                    """
+                    
+                    # Simulate assistant response (replace with actual LLM call)
+                    response = f"I see you're working with a molecule that has a QED score of {st.session_state.get('current_qed', '')}. How can I help you analyze it?"
+                    st.session_state.chat_history.append({"role": "assistant", "content": response})
+                    
+                    # Rerun to update the chat display
+                    st.rerun()
+                        
+
+
+col1, col2, col3 = st.columns([1, 2, 1], gap="medium")
 with col2:
     if molecule:
         st.header("Design History")
-        
-        # Container for scrollable content
-        with st.container(height=700):
-            
+        with st.container(height=500):
             # Display each molecule one after another
-            for entry in st.session_state["history"]:
+            for entry in st.session_state["molecules_history"]:
                 # Create two sub-columns within the right column: 50% for the image, 50% for the information
-                img_col, info_col = st.columns([0.5, 0.5])
+                img_col, info_col = st.columns([0.8, 0.5], gap="small")
 
                 # Generate the PNG image for the SMILES
                 img_io = mol_to_img(entry["smiles"])
@@ -242,7 +369,7 @@ with col2:
                 # Display the molecule image in the left sub-column
                 with img_col:
                     if img_io:
-                        st.image(img_io, use_column_width=True)
+                        st.image(img_io, width=300)
                     else:
                         st.error("Unable to generate molecule image. Invalid SMILES string.")
 
@@ -254,6 +381,9 @@ with col2:
                     st.write(f"**Molecular Weight**: {entry['MW']:.2f}")
                     st.write(f"**QED Score**: {entry['QED']:.3f}")
                 st.write("---")  # Separate each molecule iteration
+
+
+
         
 if __name__ == "__main__":
     with st.sidebar:
@@ -262,3 +392,5 @@ if __name__ == "__main__":
             '<h6>Made in &nbsp<img src="https://streamlit.io/images/brand/streamlit-mark-color.png" alt="Streamlit logo" height="16">&nbsp by <a href="https://twitter.com/mehradansari">Mehrad Ansari</a></h6>',
             unsafe_allow_html=True,
         )
+
+
