@@ -7,9 +7,6 @@
 [![PyPI version](https://badge.fury.io/py/dziner.svg)](https://badge.fury.io/py/dziner)
 [![arXiv](https://img.shields.io/badge/arXiv-2410.03963-b31b1b.svg)](https://arxiv.org/abs/2410.03963)
 
-
-
-
 An agentic framework for rational inverse design of materials by replicating and incorporating the expertise of human domain experts across various design tasks and target properties.
 
 <img src="https://github.com/user-attachments/assets/690d1732-a5fe-4ada-aa12-b2bba01eb723" width="1000">
