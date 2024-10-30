@@ -2,7 +2,7 @@
 
 <!--start-intro-->
 
-![Tests](https://github.com/github/docs/actions/workflows/test.yml/badge.svg)
+![Test Status](https://github.com/mehradans92/dZiner/actions/workflows/test.yml/badge.svg)
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![PyPI version](https://badge.fury.io/py/dziner.svg)](https://badge.fury.io/py/dziner)
 [![arXiv](https://img.shields.io/badge/arXiv-2410.03963-b31b1b.svg)](https://arxiv.org/abs/2410.03963)
