@@ -1,6 +1,11 @@
 import streamlit as st
 st.set_page_config(layout="wide")
 
+import warnings
+from langchain._api.deprecation import LangChainDeprecationWarning
+
+warnings.filterwarnings('ignore', category=LangChainDeprecationWarning)
+
 api_key_url = (
     "https://help.openai.com/en/articles/4936850-where-do-i-find-my-secret-api-key"
 )
@@ -22,6 +27,220 @@ import io
 from streamlit.components.v1 import html
 import base64
 
+import io
+import sys
+from contextlib import redirect_stdout, redirect_stderr
+
+
+from langchain.agents import tool
+from rdkit import Chem
+from rdkit.Chem import AllChem
+import subprocess
+from langchain_community.tools import HumanInputRun
+from langchain_anthropic import ChatAnthropic
+from dziner.agents import dZiner
+import dziner
+
+@tool
+def predictGNINA_docking(smiles):
+    '''
+    This tool predicts the docking score to WDR5 for a SMILES molecule. Lower docking score means a larger binding affinity.
+    This model is based on GNINA from this paper: https://jcheminf.biomedcentral.com/articles/10.1186/s13321-021-00522-2
+    '''
+    mol = Chem.MolFromSmiles(smiles)
+    mol = Chem.AddHs(mol)
+    
+    # Generate 3D coordinates
+    AllChem.EmbedMolecule(mol)
+    AllChem.UFFOptimizeMolecule(mol)
+    
+    # Save to PDB file (required format for GNINA)
+    output_file = "molecule.pdb"
+    Chem.MolToPDBFile(mol, output_file)
+
+    # Command to run GNINA
+    command = "../dziner/surrogates/gnina -r ../dziner/surrogates/Binding/WDR5_target.pdbqt -l molecule.pdb --autobox_ligand ../dziner/surrogates/Binding/WDR5_target.pdbqt --seed 0"
+    
+    # Run the command and capture the output
+    result = subprocess.getoutput(command)
+    
+    # Initialize a list to store affinity values
+    affinities = []
+    
+    # Loop through the output lines to find affinity scores
+    for line in result.splitlines():
+        if line.strip() and line.split()[0].isdigit():
+            try:
+                affinity = float(line.split()[1])
+                affinities.append(affinity)
+            except ValueError:
+                continue
+    
+    # Find the minimum affinity score
+    if affinities:
+        best_docking_score = min(affinities)
+    else:
+        best_docking_score = None
+    return best_docking_score
+
+# Define the paper lookup tool
+@tool
+def domain_knowledge(prompt):
+    '''Useful for getting chemical intuition for the problem.
+    This tool looks up design guidelines for molecules with higher binding afinity against WDR5 by looking through research papers.
+    It also includes information on the paper citation or DOI.
+    '''
+    guide_lines = []
+    for m in range(3):
+        text_splitter = CharacterTextSplitter(
+            chunk_size=1000, chunk_overlap=20)
+        paper_file =f'../data/papers/Binding/WDR5/{m}.pdf'
+        pages = PyPDFLoader(paper_file).load_and_split()
+        sliced_pages = text_splitter.split_documents(pages)
+        faiss_vectorstore = FAISS.from_documents(sliced_pages, OpenAIEmbeddings(model=Embedding_model))
+        
+        llm = ChatOpenAI(
+            model_name='gpt-4',
+            temperature=0.1,
+        )
+        g = dziner.RetrievalQABypassTokenLimit(faiss_vectorstore, RetrievalQA_prompt, llm)
+        guide_lines.append(g)
+    return " ".join(guide_lines)
+
+# Define input function for human feedback
+def get_input() -> str:
+    return st.session_state.get("current_feedback", "")
+
+# Setup human feedback tool
+human_feedback = HumanInputRun(
+    input_func=get_input,
+    description="Use this tool to obtain feedback on the design of the new SMILES you suggested.",
+    name='human_feedback'
+)
+
+# Combine all tools
+tools = [domain_knowledge, predictGNINA_docking, human_feedback]
+tool_names = [tool.name for tool in tools]
+tool_desc = [tool.description for tool in tools]
+
+
+# Define agent prompts
+FORMAT_INSTRUCTIONS = """Use the following format:
+
+Question: the input question you must answer
+Thought: you should always think about what to do
+Action: the action to take, should be one of [{tool_names}]
+Action Input: the input to the action
+Observation: the result of the action
+... (this Thought/Action/Action Input/Observation can repeat N times)
+When you have a response to say to the Human, or if you do not need to use a tool, you MUST use the format:
+'''
+Thought: Here's your final answer:
+Final Answer: [your response here]
+'''
+
+Use the exact sequebce without any "\n" or any extra "()".
+You have a final answer once you have as many new SMILES as you are asked.
+       
+"""
+
+PREFIX = """You are a helpful Chemist AI assistant called dZiner. Answer to questions the best you can.
+     Some questions may task you to make changes to a molecule based on some design guidelines
+    and optimize the its property.
+    You can look up these guidelines from the scientific literature for more information on what changes
+    changes you can make. If you don't know, do not make up answers. Suggest one new SMILES ONLY.
+    Explain changes you make to the molecule in details at each step but DO NOT put redundant information and make it short.
+    """
+
+SUFFIX = """If you're asked to design a molecule, start by:
+
+1. Ask for the initial molecule to start with.
+
+2. Researching Design Guidelines (Do this if you have not done already): Write a summary of the guidelines in a few bullet points, with citations (e.g., paper DOI) included for any design guidelines used.
+
+3. Evaluating Initial SMILES, it it is provided, if not ask for it:
+
+Binding Affinity: Assess the binding affinity of the initial SMILES.
+Validity: Check the validity of the initial SMILES structure. 
+
+4. Visualize the initial SMILES
+
+5. Modifying SMILES:
+
+Manual Adjustments: Based on the guidelines from Step 2, make manual changes to the SMILES. 
+These changes may involve adding, removing, or replacing elements, functional groups, or rings in the molecule’s core.
+Example: For a functionalized indole, try replacing the indole with structures like isoindole, indolizine, methylindoles,
+ indolone, or methylenedioxybenzene.
+Diverse Approaches: Apply different modifications that could enhance affinity without significantly increasing molecular size/weight.
+Alignment with Guidelines: Justify in great details how each new SMILES aligns with the design guidelines, 
+such as adding aromatic rings if suggested.
+
+6. Evaluating Modified SMILES:
+
+Binding Affinity: Assess the binding affinity of each new SMILES.
+Validity: Ensure each new SMILES is valid.
+
+7. Visualize the new SMILES.
+
+ After each modification in step 6, visualize the new SMILES.
+
+
+Based on the guidelines from step 2, redo steps 5-7 until you have as many new SMILES as you are asked.
+Iteration Details:
+
+Iteration 0: Use the initial input SMILES.
+
+iteration results example:
+"Iteration": 1,
+      "SMILES": "CC(=O)OC1=CC=C(C=C1)C(=O)N2CCN(CC2)CC3=CC=CC=C3I",
+      "Modification": The change made to the SMILES in the previous iteration and the detailed reasoning behind it.
+      "Docking Score": -9.8,
+      "SA Score": 2.01,
+      "QED Score": 0.40,
+      "Molecular Weight": 150,
+      "Validity": "Valid"
+
+Do not use the same SMILES you
+ have evaluated before in a new iteration.
+
+Final Steps:
+
+Document All Changes: Even if reverted, all changes must be documented and reported. Report the tools used, and their citaions.
+Avoid Redundancy: Do not repeat SMILES in the iteration history.
+Begin with Problem Description:
+Question: {input}
+Thought: {agent_scratchpad}
+"""
+anthropic_api_key = ""
+
+# Initialize the agent
+agent_model = ChatAnthropic(
+    model="claude-3-5-sonnet-20240620", 
+    api_key=anthropic_api_key,  # Make sure this is set in your environment or config
+    temperature=0.3,
+    max_tokens=8192
+)
+
+agent = dZiner(
+    tools,
+    property="Binding affinity",
+    model=agent_model,
+    verbose=True,
+    temp=0.3,
+    suffix=SUFFIX,
+    format_instructions=FORMAT_INSTRUCTIONS,
+    prefix=PREFIX,
+    max_tokens=8192,
+    max_iterations=120,
+    n_design_iterations=25
+).agent
+
+# Store the agent in session state for reuse
+if "agent" not in st.session_state:
+    st.session_state.agent = agent
+
+
+
 with st.sidebar:
     col1, col2, col3 = st.columns(3)
     col2.image('logo_transparent.png', width=150)
@@ -34,9 +253,9 @@ with st.sidebar:
         placeholder="sk-...",
         help=f"['What is that?']({api_key_url})",
         type="password",
-        value="",
+        value=os.environ["OPENAI_API_KEY"],
     )
-    os.environ["OPENAI_API_KEY"] = f"{api_key}"  #
+    # os.environ["OPENAI_API_KEY"] = f"{api_key}"  #
     if len(api_key) != 51:
         st.warning("Please enter a valid OpenAI API key.", icon="⚠️")
 
@@ -49,7 +268,17 @@ with st.sidebar:
 
 
 Embedding_model = 'text-embedding-3-large'  # You might want to verify this model
-RetrievalQA_prompt = "Design guidelines for molecules with higher binding affinity against WDR5"
+# RetrievalQA_prompt = "Design guidelines for molecules with higher binding affinity against WDR5"
+
+RetrievalQA_prompt =  """What are the design guidelines, molecular substituents, and molecular interactions that give a molecule a
+ strong binding affinity against WDR5 target? Ideally, provide a series of specialized molecular functional groups that interact
+   with WDR5 and provide a good binding affinity that can be used to functionalize a more generic hit from a ligand discovery assay.
+     Summarize your answer and cite paper by the title, DOI and the journal and year the document was published on.
+"""
+
+# RetrievalQA_prompt = """What are the design guidelines for scaffold hopping for making a molecule have a larger binding afinity against WDR5 target? 
+#     This can be based on making changes to the functional groups or other changes to the molecule. Summarize your answer and cite paper
+#     by the title, DOI and the journal and year the document was published on."""
 
 
 def mol_to_img(smiles):
@@ -120,7 +349,7 @@ def lookup_papers(uploaded_file):
         faiss_vectorstore = FAISS.from_documents(sliced_pages, OpenAIEmbeddings(model=Embedding_model))
 
         # Set up OpenAI's LLM model
-        llm = ChatOpenAI(model_name='gpt-4', temperature=0.1)
+        llm = ChatOpenAI(model_name='gpt-4o', temperature=0.1)
         
         # Use dziner's RetrievalQABypassTokenLimit to get design guidelines
         g = dziner.RetrievalQABypassTokenLimit(faiss_vectorstore, RetrievalQA_prompt, llm)
@@ -189,6 +418,8 @@ with st.container(border=True):
             st.info("Please upload one or more PDF files to extract design guidelines.")
 
 from streamlit_ketcher import st_ketcher
+from concurrent.futures import ThreadPoolExecutor
+import time
 
 # Create two columns for the Molecule Editor and Design History, with fixed height alignment
 
@@ -249,7 +480,6 @@ with st.container(border=True):
     # Right column (Chat Interface)
     with col2:
         if molecule:
-
             st.subheader("Current Design")
             with st.container(height=250):
                 # Display each molecule one after another
@@ -278,28 +508,29 @@ with st.container(border=True):
             st.markdown("""
                 <style>
                 .stChatFloatingInputContainer {
-                    position: fixed !important;
                     bottom: 0;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    width: 80%;
-                    padding: 1rem;
                     background-color: var(--background-color);
-                    z-index: 999;
+                    z-index: 100;
                 }
-                section[data-testid="stSidebar"] {
-                    z-index: 1000;
+                
+                [data-testid="stChatMessageContent"] {
+                    padding: 1rem;
+                    margin-bottom: 0.5rem;
+                }
+                
+                .chat-messages {
+                    overflow-y: auto;
                 }
                 </style>
             """, unsafe_allow_html=True)
 
             st.subheader("dZiner")
 
-            # Main chat container with padding at bottom for input box
+            # Define assistant avatar
+            assistant_avatar = "chat_icon.png"
+
+            # Main chat container with fixed height
             with st.container(height=500):
-                # Add padding at the bottom to prevent content from being hidden behind input
-                st.markdown('<div style="padding-bottom: 80px;">', unsafe_allow_html=True)
-                
                 # Initialize chat history and flag for first message if it doesn't exist
                 if "chat_history" not in st.session_state:
                     st.session_state.chat_history = []
@@ -316,8 +547,8 @@ with st.container(border=True):
                     })
                     st.session_state.initial_message_added = True
 
-                # Load logo for assistant
-                assistant_avatar = "chat_icon.png"
+                # Add spacing at top
+                st.markdown('<div style="height: 20px;"></div>', unsafe_allow_html=True)
 
                 # Display chat history
                 for message in st.session_state.chat_history:
@@ -328,28 +559,66 @@ with st.container(border=True):
                         with st.chat_message("user"):
                             st.write(message["content"])
 
-                # Close padding div
-                st.markdown('</div>', unsafe_allow_html=True)
+                # Add padding at the bottom
+                st.markdown('<div style="height: 80px;"></div>', unsafe_allow_html=True)
+
+            # Chat input
+            if prompt := st.chat_input("Ask about your molecule..."):
+                # Add user message to chat history
+                st.session_state.chat_history.append({"role": "user", "content": prompt})
                 
-                # Chat input
-                if prompt := st.chat_input("Ask about your molecule..."):
-                    # Add user message to chat history
-                    st.session_state.chat_history.append({"role": "user", "content": prompt})
+                current_entry = st.session_state["molecules_history"][-1]
+                input_data = {
+                    "input": prompt,
+                    "prompt": RetrievalQA_prompt,
+                    "tools": tools,
+                    "tool_names": tool_names,
+                    "tool_desc": tool_desc
+                }
+
+                def response_generator():
+                    f = io.StringIO()
+                    with redirect_stdout(f):
+                        agent_response = agent.invoke(input_data)
+                        
+                    # Get the captured output
+                    output = f.getvalue()
                     
-                    # Generate assistant response based on user input
-                    context = f"""
-                    Current molecule SMILES: {st.session_state.get('current_smiles', '')}
-                    SA Score: {st.session_state.get('current_sa', '')}
-                    Molecular Weight: {st.session_state.get('current_mw', '')}
-                    QED Score: {st.session_state.get('current_qed', '')}
-                    """
+                    # Process each line
+                    for line in output.split('\n'):
+                        if line.strip():
+                            # Prepare the formatted line based on its type
+                            if line.startswith('Thought:'):
+                                formatted_line = f"**🤔 {line}**\n"
+                            elif line.startswith('Action:'):
+                                formatted_line = f"**⚡ {line}**\n"
+                            elif line.startswith('Action Input:'):
+                                formatted_line = f"**📥 {line}**\n"
+                            elif line.startswith('Observation:'):
+                                formatted_line = f"**👁️ {line}**\n"
+                            elif line.startswith('Final Answer:'):
+                                formatted_line = f"**✅ {line}**\n"
+                            else:
+                                formatted_line = f"{line}\n"
+                            
+                            # Stream each character with a small delay
+                            for char in formatted_line:
+                                yield char
+                                time.sleep(0.02)  # Adjust this value to control typing speed
+                        
+                        # Add a line break between different sections
+                        yield "\n"
+                        time.sleep(0.1)  # Slightly longer pause between lines
+
+                # Stream the response
+                with st.chat_message("assistant", avatar=assistant_avatar):
+                    response = st.write_stream(response_generator())
                     
-                    # Simulate assistant response (replace with actual LLM call)
-                    response = f"I see you're working with a molecule that has a QED score of {st.session_state.get('current_qed', '')}. How can I help you analyze it?"
-                    st.session_state.chat_history.append({"role": "assistant", "content": response})
-                    
-                    # Rerun to update the chat display
-                    st.rerun()
+                # Add to chat history
+                st.session_state.chat_history.append({
+                    "role": "assistant",
+                    "content": response
+                })
                         
 
 

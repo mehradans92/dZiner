@@ -19,10 +19,12 @@ class dZiner:
         max_iterations=40,
         agent_type=AgentType.CONVERSATIONAL_REACT_DESCRIPTION,
         n_design_iterations=1,
+        early_stopping_method="generate",
         **kwargs
     ):
         self.property = property
         self.n_design_iterations = n_design_iterations
+        self.early_stopping_method = early_stopping_method
         # keeping the variables the same so they are updated later in langchain.
         self.suffix = kwargs.get('suffix',
                                  SUFFIX.format(property=self.property,
@@ -34,6 +36,8 @@ class dZiner:
                                  PREFIX.format(property=self.property))
         self.format_instructions = kwargs.get('format_instructions',
                                                 FORMAT_INSTRUCTIONS.format(tool_names="{tool_names}"))
+        self.callbacks = kwargs.get('callbacks',
+                                                None)
 
         if type(model) == str:
             if model.startswith("gpt"):
@@ -56,7 +60,8 @@ class dZiner:
             memory_key="chat_history",
             input_key='input',
             output_key="output",
-            s_messages=True
+            s_messages=True,
+            return_messages=True
         )
 
         self.verbose = kwargs.get('verbose', False)
@@ -68,10 +73,16 @@ class dZiner:
             agent_type=agent_type,
             verbose=self.verbose,
             memory=memory,
-            stop=["\nAction:", "\nObservation:", "\nFinal Answer:"],
-            early_stopping_method='generate',
+            stop=["\nAction:", "\nObservation:", "\nFinal Answer:", "\nAnswer:"],
+            early_stopping_method=self.early_stopping_method,
             handle_parsing_errors=True,
             agent_kwargs={
+                "system_message" : """You are dZiner, an expert chemist AI assistant. You must:
+                            1. Always check chat history before responding
+                            2. Use information from previous messages (like names, preferences, or context)
+                            3. Maintain consistent knowledge of previous interactions
+                            4. Never reintroduce yourself if you've already done so
+                            5. Answer questions based on the accumulated context""",
                 "prefix": self.prefix,
                 "suffix": self.suffix,
                 "format_instructions": self.format_instructions,
@@ -84,12 +95,24 @@ class dZiner:
             },
             return_intermediate_steps=True,
             max_iterations=max_iterations,
+            callbacks= self.callbacks
         )
 
     def __call__(self, prompt):
         with get_openai_callback() as cb:
             tool_desc = [tool.description for tool in self.tools]
             result = self.agent.invoke({"input":prompt, "tool_desc": tool_desc})
+            # print("After response chat history:", self.agent.memory.chat_memory.messages)
         if self.get_cost:
             print(cb)
         return result
+    
+    async def iter(self, prompt):
+        """
+        This method allows controlled iteration through the agent's response, which is useful for handling
+        intermediate steps such as feedback from the user.
+        """
+        tool_desc = [tool.description for tool in self.tools]
+        input_data = {"input": prompt, "tool_desc": tool_desc}
+        async for step in self.agent.aiter(input_data):
+            yield step
