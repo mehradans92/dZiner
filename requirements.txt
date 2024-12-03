@@ -1,9 +1,9 @@
 pydantic==2.9.2
 langchain==0.2.17
-langchain-openai>=0.1.5
+langchain-openai
 langchain-community
-langchain-anthropic==0.1.13
-openai==1.23.6
+langchain-anthropic
+openai
 numpy==1.26.4
 pandas==2.2.2
 matplotlib==3.8.4
