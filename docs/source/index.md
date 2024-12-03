@@ -17,4 +17,5 @@ peptide-hemolytic
 surfactant-cmc
 docking_GNINA_vs_AutoDockVina
 inverse_design
+solubility_inference_IBM_representation_learning
 ```
