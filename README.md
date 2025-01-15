@@ -37,7 +37,7 @@ dZiner can work with different textual representation for materials. You can eve
 - [Example 3 - Low CMC Surfactant Design](https://mehradans92.github.io/dZiner/surfactant-cmc.html)
 - [Example 4 - Different Choices of Surrorgate Models](https://mehradans92.github.io/dZiner/docking_GNINA_vs_AutoDockVina.html)
 - [Example 5 - WDR5 Ligand Inverse Design](https://mehradans92.github.io/dZiner/inverse_design.html)
-- [Example 6 - Human-in-the-loop design of more soluble molecules with IBM's embedding model (smi-TED)](https://mehradans92.github.io/dZiner/inverse_design.html)
+- [Example 6 - Human-in-the-loop design of more soluble molecules with IBM's embedding model (smi-TED)](https://mehradans92.github.io/dZiner/solubility_inference_IBM_representation_learning.html)
   
 # Citation
 
