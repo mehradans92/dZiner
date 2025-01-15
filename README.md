@@ -24,6 +24,10 @@ We applied dZiner to the rational inverse design of likely synthesizable organic
 
 <img src="https://github.com/user-attachments/assets/3480806e-43b5-423a-8322-5956a2d0c359" width="1000">
 
+## Benchmarks
+![image](https://github.com/user-attachments/assets/7171a98e-e88b-4d56-983d-e423d4c675f6)
+
+
 ## How Can I Use dZiner for My Own Materials Inverse Design Problem?
 
 dZiner can work with different textual representation for materials. You can even apply your own surrogate model to your own materials inverse design problem. Here are some example notebooks that can help you get started:
