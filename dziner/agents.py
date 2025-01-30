@@ -5,7 +5,9 @@ from langchain.callbacks import get_openai_callback
 from langchain.agents import AgentType
 from langchain_core.prompts import MessagesPlaceholder
 from langchain_openai import ChatOpenAI
+from langchain_anthropic import ChatAnthropic
 from .prompts import SUFFIX, PREFIX, FORMAT_INSTRUCTIONS
+import os
 
 
 class dZiner:
@@ -47,6 +49,10 @@ class dZiner:
                     request_timeout=1000,
                     max_tokens=4096,
                 )
+            elif model.startswith("claude"):
+               self.model = ChatAnthropic(model=model,
+                                          temperature=temp,
+                                          max_tokens=8192, api_key=os.environ['ANTHROPIC_API_KEY'])
             else:
                 # TODO: Implement support for non-OpenAI models
                 raise NotImplementedError("None-OpenAI models are not implemented yet.")
