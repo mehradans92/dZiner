@@ -1,6 +1,10 @@
 import langchain
 from langchain.agents import initialize_agent
 from langchain.memory import ConversationBufferMemory
+from langchain.memory import VectorStoreRetrieverMemory
+import faiss
+from langchain_community.docstore import InMemoryDocstore
+from langchain_community.vectorstores import FAISS
 from langchain.callbacks import get_openai_callback
 from langchain.agents import AgentType
 from langchain_core.prompts import MessagesPlaceholder
@@ -8,6 +12,9 @@ from langchain_openai import ChatOpenAI
 from langchain_anthropic import ChatAnthropic
 from .prompts import SUFFIX, PREFIX, FORMAT_INSTRUCTIONS
 import os
+from langchain.embeddings.openai import OpenAIEmbeddings
+
+Embedding_model = 'text-embedding-3-large' 
 
 
 class dZiner:
@@ -62,13 +69,26 @@ class dZiner:
         self.max_iterations = max_iterations
 
         # Initialize agent
-        memory = ConversationBufferMemory(
-            memory_key="chat_history",
+        ## testing vectorsore memories. they seem to work work better with long-horizon tasks.
+
+        embedding_size = 3072 # Dimensions of the OpenAIEmbeddings
+        index = faiss.IndexFlatL2(embedding_size)
+        embedding_fn = OpenAIEmbeddings(model=Embedding_model).embed_query
+        vectorstore = FAISS(embedding_fn, index, InMemoryDocstore({}), {})
+        retriever = vectorstore.as_retriever(search_kwargs=dict(k=5))
+        memory = VectorStoreRetrieverMemory(retriever=retriever, memory_key="chat_history",
             input_key='input',
             output_key="output",
-            s_messages=True,
-            return_messages=True
-        )
+            return_messages=True)
+        
+
+        # memory = ConversationBufferMemory(
+        #     memory_key="chat_history",
+        #     input_key='input',
+        #     output_key="output",
+        #     s_messages=True,
+        #     return_messages=True
+        # )
 
         self.verbose = kwargs.get('verbose', False)
         chat_history = MessagesPlaceholder(variable_name="chat_history")
