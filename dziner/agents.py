@@ -13,7 +13,7 @@ class dZiner:
         self,
         tools,
         property,
-        model="text-davinci-003",
+        model="gpt-4o",
         temp=0.1,
         get_cost=False,
         max_iterations=40,
