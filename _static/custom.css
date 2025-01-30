@@ -1,0 +1,17 @@
+/* Custom styles for logo above search box */
+.navbar-brand img {
+    display: block;
+    margin: 0 auto;
+    max-width: 130px !important; /* Force the max width */
+    height: auto !important; /* Ensure the aspect ratio is preserved */
+}
+
+/* Moves the search box down to make space for the logo */
+.bd-search {
+    margin-top: 30px !important; /* Adjust this value based on logo size */
+}
+
+
+.footer .author {
+    display: none;
+}
