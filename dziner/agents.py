@@ -76,19 +76,19 @@ class dZiner:
         embedding_fn = OpenAIEmbeddings(model=Embedding_model).embed_query
         vectorstore = FAISS(embedding_fn, index, InMemoryDocstore({}), {})
         retriever = vectorstore.as_retriever(search_kwargs=dict(k=5))
-        memory = VectorStoreRetrieverMemory(retriever=retriever, memory_key="chat_history",
-            input_key='input',
-            output_key="output",
-            return_messages=True)
-        
-
-        # memory = ConversationBufferMemory(
-        #     memory_key="chat_history",
+        # memory = VectorStoreRetrieverMemory(retriever=retriever, memory_key="chat_history",
         #     input_key='input',
         #     output_key="output",
-        #     s_messages=True,
-        #     return_messages=True
-        # )
+        #     return_messages=True)
+        
+
+        memory = ConversationBufferMemory(
+            memory_key="chat_history",
+            input_key='input',
+            output_key="output",
+            s_messages=True,
+            return_messages=True
+        )
 
         self.verbose = kwargs.get('verbose', False)
         chat_history = MessagesPlaceholder(variable_name="chat_history")
