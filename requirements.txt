@@ -22,8 +22,8 @@ pymatgen
 dockstring
 pytest
 
-# Browser automation for biosafety lookup tool
-browser-use>=0.2.0
+# Browser automation
+browser-use
 playwright>=1.39.0
 python-dotenv>=1.0.0
 beautifulsoup4>=4.12.2
