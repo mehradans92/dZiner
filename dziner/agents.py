@@ -12,7 +12,7 @@ from langchain_openai import ChatOpenAI
 from langchain_anthropic import ChatAnthropic
 from .prompts import SUFFIX, PREFIX, FORMAT_INSTRUCTIONS
 import os
-from langchain.embeddings.openai import OpenAIEmbeddings
+from langchain_openai import OpenAIEmbeddings
 
 Embedding_model = 'text-embedding-3-large' 
 
