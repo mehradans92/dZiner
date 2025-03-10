@@ -1,0 +1,865 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Example 4 - Different Choices of Surrogate for Docking Inference &#8212; dZiner 0.1 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=6b58acad" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=e1a75a79"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'docking_GNINA_vs_AutoDockVina';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Example 5 - WDR5 Ligand Inverse Design" href="inverse_design.html" />
+    <link rel="prev" title="Example 3 - Low CMC Surfactant Design" href="surfactant-cmc.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo_transparent.png" class="logo__image only-light" alt="dZiner 0.1 documentation - Home"/>
+    <script>document.write(`<img src="_static/logo_transparent.png" class="logo__image only-dark" alt="dZiner 0.1 documentation - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="index.html">dZiner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quick_start.html">Quick start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Co2_adorption_MOF.html">Example 1 - MOF Organic Linker Design for CO2 Adsorption</a></li>
+<li class="toctree-l1"><a class="reference internal" href="peptide-hemolytic.html">Example 2 - Desigining Peptides with a Lower Hemolytic Activity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="surfactant-cmc.html">Example 3 - Low CMC Surfactant Design</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Example 4 - Different Choices of Surrogate for Docking Inference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="inverse_design.html">Example 5 - WDR5 Ligand Inverse Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="solubility_inference_IBM_representation_learning.html">Example 6 - Human-in-the-loop design of more soluble molecules with IBM’s embedding model (smi-TED)</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/mehradans92/dziner" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/docking_GNINA_vs_AutoDockVina.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Example 4 - Different Choices of Surrogate for Docking Inference</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gnina-vs-autodock-vina">GNINA vs AutoDock Vina</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="example-4-different-choices-of-surrogate-for-docking-inference">
+<h1>Example 4 - Different Choices of Surrogate for Docking Inference<a class="headerlink" href="#example-4-different-choices-of-surrogate-for-docking-inference" title="Link to this heading">#</a></h1>
+<p>To run this notebook you need to have <a class="reference external" href="https://github.com/gnina/gnina">GNINA</a> and <a class="reference external" href="https://github.com/dockstring/dockstring">AutoDock Vina via DockString</a> installed. GNINA can be downloaded as a linux binary and made executable (see this <a class="reference external" href="https://colab.research.google.com/drive/1QYo5QLUE80N_G28PlpYs6OKGddhhd931?usp=sharing">notebook</a> for installation).</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">rdkit</span><span class="w"> </span><span class="kn">import</span> <span class="n">Chem</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">rdkit.Chem</span><span class="w"> </span><span class="kn">import</span> <span class="n">AllChem</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">subprocess</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">predictGNINA_docking</span><span class="p">(</span><span class="n">smiles</span><span class="p">):</span>
+    <span class="n">mol</span> <span class="o">=</span> <span class="n">Chem</span><span class="o">.</span><span class="n">MolFromSmiles</span><span class="p">(</span><span class="n">smiles</span><span class="p">)</span>
+    <span class="n">mol</span> <span class="o">=</span> <span class="n">Chem</span><span class="o">.</span><span class="n">AddHs</span><span class="p">(</span><span class="n">mol</span><span class="p">)</span>
+    
+    <span class="c1"># Generate 3D coordinates</span>
+    <span class="n">AllChem</span><span class="o">.</span><span class="n">EmbedMolecule</span><span class="p">(</span><span class="n">mol</span><span class="p">)</span>
+    <span class="n">AllChem</span><span class="o">.</span><span class="n">UFFOptimizeMolecule</span><span class="p">(</span><span class="n">mol</span><span class="p">)</span>
+    
+    <span class="c1"># Save to PDB file (required format for GNINA)</span>
+    <span class="n">output_file</span> <span class="o">=</span> <span class="s2">&quot;molecule.pdb&quot;</span>
+    <span class="n">Chem</span><span class="o">.</span><span class="n">MolToPDBFile</span><span class="p">(</span><span class="n">mol</span><span class="p">,</span> <span class="n">output_file</span><span class="p">)</span>
+
+     <span class="c1"># Command to run GNINA</span>
+    <span class="n">command</span> <span class="o">=</span> <span class="s2">&quot;../dziner/surrogates/gnina -r ../dziner/surrogates/Binding/WDR5_target.pdbqt -l molecule.pdb --autobox_ligand ../dziner/surrogates/Binding/WDR5_target.pdbqt --seed 0&quot;</span>
+    
+    <span class="c1"># Run the command and capture the output</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">getoutput</span><span class="p">(</span><span class="n">command</span><span class="p">)</span>
+    
+    <span class="c1"># Initialize a list to store affinity values</span>
+    <span class="n">affinities</span> <span class="o">=</span> <span class="p">[]</span>
+    
+    <span class="c1"># Loop through the output lines to find affinity scores</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">result</span><span class="o">.</span><span class="n">splitlines</span><span class="p">():</span>
+        <span class="c1"># Skip lines that don&#39;t start with a mode index (i.e., a number)</span>
+        <span class="k">if</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="ow">and</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">isdigit</span><span class="p">():</span>
+            <span class="c1"># Split the line and extract the affinity (2nd column)</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">affinity</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="mi">1</span><span class="p">])</span>
+                <span class="n">affinities</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">affinity</span><span class="p">)</span>
+            <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+                <span class="c1"># Skip lines that don&#39;t have a valid number in the second column</span>
+                <span class="k">continue</span>
+    
+    <span class="c1"># Find the minimum affinity score</span>
+    <span class="k">if</span> <span class="n">affinities</span><span class="p">:</span>
+        <span class="n">best_docking_score</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">affinities</span><span class="p">)</span>
+        <span class="c1"># print(f&quot;Best docking score: {best_docking_score}&quot;)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1"># print(&quot;No valid docking scores found.&quot;)</span>
+        <span class="n">best_docking_score</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="k">return</span> <span class="n">best_docking_score</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">dockstring</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_target</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">predictAutoVina_docking</span><span class="p">(</span><span class="n">smiles</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    This tool predicts the docking score to WDR5 for a SMILES molecule. Lower docking score means a larger binding affinity.</span>
+<span class="sd">    This model based on Autodock Vina from this paper: https://pubs.acs.org/doi/10.1021/acs.jcim.1c01334 </span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">smiles</span> <span class="o">=</span> <span class="n">smiles</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;&#39;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+    <span class="n">target</span> <span class="o">=</span> <span class="n">load_target</span><span class="p">(</span><span class="s2">&quot;WDR5&quot;</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">score</span><span class="p">,</span> <span class="n">affinities</span> <span class="o">=</span> <span class="n">target</span><span class="o">.</span><span class="n">dock</span><span class="p">(</span><span class="n">smiles</span><span class="p">)</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="n">score</span> <span class="o">=</span> <span class="s1">&#39;Invalid molecule&#39;</span>
+    <span class="k">return</span> <span class="n">score</span>
+
+
+</pre></div>
+</div>
+<section id="gnina-vs-autodock-vina">
+<h2>GNINA vs AutoDock Vina<a class="headerlink" href="#gnina-vs-autodock-vina" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">tqdm</span><span class="w"> </span><span class="kn">import</span> <span class="n">tqdm</span>
+<span class="n">tqdm</span><span class="o">.</span><span class="n">pandas</span><span class="p">()</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../paper/results/1.binding-WDR5/new_candidate/anthropic/WDR5-20-it(0).csv&#39;</span><span class="p">,</span> <span class="n">usecols</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Iteration&#39;</span><span class="p">,</span> <span class="s1">&#39;SMILES&#39;</span><span class="p">]</span> <span class="p">)</span>
+<span class="n">df</span>
+
+</pre></div>
+</div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+</pre></div>
+</div>
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Iteration</th>
+      <th>SMILES</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C([N+]([O-])...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>CN1CCN(C2=C(NC(C3=CC=CC=C3F)=O)C=C([N+]([O-])=...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2</td>
+      <td>CN1CCN(C2=C(NC(C3=CC=CC4=CC=CC=C43)=O)C=C([N+]...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>3</td>
+      <td>CN1CCN(C2=C(NC(C3=CC=CC4=CC=CC=C43)=O)C=C(C#N)...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>4</td>
+      <td>CN1CCN(C2=C(NC(C3=CC=CC4=CC=CC=C43)=O)C=C(C(=O...</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>5</td>
+      <td>CN1CCN(C2=C(NC(C3=CC=CC4=CC=CC=C43)=O)C=C(C(=O...</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>6</td>
+      <td>CN1CCN(CC(=O)N)CC1C2=C(NC(C3=CC=CC4=CC=CC=C43)...</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>7</td>
+      <td>CN1CCN(C2=C(NC(C3=C(F)C=CC4=CC=CC=C43)=O)C=C(C...</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>8</td>
+      <td>CN1CCN(C2=C(NC(=O)CC3=CC=CC4=CC=CC=C43)C=C(C(=...</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>9</td>
+      <td>CN1CCN(CC2=CC=C(NC(C3=CC=CC4=CC=CC=C43)=O)C(C(...</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>10</td>
+      <td>CN1CCN(C2=C(NC(C3=CC=CC4=CC=CC=C43)=O)C=C(C(=O...</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>11</td>
+      <td>CCN1CCN(C2=C(NC(C3=CC=CC4=CC=CC=C43)=O)C=C(C(=...</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>12</td>
+      <td>CN1CCN(C2=C(NC(C3=CC=CC4=CC=CC=C43)=O)C(F)=C(C...</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>13</td>
+      <td>CN1CCN(C2=C(NC(=N)C3=CC=CC4=CC=CC=C43)C=C(C(=O...</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>14</td>
+      <td>CN1CCN(C2=C(NC(C3=CC=CC4=CC=CC=C43)=O)C=C(C(=O...</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>15</td>
+      <td>CN1CCN(C2=C(NC(C3=CC=CC4=CC=CC=C43)=O)C=C(C(=O...</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>16</td>
+      <td>CN1CCN(C2=C(NC(C3=CC=C(F)C4=CC=CC=C43)=O)C=C(C...</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>17</td>
+      <td>CN1CCN(C2=C(NC(C3=CC=C(Cl)C4=CC=CC=C43)=O)C=C(...</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>18</td>
+      <td>CCN1CCN(C2=C(NC(C3=CC=C(Cl)C4=CC=CC=C43)=O)C=C...</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>19</td>
+      <td>CN1CCN(C2=C(NC(C3=CC=C(Cl)C4=CC=CC=C43)=O)C=C(...</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="n">time</span> <span class="c1">## 22.65 seconds/ molecule</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Docking Score (GNINA)&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;SMILES&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">progress_apply</span><span class="p">(</span><span class="n">predictGNINA_docking</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [07:33&lt;00:00, 22.65s/it]
+
+CPU times: user 2.16 s, sys: 58.6 ms, total: 2.22 s
+Wall time: 7min 33s
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="n">time</span> <span class="c1">## 21.4 seconds/ molecule</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Docking Score (AutoDock Vina)&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;SMILES&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">progress_apply</span><span class="p">(</span><span class="n">predictAutoVina_docking</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [07:08&lt;00:00, 21.42s/it]
+
+CPU times: user 2.91 s, sys: 134 ms, total: 3.04 s
+Wall time: 7min 8s
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;</span><span class="se">\u0394</span><span class="s1">&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Docking Score (GNINA)&#39;</span><span class="p">]</span><span class="o">-</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Docking Score (AutoDock Vina)&#39;</span><span class="p">])</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+</pre></div>
+</div>
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Iteration</th>
+      <th>SMILES</th>
+      <th>Docking Score (GNINA)</th>
+      <th>Docking Score (AutoDock Vina)</th>
+      <th>Δ</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C([N+]([O-])...</td>
+      <td>-6.33</td>
+      <td>-6.7</td>
+      <td>0.37</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>CN1CCN(C2=C(NC(C3=CC=CC=C3F)=O)C=C([N+]([O-])=...</td>
+      <td>-5.52</td>
+      <td>-6.6</td>
+      <td>1.08</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2</td>
+      <td>CN1CCN(C2=C(NC(C3=CC=CC4=CC=CC=C43)=O)C=C([N+]...</td>
+      <td>-7.55</td>
+      <td>-7.6</td>
+      <td>0.05</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>3</td>
+      <td>CN1CCN(C2=C(NC(C3=CC=CC4=CC=CC=C43)=O)C=C(C#N)...</td>
+      <td>-7.83</td>
+      <td>-7.6</td>
+      <td>0.23</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>4</td>
+      <td>CN1CCN(C2=C(NC(C3=CC=CC4=CC=CC=C43)=O)C=C(C(=O...</td>
+      <td>-8.26</td>
+      <td>-8.4</td>
+      <td>0.14</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>5</td>
+      <td>CN1CCN(C2=C(NC(C3=CC=CC4=CC=CC=C43)=O)C=C(C(=O...</td>
+      <td>-8.22</td>
+      <td>-8.3</td>
+      <td>0.08</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>6</td>
+      <td>CN1CCN(CC(=O)N)CC1C2=C(NC(C3=CC=CC4=CC=CC=C43)...</td>
+      <td>-8.88</td>
+      <td>-7.9</td>
+      <td>0.98</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>7</td>
+      <td>CN1CCN(C2=C(NC(C3=C(F)C=CC4=CC=CC=C43)=O)C=C(C...</td>
+      <td>-8.15</td>
+      <td>-8.1</td>
+      <td>0.05</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>8</td>
+      <td>CN1CCN(C2=C(NC(=O)CC3=CC=CC4=CC=CC=C43)C=C(C(=...</td>
+      <td>-7.82</td>
+      <td>-8.2</td>
+      <td>0.38</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>9</td>
+      <td>CN1CCN(CC2=CC=C(NC(C3=CC=CC4=CC=CC=C43)=O)C(C(...</td>
+      <td>-7.36</td>
+      <td>-8.2</td>
+      <td>0.84</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>10</td>
+      <td>CN1CCN(C2=C(NC(C3=CC=CC4=CC=CC=C43)=O)C=C(C(=O...</td>
+      <td>-8.35</td>
+      <td>-8.2</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>11</td>
+      <td>CCN1CCN(C2=C(NC(C3=CC=CC4=CC=CC=C43)=O)C=C(C(=...</td>
+      <td>-8.07</td>
+      <td>-7.9</td>
+      <td>0.17</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>12</td>
+      <td>CN1CCN(C2=C(NC(C3=CC=CC4=CC=CC=C43)=O)C(F)=C(C...</td>
+      <td>-7.55</td>
+      <td>-8.0</td>
+      <td>0.45</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>13</td>
+      <td>CN1CCN(C2=C(NC(=N)C3=CC=CC4=CC=CC=C43)C=C(C(=O...</td>
+      <td>-7.96</td>
+      <td>-7.9</td>
+      <td>0.06</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>14</td>
+      <td>CN1CCN(C2=C(NC(C3=CC=CC4=CC=CC=C43)=O)C=C(C(=O...</td>
+      <td>-9.02</td>
+      <td>-8.7</td>
+      <td>0.32</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>15</td>
+      <td>CN1CCN(C2=C(NC(C3=CC=CC4=CC=CC=C43)=O)C=C(C(=O...</td>
+      <td>-8.14</td>
+      <td>-8.6</td>
+      <td>0.46</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>16</td>
+      <td>CN1CCN(C2=C(NC(C3=CC=C(F)C4=CC=CC=C43)=O)C=C(C...</td>
+      <td>-8.58</td>
+      <td>-8.8</td>
+      <td>0.22</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>17</td>
+      <td>CN1CCN(C2=C(NC(C3=CC=C(Cl)C4=CC=CC=C43)=O)C=C(...</td>
+      <td>-8.91</td>
+      <td>-8.9</td>
+      <td>0.01</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>18</td>
+      <td>CCN1CCN(C2=C(NC(C3=CC=C(Cl)C4=CC=CC=C43)=O)C=C...</td>
+      <td>-7.51</td>
+      <td>-8.7</td>
+      <td>1.19</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>19</td>
+      <td>CN1CCN(C2=C(NC(C3=CC=C(Cl)C4=CC=CC=C43)=O)C=C(...</td>
+      <td>-8.68</td>
+      <td>-8.3</td>
+      <td>0.38</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="surfactant-cmc.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Example 3 - Low CMC Surfactant Design</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="inverse_design.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Example 5 - WDR5 Ligand Inverse Design</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gnina-vs-autodock-vina">GNINA vs AutoDock Vina</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024, Mehrad Ansari.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,1371 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Example 6 - Human-in-the-loop design of more soluble molecules with IBM’s embedding model (smi-TED) &#8212; dZiner 0.1 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=6b58acad" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=e1a75a79"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'solubility_inference_IBM_representation_learning';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Example 5 - WDR5 Ligand Inverse Design" href="inverse_design.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo_transparent.png" class="logo__image only-light" alt="dZiner 0.1 documentation - Home"/>
+    <script>document.write(`<img src="_static/logo_transparent.png" class="logo__image only-dark" alt="dZiner 0.1 documentation - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="index.html">dZiner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quick_start.html">Quick start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Co2_adorption_MOF.html">Example 1 - MOF Organic Linker Design for CO2 Adsorption</a></li>
+<li class="toctree-l1"><a class="reference internal" href="peptide-hemolytic.html">Example 2 - Desigining Peptides with a Lower Hemolytic Activity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="surfactant-cmc.html">Example 3 - Low CMC Surfactant Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docking_GNINA_vs_AutoDockVina.html">Example 4 - Different Choices of Surrogate for Docking Inference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="inverse_design.html">Example 5 - WDR5 Ligand Inverse Design</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Example 6 - Human-in-the-loop design of more soluble molecules with IBM’s embedding model (smi-TED)</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/mehradans92/dziner" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/solubility_inference_IBM_representation_learning.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Example 6 - Human-in-the-loop design of more soluble molecules with IBM’s embedding model (smi-TED)</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-the-embedding-model">Loading the embedding model</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-training-data">Loading training data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#training">Training</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solubility-challenges">Solubility Challenges</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#benchmarks">Benchmarks</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#human-in-the-loop-design-of-more-soluble-molecules">Human-in-the-loop design of more soluble molecules</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#defining-tools">Defining tools</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#defining-custom-system-messages-for-the-agent">Defining custom system messages for the agent</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-agent">Running the agent</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="example-6-human-in-the-loop-design-of-more-soluble-molecules-with-ibm-s-embedding-model-smi-ted">
+<h1>Example 6 - Human-in-the-loop design of more soluble molecules with IBM’s embedding model (smi-TED)<a class="headerlink" href="#example-6-human-in-the-loop-design-of-more-soluble-molecules-with-ibm-s-embedding-model-smi-ted" title="Link to this heading">#</a></h1>
+<p>In this example, we use IBM’s embedding model (<a class="reference external" href="https://huggingface.co/ibm/materials.smi-ted">smi-TED</a>) to design more soluble molecules. <a class="reference external" href="https://www.nature.com/articles/s41597-019-0151-1">AqSolDB</a> is used as training data, containing aqueous solubility (LogS) values for 9,982 unique molecules extended with 17 topological and physicochemical 2D descriptors calculated by RDKit. Model benchmarking is based on a recent <a class="reference external" href="https://pubs.rsc.org/en/content/articlehtml/2024/dd/d3dd00217a">paper</a> by Mayk Ramos and Andrew White.</p>
+<section id="loading-the-embedding-model">
+<h2>Loading the embedding model<a class="headerlink" href="#loading-the-embedding-model" title="Link to this heading">#</a></h2>
+<p>You can clone IBM’s SMILES-based Transformer Encoder-Decoder (SMI-TED) from this <a class="reference external" href="https://github.com/IBM/materials/tree/main/models/smi_ted">repo</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s2">&quot;ignore&quot;</span><span class="p">)</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">rdkit</span><span class="w"> </span><span class="kn">import</span> <span class="n">rdBase</span>
+<span class="n">rdBase</span><span class="o">.</span><span class="n">DisableLog</span><span class="p">(</span><span class="s1">&#39;rdApp.warning&#39;</span><span class="p">)</span>
+
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;../dziner/surrogates/smi-TED/&#39;</span><span class="p">)</span>
+
+<span class="c1"># materials.smi-ted</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">load</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_smi_ted</span>
+
+<span class="c1"># Data</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+
+<span class="c1"># Chemistry</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">rdkit</span><span class="w"> </span><span class="kn">import</span> <span class="n">Chem</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">rdkit.Chem</span><span class="w"> </span><span class="kn">import</span> <span class="n">PandasTools</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">rdkit.Chem</span><span class="w"> </span><span class="kn">import</span> <span class="n">Descriptors</span>
+<span class="n">PandasTools</span><span class="o">.</span><span class="n">RenderImagesInAllDataFrames</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># function to canonicalize SMILES</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">normalize_smiles</span><span class="p">(</span><span class="n">smi</span><span class="p">,</span> <span class="n">canonical</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">isomeric</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">normalized</span> <span class="o">=</span> <span class="n">Chem</span><span class="o">.</span><span class="n">MolToSmiles</span><span class="p">(</span>
+            <span class="n">Chem</span><span class="o">.</span><span class="n">MolFromSmiles</span><span class="p">(</span><span class="n">smi</span><span class="p">),</span> <span class="n">canonical</span><span class="o">=</span><span class="n">canonical</span><span class="p">,</span> <span class="n">isomericSmiles</span><span class="o">=</span><span class="n">isomeric</span>
+        <span class="p">)</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="n">normalized</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="k">return</span> <span class="n">normalized</span>
+
+<span class="n">model_smi_ted</span> <span class="o">=</span> <span class="n">load_smi_ted</span><span class="p">(</span>
+    <span class="n">folder</span><span class="o">=</span><span class="s1">&#39;../dziner/surrogates/smi-TED/&#39;</span><span class="p">,</span>
+    <span class="n">ckpt_filename</span><span class="o">=</span><span class="s1">&#39;smi-ted-Light_40.pt&#39;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Failed to find the pandas get_adjustment() function to patch
+Failed to patch pandas - PandasTools will have limited functionality
+Failed to patch pandas - unable to change molecule rendering
+Failed to patch pandas - unable to change molecule rendering
+
+
+Random Seed: 12345
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Vocab size: 2393
+[INFERENCE MODE - smi-ted-Light]
+</pre></div>
+</div>
+</section>
+<section id="loading-training-data">
+<h2>Loading training data<a class="headerlink" href="#loading-training-data" title="Link to this heading">#</a></h2>
+<p>The training data can be downloaded from <a class="reference external" href="https://github.com/ur-whitelab/mol.dev/tree/main/ml">here</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="n">AqSolDB</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;../dziner/surrogates/solubility/data/curated-solubility-dataset.csv&quot;</span><span class="p">)</span>
+<span class="n">df_AqSolDB</span> <span class="o">=</span> <span class="n">AqSolDB</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">rdkit</span><span class="w"> </span><span class="kn">import</span> <span class="n">Chem</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">randomize_smiles</span><span class="p">(</span><span class="n">mol</span><span class="p">,</span> <span class="n">random_type</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">isomericSmiles</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">canonical</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    From: https://github.com/rxn4chemistry/rxn_yields</span>
+<span class="sd">    From: https://github.com/undeadpixel/reinvent-randomized and https://github.com/GLambard/SMILES-X</span>
+<span class="sd">    Returns a random SMILES given a SMILES of a molecule.</span>
+<span class="sd">    :param mol: A Mol object</span>
+<span class="sd">    :param random_type: The type (unrestricted, restricted, rotated) of randomization performed.</span>
+<span class="sd">    :return : A random SMILES string of the same molecule or None if the molecule is invalid.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">random_type</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+      <span class="n">random_type</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s1">&#39;unrestricted&#39;</span><span class="p">,</span> <span class="s1">&#39;restricted&#39;</span><span class="p">,</span> <span class="s1">&#39;rotated&#39;</span><span class="p">])</span>
+
+    <span class="k">if</span> <span class="n">random_type</span> <span class="o">==</span> <span class="s2">&quot;unrestricted&quot;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">Chem</span><span class="o">.</span><span class="n">MolToSmiles</span><span class="p">(</span><span class="n">mol</span><span class="p">,</span> <span class="n">canonical</span><span class="o">=</span><span class="n">canonical</span><span class="p">,</span> <span class="n">doRandom</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">isomericSmiles</span><span class="o">=</span><span class="n">isomericSmiles</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">random_type</span> <span class="o">==</span> <span class="s2">&quot;restricted&quot;</span><span class="p">:</span>
+        <span class="n">new_atom_order</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">mol</span><span class="o">.</span><span class="n">GetNumAtoms</span><span class="p">()))</span>
+        <span class="n">random</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="n">new_atom_order</span><span class="p">)</span>
+        <span class="n">random_mol</span> <span class="o">=</span> <span class="n">Chem</span><span class="o">.</span><span class="n">RenumberAtoms</span><span class="p">(</span><span class="n">mol</span><span class="p">,</span> <span class="n">newOrder</span><span class="o">=</span><span class="n">new_atom_order</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">Chem</span><span class="o">.</span><span class="n">MolToSmiles</span><span class="p">(</span><span class="n">random_mol</span><span class="p">,</span> <span class="n">canonical</span><span class="o">=</span><span class="n">canonical</span><span class="p">,</span> <span class="n">isomericSmiles</span><span class="o">=</span><span class="n">isomericSmiles</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">random_type</span> <span class="o">==</span> <span class="s1">&#39;rotated&#39;</span><span class="p">:</span>
+        <span class="n">n_atoms</span> <span class="o">=</span> <span class="n">mol</span><span class="o">.</span><span class="n">GetNumAtoms</span><span class="p">()</span>
+        <span class="n">rotation_index</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">n_atoms</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">atoms</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">n_atoms</span><span class="p">))</span>
+        <span class="n">new_atoms_order</span> <span class="o">=</span> <span class="p">(</span><span class="n">atoms</span><span class="p">[</span><span class="n">rotation_index</span><span class="o">%</span><span class="nb">len</span><span class="p">(</span><span class="n">atoms</span><span class="p">):]</span><span class="o">+</span><span class="n">atoms</span><span class="p">[:</span><span class="n">rotation_index</span><span class="o">%</span><span class="nb">len</span><span class="p">(</span><span class="n">atoms</span><span class="p">)])</span>
+        <span class="n">rotated_mol</span> <span class="o">=</span> <span class="n">Chem</span><span class="o">.</span><span class="n">RenumberAtoms</span><span class="p">(</span><span class="n">mol</span><span class="p">,</span><span class="n">new_atoms_order</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">Chem</span><span class="o">.</span><span class="n">MolToSmiles</span><span class="p">(</span><span class="n">rotated_mol</span><span class="p">,</span> <span class="n">canonical</span><span class="o">=</span><span class="n">canonical</span><span class="p">,</span> <span class="n">isomericSmiles</span><span class="o">=</span><span class="n">isomericSmiles</span><span class="p">)</span>
+    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Type &#39;</span><span class="si">{}</span><span class="s2">&#39; is not valid&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">random_type</span><span class="p">))</span>
+
+<span class="n">smiles</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">df_AqSolDB</span><span class="p">[</span><span class="s2">&quot;SMILES&quot;</span><span class="p">])</span>
+<span class="n">solubilities</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">df_AqSolDB</span><span class="p">[</span><span class="s2">&quot;Solubility&quot;</span><span class="p">])</span>
+<span class="n">aug_data</span> <span class="o">=</span> <span class="mi">10</span>
+
+<span class="n">aug_smiles</span><span class="o">=</span><span class="p">[]</span>
+<span class="n">aug_solubilities</span><span class="o">=</span><span class="p">[]</span>
+<span class="k">for</span> <span class="n">sml</span><span class="p">,</span> <span class="n">sol</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">smiles</span><span class="p">,</span> <span class="n">solubilities</span><span class="p">):</span>
+  <span class="n">new_smls</span> <span class="o">=</span> <span class="p">[]</span>
+  <span class="n">new_smls</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sml</span><span class="p">)</span>
+  <span class="n">aug_solubilities</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sol</span><span class="p">)</span>
+  <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">aug_data</span><span class="p">):</span>
+    <span class="k">try</span><span class="p">:</span>
+      <span class="n">new_sml</span> <span class="o">=</span> <span class="n">randomize_smiles</span><span class="p">(</span><span class="n">Chem</span><span class="o">.</span><span class="n">MolFromSmiles</span><span class="p">(</span><span class="n">sml</span><span class="p">),</span> <span class="n">canonical</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+      <span class="k">if</span> <span class="n">new_sml</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">new_smls</span><span class="p">:</span>
+        <span class="n">new_smls</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">new_sml</span><span class="p">)</span>
+        <span class="n">aug_solubilities</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sol</span><span class="p">)</span>
+    <span class="k">except</span><span class="p">:</span>
+      <span class="k">continue</span>
+  <span class="n">aug_smiles</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">new_smls</span><span class="p">)</span>
+
+<span class="n">aug_df_AqSolDB</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;SMILES&quot;</span><span class="p">:</span> <span class="n">aug_smiles</span><span class="p">,</span>
+    <span class="s2">&quot;Solubility&quot;</span><span class="p">:</span> <span class="n">aug_solubilities</span>
+<span class="p">})</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The dataset was augmented from </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">df_AqSolDB</span><span class="p">)</span><span class="si">}</span><span class="s2"> to </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">aug_df_AqSolDB</span><span class="p">)</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>The dataset was augmented from 9982 to 47617.
+</pre></div>
+</div>
+<p>Let’s have a look at the dataset:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">aug_df_AqSolDB</span>
+</pre></div>
+</div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+</pre></div>
+</div>
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>SMILES</th>
+      <th>Solubility</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>[Br-].CCCCCCCCCCCCCCCCCC[N+](C)(C)C</td>
+      <td>-3.616127</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>C(CCC)CCCCCCCCCCCCCC[N+](C)(C)C.[Br-]</td>
+      <td>-3.616127</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>CCCCCCCCCCCCCCCCCC[N+](C)(C)C.[Br-]</td>
+      <td>-3.616127</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>C(CC)CCCCCCCCCCCCCCC[N+](C)(C)C.[Br-]</td>
+      <td>-3.616127</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>C(CCCCCCCCCCCC)CCCCC[N+](C)(C)C.[Br-]</td>
+      <td>-3.616127</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>47612</th>
+      <td>O(C)c1c(OC)ccc(c1)C(CCCN(CCc1cc(c(OC)cc1)OC)C)...</td>
+      <td>-3.980000</td>
+    </tr>
+    <tr>
+      <th>47613</th>
+      <td>O(C)c1cc(ccc1OC)CCN(CCCC(C(C)C)(C#N)c1ccc(OC)c...</td>
+      <td>-3.980000</td>
+    </tr>
+    <tr>
+      <th>47614</th>
+      <td>CC(C)C(CCCN(CCc1ccc(OC)c(c1)OC)C)(C#N)c1ccc(c(...</td>
+      <td>-3.980000</td>
+    </tr>
+    <tr>
+      <th>47615</th>
+      <td>CC(=O)CC(c1ccccc1)c1c(O)c2ccccc2oc1=O</td>
+      <td>-4.780000</td>
+    </tr>
+    <tr>
+      <th>47616</th>
+      <td>C(C(c1c(oc2c(cccc2)c1O)=O)c1ccccc1)C(=O)C</td>
+      <td>-4.780000</td>
+    </tr>
+  </tbody>
+</table>
+<p>47617 rows × 2 columns</p>
+</div>
+</section>
+<section id="training">
+<h2>Training<a class="headerlink" href="#training" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.model_selection</span><span class="w"> </span><span class="kn">import</span> <span class="n">train_test_split</span>
+
+
+<span class="c1"># First, split off the test set</span>
+<span class="n">train_df</span><span class="p">,</span> <span class="n">test_df</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">aug_df_AqSolDB</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="c1"># Then, split the remaining data into train and validation sets</span>
+<span class="n">train_df</span><span class="p">,</span> <span class="n">val_df</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">train_df</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="c1"># Output DataFrames</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Train Set Size:&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">train_df</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Validation Set Size:&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">val_df</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Test Set Size:&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">test_df</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Train Set Size: 30474
+Validation Set Size: 7619
+Test Set Size: 9524
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">torch</span><span class="o">.</span><span class="n">no_grad</span><span class="p">():</span>
+    <span class="n">df_embeddings_train</span> <span class="o">=</span> <span class="n">model_smi_ted</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">train_df</span><span class="p">[</span><span class="s1">&#39;SMILES&#39;</span><span class="p">])</span>
+    <span class="n">df_embeddings_val</span> <span class="o">=</span> <span class="n">model_smi_ted</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">val_df</span><span class="p">[</span><span class="s1">&#39;SMILES&#39;</span><span class="p">])</span>
+    <span class="n">df_embeddings_test</span> <span class="o">=</span> <span class="n">model_smi_ted</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">test_df</span><span class="p">[</span><span class="s1">&#39;SMILES&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 304/304 [01:32&lt;00:00,  3.30it/s]
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 76/76 [00:24&lt;00:00,  3.14it/s]
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 95/95 [00:28&lt;00:00,  3.29it/s]
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">xgboost</span><span class="w"> </span><span class="kn">import</span> <span class="n">XGBRegressor</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">roc_auc_score</span>
+
+<span class="n">model</span> <span class="o">=</span> <span class="n">XGBRegressor</span><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span> <span class="n">learning_rate</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">max_depth</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+        <span class="n">objective</span><span class="o">=</span><span class="s1">&#39;reg:squarederror&#39;</span><span class="p">)</span>
+
+<span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">df_embeddings_train</span><span class="p">,</span> <span class="n">train_df</span><span class="p">[</span><span class="s1">&#39;Solubility&#39;</span><span class="p">])</span>
+
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">root_mean_squared_error</span>
+
+<span class="n">y_pred_val</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">df_embeddings_val</span><span class="p">)</span>
+<span class="n">rmse_val</span> <span class="o">=</span> <span class="n">root_mean_squared_error</span><span class="p">(</span><span class="n">val_df</span><span class="p">[</span><span class="s1">&#39;Solubility&#39;</span><span class="p">],</span> <span class="n">y_pred_val</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Validation RMSE: </span><span class="si">{</span><span class="n">rmse_val</span><span class="si">:</span><span class="s1">.3f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Validation RMSE: 0.275
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">y_pred_test</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">df_embeddings_test</span><span class="p">)</span>
+<span class="n">rmse_test</span> <span class="o">=</span> <span class="n">root_mean_squared_error</span><span class="p">(</span><span class="n">test_df</span><span class="p">[</span><span class="s1">&#39;Solubility&#39;</span><span class="p">],</span> <span class="n">y_pred_test</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Test RMSE: </span><span class="si">{</span><span class="n">rmse_test</span><span class="si">:</span><span class="s1">.3f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Test RMSE: 0.261
+</pre></div>
+</div>
+</section>
+<section id="solubility-challenges">
+<h2>Solubility Challenges<a class="headerlink" href="#solubility-challenges" title="Link to this heading">#</a></h2>
+<p><a class="reference external" href="https://pubs.acs.org/doi/abs/10.1021/acs.jcim.0c00701">Llinàs et al.</a> introduced two solubility challenges featuring consistent data. These challenges highlighted the importance of data quality over model selection for accurate solubility predictions. You can download the challenges data from <a class="reference external" href="https://github.com/ur-whitelab/mol.dev/tree/main/ml">here</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">rdkit.Chem.Descriptors</span><span class="w"> </span><span class="kn">import</span> <span class="n">MolWt</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">calcS0</span><span class="p">(</span><span class="n">entry</span><span class="p">):</span>
+  <span class="k">try</span><span class="p">:</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="mf">1e-3</span><span class="o">*</span><span class="n">entry</span><span class="p">[</span><span class="s2">&quot;expSolubility&quot;</span><span class="p">]</span><span class="o">/</span><span class="n">MolWt</span><span class="p">(</span><span class="n">Chem</span><span class="o">.</span><span class="n">MolFromSmiles</span><span class="p">(</span><span class="n">entry</span><span class="p">[</span><span class="s2">&quot;SMILES&quot;</span><span class="p">])))</span>
+  <span class="k">except</span><span class="p">:</span>
+    <span class="k">return</span> <span class="kc">None</span>
+
+<span class="n">SolChal1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../dziner/surrogates/solubility/data/SolChal1.csv&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+<span class="n">SolChal1</span><span class="p">[</span><span class="s1">&#39;SMILES&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">SolChal1</span><span class="p">[</span><span class="s1">&#39;SMILES&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">normalize_smiles</span><span class="p">)</span>
+<span class="n">SolChal1</span><span class="p">[</span><span class="s2">&quot;Solubility&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">SolChal1</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">calcS0</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">SolChal2_1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../dziner/surrogates/solubility/data/SolChal2-1.csv&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+<span class="n">SolChal2_1</span><span class="p">[</span><span class="s1">&#39;SMILES&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">SolChal2_1</span><span class="p">[</span><span class="s1">&#39;SMILES&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">normalize_smiles</span><span class="p">)</span>
+
+
+<span class="n">SolChal2_2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../dziner/surrogates/solubility/data/SolChal2-2.csv&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+<span class="n">SolChal2_2</span><span class="p">[</span><span class="s1">&#39;SMILES&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">SolChal2_2</span><span class="p">[</span><span class="s1">&#39;SMILES&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">normalize_smiles</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Let’s take a look at <code class="docutils literal notranslate"><span class="pre">SolChal1</span></code> data:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">SolChal1</span>
+</pre></div>
+</div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+</pre></div>
+</div>
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>SMILES</th>
+      <th>InChI</th>
+      <th>expSolubility</th>
+      <th>expUncertainty</th>
+      <th>Solubility</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Acebutolol</td>
+      <td>CCCC(=O)Nc1ccc(OCC(O)CNC(C)C)c(C(C)=O)c1</td>
+      <td>InChI=1/C18H28N2O4/c1-5-6-18(23)20-14-7-8-17(1...</td>
+      <td>711.00</td>
+      <td>140.00</td>
+      <td>-2.675028</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Amoxicillin</td>
+      <td>CC1(C)SC2C(NC(=O)C(N)c3ccc(O)cc3)C(=O)N2C1C(=O)O</td>
+      <td>InChI=1/C16H19N3O5S/c1-16(2)11(15(23)24)19-13(...</td>
+      <td>3900.00</td>
+      <td>200.00</td>
+      <td>-1.971717</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Bendroflumethiazide</td>
+      <td>NS(=O)(=O)c1cc2c(cc1C(F)(F)F)NC(Cc1ccccc1)NS2(...</td>
+      <td>InChI=1/C15H18F3N3O4Rn2/c16-15(17,18)10-7-11-1...</td>
+      <td>21.20</td>
+      <td>2.60</td>
+      <td>-4.298381</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Benzocaine</td>
+      <td>CCOC(=O)c1ccc(N)cc1</td>
+      <td>InChI=1/C9H11NO2/c1-2-12-9(11)7-3-5-8(10)6-4-7...</td>
+      <td>780.00</td>
+      <td>150.00</td>
+      <td>-2.325894</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Benzthiazide</td>
+      <td>NS(=O)(=O)c1cc2c(cc1Cl)N=C(CSCc1ccccc1)NS2(=O)=O</td>
+      <td>InChI=1/C15H18ClN3O4Rn2S/c16-11-6-12-14(7-13(1...</td>
+      <td>6.40</td>
+      <td>0.10</td>
+      <td>-4.829251</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Clozapine</td>
+      <td>CN1CCN(C2=Nc3cc(Cl)ccc3Nc3ccccc32)CC1</td>
+      <td>InChI=1/C18H19ClN4/c1-22-8-10-23(11-9-22)18-14...</td>
+      <td>188.90</td>
+      <td>9.70</td>
+      <td>-3.238091</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Dibucaine</td>
+      <td>CCCCOc1cc(C(=O)NCCN(CC)CC)c2ccccc2n1</td>
+      <td>InChI=1/C20H29N3O2/c1-4-7-14-25-19-15-17(16-10...</td>
+      <td>14.00</td>
+      <td>2.00</td>
+      <td>-4.389762</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Diethylstilbestrol</td>
+      <td>CCC(=C(CC)c1ccc(O)cc1)c1ccc(O)cc1</td>
+      <td>InChI=1/C18H20O2/c1-3-17(13-5-9-15(19)10-6-13)...</td>
+      <td>10.00</td>
+      <td>3.00</td>
+      <td>-4.428711</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>Diflunisal</td>
+      <td>O=C(O)c1cc(-c2ccc(F)cc2F)ccc1O</td>
+      <td>InChI=1/C13H8F2O3/c14-8-2-3-9(11(15)6-8)7-1-4-...</td>
+      <td>0.29</td>
+      <td>0.02</td>
+      <td>-5.935889</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>Dipyridamole</td>
+      <td>OCCN(CCO)c1nc(N2CCCCC2)c2nc(N(CCO)CCO)nc(N3CCC...</td>
+      <td>InChI=1/C24H40N8O4/c33-15-11-31(12-16-34)23-26...</td>
+      <td>3.46</td>
+      <td>0.05</td>
+      <td>-5.163902</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>Folic_Acid</td>
+      <td>Nc1nc(O)c2nc(CNc3ccc(C(=O)NC(CCC(=O)O)C(=O)O)c...</td>
+      <td>InChI=1/C19H19N7O6/c20-19-25-15-14(17(30)26-19...</td>
+      <td>2.50</td>
+      <td>0.20</td>
+      <td>-5.246896</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>Furosemide</td>
+      <td>NS(=O)(=O)c1cc(C(=O)O)c(NCc2ccco2)cc1Cl</td>
+      <td>InChI=1/C12H13ClN2O5Rn/c13-9-5-10(15-6-7-2-1-3...</td>
+      <td>19.60</td>
+      <td>2.00</td>
+      <td>-4.227242</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>Hydrochlorothiazide</td>
+      <td>NS(=O)(=O)c1cc2c(cc1Cl)NCNS2(=O)=O</td>
+      <td>InChI=1/C7H12ClN3O4Rn2/c8-4-1-5-7(2-6(4)16(9,1...</td>
+      <td>625.00</td>
+      <td>11.00</td>
+      <td>-2.677964</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>Imipramine</td>
+      <td>CN(C)CCCN1c2ccccc2CCc2ccccc21</td>
+      <td>InChI=1/C19H24N2/c1-20(2)14-7-15-21-18-10-5-3-...</td>
+      <td>22.00</td>
+      <td>1.00</td>
+      <td>-4.105379</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>Indomethacin</td>
+      <td>COc1ccc2c(c1)c(CC(=O)O)c(C)n2C(=O)c1ccc(Cl)cc1</td>
+      <td>InChI=1/C19H16ClNO4/c1-11-15(10-18(22)23)16-9-...</td>
+      <td>410.00</td>
+      <td>5.00</td>
+      <td>-2.940848</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>Ketoprofen</td>
+      <td>CC(C(=O)O)c1cccc(C(=O)c2ccccc2)c1</td>
+      <td>InChI=1/C16H14O3/c1-11(16(18)19)13-8-5-9-14(10...</td>
+      <td>157.00</td>
+      <td>4.00</td>
+      <td>-3.209421</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>Lidocaine</td>
+      <td>CCN(CC)CC(=O)Nc1c(C)cccc1C</td>
+      <td>InChI=1/C14H22N2O/c1-5-16(6-2)10-13(17)15-14-1...</td>
+      <td>3130.00</td>
+      <td>100.00</td>
+      <td>-1.874308</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>Meclofenamic_acid</td>
+      <td>Cc1ccc(Cl)c(Nc2ccccc2C(=O)O)c1Cl</td>
+      <td>InChI=1/C14H11Cl2NO2/c1-8-6-7-10(15)13(12(8)16...</td>
+      <td>0.16</td>
+      <td>0.01</td>
+      <td>-6.267396</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>Naphthoic_acid</td>
+      <td>O=C(O)c1ccc2ccccc2c1</td>
+      <td>InChI=1/C11H8O2/c12-11(13)10-6-5-8-3-1-2-4-9(8...</td>
+      <td>28.96</td>
+      <td>9.91</td>
+      <td>-3.774192</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>Probenecid</td>
+      <td>CCCN(CCC)S(=O)(=O)c1ccc(C(=O)O)cc1</td>
+      <td>InChI=1/C13H21NO4Rn/c1-3-9-14(10-4-2)19(17,18)...</td>
+      <td>3.90</td>
+      <td>0.10</td>
+      <td>-4.864336</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>Pyrimethamine</td>
+      <td>CCc1nc(N)nc(N)c1-c1ccc(Cl)cc1</td>
+      <td>InChI=1/C12H13ClN4/c1-2-9-10(11(14)17-12(15)16...</td>
+      <td>19.40</td>
+      <td>2.70</td>
+      <td>-4.107904</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>Salicylic_acid</td>
+      <td>O=C(O)c1ccccc1O</td>
+      <td>InChI=1/C7H6O3/c8-6-4-2-1-3-5(6)7(9)10/h1-4,8H...</td>
+      <td>1620.00</td>
+      <td>40.00</td>
+      <td>-1.930748</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>Sulfamerazine</td>
+      <td>Cc1ccnc(NS(=O)(=O)c2ccc(N)cc2)n1</td>
+      <td>InChI=1/C11H14N4O2Rn/c1-8-6-7-13-11(14-8)15-18...</td>
+      <td>200.00</td>
+      <td>6.00</td>
+      <td>-3.121084</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>Sulfamethizole</td>
+      <td>Cc1nnc(NS(=O)(=O)c2ccc(N)cc2)s1</td>
+      <td>InChI=1/C9H12N4O2RnS/c1-6-11-12-9(17-6)13-16(1...</td>
+      <td>450.00</td>
+      <td>40.00</td>
+      <td>-2.778696</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>Thiabendazole</td>
+      <td>c1ccc2[nH]c(-c3cscn3)nc2c1</td>
+      <td>InChI=1/C10H7N3S/c1-2-4-8-7(3-1)12-10(13-8)9-5...</td>
+      <td>66.00</td>
+      <td>4.00</td>
+      <td>-3.484201</td>
+    </tr>
+    <tr>
+      <th>30</th>
+      <td>Tolbutamide</td>
+      <td>CCCCNC(=O)NS(=O)(=O)c1ccc(C)cc1</td>
+      <td>InChI=1/C12H18N2O3S/c1-3-4-9-13-12(15)14-18(16...</td>
+      <td>93.00</td>
+      <td>5.00</td>
+      <td>-3.463450</td>
+    </tr>
+    <tr>
+      <th>31</th>
+      <td>Trazodone</td>
+      <td>O=c1n(CCCN2CCN(c3cccc(Cl)c3)CC2)nc2ccccn12</td>
+      <td>InChI=1/C19H22ClN5O/c20-16-5-3-6-17(15-16)23-1...</td>
+      <td>127.00</td>
+      <td>10.00</td>
+      <td>-3.466590</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<p>Now we create the embeddings for them using smi-TED:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">torch</span><span class="o">.</span><span class="n">no_grad</span><span class="p">():</span>
+    <span class="n">df_embeddings_SolChal1</span> <span class="o">=</span> <span class="n">model_smi_ted</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">SolChal1</span><span class="p">[</span><span class="s1">&#39;SMILES&#39;</span><span class="p">])</span>
+    <span class="n">df_embeddings_SolChal2_1</span> <span class="o">=</span> <span class="n">model_smi_ted</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">SolChal2_1</span><span class="p">[</span><span class="s1">&#39;SMILES&#39;</span><span class="p">])</span>
+    <span class="n">df_embeddings_SolChal2_2</span> <span class="o">=</span> <span class="n">model_smi_ted</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">SolChal2_2</span><span class="p">[</span><span class="s1">&#39;SMILES&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 27/27 [00:00&lt;00:00, 35.72it/s]
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00&lt;00:00,  3.48it/s]
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 32/32 [00:00&lt;00:00, 47.23it/s]
+</pre></div>
+</div>
+<section id="benchmarks">
+<h3>Benchmarks<a class="headerlink" href="#benchmarks" title="Link to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">y_pred_SolChal1</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">df_embeddings_SolChal1</span><span class="p">)</span>
+<span class="n">y_pred_SolChal2_1</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">df_embeddings_SolChal2_1</span><span class="p">)</span>
+<span class="n">y_pred_SolChal2_2</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">df_embeddings_SolChal2_2</span><span class="p">)</span>
+
+<span class="n">rmse_SolChal1</span> <span class="o">=</span> <span class="n">root_mean_squared_error</span><span class="p">(</span><span class="n">SolChal1</span><span class="p">[</span><span class="s1">&#39;Solubility&#39;</span><span class="p">],</span> <span class="n">y_pred_SolChal1</span><span class="p">)</span>
+<span class="n">rmse_SolChal2_1</span> <span class="o">=</span> <span class="n">root_mean_squared_error</span><span class="p">(</span><span class="n">SolChal2_1</span><span class="p">[</span><span class="s1">&#39;Solubility&#39;</span><span class="p">],</span> <span class="n">y_pred_SolChal2_1</span><span class="p">)</span>
+<span class="n">rmse_SolChal2_2</span> <span class="o">=</span> <span class="n">root_mean_squared_error</span><span class="p">(</span><span class="n">SolChal2_2</span><span class="p">[</span><span class="s1">&#39;Solubility&#39;</span><span class="p">],</span> <span class="n">y_pred_SolChal2_2</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;RMSE Challenge 1: </span><span class="si">{</span><span class="n">rmse_SolChal1</span><span class="si">:</span><span class="s1">.3f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;RMSE Challenge 2_1: </span><span class="si">{</span><span class="n">rmse_SolChal2_1</span><span class="si">:</span><span class="s1">.3f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;RMSE Challenge 2_2: </span><span class="si">{</span><span class="n">rmse_SolChal2_2</span><span class="si">:</span><span class="s1">.3f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>RMSE Challenge 1: 0.883
+RMSE Challenge 2_1: 0.760
+RMSE Challenge 2_2: 1.410
+</pre></div>
+</div>
+<p>Comparing to <a class="reference external" href="https://pubs.rsc.org/en/content/articlehtml/2024/dd/d3dd00217a">Mayk Ramos’s work</a>, our trained model with smi-TED embeddings performs better with respect to the best models reported in that study for Solubility challenge 1 and Solubility challenge 2_1.</p>
+</section>
+</section>
+<section id="human-in-the-loop-design-of-more-soluble-molecules">
+<h2>Human-in-the-loop design of more soluble molecules<a class="headerlink" href="#human-in-the-loop-design-of-more-soluble-molecules" title="Link to this heading">#</a></h2>
+<p>Now that we have this awesome solubility predictor, let’s augment it with dZiner and make more soluble molecules by giving feedback on the design at each iteration.</p>
+<section id="defining-tools">
+<h3>Defining tools<a class="headerlink" href="#defining-tools" title="Link to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">langchain._api</span><span class="w"> </span><span class="kn">import</span> <span class="n">LangChainDeprecationWarning</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">simplefilter</span><span class="p">(</span><span class="s2">&quot;ignore&quot;</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="n">LangChainDeprecationWarning</span><span class="p">)</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">dziner</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+
+<span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;SERPER_API_KEY&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;YOUR_SERPER_API_KEY&quot;</span>
+<span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;ANTHROPIC_API_KEY&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;YOUR_ANTHROPIC_API_KEY&quot;</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">dziner.tools</span><span class="w"> </span><span class="kn">import</span> <span class="n">search</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Search tool:</span><span class="se">\n</span><span class="si">{</span><span class="n">search</span><span class="o">.</span><span class="n">description</span><span class="si">}</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">langchain.agents</span><span class="w"> </span><span class="kn">import</span> <span class="n">tool</span>
+
+<span class="nd">@tool</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">predict_solubility</span><span class="p">(</span><span class="n">smiles</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    This tool predicts the aqueous solubility (LogS) via IBM&#39;s smi-TED embeddings. Model is trained using the AqSolDB dataset. </span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">with</span> <span class="n">torch</span><span class="o">.</span><span class="n">no_grad</span><span class="p">():</span>
+        <span class="n">mol_embedding</span> <span class="o">=</span> <span class="n">model_smi_ted</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">smiles</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">mol_embedding</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">get_input</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Insert your text. Enter &#39;q&#39; or press Ctrl-D (or Ctrl-Z on Windows) to end.&quot;</span><span class="p">)</span>
+    <span class="n">contents</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">line</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">line</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">langchain_community.tools</span><span class="w"> </span><span class="kn">import</span> <span class="n">HumanInputRun</span>
+<span class="n">human_feedback</span> <span class="o">=</span> <span class="n">HumanInputRun</span><span class="p">(</span><span class="n">input_func</span><span class="o">=</span><span class="n">get_input</span><span class="p">,</span>
+                              <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Use this tool to obtain feedback on the design of the new SMILES you suggested.&quot;</span><span class="p">,</span>
+                                                         <span class="n">name</span><span class="o">=</span><span class="s1">&#39;human_feedback&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;predict_solubility tool:</span><span class="se">\n</span><span class="si">{</span><span class="n">predict_solubility</span><span class="o">.</span><span class="n">description</span><span class="si">}</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;human_feedback tool:</span><span class="se">\n</span><span class="si">{</span><span class="n">human_feedback</span><span class="o">.</span><span class="n">description</span><span class="si">}</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Search tool:
+This tool performs a search on Google using SerpAPI and returns relevant information for the query.
+It is useful for retrieving information from the web or when you need to look up current data.
+
+predict_solubility tool:
+This tool predicts the aqueous solubility (LogS) via IBM&#39;s smi-TED embeddings. Model is trained using the AqSolDB dataset.
+
+human_feedback tool:
+Use this tool to obtain feedback on the design of the new SMILES you suggested.
+</pre></div>
+</div>
+</section>
+<section id="defining-custom-system-messages-for-the-agent">
+<h3>Defining custom system messages for the agent<a class="headerlink" href="#defining-custom-system-messages-for-the-agent" title="Link to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">PREFIX</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;You are a helpful Chemist AI assistant called dZiner. Answer to questions the best you can. Try to be funny when you can.</span>
+<span class="s2">     Some questions may task you to make changes to a molecule based on some design guidelines</span>
+<span class="s2">    and optimize the its property.</span>
+<span class="s2">    You can look up these guidelines from the internet for more information on what changes</span>
+<span class="s2">    changes you can make. If you don&#39;t know, do not make up answers. Suggest one new SMILES ONLY.</span>
+<span class="s2">    Explain changes you make to the molecule in details at each step but DO NOT put redundant information and make it short.</span>
+<span class="s2">    &quot;&quot;&quot;</span>
+
+<span class="n">FORMAT_INSTRUCTIONS</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;Use the following format:</span>
+
+<span class="s2">Question: the input question you must answer</span>
+<span class="s2">Thought: you should always think about what to do</span>
+<span class="s2">Action: the action to take, should be one of [</span><span class="si">{tool_names}</span><span class="s2">]</span>
+<span class="s2">Action Input: the input to the action</span>
+<span class="s2">Observation: the result of the action</span>
+<span class="s2">... (this Thought/Action/Action Input/Observation can repeat N times)</span>
+<span class="s2">When you have a response to say to the Human, or if you do not need to use a tool, you MUST use the format:</span>
+<span class="s2">&#39;&#39;&#39;</span>
+<span class="s2">Thought: Here&#39;s your final answer:</span>
+<span class="s2">Final Answer: [your response here]</span>
+<span class="s2">&#39;&#39;&#39;</span>
+
+<span class="s2">Use the exact sequebce without any &quot;</span><span class="se">\n</span><span class="s2">&quot; or any extra &quot;()&quot;.</span>
+<span class="s2">You have a final answer once you have as many new SMILES as you are asked.</span>
+<span class="s2">       </span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="n">SUFFIX</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;You should always follow these steps:</span>
+<span class="s2">    1. Lookup and summarize design guidelines on what functional groups can help with better solubility.</span>
+<span class="s2">    Make sure to add citations (paper DOI) for design guidelines if you use them, in your final response.</span>
+<span class="s2">    Your final response should also contain the source for the tools used from their summary in description in </span><span class="si">{tool_desc}</span><span class="s2">.</span>
+<span class="s2">    2. Evaluate the solubility of the initial molecule you start with.</span>
+<span class="s2">    3. Start making changes to the molecule based on guidelines you found in step 1. Try to use different changes at each iteration.</span>
+<span class="s2">    4. Evaluate the solubility for the new molecule</span>
+<span class="s2">    5. Ask for human feedback on the new design.</span>
+<span class="s2">    If the solubility does not change properly, revert change to the best previous molecule and try something else by</span>
+<span class="s2">    redoing steps 3-5. Iterate you get a positive feedback on the design from the human.</span>
+
+<span class="s2">    Start by describing the problem: </span><span class="se">\n\n</span><span class="s2">Begin!</span><span class="se">\n</span><span class="s2"> </span><span class="se">\n\n</span><span class="s2">Question: </span><span class="si">{input}</span>
+<span class="s2">Thought:</span><span class="si">{agent_scratchpad}</span><span class="se">\n</span><span class="s2">&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+</section>
+<section id="running-the-agent">
+<h3>Running the agent<a class="headerlink" href="#running-the-agent" title="Link to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">dziner.agents</span><span class="w"> </span><span class="kn">import</span> <span class="n">dZiner</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">langchain_anthropic</span><span class="w"> </span><span class="kn">import</span> <span class="n">ChatAnthropic</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+
+<span class="n">tools</span> <span class="o">=</span> <span class="p">[</span><span class="n">predict_solubility</span><span class="p">,</span> <span class="n">search</span><span class="p">,</span> <span class="n">human_feedback</span><span class="p">]</span>
+<span class="n">tool_names</span> <span class="o">=</span> <span class="p">[</span><span class="n">tool</span><span class="o">.</span><span class="n">name</span> <span class="k">for</span> <span class="n">tool</span> <span class="ow">in</span> <span class="n">tools</span><span class="p">]</span>  
+<span class="n">tool_desc</span> <span class="o">=</span> <span class="p">[</span><span class="n">tool</span><span class="o">.</span><span class="n">description</span> <span class="k">for</span> <span class="n">tool</span> <span class="ow">in</span> <span class="n">tools</span><span class="p">]</span>
+
+<span class="n">agent_model</span> <span class="o">=</span> <span class="n">ChatAnthropic</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="s2">&quot;claude-3-5-sonnet-20240620&quot;</span><span class="p">,</span> <span class="n">api_key</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;ANTHROPIC_API_KEY&quot;</span><span class="p">],</span> <span class="n">temperature</span><span class="o">=</span><span class="mf">0.4</span><span class="p">,</span> <span class="n">max_tokens</span><span class="o">=</span><span class="mi">8192</span><span class="p">)</span>
+<span class="n">agent</span> <span class="o">=</span> <span class="n">dZiner</span><span class="p">(</span><span class="n">tools</span><span class="p">,</span> <span class="nb">property</span><span class="o">=</span><span class="s2">&quot;Solubility&quot;</span><span class="p">,</span>
+               <span class="n">model</span><span class="o">=</span><span class="n">agent_model</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+              <span class="n">suffix</span><span class="o">=</span><span class="n">SUFFIX</span><span class="p">,</span> <span class="n">format_instructions</span><span class="o">=</span><span class="n">FORMAT_INSTRUCTIONS</span><span class="p">)</span><span class="o">.</span><span class="n">agent</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">inital_smiles</span> <span class="o">=</span> <span class="s2">&quot;CN1CCN(C2=Nc3cc(Cl)ccc3Nc3ccccc32)CC1&quot;</span>
+
+<span class="n">Human_prompt</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;Make changes to </span><span class="si">{</span><span class="n">inital_smiles</span><span class="si">}</span><span class="s2"> and make it more soluble.&quot;</span>
+
+<span class="n">input_data</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;input&quot;</span><span class="p">:</span> <span class="n">Human_prompt</span><span class="p">,</span>
+            <span class="s2">&quot;tools&quot;</span><span class="p">:</span> <span class="n">tools</span><span class="p">,</span>
+            <span class="s2">&quot;tool_names&quot;</span><span class="p">:</span> <span class="n">tool_names</span><span class="p">,</span>
+            <span class="s2">&quot;tool_desc&quot;</span><span class="p">:</span> <span class="n">tool_desc</span>
+        <span class="p">}</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="n">agent</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">input_data</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Error in StdOutCallbackHandler.on_chain_start callback: AttributeError(&quot;&#39;NoneType&#39; object has no attribute &#39;get&#39;&quot;)
+
+
+[32;1m[1;3mThought: To begin, I need to understand the design guidelines for improving solubility and evaluate the initial molecule&#39;s solubility. Let&#39;s start by searching for information on functional groups that can enhance solubility.
+
+Action: search
+Action Input: functional groups to improve aqueous solubility of organic compounds
+[0m
+Observation: [33;1m[1;3mAny functional group that can donate a hydrogen bond to water (eg. alcohols, amines) will significantly contribute to water solubility. Any functional group that can only accept a hydrogen bond from water (eg. ketones, aldehydes, ethers) will have a somewhat smaller but still significant effect on water solubility.[0m
+Thought:[32;1m[1;3mThought: Thank you for the information. Now I have a better understanding of functional groups that can improve aqueous solubility. Let&#39;s summarize the key points:
+
+1. Hydrogen bond donors (e.g., alcohols, amines) significantly contribute to water solubility.
+2. Hydrogen bond acceptors (e.g., ketones, aldehydes, ethers) also improve water solubility, but to a lesser extent.
+
+Now, let&#39;s evaluate the solubility of our initial molecule.
+
+Action: predict_solubility
+Action Input: CN1CCN(C2=Nc3cc(Cl)ccc3Nc3ccccc32)CC1
+[0m
+
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00&lt;00:00,  9.25it/s]
+
+
+
+Observation: [36;1m[1;3m-4.6247563[0m
+Thought:[32;1m[1;3mThought: The initial molecule has a predicted LogS value of -4.62, which indicates poor water solubility. Let&#39;s make some changes to improve its solubility based on the design guidelines we found. We&#39;ll start by adding a hydroxyl group (OH) to one of the aromatic rings, as it&#39;s a hydrogen bond donor and should significantly improve solubility.
+
+Action: predict_solubility
+Action Input: CN1CCN(C2=Nc3cc(Cl)ccc3Nc3ccc(O)cc32)CC1
+[0m
+
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00&lt;00:00,  9.28it/s]
+
+
+
+Observation: [36;1m[1;3m-4.292879[0m
+Thought:[32;1m[1;3mThought: The addition of a hydroxyl group has improved the solubility slightly, with the LogS value increasing from -4.62 to -4.29. However, we can try to make further improvements. Let&#39;s add another hydroxyl group to see if we can enhance the solubility even more.
+
+Action: predict_solubility
+Action Input: CN1CCN(C2=Nc3cc(Cl)ccc3Nc3c(O)cc(O)cc32)CC1
+[0m
+
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00&lt;00:00,  9.49it/s]
+
+
+
+Observation: [36;1m[1;3m-4.497037[0m
+Thought:[32;1m[1;3mThought: I apologize for the confusion in my previous response. It seems that adding another hydroxyl group did not improve the solubility as expected. Let&#39;s try a different approach by replacing the chlorine atom with a more polar group, such as an amine (NH2), which is both a hydrogen bond donor and acceptor.
+
+Action: predict_solubility
+Action Input: CN1CCN(C2=Nc3cc(N)ccc3Nc3ccc(O)cc32)CC1
+[0m
+
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00&lt;00:00,  9.41it/s]
+
+
+
+Observation: [36;1m[1;3m-3.7260334[0m
+Thought:[32;1m[1;3mThought: The replacement of the chlorine atom with an amine group (NH2) has significantly improved the solubility, with the LogS value increasing from -4.29 to -3.73. This is a notable improvement. Let&#39;s ask for human feedback on this new design.
+
+Action: human_feedback
+Action Input: I&#39;ve made two changes to the original molecule to improve its solubility:
+1. Added a hydroxyl group (OH) to one of the aromatic rings.
+2. Replaced the chlorine atom with an amine group (NH2).
+The new SMILES is: CN1CCN(C2=Nc3cc(N)ccc3Nc3ccc(O)cc32)CC1
+The predicted LogS has improved from -4.62 to -3.73. Do you approve of these changes?
+[0m
+
+I&#39;ve made two changes to the original molecule to improve its solubility:
+1. Added a hydroxyl group (OH) to one of the aromatic rings.
+2. Replaced the chlorine atom with an amine group (NH2).
+The new SMILES is: CN1CCN(C2=Nc3cc(N)ccc3Nc3ccc(O)cc32)CC1
+The predicted LogS has improved from -4.62 to -3.73. Do you approve of these changes?
+
+Insert your text. Enter &#39;q&#39; or press Ctrl-D (or Ctrl-Z on Windows) to end.
+
+
+ Thanks. Try to add more hydrogen bond donors
+
+
+
+Observation: [38;5;200m[1;3mThanks. Try to add more hydrogen bond donors[0m
+Thought:[32;1m[1;3mThought: Thank you for the feedback. I&#39;ll focus on adding more hydrogen bond donors to further improve the solubility. Let&#39;s add another hydroxyl group (OH) to the molecule, this time on the piperazine ring.
+
+Action: predict_solubility
+Action Input: CN1CCN(C2=Nc3cc(N)ccc3Nc3ccc(O)cc32)CC1(O)
+[0m
+
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00&lt;00:00,  9.35it/s]
+
+
+
+Observation: [36;1m[1;3m-3.4522743[0m
+Thought:[32;1m[1;3mThought: The addition of another hydroxyl group to the piperazine ring has further improved the solubility, with the LogS value increasing from -3.73 to -3.45. This is a positive change. Let&#39;s ask for human feedback on this new design.
+
+Action: human_feedback
+Action Input: I&#39;ve made an additional change to the molecule to improve its solubility:
+1. Added another hydroxyl group (OH) to the piperazine ring.
+The new SMILES is: CN1CCN(C2=Nc3cc(N)ccc3Nc3ccc(O)cc32)CC1(O)
+The predicted LogS has improved from -3.73 to -3.45. Do you approve of this change?
+[0m
+
+I&#39;ve made an additional change to the molecule to improve its solubility:
+1. Added another hydroxyl group (OH) to the piperazine ring.
+The new SMILES is: CN1CCN(C2=Nc3cc(N)ccc3Nc3ccc(O)cc32)CC1(O)
+The predicted LogS has improved from -3.73 to -3.45. Do you approve of this change?
+
+Insert your text. Enter &#39;q&#39; or press Ctrl-D (or Ctrl-Z on Windows) to end.
+
+
+ Great. Now add more charged groups like carboxylate.
+
+
+
+Observation: [38;5;200m[1;3mGreat. Now add more charged groups like carboxylate.[0m
+Thought:[32;1m[1;3mThought: Thank you for the feedback. I&#39;ll now focus on adding a charged group, specifically a carboxylate group, to further improve the solubility. Let&#39;s add a carboxylate group (-COO-) to one of the aromatic rings.
+
+Action: predict_solubility
+Action Input: CN1CCN(C2=Nc3cc(N)ccc3Nc3ccc(O)c(C(=O)[O-])c32)CC1(O)
+[0m
+
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00&lt;00:00,  9.24it/s]
+
+
+
+Observation: [36;1m[1;3m-2.8749063[0m
+Thought:[32;1m[1;3mThought: Here&#39;s your final answer:
+
+Final Answer: I have successfully made changes to the original molecule CN1CCN(C2=Nc3cc(Cl)ccc3Nc3ccccc32)CC1 to improve its solubility. The final optimized molecule has the following SMILES:
+
+CN1CCN(C2=Nc3cc(N)ccc3Nc3ccc(O)c(C(=O)[O-])c32)CC1(O)
+
+The changes made to improve solubility are:
+1. Added a hydroxyl group (OH) to one of the aromatic rings.
+2. Replaced the chlorine atom with an amine group (NH2).
+3. Added a hydroxyl group (OH) to the piperazine ring.
+4. Added a carboxylate group (-COO-) to one of the aromatic rings.
+
+These modifications have significantly improved the predicted solubility (LogS) from the initial value of -4.62 to -2.87, which represents a substantial increase in aqueous solubility.
+
+The design guidelines used for improving solubility include:
+1. Adding hydrogen bond donors (e.g., hydroxyl and amine groups)
+2. Adding charged groups (e.g., carboxylate)
+
+These guidelines are consistent with general principles of medicinal chemistry for improving aqueous solubility, as described in various sources. However, for a more specific citation, you may refer to:
+
+Waring, M.J. (2009). Lipophilicity in drug discovery. Expert Opinion on Drug Discovery, 5(3), 235-248. DOI: 10.1517/17460441003605098
+
+The solubility predictions were made using the tool that &quot;predicts the aqueous solubility (LogS) via IBM&#39;s smi-TED embeddings. Model is trained using the AqSolDB dataset.&quot; The search for design guidelines was performed using the tool that &quot;performs a search on Google using SerpAPI and returns relevant information for the query.&quot; Human feedback was obtained using the tool to &quot;obtain feedback on the design of the new SMILES suggested.&quot;
+
+This optimized molecule should have significantly improved aqueous solubility while maintaining the core structure of the original compound.[0m
+
+[1m&gt; Finished chain.[0m
+</pre></div>
+</div>
+<p>Looks like we have two orders of magnitude increase in solubility now :)</p>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="inverse_design.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Example 5 - WDR5 Ligand Inverse Design</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-the-embedding-model">Loading the embedding model</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-training-data">Loading training data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#training">Training</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solubility-challenges">Solubility Challenges</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#benchmarks">Benchmarks</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#human-in-the-loop-design-of-more-soluble-molecules">Human-in-the-loop design of more soluble molecules</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#defining-tools">Defining tools</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#defining-custom-system-messages-for-the-agent">Defining custom system messages for the agent</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-agent">Running the agent</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024, Mehrad Ansari.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

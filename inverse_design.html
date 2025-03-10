@@ -1,0 +1,669 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Example 5 - WDR5 Ligand Inverse Design &#8212; dZiner 0.1 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=6b58acad" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=e1a75a79"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'inverse_design';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Example 6 - Human-in-the-loop design of more soluble molecules with IBM’s embedding model (smi-TED)" href="solubility_inference_IBM_representation_learning.html" />
+    <link rel="prev" title="Example 4 - Different Choices of Surrogate for Docking Inference" href="docking_GNINA_vs_AutoDockVina.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo_transparent.png" class="logo__image only-light" alt="dZiner 0.1 documentation - Home"/>
+    <script>document.write(`<img src="_static/logo_transparent.png" class="logo__image only-dark" alt="dZiner 0.1 documentation - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="index.html">dZiner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quick_start.html">Quick start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Co2_adorption_MOF.html">Example 1 - MOF Organic Linker Design for CO2 Adsorption</a></li>
+<li class="toctree-l1"><a class="reference internal" href="peptide-hemolytic.html">Example 2 - Desigining Peptides with a Lower Hemolytic Activity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="surfactant-cmc.html">Example 3 - Low CMC Surfactant Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docking_GNINA_vs_AutoDockVina.html">Example 4 - Different Choices of Surrogate for Docking Inference</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Example 5 - WDR5 Ligand Inverse Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="solubility_inference_IBM_representation_learning.html">Example 6 - Human-in-the-loop design of more soluble molecules with IBM’s embedding model (smi-TED)</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/mehradans92/dziner" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/inverse_design.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Example 5 - WDR5 Ligand Inverse Design</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#defining-agent-tools">Defining Agent Tools</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#defining-custom-system-messages-for-the-agent">Defining custom system messages for the agent</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="example-5-wdr5-ligand-inverse-design">
+<h1>Example 5 - WDR5 Ligand Inverse Design<a class="headerlink" href="#example-5-wdr5-ligand-inverse-design" title="Link to this heading">#</a></h1>
+<p>In this example, we take a look at identifying molecules with high binding affinity against WDR5 protein tagert. WDR5 is a key protein involved in chromatin remodeling, serving as a core component of the COMPASS complex, which regulates histone methylation and plays a crucial role in gene expression, making it a significant target for cancer and epigenetic therapies.
+We set the inverse design criteria to design potential molecules with a docking score of -9 ± 0.5 kcal/mol.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">langchain._api</span><span class="w"> </span><span class="kn">import</span> <span class="n">LangChainDeprecationWarning</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">simplefilter</span><span class="p">(</span><span class="s2">&quot;ignore&quot;</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="n">LangChainDeprecationWarning</span><span class="p">)</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">dziner</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+
+<span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;SERPER_API_KEY&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;YOUR_SERPER_API_KEY&quot;</span>
+<span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;ANTHROPIC_API_KEY&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;YOUR_ANTHROPIC_API_KEY&quot;</span>
+</pre></div>
+</div>
+<section id="defining-agent-tools">
+<h2>Defining Agent Tools<a class="headerlink" href="#defining-agent-tools" title="Link to this heading">#</a></h2>
+<p>The ReAct agent can be augmented with many different tools depneding on your problem. Here, we load Google search tool with <code class="docutils literal notranslate"><span class="pre">SERPER</span> <span class="pre">API</span></code> and a docking score predictor with <a class="reference external" href="https://github.com/gnina/gnina">GNINA</a>. GNINA can be downloaded as a linux binary and made executable (see this <a class="reference external" href="https://colab.research.google.com/drive/1QYo5QLUE80N_G28PlpYs6OKGddhhd931?usp=sharing">notebook</a> for installation). The live Google search tool allows the model to find information on how to interact with WDR5 binding, and guide the possible adaptation to the core structure of the molecule. You also can define your own cutom tools for the agent (check other examples <a class="reference external" href="https://mehradans92.github.io/dZiner/">here</a>)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">dziner.tools</span><span class="w"> </span><span class="kn">import</span> <span class="n">search</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Search tool:</span><span class="se">\n</span><span class="si">{</span><span class="n">search</span><span class="o">.</span><span class="n">description</span><span class="si">}</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">langchain.agents</span><span class="w"> </span><span class="kn">import</span> <span class="n">tool</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">rdkit</span><span class="w"> </span><span class="kn">import</span> <span class="n">Chem</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">rdkit.Chem</span><span class="w"> </span><span class="kn">import</span> <span class="n">AllChem</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">subprocess</span>
+
+<span class="nd">@tool</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">predictGNINA_docking</span><span class="p">(</span><span class="n">smiles</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    This tool predicts the docking score to WDR5 for a SMILES molecule. Lower docking score means a larger binding affinity.</span>
+<span class="sd">    This model is based on GNINA from this paper: https://jcheminf.biomedcentral.com/articles/10.1186/s13321-021-00522-2</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">mol</span> <span class="o">=</span> <span class="n">Chem</span><span class="o">.</span><span class="n">MolFromSmiles</span><span class="p">(</span><span class="n">smiles</span><span class="p">)</span>
+    <span class="n">mol</span> <span class="o">=</span> <span class="n">Chem</span><span class="o">.</span><span class="n">AddHs</span><span class="p">(</span><span class="n">mol</span><span class="p">)</span>
+    
+    <span class="c1"># Generate 3D coordinates</span>
+    <span class="n">AllChem</span><span class="o">.</span><span class="n">EmbedMolecule</span><span class="p">(</span><span class="n">mol</span><span class="p">)</span>
+    <span class="n">AllChem</span><span class="o">.</span><span class="n">UFFOptimizeMolecule</span><span class="p">(</span><span class="n">mol</span><span class="p">)</span>
+    
+    <span class="c1"># Save to PDB file (required format for GNINA)</span>
+    <span class="n">output_file</span> <span class="o">=</span> <span class="s2">&quot;molecule.pdb&quot;</span>
+    <span class="n">Chem</span><span class="o">.</span><span class="n">MolToPDBFile</span><span class="p">(</span><span class="n">mol</span><span class="p">,</span> <span class="n">output_file</span><span class="p">)</span>
+
+     <span class="c1"># Command to run GNINA</span>
+    <span class="n">command</span> <span class="o">=</span> <span class="s2">&quot;../dziner/surrogates/gnina -r ../dziner/surrogates/Binding/WDR5_target.pdbqt -l molecule.pdb --autobox_ligand ../dziner/surrogates/Binding/WDR5_target.pdbqt --seed 0&quot;</span>
+    
+    <span class="c1"># Run the command and capture the output</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">getoutput</span><span class="p">(</span><span class="n">command</span><span class="p">)</span>
+    
+    <span class="c1"># Initialize a list to store affinity values</span>
+    <span class="n">affinities</span> <span class="o">=</span> <span class="p">[]</span>
+    
+    <span class="c1"># Loop through the output lines to find affinity scores</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">result</span><span class="o">.</span><span class="n">splitlines</span><span class="p">():</span>
+        <span class="c1"># Skip lines that don&#39;t start with a mode index (i.e., a number)</span>
+        <span class="k">if</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="ow">and</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">isdigit</span><span class="p">():</span>
+            <span class="c1"># Split the line and extract the affinity (2nd column)</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">affinity</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="mi">1</span><span class="p">])</span>
+                <span class="n">affinities</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">affinity</span><span class="p">)</span>
+            <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+                <span class="c1"># Skip lines that don&#39;t have a valid number in the second column</span>
+                <span class="k">continue</span>
+    
+    <span class="c1"># Find the minimum affinity score</span>
+    <span class="k">if</span> <span class="n">affinities</span><span class="p">:</span>
+        <span class="n">best_docking_score</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">affinities</span><span class="p">)</span>
+        <span class="c1"># print(f&quot;Best docking score: {best_docking_score}&quot;)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1"># print(&quot;No valid docking scores found.&quot;)</span>
+        <span class="n">best_docking_score</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="k">return</span> <span class="n">best_docking_score</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;WDR5 docking eval tool:</span><span class="se">\n</span><span class="si">{</span><span class="n">predictGNINA_docking</span><span class="o">.</span><span class="n">description</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Search tool:
+This tool performs a search on Google using SerpAPI and returns relevant information for the query.
+It is useful for retrieving information from the web or when you need to look up current data.
+
+WDR5 docking eval tool:
+This tool predicts the docking score to WDR5 for a SMILES molecule. Lower docking score means a larger binding affinity.
+This model is based on GNINA from this paper: https://jcheminf.biomedcentral.com/articles/10.1186/s13321-021-00522-2
+</pre></div>
+</div>
+</section>
+<section id="defining-custom-system-messages-for-the-agent">
+<h2>Defining custom system messages for the agent<a class="headerlink" href="#defining-custom-system-messages-for-the-agent" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">FORMAT_INSTRUCTIONS</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;Use the following format:</span>
+
+<span class="s2">Question: the input question you must answer</span>
+<span class="s2">Thought: you should always think about what to do</span>
+<span class="s2">Action: the action to take, should be one of [</span><span class="si">{tool_names}</span><span class="s2">]</span>
+<span class="s2">Action Input: the input to the action</span>
+<span class="s2">Observation: the result of the action</span>
+<span class="s2">... (this Thought/Action/Action Input/Observation can repeat N times)</span>
+<span class="s2">When you have a response to say to the Human, or if you do not need to use a tool, you MUST use the format:</span>
+<span class="s2">&#39;&#39;&#39;</span>
+<span class="s2">Thought: Here&#39;s your final answer:</span>
+<span class="s2">Final Answer: [your response here]</span>
+<span class="s2">&#39;&#39;&#39;</span>
+
+<span class="s2">Use the exact sequebce without any &quot;</span><span class="se">\n</span><span class="s2">&quot; or any extra &quot;()&quot;.</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="n">SUFFIX</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;You should always follow these steps:</span>
+<span class="s2">    1. Lookup and summarize design guidelines on what functional groups can help with better binding.</span>
+<span class="s2">    Make sure to add citations (paper DOI) for design guidelines if you use them, in your final response.</span>
+<span class="s2">    Your final response should also contain the source for the tools used from their summary in description in </span><span class="si">{tool_desc}</span><span class="s2">.</span>
+<span class="s2">    2. Evaluate the docking of the initial molecule you start with.</span>
+<span class="s2">    3. Start making changes to the molecule based on guidelines you found in step 1. Try to use different changes at each iteration.</span>
+<span class="s2">    4. Evaluate the docking score for the new molecule</span>
+<span class="s2">     If the docking score does not change properly, revert change to the best previous sequence and try something else by</span>
+<span class="s2">    redoing steps 3 and 4. Iterate until you have 2 new candidates that exactly follow the acceptance docking score criteria and then stop.</span>
+
+<span class="s2">    Start by describing the problem: </span><span class="se">\n\n</span><span class="s2">Begin!</span><span class="se">\n</span><span class="s2"> </span><span class="se">\n\n</span><span class="s2">Question: </span><span class="si">{input}</span>
+<span class="s2">Thought:</span><span class="si">{agent_scratchpad}</span><span class="se">\n</span><span class="s2">&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+<p>We use Claude 3.5 Sonnet to drive our agent.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">dziner.agents</span><span class="w"> </span><span class="kn">import</span> <span class="n">dZiner</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">langchain_anthropic</span><span class="w"> </span><span class="kn">import</span> <span class="n">ChatAnthropic</span>
+
+<span class="n">tools</span> <span class="o">=</span> <span class="p">[</span><span class="n">predictGNINA_docking</span><span class="p">,</span> <span class="n">search</span><span class="p">]</span>
+<span class="n">tool_names</span> <span class="o">=</span> <span class="p">[</span><span class="n">tool</span><span class="o">.</span><span class="n">name</span> <span class="k">for</span> <span class="n">tool</span> <span class="ow">in</span> <span class="n">tools</span><span class="p">]</span>  
+<span class="n">tool_desc</span> <span class="o">=</span> <span class="p">[</span><span class="n">tool</span><span class="o">.</span><span class="n">description</span> <span class="k">for</span> <span class="n">tool</span> <span class="ow">in</span> <span class="n">tools</span><span class="p">]</span>
+
+<span class="n">agent_model</span> <span class="o">=</span> <span class="n">ChatAnthropic</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="s2">&quot;claude-3-5-sonnet-20240620&quot;</span><span class="p">,</span> <span class="n">api_key</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;ANTHROPIC_API_KEY&quot;</span><span class="p">],</span> <span class="n">temperature</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">max_tokens</span><span class="o">=</span><span class="mi">8192</span><span class="p">)</span>
+<span class="n">agent</span> <span class="o">=</span> <span class="n">dZiner</span><span class="p">(</span><span class="n">tools</span><span class="p">,</span> <span class="nb">property</span><span class="o">=</span><span class="s2">&quot;Binding affinity&quot;</span><span class="p">,</span>
+               <span class="n">model</span><span class="o">=</span><span class="n">agent_model</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">n_design_iterations</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+              <span class="n">suffix</span><span class="o">=</span><span class="n">SUFFIX</span><span class="p">,</span> <span class="n">format_instructions</span><span class="o">=</span><span class="n">FORMAT_INSTRUCTIONS</span><span class="p">)</span><span class="o">.</span><span class="n">agent</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Human_prompt</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;Suggest two molecules (SMILES) with docking score of docking score of -9±0.5 against WDR5 protein target.</span><span class="se">\</span>
+<span class="s2">                Make sure both candidates do not violate this docking score acceptance criteria&quot;</span>
+
+<span class="n">input_data</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;input&quot;</span><span class="p">:</span> <span class="n">Human_prompt</span><span class="p">,</span>
+            <span class="s2">&quot;tools&quot;</span><span class="p">:</span> <span class="n">tools</span><span class="p">,</span>
+            <span class="s2">&quot;tool_names&quot;</span><span class="p">:</span> <span class="n">tool_names</span><span class="p">,</span>
+            <span class="s2">&quot;tool_desc&quot;</span><span class="p">:</span> <span class="n">tool_desc</span>
+        <span class="p">}</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="n">agent</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">input_data</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[1m&gt; Entering new AgentExecutor chain...[0m
+[32;1m[1;3mThought: To begin this task, I need to first research the design guidelines for molecules that bind well to WDR5. Then, I&#39;ll evaluate an initial molecule and make iterative changes to optimize its binding affinity.
+
+Action: search
+Action Input: WDR5 inhibitor design guidelines
+[0m
+Observation: [33;1m[1;3mWDR5 is a critical chromatin cofactor of MYC. WDR5 interacts with MYC through the WBM pocket and is hypothesized to anchor MYC to chromatin ... Missing: guidelines | Show results with:guidelines. WDR5 inhibitors were originally conceived as epigenetic modulators, proposed to inhibit cancer cells by reversing oncogenic patterns of histone H3 lysine 4 ... WDR5 small molecule inhibition reduces the interaction between WDR5 and WRAD complex members and broadly diminishes histone 3 lysine 4 trimethylation (H3K4me3). We have discovered WDR5 WIN-site inhibitors that feature bicyclic heteroaryl P7 units through structure-based design and address the limitations ... Missing: guidelines | Show results with:guidelines. We show that WIN site inhibition disables only a specific subset of WDR5 activity, and that H3K4me changes induced by WDR5 depletion do not explain ... This study presents the design, synthesis, and evaluation of two diverse WDR5 degrader series based on two WIN site binding scaffolds Missing: inhibitor | Show results with:inhibitor. We demonstrated that WDR5 regulated lncRNAs are down regulated with different sensitivity toward the corresponding inhibitors. In this review, we address the recent progress made in targeting WDR5 to inhibit MDR5–MYC and MDR5–MLL1 interactions, including its targeted protein ... We show that the WIN site inhibitor alters the interaction of WDR5 with dozens of proteins, including those linked to phosphatidylinositol 3-kinase (PI3K) ... Missing: guidelines | Show results with:guidelines. This study reveals the structural basis for the formation of the WDR5-MBD3C subcomplex and provides new insights into the recognition mode of WDR5 for the WIN ...[0m
+Thought:[32;1m[1;3mThought: The search results don&#39;t provide specific design guidelines for WDR5 inhibitors. I need to search for more specific information about the structural features that contribute to WDR5 binding.
+
+Action: search
+Action Input: WDR5 inhibitor structural features binding pocket
+[0m
+Observation: [33;1m[1;3mMost WDR5 inhibitors target the WIN (WDR5-interaction) site on WDR5, a pocket that binds to an arginine-containing WIN motif in partner proteins (Ali et al., ... On one surface of WDR5 is a shallow hydrophobic cleft referred to as the “WBM” (WDR5-binding motif) site. As its name implies, the WBM site ... Missing: pocket | Show results with:pocket. We have discovered WDR5 WIN-site inhibitors that feature bicyclic heteroaryl P7 units through structure-based design and address the ... MBD3C binds WDR5 in a manner analogous to the inhibitor compound C6. The acidic pocket on the smaller surface of WDR5 has been identified as a therapeutic ... WDR5–0103 is a small-molecule compound that binds to the histone H3 lysine 4 (H3K4) presenter WD repeat-containing protein 5 (WDR5) with high affinity and ... Song, J. J. &amp; Kingston, R. E. WDR5 interacts with mixed lineage leukemia (MLL) protein via the histone H3-binding pocket. J. Biol. Chem. 283 ... WD repeat-containing protein 5 (WDR5) is an important component of the multiprotein complex essential for activating mixed-lineage leukemia 1 ( ... We previously demonstrated that WDR5 binds the conserved WDR5 interaction (Win) motif of MLL1 in vitro, an interaction that is required for the H3K4 ... Here, we used fragment-based approaches, coupled with structure-based design, to identify inhibitors that bind tightly to the WIN site of WDR5— ... Abstract. WDR5 is a highly-conserved nuclear protein that performs multiple scaffolding functions in the context of chromatin.[0m
+Thought:[32;1m[1;3mThought: Based on the search results, I&#39;ve gathered some important information about WDR5 inhibitors and their structural features. Although specific design guidelines weren&#39;t provided, I can infer some key points:
+
+1. Most WDR5 inhibitors target the WIN (WDR5-interaction) site.
+2. The WIN site is a pocket that binds to an arginine-containing WIN motif in partner proteins.
+3. There&#39;s also a shallow hydrophobic cleft called the &quot;WBM&quot; (WDR5-binding motif) site.
+4. Some inhibitors feature bicyclic heteroaryl P7 units.
+5. Structure-based design has been used to develop WDR5 inhibitors.
+
+Now, I&#39;ll start by evaluating an initial molecule and then make iterative changes based on these insights.
+
+Action: predictGNINA_docking
+Action Input: CC1=CC=C(C=C1)C2=NN=C(O2)C3=CC=NC=C3
+[0m
+Observation: [36;1m[1;3m-6.69[0m
+Thought:[32;1m[1;3mThought: The initial molecule has a docking score of -6.69, which is higher than our target range of -9±0.5. We need to modify the structure to improve its binding affinity. Based on the information gathered, I&#39;ll make some changes to potentially enhance its interaction with the WIN site of WDR5.
+
+1. Add an arginine-like moiety to mimic the WIN motif
+2. Incorporate a bicyclic heteroaryl group
+3. Increase overall hydrophobicity
+
+Let&#39;s start by adding an arginine-like group:
+
+Action: predictGNINA_docking
+Action Input: CC1=CC=C(C=C1)C2=NN=C(O2)C3=CC=NC(=C3)CCCNC(=N)N
+[0m
+Observation: [36;1m[1;3m-8.38[0m
+Thought:[32;1m[1;3mThought: The modification has improved the docking score from -6.69 to -8.38, which is closer to our target range of -9±0.5. This suggests that adding an arginine-like moiety was beneficial. Let&#39;s try to further optimize the molecule by incorporating a bicyclic heteroaryl group.
+
+Action: predictGNINA_docking
+Action Input: CC1=CC=C(C=C1)C2=NN=C(O2)C3=C4C=CC=CC4=NC(=C3)CCCNC(=N)N
+[0m
+Observation: [36;1m[1;3m-8.59[0m
+Thought:[32;1m[1;3mThought: The incorporation of a bicyclic heteroaryl group has further improved the docking score to -8.59, which is now within our target range of -9±0.5. This molecule can be considered as our first candidate. Let&#39;s try to generate another candidate by making a slight modification to this structure.
+
+Action: predictGNINA_docking
+Action Input: CC1=CC=C(C=C1)C2=NN=C(O2)C3=C4C=CC=CC4=NC(=C3)CCCNC(=N)NC(=O)C
+[0m
+Observation: [36;1m[1;3m-9.37[0m
+Thought:[32;1m[1;3mThought: Here&#39;s your final answer:
+
+Final Answer: Based on the iterative design process and docking score predictions, I have successfully identified two molecules that meet the criteria of having a docking score of -9±0.5 against the WDR5 protein target. Here are the two candidates:
+
+1. CC1=CC=C(C=C1)C2=NN=C(O2)C3=C4C=CC=CC4=NC(=C3)CCCNC(=N)N
+   Docking score: -8.59
+
+2. CC1=CC=C(C=C1)C2=NN=C(O2)C3=C4C=CC=CC4=NC(=C3)CCCNC(=N)NC(=O)C
+   Docking score: -9.37
+
+Both molecules were designed based on the following structural features that contribute to WDR5 binding:
+
+1. Targeting the WIN (WDR5-interaction) site
+2. Incorporating an arginine-like moiety to mimic the WIN motif
+3. Including a bicyclic heteroaryl group
+4. Maintaining overall hydrophobicity
+
+The design process involved iterative modifications and evaluation of docking scores using the predictGNINA_docking tool, which is based on GNINA as described in the paper: https://jcheminf.biomedcentral.com/articles/10.1186/s13321-021-00522-2
+
+It&#39;s important to note that while specific design guidelines were not available in the literature search, the structural features incorporated were inferred from general information about WDR5 inhibitors and their binding characteristics.
+
+These molecules represent potential starting points for further optimization and experimental validation as WDR5 inhibitors.[0m
+
+[1m&gt; Finished chain.[0m
+</pre></div>
+</div>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="docking_GNINA_vs_AutoDockVina.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Example 4 - Different Choices of Surrogate for Docking Inference</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="solubility_inference_IBM_representation_learning.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Example 6 - Human-in-the-loop design of more soluble molecules with IBM’s embedding model (smi-TED)</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#defining-agent-tools">Defining Agent Tools</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#defining-custom-system-messages-for-the-agent">Defining custom system messages for the agent</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024, Mehrad Ansari.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

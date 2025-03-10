@@ -1,0 +1,1165 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Example 3 - Low CMC Surfactant Design &#8212; dZiner 0.1 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=6b58acad" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=e1a75a79"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'surfactant-cmc';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Example 4 - Different Choices of Surrogate for Docking Inference" href="docking_GNINA_vs_AutoDockVina.html" />
+    <link rel="prev" title="Example 2 - Desigining Peptides with a Lower Hemolytic Activity" href="peptide-hemolytic.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo_transparent.png" class="logo__image only-light" alt="dZiner 0.1 documentation - Home"/>
+    <script>document.write(`<img src="_static/logo_transparent.png" class="logo__image only-dark" alt="dZiner 0.1 documentation - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="index.html">dZiner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quick_start.html">Quick start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Co2_adorption_MOF.html">Example 1 - MOF Organic Linker Design for CO2 Adsorption</a></li>
+<li class="toctree-l1"><a class="reference internal" href="peptide-hemolytic.html">Example 2 - Desigining Peptides with a Lower Hemolytic Activity</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Example 3 - Low CMC Surfactant Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docking_GNINA_vs_AutoDockVina.html">Example 4 - Different Choices of Surrogate for Docking Inference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="inverse_design.html">Example 5 - WDR5 Ligand Inverse Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="solubility_inference_IBM_representation_learning.html">Example 6 - Human-in-the-loop design of more soluble molecules with IBM’s embedding model (smi-TED)</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/mehradans92/dziner" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/surfactant-cmc.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Example 3 - Low CMC Surfactant Design</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#defining-customized-agent-tools">Defining Customized Agent Tools</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-up-the-cmc-predictor">Setting up the CMC predictor</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#retrieving-domain-knowledge-from-scientific-literature">Retrieving domain-knowledge from scientific literature</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#defining-dziner-agent">Defining dZiner agent</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#defining-custom-system-messages-for-the-agent">Defining custom system messages for the agent</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-design-constraints">Adding Design Constraints</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="example-3-low-cmc-surfactant-design">
+<h1>Example 3 - Low CMC Surfactant Design<a class="headerlink" href="#example-3-low-cmc-surfactant-design" title="Link to this heading">#</a></h1>
+<p>Surfactant molecules play important roles in a wide variety of disciplines of study, from lubricants
+and coating to pharmaceuticals and drug delivery systems. This wide applicability of study is
+due to the role of surfactant molecules act as compatibilizers between dissimilar materials phases.
+While there are many metrics that are used to characterize surfactant molecules, the most common
+is the critical micelle concentration (CMC). CMC is traditionally the experimentally determined
+concentration at which individual surfactant molecules will self-assemble into larger aggregates
+(micelles). This value is critically important as the desirable properties of surfactants (solubilizing
+differing phases, enabling biocompatibility etc.) are typically only enabled when the solution
+concentration of the surfactant is above the CMC. To design surfactant molecules with a desired
+CMC, the task is often challenging and relies heavily on domain-knowledge based expertise. Hence,
+the design task of minimizing CMC is both well-suited for an LLM agent, and a desirable objective
+to reduce the reliance on domain expertise for chemical synthesis.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">dziner</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">langchain._api</span><span class="w"> </span><span class="kn">import</span> <span class="n">LangChainDeprecationWarning</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">simplefilter</span><span class="p">(</span><span class="s2">&quot;ignore&quot;</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="n">LangChainDeprecationWarning</span><span class="p">)</span>
+<span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;TF_CPP_MIN_LOG_LEVEL&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;3&#39;</span> 
+
+<span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;OPENAI_API_KEY&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;YOUR_OPENAI_API_KEY&quot;</span>
+<span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;ANTHROPIC_API_KEY&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;YOUR_ANTHROPIC_API_KEY&#39;</span>
+</pre></div>
+</div>
+<section id="defining-customized-agent-tools">
+<h2>Defining Customized Agent Tools<a class="headerlink" href="#defining-customized-agent-tools" title="Link to this heading">#</a></h2>
+<section id="setting-up-the-cmc-predictor">
+<h3>Setting up the CMC predictor<a class="headerlink" href="#setting-up-the-cmc-predictor" title="Link to this heading">#</a></h3>
+<p>This model is based on the work of <a class="reference external" href="https://pubs.acs.org/doi/10.1021/acs.jpcb.1c05264">Qin et al.</a> without any adaptations. The authors used a
+Graph Convolutional Neural Network (GCN) to predict the critical micelle concentration (CMC)
+of surfactants based on their molecular structure as SMILES input. The CMC training data were
+experimentally measured at room temperature (between 20 and 25 °C) in water for 202 surfactants
+coming from various classes, including nonionic, cationic, anionic, and zwitterionic. The model
+architecture leverages graph convolutional layers to process molecular graphs, where atoms are
+represented as nodes and bonds as edges, effectively capturing both topological and constitutional
+information. The GCN includes average pooling to aggregate atom-level features into a fixed-size
+graph-level vector, followed by fully connected layers with ReLU activations for the final regression
+of the log CMC value. In terms of performance, the GCN has a root-mean-squared-error (RMSE)
+of 0.23 and an R2 of 0.96 on test data for nonionic surfactants, outperforming previous quantitative
+structure-property relationship (QSPR) models. The ensemble of models used in our study are based
+on an 11-fold cross-validation with mean RMSE of 0.32. For more details on the model, refer to
+reference
+See <a class="reference external" href="https://pubs.acs.org/doi/10.1021/acs.jpcb.1c05264">paper</a> for more details on the surrogate model.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">## And is coming from this URL </span>
+<span class="c1">## https://github.com/zavalab/ML/blob/master/CMC_GCN/saved_models/gnn_logs_save_202_hu256_lr0.005_best_trainalles_seed4592/ep200bs5lr0.005hu256es.pth.tar</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">langchain.agents</span><span class="w"> </span><span class="kn">import</span> <span class="n">tool</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">dziner.surrogates.CMC.model</span><span class="w"> </span><span class="kn">import</span> <span class="n">predict_single_point</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="nd">@tool</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">predict_cmc</span><span class="p">(</span><span class="n">smiles</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    This tool predicts the mean log Critical Micelle Concentration (LogCMC) and it standard deviation for a SMILES.</span>
+<span class="sd">    The model is based on a GCN from this paper:</span>
+<span class="sd">    https://pubs.acs.org/doi/abs/10.1021/acs.jpcb.1c05264</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">base_model_path</span> <span class="o">=</span> <span class="s2">&quot;../dziner/surrogates/CMC/training/11-folds/ep200bs5lr0.005kf11hu256cvid</span><span class="si">{}</span><span class="s2">.pth.tar&quot;</span>
+    
+    <span class="n">device</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">device</span><span class="p">(</span><span class="s1">&#39;cuda:0&#39;</span> <span class="k">if</span> <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">is_available</span><span class="p">()</span> <span class="k">else</span> <span class="s1">&#39;cpu&#39;</span><span class="p">)</span>
+    <span class="n">predictions</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="c1"># Looping through the ensemble of models with 11-fold cross validation.</span>
+    <span class="k">for</span> <span class="n">cvid</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">11</span><span class="p">):</span>  
+        <span class="n">model_path</span> <span class="o">=</span> <span class="n">base_model_path</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">cvid</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">prediction</span> <span class="o">=</span> <span class="n">predict_single_point</span><span class="p">(</span><span class="n">smiles</span><span class="p">,</span> <span class="n">model_path</span><span class="p">,</span> <span class="n">device</span><span class="p">)</span>
+            <span class="n">predictions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">prediction</span><span class="p">)</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="n">predictions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
+    
+    <span class="n">valid_predictions</span> <span class="o">=</span> <span class="p">[</span><span class="n">p</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">predictions</span> <span class="k">if</span> <span class="n">p</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">]</span>
+    
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">valid_predictions</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;Invalid molecule&#39;</span><span class="p">,</span> <span class="kc">None</span>
+    
+    <span class="n">mean_prediction</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">valid_predictions</span><span class="p">)</span>
+    <span class="n">std_prediction</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">valid_predictions</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">mean_prediction</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">std_prediction</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+
+</pre></div>
+</div>
+</section>
+<section id="retrieving-domain-knowledge-from-scientific-literature">
+<h3>Retrieving domain-knowledge from scientific literature<a class="headerlink" href="#retrieving-domain-knowledge-from-scientific-literature" title="Link to this heading">#</a></h3>
+<p>We use obtain some domain-knowledge on how the presence of different amino acids can affect the hemolytic activity within the peptide sequence.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">langchain.vectorstores</span><span class="w"> </span><span class="kn">import</span> <span class="n">FAISS</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">langchain.embeddings.openai</span><span class="w"> </span><span class="kn">import</span> <span class="n">OpenAIEmbeddings</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">langchain.document_loaders</span><span class="w"> </span><span class="kn">import</span> <span class="n">PyPDFLoader</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">langchain_openai</span><span class="w"> </span><span class="kn">import</span> <span class="n">ChatOpenAI</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">langchain.text_splitter</span><span class="w"> </span><span class="kn">import</span> <span class="n">CharacterTextSplitter</span>
+<span class="n">Embedding_model</span> <span class="o">=</span> <span class="s1">&#39;text-embedding-3-large&#39;</span> 
+
+<span class="n">RetrievalQA_prompt</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;What are the design guidelines for making the surfactant with a Critical Micelle Concentration? </span>
+<span class="s2">    This can be based on making changes to the functional groups or other changes to the molecule. Summarize your answer and cite paper</span>
+<span class="s2">    by the title, DOI and the journal and year the document was published on.&quot;&quot;&quot;</span>
+
+<span class="nd">@tool</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">domain_knowledge</span><span class="p">(</span><span class="n">prompt</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;Useful for getting chemical intuition for the problem.</span>
+<span class="sd">     This tool looks up design guidelines for molecules with lower Critical Micelle Concentration by looking through research papers.</span>
+<span class="sd">    It also includes information on the paper citation or DOI.</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">guide_lines</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">):</span>
+        <span class="n">text_splitter</span> <span class="o">=</span> <span class="n">CharacterTextSplitter</span><span class="p">(</span>
+            <span class="n">chunk_size</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">chunk_overlap</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+        <span class="n">paper_file</span> <span class="o">=</span><span class="sa">f</span><span class="s1">&#39;../data/papers/CMC/</span><span class="si">{</span><span class="n">m</span><span class="si">}</span><span class="s1">.pdf&#39;</span>
+        <span class="n">pages</span> <span class="o">=</span> <span class="n">PyPDFLoader</span><span class="p">(</span><span class="n">paper_file</span><span class="p">)</span><span class="o">.</span><span class="n">load_and_split</span><span class="p">()</span>
+        <span class="n">sliced_pages</span> <span class="o">=</span> <span class="n">text_splitter</span><span class="o">.</span><span class="n">split_documents</span><span class="p">(</span><span class="n">pages</span><span class="p">)</span>
+        <span class="n">faiss_vectorstore</span> <span class="o">=</span> <span class="n">FAISS</span><span class="o">.</span><span class="n">from_documents</span><span class="p">(</span><span class="n">sliced_pages</span><span class="p">,</span> <span class="n">OpenAIEmbeddings</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="n">Embedding_model</span><span class="p">))</span>    
+        <span class="n">llm</span><span class="o">=</span><span class="n">ChatOpenAI</span><span class="p">(</span>
+                        <span class="n">model_name</span><span class="o">=</span><span class="s1">&#39;gpt-4o&#39;</span><span class="p">,</span>
+                        <span class="n">temperature</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span>
+                        <span class="p">)</span>
+        <span class="n">g</span> <span class="o">=</span> <span class="n">dziner</span><span class="o">.</span><span class="n">RetrievalQABypassTokenLimit</span><span class="p">(</span><span class="n">faiss_vectorstore</span><span class="p">,</span> <span class="n">RetrievalQA_prompt</span><span class="p">,</span> <span class="n">llm</span><span class="p">)</span>
+        <span class="n">guide_lines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">g</span><span class="p">)</span>
+    <span class="k">return</span> <span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">guide_lines</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="defining-dziner-agent">
+<h2>Defining dZiner agent<a class="headerlink" href="#defining-dziner-agent" title="Link to this heading">#</a></h2>
+<p>We use Claude 3.5 Sonnet to drive our agent.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">dziner.tools</span><span class="w"> </span><span class="kn">import</span> <span class="n">mol_chemical_feasibility</span>
+
+<span class="n">tools</span> <span class="o">=</span> <span class="p">[</span><span class="n">domain_knowledge</span><span class="p">,</span> <span class="n">mol_chemical_feasibility</span><span class="p">,</span> <span class="n">predict_cmc</span><span class="p">]</span>
+
+<span class="n">tool_names</span> <span class="o">=</span> <span class="p">[</span><span class="n">tool</span><span class="o">.</span><span class="n">name</span> <span class="k">for</span> <span class="n">tool</span> <span class="ow">in</span> <span class="n">tools</span><span class="p">]</span>  
+<span class="n">tool_desc</span> <span class="o">=</span> <span class="p">[</span><span class="n">tool</span><span class="o">.</span><span class="n">description</span> <span class="k">for</span> <span class="n">tool</span> <span class="ow">in</span> <span class="n">tools</span><span class="p">]</span>
+
+
+<span class="n">initial_surfactant</span> <span class="o">=</span> <span class="s2">&quot;CCCCCCCCCC(=O)CC(=O)NC1CCOC1=O&quot;</span> 
+<span class="n">Human_prompt</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;Make changes to </span><span class="si">{</span><span class="n">initial_surfactant</span><span class="si">}</span><span class="s2"> so it will have a lower Critical Micelle Concentration (CMC). Suggest 5 new candidates.&quot;</span>
+
+<span class="n">input_data</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;input&quot;</span><span class="p">:</span> <span class="n">Human_prompt</span><span class="p">,</span>
+            <span class="s2">&quot;prompt&quot;</span><span class="p">:</span> <span class="n">RetrievalQA_prompt</span><span class="p">,</span>
+            <span class="s2">&quot;tools&quot;</span><span class="p">:</span> <span class="n">tools</span><span class="p">,</span>
+            <span class="s2">&quot;tool_names&quot;</span><span class="p">:</span> <span class="n">tool_names</span><span class="p">,</span>
+            <span class="s2">&quot;tool_desc&quot;</span><span class="p">:</span> <span class="n">tool_desc</span>
+        <span class="p">}</span>
+</pre></div>
+</div>
+<section id="defining-custom-system-messages-for-the-agent">
+<h3>Defining custom system messages for the agent<a class="headerlink" href="#defining-custom-system-messages-for-the-agent" title="Link to this heading">#</a></h3>
+</section>
+<section id="adding-design-constraints">
+<h3>Adding Design Constraints<a class="headerlink" href="#adding-design-constraints" title="Link to this heading">#</a></h3>
+<p>You can add design design contraints to the model in natural language text. Here, we add one to keep the molecular weight of suggested new candidates lower than 600 g/mol, to ensure more realistic molecules</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">FORMAT_INSTRUCTIONS</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">Use the following format:</span>
+
+<span class="s2">    Thought: you should always think about what to do and never leave this empty</span>
+<span class="s2">    Action: the action to take, should be one of the tools [</span><span class="si">{tool_names}</span><span class="s2">]</span>
+<span class="s2">    Action Input: the input to the action</span>
+<span class="s2">    Observation: the result of the action</span>
+<span class="s2">    ... (this Thought/Action/Action Input/Observation can repeat N times)</span>
+<span class="s2">    Thought: I know the final answer (This is after you have completed generating 10 SMILES in your final answer)</span>
+<span class="s2">    Final Answer: the final answer to the input question. </span>
+<span class="s2">    The Final Answer MUST come in JSON format with NO extra text.</span>
+<span class="s2">    </span>
+<span class="s2">    Example final answer format:</span>
+
+<span class="s2">     &quot;Iteration&quot;: 0,</span>
+<span class="s2">      &quot;SMILES&quot;: &quot;CC(=O)OC1=CC=C(C=C1)C(=O)N2CCN(CC2)CC3=CC=CC=C3I&quot;,</span>
+<span class="s2">      &quot;Modification&quot;: The change made to the SMILES in the previous iteration and the detailed reasoning behind it.</span>
+<span class="s2">      &quot;logCMC&quot;: -9.8,</span>
+<span class="s2">      &quot;uncertainty&quot;: 0.1,</span>
+<span class="s2">      &quot;SA Score&quot;: 2.01,</span>
+<span class="s2">      &quot;Molecular Weight&quot;: 150,</span>
+<span class="s2">      &quot;Validity&quot;: &quot;Valid&quot;</span>
+
+<span class="s2">    Report all iterations, even if the SMILES is invalid. An iteration includes, suggesting a new SMILES, determining its validity, computing its logCMC.</span>
+<span class="s2">    </span>
+<span class="s2">    Use the exact SMILES without any newlines or extra parentheses. Do not repeat SMILES that already exist in the iteration history.</span>
+<span class="s2">    </span>
+<span class="s2">    You have a final answer once 10 new SMILES candidates are generated and evaluated. </span>
+<span class="s2">       </span>
+
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="n">SUFFIX</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;Start by:</span>
+
+<span class="s2">1. Researching Design Guidelines: Summarize the guidelines in a few bullet points, with citations (e.g., paper DOI) included for any design guidelines used.</span>
+
+<span class="s2">2. Evaluating Initial SMILES:</span>
+
+<span class="s2">logCMC: Assess the logCMC of the initial SMILES.</span>
+<span class="s2">Validity: Check the validity of the initial SMILES structure.</span>
+<span class="s2">3. Modifying SMILES:</span>
+
+<span class="s2">Manual Adjustments: Based on the guidelines from Step 1, make manual changes to the SMILES. These changes may involve adding, removing, or replacing elements, functional groups, or rings in the molecule’s core.</span>
+<span class="s2">Apply different modifications that could enhance logCMC without significantly increasing molecular size/weight.</span>
+<span class="s2">Alignment with Guidelines: Justify in great details how each new SMILES aligns with the design guidelines, such as adding aromatic rings if suggested.</span>
+<span class="s2">4. Evaluating Modified SMILES:</span>
+
+<span class="s2">logCMC: Assess the logCMC of each new SMILES.</span>
+<span class="s2">Validity: Ensure each new SMILES is valid.</span>
+
+<span class="s2">Choose the SMILES with the lowest logCMC.</span>
+<span class="s2">If no improvement is seen, revert to the previous valid SMILES with the best logCMC and retry Steps 3–4.</span>
+<span class="s2">Iteration Details:</span>
+
+<span class="s2">Iteration 0: Use the initial input SMILES.</span>
+<span class="s2">Iteration Limit: MUST only stop after generating 10 new SMILES candidates (10 new SMILES MUST be in your final answer).</span>
+<span class="s2">Molecular Weight: Prioritize changes that keep the molecular weight below 600 g/mol.</span>
+<span class="s2">Final Steps:</span>
+
+<span class="s2">Document All Changes: Even if reverted or invalid SMILES, all changes must be documented and reported in the end given the format instructions.</span>
+<span class="s2">Avoid Redundancy: Do not repeat SMILES in the iteration history.</span>
+<span class="s2">Begin with Problem Description:</span>
+<span class="s2">Question: </span><span class="si">{input}</span>
+<span class="s2">Thought: </span><span class="si">{agent_scratchpad}</span>
+<span class="s2">&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">dziner.agents</span><span class="w"> </span><span class="kn">import</span> <span class="n">dZiner</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">langchain_anthropic</span><span class="w"> </span><span class="kn">import</span> <span class="n">ChatAnthropic</span>
+
+<span class="n">agent_model</span> <span class="o">=</span> <span class="n">ChatAnthropic</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="s2">&quot;claude-3-5-sonnet-20240620&quot;</span><span class="p">,</span> <span class="n">api_key</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;ANTHROPIC_API_KEY&quot;</span><span class="p">],</span>
+                      <span class="n">temperature</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">max_tokens</span><span class="o">=</span><span class="mi">8192</span><span class="p">)</span>
+
+
+<span class="n">agent</span> <span class="o">=</span> <span class="n">dZiner</span><span class="p">(</span><span class="n">tools</span><span class="p">,</span> <span class="nb">property</span><span class="o">=</span><span class="s2">&quot;Critical Micelle Concentration (CMC)&quot;</span><span class="p">,</span>
+               <span class="n">model</span><span class="o">=</span><span class="n">agent_model</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">n_design_iterations</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+              <span class="n">suffix</span><span class="o">=</span><span class="n">SUFFIX</span><span class="p">,</span> <span class="n">format_instructions</span><span class="o">=</span><span class="n">FORMAT_INSTRUCTIONS</span><span class="p">)</span><span class="o">.</span><span class="n">agent</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">response</span> <span class="o">=</span> <span class="n">agent</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">input_data</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[1m&gt; Entering new AgentExecutor chain...[0m
+[32;1m[1;3mThought: To begin, I need to research the design guidelines for molecules with lower Critical Micelle Concentration (CMC). This will help me understand what changes I should make to the given SMILES to achieve a lower CMC.
+
+Action: domain_knowledge
+Action Input: Design guidelines for molecules with lower Critical Micelle Concentration
+[0m
+Observation: [36;1m[1;3mThe design guidelines for creating surfactants with a specific Critical Micelle Concentration (CMC) involve manipulating the molecular structure, particularly the hydrophobic tails and headgroups. Key strategies include:
+
+1. **Hydrophobic Tail Structure**: The chemical nature and structure of the hydrophobic tails significantly influence the CMC. For instance, fluorocarbon surfactants have lower CMCs due to their larger molecular volume and lower polarizability compared to hydrocarbons. Similarly, branching in hydrocarbon tails can reduce the CMC by increasing the packing density at the interface.
+
+2. **Headgroup Modifications**: The type and charge of the headgroup can also affect the CMC. Adjusting the headgroup can alter the balance between hydrophilic and hydrophobic interactions, influencing the surfactant&#39;s ability to form micelles.
+
+3. **Chain Length and Branching**: Increasing the chain length generally decreases the CMC, as longer chains enhance hydrophobic interactions. Branching can also be used to achieve lower surface tensions and CMCs by promoting dense packing of the surfactant molecules at the interface.
+
+4. **Substitution with Low-Surface-Energy Groups**: Incorporating groups like methyl (CH3) at the chain termini can lower the surface energy and CMC, mimicking the architecture of effective siloxane surfactants.
+
+These guidelines are based on the understanding that the balance between hydrophobic and hydrophilic interactions, as well as the molecular packing at the interface, are crucial for determining the CMC and overall efficiency of surfactants.
+
+Reference: &quot;Surfactants at the Design Limit,&quot; DOI: 10.1021/acs.langmuir.5b00336, Langmuir, 2015. Design guidelines for making surfactants with a specific Critical Micelle Concentration (CMC) involve modifying the molecular structure, particularly the hydrophobic tail and the hydrophilic head. Key strategies include:
+
+1. **Tail Length and Branching**: Shortening the hydrophobic tail generally increases the CMC. Additionally, converting a linear alkyl chain into a branched one can also increase the CMC.
+
+2. **Head Group Modifications**: Increasing the size of the hydrophilic head or adding polar groups to the head can lead to a higher CMC.
+
+3. **Aromatic Modifications**: Breaking π bonds in aromatic rings, such as converting a benzene ring to a cyclohexane group, can lower the CMC due to reduced polarity.
+
+These guidelines are based on the understanding that the balance between hydrophilic and hydrophobic parts of the surfactant molecule influences the CMC. The guidelines are supported by predictions from Graph Convolutional Networks (GCNs) and COSMOmic calculations, which have shown consistent trends with experimental observations.
+
+Reference:
+- Title: &quot;Predicting Critical Micelle Concentrations with Molecular Dynamics Simulations and COSMOmic&quot;
+- DOI: 10.1002/cite.201700129
+- Journal: Chemie Ingenieur Technik, 2017 The design guidelines for making surfactants with a specific Critical Micelle Concentration (CMC) involve modifying the molecular structure, particularly the functional groups and branching. The study suggests that the CMC value is influenced by the molecular connectivity indices, which represent the structure of the surfactant. Specifically, the first-order valence molecular connectivity index (1χν) and the second-order molecular connectivity index (2χ) are crucial. The 1χν index decreases with increased branching, while the 2χ index increases with branching. Therefore, to design surfactants with a desired CMC, one can adjust the branching and the type of functional groups in the molecule. For example, changing spacer groups can affect the CMC, as seen in the order of increasing CMC values: –CH2– &lt; –NH– &lt; –O– for straight chains, and –CH3 &lt; –NH2 &lt; –OH for branched groups.
+
+Reference: &quot;Prediction of critical micelle concentration of cationic surfactants using connectivity indices,&quot; DOI: 10.1007/s10910-010-9738-7, Journal of Mathematical Chemistry, 2011. Designing surfactants with a specific Critical Micelle Concentration (CMC) involves modifying the molecular structure, particularly the hydrophilic head and hydrophobic tail. Here are some guidelines based on the literature:
+
+1. **Hydrophobic Tail Modifications**: Increasing the length of the hydrophobic tail generally decreases the CMC. This is because longer hydrophobic chains enhance the tendency of surfactant molecules to aggregate into micelles. 
+
+2. **Hydrophilic Head Modifications**: The nature and size of the hydrophilic head group can significantly affect the CMC. For instance, increasing the size or charge of the head group can increase the CMC due to enhanced solubility in water.
+
+3. **Branching and Saturation**: Introducing branching in the hydrophobic tail or using unsaturated chains can influence the CMC. Branching typically increases the CMC, while unsaturation can either increase or decrease it depending on the specific structure.
+
+4. **Functional Groups**: Adding functional groups that can participate in hydrogen bonding or ionic interactions can alter the CMC. For example, introducing ether or ester linkages can increase the hydrophilicity and thus the CMC.
+
+5. **Aromatic Rings**: Incorporating aromatic rings in the hydrophobic tail can decrease the CMC due to π-π interactions that promote aggregation.
+
+These guidelines are derived from quantitative structure-property relationship (QSPR) studies, which correlate molecular descriptors with CMC values. For more detailed insights, refer to the study titled &quot;Prediction of critical micelle concentration using a quantitative structure–property relationship approach&quot; published in the Journal of Colloid Interface Science in 1997 (DOI: 10.1006/jcis.1997.4778). Designing a surfactant with a specific Critical Micelle Concentration (CMC) involves manipulating the molecular structure, particularly the hydrophobic tail and hydrophilic headgroup. Here are some guidelines based on the literature:
+
+1. **Tail Length and Structure**: Increasing the length of the hydrocarbon tail generally decreases the CMC, as longer tails enhance hydrophobic interactions, promoting micelle formation. Linear tails are more effective than branched ones in reducing CMC. 
+
+2. **Headgroup Size and Type**: The size and type of the headgroup significantly affect the CMC. Larger headgroups or those with strong polar or ionic characteristics can increase the CMC due to steric hindrance or electrostatic repulsion. Nonionic surfactants typically have lower CMCs compared to ionic ones.
+
+3. **Counterions**: For ionic surfactants, the type of counterion can influence the CMC. Surfactants with larger or more polarizable counterions tend to have lower CMCs.
+
+4. **Functional Groups**: Introducing functional groups that enhance hydrogen bonding or other specific interactions can modify the CMC. For example, adding ethylene oxide units can increase the hydrophilicity of the headgroup, affecting the CMC.
+
+These guidelines are derived from the study of various surfactant systems and their micellization behavior. For more detailed insights, refer to the paper titled &quot;Analyzing the Accuracy of Critical Micelle Concentration Predictions Using Deep Learning,&quot; DOI: 10.1021/acs.jctc.3c00868, published in the Journal of Chemical Theory and Computation in 2023. The design guidelines for making surfactants with a specific Critical Micelle Concentration (CMC) involve modifications to the molecular structure, particularly focusing on the hydrophobic tail length, head group area, and the presence of functional groups. Key factors include:
+
+1. **Hydrophobic Tail Length**: Increasing the hydrophobic tail length generally decreases the CMC, as longer tails enhance the hydrophobic interactions that drive micelle formation.
+
+2. **Head Group Area**: The size and nature of the head group can influence the CMC. Larger or more polar head groups can increase the CMC due to increased repulsion between head groups.
+
+3. **Functional Groups**: Introducing or modifying functional groups can alter the balance between hydrophilic and hydrophobic interactions, thus affecting the CMC. For example, adding ethylene oxide units can increase hydrophilicity and potentially increase the CMC.
+
+4. **Spacer Groups**: In Gemini surfactants, the spacer group connecting the two hydrophobic tails can be adjusted to optimize the CMC.
+
+These design principles are discussed in the context of surfactant properties and their impact on CMC in the paper titled &quot;QSPR for the prediction of critical micelle concentration of different classes of surfactants using machine learning algorithms,&quot; published in the Journal of Molecular Graphics and Modelling, 2024. DOI: 10.1016/j.jmgm.2024.108757.[0m
+Thought:[32;1m[1;3mThought: Now that I have researched the design guidelines for molecules with lower Critical Micelle Concentration (CMC), I can start evaluating and modifying the given SMILES. First, I need to assess the initial SMILES structure and its logCMC.
+
+Action: mol_chemical_feasibility
+Action Input: CCCCCCCCCC(=O)CC(=O)NC1CCOC1=O
+[0m
+Observation: [33;1m[1;3m(&#39;Valid SMILES&#39;, 2.80403143711424, 297.39500000000004, &#39;CCCCCCCCCC(=O)CC(=O)NC1CCOC1=O&#39;)[0m
+Thought:[32;1m[1;3mThought: The initial SMILES is valid, with a Synthetic Accessibility (SA) score of 2.80 and a molecular weight of 297.40 g/mol. Now, I need to predict its logCMC to have a baseline for comparison.
+
+Action: predict_cmc
+Action Input: CCCCCCCCCC(=O)CC(=O)NC1CCOC1=O
+[0m
+Observation: [38;5;200m[1;3m(1.785, 0.321)[0m
+Thought:[32;1m[1;3mThought: Now that I have the initial logCMC value of 1.785 (±0.321), I can start making modifications to the molecule to lower its CMC. Based on the design guidelines, I&#39;ll focus on increasing the hydrophobic tail length, introducing branching, and modifying the head group. I&#39;ll start by extending the alkyl chain.
+
+Action: mol_chemical_feasibility
+Action Input: CCCCCCCCCCCC(=O)CC(=O)NC1CCOC1=O
+[0m
+Observation: [33;1m[1;3m(&#39;Valid SMILES&#39;, 2.8052551515855004, 325.4490000000001, &#39;CCCCCCCCCCCC(=O)CC(=O)NC1CCOC1=O&#39;)[0m
+Thought:[32;1m[1;3mThought: The modified SMILES is valid, with a slightly higher SA score of 2.81 and a molecular weight of 325.45 g/mol, which is still well below our 600 g/mol limit. Now, let&#39;s predict its logCMC to see if this modification has lowered the CMC.
+
+Action: predict_cmc
+Action Input: CCCCCCCCCCCC(=O)CC(=O)NC1CCOC1=O
+[0m
+Observation: [38;5;200m[1;3m(1.054, 0.268)[0m
+Thought:[32;1m[1;3mThought: The modification has successfully lowered the logCMC from 1.785 to 1.054, which is a significant improvement. This aligns with the design guideline that increasing the hydrophobic tail length generally decreases the CMC. Let&#39;s continue modifying the molecule to further lower the CMC. Next, I&#39;ll try introducing branching in the hydrophobic tail.
+
+Action: mol_chemical_feasibility
+Action Input: CCC(C)CCCCCCCC(=O)CC(=O)NC1CCOC1=O
+[0m
+Observation: [33;1m[1;3m(&#39;Valid SMILES&#39;, 3.2232653564318277, 325.4490000000001, &#39;CCC(C)CCCCCCCC(=O)CC(=O)NC1CCOC1=O&#39;)[0m
+Thought:[32;1m[1;3mThought: The branched SMILES is valid, with an SA score of 3.22 and the same molecular weight as the previous modification (325.45 g/mol). Let&#39;s check its logCMC to see if the branching has further lowered the CMC.
+
+Action: predict_cmc
+Action Input: CCC(C)CCCCCCCC(=O)CC(=O)NC1CCOC1=O
+[0m
+Observation: [38;5;200m[1;3m(2.225, 0.369)[0m
+Thought:[32;1m[1;3mThought: The branching modification unexpectedly increased the logCMC from 1.054 to 2.225. This goes against our goal of lowering the CMC. Let&#39;s revert to the previous valid SMILES with the lowest logCMC and try a different modification. We&#39;ll attempt to modify the head group by introducing an aromatic ring, which might promote aggregation and lower the CMC.
+
+Action: mol_chemical_feasibility
+Action Input: CCCCCCCCCCCC(=O)CC(=O)Nc1ccccc1
+[0m
+Observation: [33;1m[1;3m(&#39;Valid SMILES&#39;, 1.849218094652155, 317.47299999999996, &#39;CCCCCCCCCCCC(=O)CC(=O)Nc1ccccc1&#39;)[0m
+Thought:[32;1m[1;3mThought: The new SMILES with an aromatic ring in the head group is valid, with a lower SA score of 1.85 and a molecular weight of 317.47 g/mol. This modification aligns with the guideline suggesting that incorporating aromatic rings can potentially decrease the CMC. Let&#39;s check its logCMC.
+
+Action: predict_cmc
+Action Input: CCCCCCCCCCCC(=O)CC(=O)Nc1ccccc1
+[0m
+Observation: [38;5;200m[1;3m(2.334, 0.422)[0m
+Thought:[32;1m[1;3mThought: The modification with the aromatic ring unexpectedly increased the logCMC to 2.334, which is higher than our previous best result of 1.054. This suggests that the aromatic modification in this specific case did not have the desired effect of lowering the CMC. Let&#39;s try a different approach by introducing a functional group that might enhance hydrogen bonding, such as an ether linkage in the hydrophobic tail.
+
+Action: mol_chemical_feasibility
+Action Input: CCCCCCCCCCCOCC(=O)CC(=O)NC1CCOC1=O
+[0m
+Observation: [33;1m[1;3m(&#39;Valid SMILES&#39;, 2.9296713168468127, 355.4750000000001, &#39;CCCCCCCCCCCOCC(=O)CC(=O)NC1CCOC1=O&#39;)[0m
+Thought:[32;1m[1;3mThought: The new SMILES with an ether linkage in the hydrophobic tail is valid, with an SA score of 2.93 and a molecular weight of 355.48 g/mol. This modification introduces a functional group that might affect the hydrophilic-hydrophobic balance. Let&#39;s check its logCMC to see if this change has lowered the CMC.
+
+Action: predict_cmc
+Action Input: CCCCCCCCCCCOCC(=O)CC(=O)NC1CCOC1=O
+[0m
+Observation: [38;5;200m[1;3m(0.798, 0.345)[0m
+Thought:[32;1m[1;3mThought: The modification with the ether linkage has successfully lowered the logCMC to 0.798, which is our best result so far. This aligns with the design guideline suggesting that introducing functional groups can alter the balance between hydrophilic and hydrophobic interactions, affecting the CMC. Let&#39;s continue exploring modifications to further lower the CMC. We&#39;ll try adding a fluorine atom to the end of the hydrophobic tail, as fluorocarbon surfactants are known to have lower CMCs due to their larger molecular volume and lower polarizability.
+
+Action: mol_chemical_feasibility
+Action Input: CCCCCCCCCCCF(=O)CC(=O)NC1CCOC1=O
+[0m
+Observation: [33;1m[1;3m(&#39;Invalid SMILES&#39;, 0, 0, &#39;CCCCCCCCCCCF(=O)CC(=O)NC1CCOC1=O&#39;)[0m
+Thought:[32;1m[1;3mThought: I apologize for the mistake in the previous SMILES. The fluorine atom should be added to the end of the hydrophobic tail without changing the carbonyl group. Let&#39;s correct this and try again.
+
+Action: mol_chemical_feasibility
+Action Input: FCCCCCCCCCCC(=O)CC(=O)NC1CCOC1=O
+[0m
+Observation: [33;1m[1;3m(&#39;Valid SMILES&#39;, 3.0191271042482217, 329.4120000000001, &#39;FCCCCCCCCCCC(=O)CC(=O)NC1CCOC1=O&#39;)[0m
+Thought:[32;1m[1;3mThought: The corrected SMILES with a fluorine atom at the end of the hydrophobic tail is valid, with an SA score of 3.02 and a molecular weight of 329.41 g/mol. This modification aligns with the guideline suggesting that fluorocarbon surfactants can have lower CMCs. Let&#39;s check its logCMC to see if this change has further lowered the CMC.
+
+Action: predict_cmc
+Action Input: FCCCCCCCCCCC(=O)CC(=O)NC1CCOC1=O
+[0m
+Observation: [38;5;200m[1;3m(-0.779, 0.67)[0m
+Thought:[32;1m[1;3mThought: The modification with the fluorine atom has significantly lowered the logCMC to -0.779, which is our best result so far. This aligns with the design guideline suggesting that fluorocarbon surfactants can have lower CMCs due to their larger molecular volume and lower polarizability. Let&#39;s continue exploring modifications to see if we can further lower the CMC. We&#39;ll try introducing a branched structure near the head group, which might affect the packing of the molecules at the interface.
+
+Action: mol_chemical_feasibility
+Action Input: FCCCCCCCCCCC(=O)C(C)C(=O)NC1CCOC1=O
+[0m
+Observation: [33;1m[1;3m(&#39;Valid SMILES&#39;, 3.3828167686190795, 343.4390000000001, &#39;FCCCCCCCCCCC(=O)C(C)C(=O)NC1CCOC1=O&#39;)[0m
+Thought:[32;1m[1;3mThought: The new SMILES with a branched structure near the head group is valid, with an SA score of 3.38 and a molecular weight of 343.44 g/mol. This modification introduces branching that might affect the packing of the molecules at the interface. Let&#39;s check its logCMC to see if this change has further lowered the CMC.
+
+Action: predict_cmc
+Action Input: FCCCCCCCCCCC(=O)C(C)C(=O)NC1CCOC1=O
+[0m
+Observation: [38;5;200m[1;3m(-1.109, 0.515)[0m
+Thought:[32;1m[1;3mThought: The modification with the branched structure near the head group has further lowered the logCMC to -1.109, which is our best result so far. This aligns with the design guideline suggesting that branching can affect the packing of molecules at the interface, potentially lowering the CMC. Let&#39;s continue exploring modifications to see if we can further lower the CMC. We&#39;ll try introducing a second fluorine atom to enhance the fluorocarbon effect.
+
+Action: mol_chemical_feasibility
+Action Input: FCCCCCCCCCCF(=O)C(C)C(=O)NC1CCOC1=O
+[0m
+Observation: [33;1m[1;3m(&#39;Invalid SMILES&#39;, 0, 0, &#39;FCCCCCCCCCCF(=O)C(C)C(=O)NC1CCOC1=O&#39;)[0m
+Thought:[32;1m[1;3mThought: I apologize for the mistake in the previous SMILES. The second fluorine atom should be added to the hydrophobic tail without changing the carbonyl group. Let&#39;s correct this and try again.
+
+Action: mol_chemical_feasibility
+Action Input: FCCCCCCCCCFC(=O)C(C)C(=O)NC1CCOC1=O
+[0m
+Observation: [33;1m[1;3m(&#39;Invalid SMILES&#39;, 0, 0, &#39;FCCCCCCCCCFC(=O)C(C)C(=O)NC1CCOC1=O&#39;)[0m
+Thought:[32;1m[1;3mThought: I apologize for the consecutive mistakes. It seems that adding a second fluorine atom in the middle of the hydrophobic chain is causing issues with the SMILES validity. Let&#39;s try a different approach by adding the second fluorine atom at the other end of the hydrophobic tail.
+
+Action: mol_chemical_feasibility
+Action Input: FCCCCCCCCCCC(=O)C(C)C(=O)NC1CCOC1=OF
+[0m
+Observation: [33;1m[1;3m(&#39;Invalid SMILES&#39;, 0, 0, &#39;FCCCCCCCCCCC(=O)C(C)C(=O)NC1CCOC1=OF&#39;)[0m
+Thought:[32;1m[1;3mThought: I apologize for the continued errors. It seems that adding a second fluorine atom is causing issues with the SMILES validity. Let&#39;s take a step back and try a different modification approach. Instead of adding another fluorine, let&#39;s try introducing a triple bond in the hydrophobic tail, which might affect the molecule&#39;s packing and potentially lower the CMC.
+
+Action: mol_chemical_feasibility
+Action Input: FCCCCCCC#CCC(=O)C(C)C(=O)NC1CCOC1=O
+[0m
+Observation: [33;1m[1;3m(&#39;Valid SMILES&#39;, 3.8793307410472124, 325.38000000000017, &#39;FCCCCCCC#CCC(=O)C(C)C(=O)NC1CCOC1=O&#39;)[0m
+Thought:[32;1m[1;3mThought: The new SMILES with a triple bond in the hydrophobic tail is valid, with an SA score of 3.88 and a molecular weight of 325.38 g/mol. This modification introduces unsaturation that might affect the packing of the molecules and potentially lower the CMC. Let&#39;s check its logCMC to see if this change has further lowered the CMC.
+
+Action: predict_cmc
+Action Input: FCCCCCCC#CCC(=O)C(C)C(=O)NC1CCOC1=O
+[0m
+Observation: [38;5;200m[1;3m(0.065, 0.737)[0m
+Thought:[32;1m[1;3mThought: The modification with the triple bond in the hydrophobic tail has increased the logCMC to 0.065, which is higher than our previous best result of -1.109. This suggests that the introduction of the triple bond did not have the desired effect of lowering the CMC in this case. Let&#39;s revert to our best structure so far and try a different modification. We&#39;ll attempt to introduce a small polar group in the hydrophobic tail, which might affect the hydrophilic-hydrophobic balance without significantly increasing the CMC.
+
+Action: mol_chemical_feasibility
+Action Input: FCCCCCCCCCCC(=O)C(C)C(=O)NC1CCOC1=O
+[0m
+Observation: [33;1m[1;3m(&#39;Valid SMILES&#39;, 3.3828167686190795, 343.4390000000001, &#39;FCCCCCCCCCCC(=O)C(C)C(=O)NC1CCOC1=O&#39;)[0m
+Thought:[32;1m[1;3mThought: I apologize for the confusion. It seems I accidentally reverted to our previous best structure without making any new modifications. Let&#39;s introduce a small polar group, such as a hydroxyl group, in the hydrophobic tail to see if it affects the hydrophilic-hydrophobic balance and potentially lowers the CMC.
+
+Action: mol_chemical_feasibility
+Action Input: FCCCCCCCC(O)CCC(=O)C(C)C(=O)NC1CCOC1=O
+[0m
+Observation: [33;1m[1;3m(&#39;Valid SMILES&#39;, 3.7659075452394415, 359.43800000000016, &#39;FCCCCCCCC(O)CCC(=O)C(C)C(=O)NC1CCOC1=O&#39;)[0m
+Thought:[32;1m[1;3mThought: The new SMILES with a hydroxyl group in the hydrophobic tail is valid, with an SA score of 3.77 and a molecular weight of 359.44 g/mol. This modification introduces a small polar group that might affect the hydrophilic-hydrophobic balance. Let&#39;s check its logCMC to see if this change has lowered the CMC.
+
+Action: predict_cmc
+Action Input: FCCCCCCCC(O)CCC(=O)C(C)C(=O)NC1CCOC1=O
+[0m
+Observation: [38;5;200m[1;3m(0.032, 0.808)[0m
+Thought:[32;1m[1;3mThought: The modification with the hydroxyl group in the hydrophobic tail has increased the logCMC to 0.032, which is higher than our previous best result of -1.109. This suggests that introducing the hydroxyl group did not have the desired effect of lowering the CMC in this case. We have now generated and evaluated 10 new SMILES candidates, so we can conclude our optimization process and provide the final answer.
+
+Final Answer: {
+  &quot;iterations&quot;: [
+    {
+      &quot;Iteration&quot;: 0,
+      &quot;SMILES&quot;: &quot;CCCCCCCCCC(=O)CC(=O)NC1CCOC1=O&quot;,
+      &quot;Modification&quot;: &quot;Initial SMILES&quot;,
+      &quot;logCMC&quot;: 1.785,
+      &quot;uncertainty&quot;: 0.321,
+      &quot;SA Score&quot;: 2.80,
+      &quot;Molecular Weight&quot;: 297.40,
+      &quot;Validity&quot;: &quot;Valid&quot;
+    },
+    {
+      &quot;Iteration&quot;: 1,
+      &quot;SMILES&quot;: &quot;CCCCCCCCCCCC(=O)CC(=O)NC1CCOC1=O&quot;,
+      &quot;Modification&quot;: &quot;Extended the alkyl chain by adding two carbon atoms to increase hydrophobic tail length&quot;,
+      &quot;logCMC&quot;: 1.054,
+      &quot;uncertainty&quot;: 0.268,
+      &quot;SA Score&quot;: 2.81,
+      &quot;Molecular Weight&quot;: 325.45,
+      &quot;Validity&quot;: &quot;Valid&quot;
+    },
+    {
+      &quot;Iteration&quot;: 2,
+      &quot;SMILES&quot;: &quot;CCC(C)CCCCCCCC(=O)CC(=O)NC1CCOC1=O&quot;,
+      &quot;Modification&quot;: &quot;Introduced branching in the hydrophobic tail by adding a methyl group&quot;,
+      &quot;logCMC&quot;: 2.225,
+      &quot;uncertainty&quot;: 0.369,
+      &quot;SA Score&quot;: 3.22,
+      &quot;Molecular Weight&quot;: 325.45,
+      &quot;Validity&quot;: &quot;Valid&quot;
+    },
+    {
+      &quot;Iteration&quot;: 3,
+      &quot;SMILES&quot;: &quot;CCCCCCCCCCCC(=O)CC(=O)Nc1ccccc1&quot;,
+      &quot;Modification&quot;: &quot;Modified the head group by replacing the cyclic ester with an aromatic ring&quot;,
+      &quot;logCMC&quot;: 2.334,
+      &quot;uncertainty&quot;: 0.422,
+      &quot;SA Score&quot;: 1.85,
+      &quot;Molecular Weight&quot;: 317.47,
+      &quot;Validity&quot;: &quot;Valid&quot;
+    },
+    {
+      &quot;Iteration&quot;: 4,
+      &quot;SMILES&quot;: &quot;CCCCCCCCCCCOCC(=O)CC(=O)NC1CCOC1=O&quot;,
+      &quot;Modification&quot;: &quot;Introduced an ether linkage in the hydrophobic tail&quot;,
+      &quot;logCMC&quot;: 0.798,
+      &quot;uncertainty&quot;: 0.345,
+      &quot;SA Score&quot;: 2.93,
+      &quot;Molecular Weight&quot;: 355.48,
+      &quot;Validity&quot;: &quot;Valid&quot;
+    },
+    {
+      &quot;Iteration&quot;: 5,
+      &quot;SMILES&quot;: &quot;FCCCCCCCCCCC(=O)CC(=O)NC1CCOC1=O&quot;,
+      &quot;Modification&quot;: &quot;Added a fluorine atom at the end of the hydrophobic tail&quot;,
+      &quot;logCMC&quot;: -0.779,
+      &quot;uncertainty&quot;: 0.67,
+      &quot;SA Score&quot;: 3.02,
+      &quot;Molecular Weight&quot;: 329.41,
+      &quot;Validity&quot;: &quot;Valid&quot;
+    },
+    {
+      &quot;Iteration&quot;: 6,
+      &quot;SMILES&quot;: &quot;FCCCCCCCCCCC(=O)C(C)C(=O)NC1CCOC1=O&quot;,
+      &quot;Modification&quot;: &quot;Introduced a branched structure near the head group by adding a methyl group&quot;,
+      &quot;logCMC&quot;: -1.109,
+      &quot;uncertainty&quot;: 0.515,
+      &quot;SA Score&quot;: 3.38,
+      &quot;Molecular Weight&quot;: 343.44,
+      &quot;Validity&quot;: &quot;Valid&quot;
+    },
+    {
+      &quot;Iteration&quot;: 7,
+      &quot;SMILES&quot;: &quot;FCCCCCCCCCCF(=O)C(C)C(=O)NC1CCOC1=O&quot;,
+      &quot;Modification&quot;: &quot;Attempted to add a second fluorine atom, but resulted in an invalid SMILES&quot;,
+      &quot;logCMC&quot;: null,
+      &quot;uncertainty&quot;: null,
+      &quot;SA Score&quot;: null,
+      &quot;Molecular Weight&quot;: null,
+      &quot;Validity&quot;: &quot;Invalid&quot;
+    },
+    {
+      &quot;Iteration&quot;: 8,
+      &quot;SMILES&quot;: &quot;FCCCCCCC#CCC(=O)C(C)C(=O)NC1CCOC1=O&quot;,
+      &quot;Modification&quot;: &quot;Introduced a triple bond in the hydrophobic tail&quot;,
+      &quot;logCMC&quot;: 0.065,
+      &quot;uncertainty&quot;: 0.737,
+      &quot;SA Score&quot;: 3.88,
+      &quot;Molecular Weight&quot;: 325.38,
+      &quot;Validity&quot;: &quot;Valid&quot;
+    },
+    {
+      &quot;Iteration&quot;: 9,
+      &quot;SMILES&quot;: &quot;FCCCCCCCC(O)CCC(=O)C(C)C(=O)NC1CCOC1=O&quot;,
+      &quot;Modification&quot;: &quot;Introduced a hydroxyl group in the hydrophobic tail&quot;,
+      &quot;logCMC&quot;: 0.032,
+      &quot;uncertainty&quot;: 0.808,
+      &quot;SA Score&quot;: 3.77,
+      &quot;Molecular Weight&quot;: 359.44,
+      &quot;Validity&quot;: &quot;Valid&quot;
+    }
+  ]
+}[0m
+
+[1m&gt; Finished chain.[0m
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+
+<span class="n">output_str</span> <span class="o">=</span> <span class="n">response</span><span class="p">[</span><span class="s1">&#39;output&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;```json&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)[</span><span class="mi">18</span><span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">output_dict</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">output_str</span><span class="p">)</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">output_dict</span><span class="p">)</span>
+</pre></div>
+</div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+</pre></div>
+</div>
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Iteration</th>
+      <th>SMILES</th>
+      <th>Modification</th>
+      <th>logCMC</th>
+      <th>uncertainty</th>
+      <th>SA Score</th>
+      <th>Molecular Weight</th>
+      <th>Validity</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>CCCCCCCCCC(=O)CC(=O)NC1CCOC1=O</td>
+      <td>Initial SMILES</td>
+      <td>1.785</td>
+      <td>0.321</td>
+      <td>2.80</td>
+      <td>297.40</td>
+      <td>Valid</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>CCCCCCCCCCCC(=O)CC(=O)NC1CCOC1=O</td>
+      <td>Extended the alkyl chain by adding two carbon ...</td>
+      <td>1.054</td>
+      <td>0.268</td>
+      <td>2.81</td>
+      <td>325.45</td>
+      <td>Valid</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2</td>
+      <td>CCC(C)CCCCCCCC(=O)CC(=O)NC1CCOC1=O</td>
+      <td>Introduced branching in the hydrophobic tail b...</td>
+      <td>2.225</td>
+      <td>0.369</td>
+      <td>3.22</td>
+      <td>325.45</td>
+      <td>Valid</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>3</td>
+      <td>CCCCCCCCCCCC(=O)CC(=O)Nc1ccccc1</td>
+      <td>Modified the head group by replacing the cycli...</td>
+      <td>2.334</td>
+      <td>0.422</td>
+      <td>1.85</td>
+      <td>317.47</td>
+      <td>Valid</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>4</td>
+      <td>CCCCCCCCCCCOCC(=O)CC(=O)NC1CCOC1=O</td>
+      <td>Introduced an ether linkage in the hydrophobic...</td>
+      <td>0.798</td>
+      <td>0.345</td>
+      <td>2.93</td>
+      <td>355.48</td>
+      <td>Valid</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>5</td>
+      <td>FCCCCCCCCCCC(=O)CC(=O)NC1CCOC1=O</td>
+      <td>Added a fluorine atom at the end of the hydrop...</td>
+      <td>-0.779</td>
+      <td>0.670</td>
+      <td>3.02</td>
+      <td>329.41</td>
+      <td>Valid</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>6</td>
+      <td>FCCCCCCCCCCC(=O)C(C)C(=O)NC1CCOC1=O</td>
+      <td>Introduced a branched structure near the head ...</td>
+      <td>-1.109</td>
+      <td>0.515</td>
+      <td>3.38</td>
+      <td>343.44</td>
+      <td>Valid</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>7</td>
+      <td>FCCCCCCCCCCF(=O)C(C)C(=O)NC1CCOC1=O</td>
+      <td>Attempted to add a second fluorine atom, but r...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Invalid</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>8</td>
+      <td>FCCCCCCC#CCC(=O)C(C)C(=O)NC1CCOC1=O</td>
+      <td>Introduced a triple bond in the hydrophobic tail</td>
+      <td>0.065</td>
+      <td>0.737</td>
+      <td>3.88</td>
+      <td>325.38</td>
+      <td>Valid</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>9</td>
+      <td>FCCCCCCCC(O)CCC(=O)C(C)C(=O)NC1CCOC1=O</td>
+      <td>Introduced a hydroxyl group in the hydrophobic...</td>
+      <td>0.032</td>
+      <td>0.808</td>
+      <td>3.77</td>
+      <td>359.44</td>
+      <td>Valid</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="peptide-hemolytic.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Example 2 - Desigining Peptides with a Lower Hemolytic Activity</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="docking_GNINA_vs_AutoDockVina.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Example 4 - Different Choices of Surrogate for Docking Inference</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#defining-customized-agent-tools">Defining Customized Agent Tools</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-up-the-cmc-predictor">Setting up the CMC predictor</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#retrieving-domain-knowledge-from-scientific-literature">Retrieving domain-knowledge from scientific literature</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#defining-dziner-agent">Defining dZiner agent</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#defining-custom-system-messages-for-the-agent">Defining custom system messages for the agent</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-design-constraints">Adding Design Constraints</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024, Mehrad Ansari.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
