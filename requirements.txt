@@ -23,6 +23,8 @@ dockstring
 pytest
 
 # Browser automation
+Selenium-Screenshot
+webdriver-manager
 browser-use
 playwright>=1.39.0
 python-dotenv>=1.0.0
