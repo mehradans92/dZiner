@@ -1,0 +1,21 @@
+Iteration,SMILES,Modification,logCMC,Uncertainty,SA Score,Molecular Weight,Validity
+0,CCCCCCCCCC(=O)CC(=O)NC1CCOC1=O,Initial SMILES,1.785,0.321,2.80403143711424,297.39500000000004,Valid
+1,CCCCCCCCC(O)C(=O)CC(=O)NC1CCOC1=O,Added a hydroxyl group to the terminal carbon of the alkyl chain,1.577,0.558,3.2955028498502994,313.39400000000006,Valid
+2,CCCCCCCCC(=O)OCC(=O)NC1CCOC1=O,Added a carboxyl group to the terminal carbon of the alkyl chain,2.006,0.498,2.605719311951267,299.367,Valid
+3,CCCCCCCCC(NH2)C(=O)CC(=O)NC1CCOC1=O,Added an amine group to the terminal carbon of the alkyl chain,0.0,0.0,0.0,0.0,Invalid
+4,CCCCCCCCC(SO3H)C(=O)CC(=O)NC1CCOC1=O,Added a sulfonic acid group to the terminal carbon of the alkyl chain,0.0,0.0,0.0,0.0,Invalid
+5,CCCCCCCCC(O)C(=O)CC(=O)NC1CCOC1=O,Added a hydroxyl group to the carbon adjacent to the terminal carbon of the alkyl chain,1.577,0.558,3.2955028498502994,313.39400000000006,Valid
+6,CCCCCCCCC(OCH3)C(=O)CC(=O)NC1CCOC1=O,Added a methoxy group to the terminal carbon of the alkyl chain,0.0,0.0,0.0,0.0,Invalid
+7,CCCCCCCCC(O)C(=O)CC(=O)NC1CCOC1=O,Added a hydroxyl group to the carbon adjacent to the terminal carbon of the alkyl chain,1.577,0.558,3.2955028498502994,313.39400000000006,Valid
+8,CCCCCCCCC(O)C(=O)C(O)C(=O)NC1CCOC1=O,Added a hydroxyl group to the carbon next to the carbonyl group in the chain,1.285,0.641,3.6567656950323313,329.39300000000014,Valid
+9,CCCCCCCCC(O)C(=O)C(O)C(=O)N(CO)C1CCOC1=O,Added a hydroxyl group to the nitrogen in the amide group,1.089,0.679,4.062791540911288,359.41900000000015,Valid
+10,CCCCCCCCC(O)C(=O)C(O)C(=O)NC(CO)C1CCOC1=O,Added a hydroxyl group to the carbon adjacent to the nitrogen in the amide group,1.415,0.682,4.172121868165103,373.4460000000002,Valid
+11,CCCCCCCCC(O)C(=O)C(O)C(=O)NC1CC(O)OC1=O,Added a hydroxyl group to the carbon adjacent to the oxygen in the oxazolidine ring,1.541,0.817,4.124056833662375,345.3920000000001,Valid
+12,CCCCCCCCC(O)C(=O)C(O)C(=O)NC1C(O)COC1=O,Added a hydroxyl group to the carbon adjacent to the nitrogen in the oxazolidine ring,1.76,0.822,4.008230561473026,345.3920000000001,Valid
+13,CCCCCCCCC(O)C(=O)C(O)C(=O)NC1CCNCC1,Replaced the oxazolidine ring with a piperidine ring,1.619,0.927,3.3806896352779807,328.45300000000015,Valid
+14,CCCCCCCCC(O)C(=O)C(O)C(=O)NC1CC(O)NCC1,Added a hydroxyl group to the piperidine ring,2.026,0.878,4.087291970832897,344.4520000000001,Valid
+15,CCCCCCCCC(O)C(=O)C(O)C(=O)NC1CCOCC1,Replaced the piperidine ring with a morpholine ring,0.725,0.601,3.325240116047212,329.4370000000002,Valid
+16,CCCCCCCCC(O)C(=O)C(O)C(=O)NC1CC(O)OCC1,Added a hydroxyl group to the morpholine ring,1.134,0.822,3.962582180623107,345.43600000000015,Valid
+17,CCCCCCCCC(=O)OCC(=O)C(O)C(=O)NC1CCOCC1,Replaced the terminal carbon of the alkyl chain with a carboxyl group,1.228,0.464,2.948276285117979,357.4470000000002,Valid
+18,CCCCCCCCC(=O)OCC(O)C(=O)C(O)C(=O)NC1CCOCC1,Added a hydroxyl group to the carbon adjacent to the carboxyl group,1.265,0.587,3.4189486222190917,387.47300000000024,Valid
+19,CCCCCCCCC(=O)OCC(=O)C(O)C(=O)NC1CCOCC1,Replaced the terminal carbon of the alkyl chain with a sulfonic acid group,1.228,0.464,2.948276285117979,357.4470000000002,Valid

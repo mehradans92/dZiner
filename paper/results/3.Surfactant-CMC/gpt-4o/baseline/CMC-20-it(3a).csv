@@ -1,0 +1,19 @@
+Iteration,SMILES,Modification,logCMC,Uncertainty,SA Score,Molecular Weight,Validity
+0,CCCCCCCCCC(=O)CC(=O)NC1CCOC1=O,Initial SMILES,1.785,0.321,2.80403143711424,297.39500000000004,Valid
+1,CCCCCCCCCC(=O)CC(=O)NC1CC(O)OC1=O,Added a hydroxyl group to increase hydrophilicity,2.008,0.555,3.4126844387532014,313.39400000000006,Valid
+2,CCCCCCCCCC(=O)CC(=O)NC1CC(N)OC1=O,Added an amine group to increase hydrophilicity,2.31,0.548,3.4568332407708544,312.4100000000001,Valid
+3,CCCCCCCCCC(=O)CC(=O)NC1CC(C(=O)O)OC1=O,Added a carboxyl group to increase hydrophilicity,2.247,0.452,3.348154541294167,341.4040000000001,Valid
+4,CCCCCCCCC(=O)CC(=O)NC1CCOC1=O,Shortened the alkyl chain length,2.189,0.37,2.80841392125585,283.368,Valid
+5,CCCCCCCCCC(=O)CC(=O)NC1CC(OS(=O)(=O)O)OC1=O,Added a sulfonate group to increase hydrophilicity,1.913,0.635,3.6075252246009617,393.45800000000014,Valid
+6,CCCCCCCCCC(=O)CC(=O)NC1CC(OCC)OC1=O,Added an ether group to increase hydrophilicity,1.596,0.492,3.3817359419830293,341.44800000000015,Valid
+7,CCCCCCCCCC(=O)CC(=O)NC1CC(OPO(=O)O)OC1=O,Added a phosphate group to increase hydrophilicity,0.0,0.0,0.0,0.0,Invalid
+8,CCCCCCCCCC(=O)CC(=O)NC1CC(C#N)OC1=O,Added a nitrile group to increase hydrophilicity,2.27,0.518,3.5496213660472122,322.4050000000001,Valid
+9,CCCCCCCCCC(=O)CC(=O)NC1CC(OCH3)OC1=O,Added a methoxy group to increase hydrophilicity,0.0,0.0,0.0,0.0,Invalid
+10,CCCCCCCCCC(=O)CC(=O)NC1CC(F)OC1=O,Added a fluorine atom to increase hydrophilicity,1.8,0.499,3.4972390415274752,315.38500000000005,Valid
+11,CCCCCCCCCC(=O)CC(=O)NC1CC(Cl)OC1=O,Added a chlorine atom to increase hydrophilicity,1.828,0.51,3.4923633794845994,331.8400000000001,Valid
+12,CCCCCCCCCC(=O)CC(=O)NC1CC(Br)OC1=O,Added a bromine atom to increase hydrophilicity,1.796,0.515,3.516253669522431,376.29100000000005,Valid
+13,CCCCCCCCCC(=O)CC(=O)NC1CC(I)OC1=O,Added an iodine atom to increase hydrophilicity,1.743,0.529,3.5523353845287353,423.29100000000005,Valid
+14,CCCCCCCCCC(=O)CC(=O)NC1CC(OS(=O)(=O)N)OC1=O,Added a sulfonamide group to increase hydrophilicity,2.43,0.576,3.6511289082412643,392.47400000000016,Valid
+15,CCCCCCCCCC(=O)CC(=O)NC1CC(SH)OC1=O,Added a thiol group to increase hydrophilicity,0.0,0.0,0.0,0.0,Invalid
+16,CCCCCCCCCC(=O)CC(=O)NC1CC(NO2)OC1=O,Added a nitro group to increase hydrophilicity,0.0,0.0,0.0,0.0,Invalid
+17,CCCCCCCCCC(=O)CC(=O)NC1CC(OH)OC1=O,Added a hydroxyl group to increase hydrophilicity,0.0,0.0,0.0,0.0,Invalid

@@ -1,0 +1,22 @@
+Iteration,SMILES,Modification,logCMC,Uncertainty,SA Score,Molecular Weight,Validity
+0,CCCCCCCCCC(=O)CC(=O)NC1CCOC1=O,Initial SMILES,1.785,0.321,2.804,297.395,Valid
+1,CCCCCCCCC(=O)CC(=O)NC1CCOC1=O,Removed one carbon from the alkyl chain.,2.189,0.37,2.808,283.368,Valid
+2,CCCCCCCCCOCC(=O)NC1CCOC1=O,Added a hydroxyl group to the terminal end of the alkyl chain.,1.154,0.491,2.672,285.384,Valid
+3,CCCCCCCCC(O)OCC(=O)NC1CCOC1=O,Added another hydroxyl group to the alkyl chain.,1.358,0.768,3.278,301.383,Valid
+4,CCCCCCCCC(=O)OCC(=O)NC1CCOC1=O,Added a carboxyl group to the terminal end of the alkyl chain.,2.006,0.498,2.606,299.367,Valid
+5,CCCCCCCCC(=O)S(=O)(=O)CC(=O)NC1CCOC1=O,Replaced the terminal carboxyl group with a sulfonic acid group.,2.279,0.409,3.25,347.433,Valid
+6,CCCCCCCCC(=O)NCC(=O)NC1CCOC1=O,Added an amine group to the terminal end of the alkyl chain.,2.681,0.441,2.607,298.383,Valid
+7,CCCCCCCCCOCC(=O)NC1CCOC1=O,Added a methoxy group to the terminal end of the alkyl chain.,0.808,0.45,2.676,299.411,Valid
+8,CCCCCCCCC(F)OCC(=O)NC1CCOC1=O,Added a fluorine atom to the alkyl chain.,1.128,0.675,3.381,303.374,Valid
+9,CCCCCCCCC(Cl)OCC(=O)NC1CCOC1=O,Added a chlorine atom to the alkyl chain.,1.124,0.692,3.378,319.829,Valid
+10,CCCCCCCCC(Br)OCC(=O)NC1CCOC1=O,Added a bromine atom to the alkyl chain.,1.109,0.679,3.429,364.28,Valid
+11,CCCCCCCCC(I)OCC(=O)NC1CCOC1=O,Added an iodine atom to the alkyl chain.,1.096,0.696,3.488,411.28,Valid
+12,CCCCCCCCC(N(=O)=O)OCC(=O)NC1CCOC1=O,Added a nitro group to the alkyl chain.,3.245,0.715,3.588,330.381,Valid
+13,CCCCCCCCOCCOCC(=O)NC1CCOC1=O,Added an ether group to the alkyl chain.,1.55,0.606,2.773,315.41,Valid
+14,CCCCCCCCC(S)OCC(=O)NC1CCOC1=O,Added a thiol group to the alkyl chain.,1.25,0.737,3.478,317.451,Valid
+15,CCCCCCCCC(NC(=O))OCC(=O)NC1CCOC1=O,Added an amide group to the alkyl chain.,1.818,0.692,3.575,328.409,Valid
+16,CCCCCCCCC(C#N)OCC(=O)NC1CCOC1=O,Added a cyano group to the alkyl chain.,1.942,0.647,3.407,310.394,Valid
+17,CCCCCCCCC(C1=CC=CC=C1)OCC(=O)NC1CCOC1=O,Added a phenyl group to the alkyl chain.,1.874,0.5,3.073,361.482,Valid
+18,CCCCCCCCC(CC)OCC(=O)NC1CCOC1=O,Added an ethyl group to the alkyl chain.,1.733,0.466,3.189,313.438,Valid
+19,CCCCCCCCC(CCC)OCC(=O)NC1CCOC1=O,Added a propyl group to the alkyl chain.,1.991,0.649,3.2,327.465,Valid
+20,CCCCCCCCC(CCCC)OCC(=O)NC1CCOC1=O,Added a butyl group to the alkyl chain.,1.906,0.605,3.183,341.492,Valid

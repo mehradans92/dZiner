@@ -1,0 +1,22 @@
+Iteration,SMILES,Modification,logCMC,Uncertainty,SA Score,Molecular Weight,Validity
+0,CCCCCCCCCC(=O)CC(=O)NC1CCOC1=O,Initial SMILES,1.785,0.321,2.80403143711424,297.39500000000004,Valid
+1,CCCCCCCCCC(=O)CC(=O)NC1CCOC1=OCC,Added a hydrophilic group,0.0,0.0,0.0,0.0,Invalid
+2,CCCCCCCCCC(=O)CC(=O)NC1CCOC1=OCCO,Added a hydroxyl group,0.0,0.0,0.0,0.0,Invalid
+3,CCCCCCCCC(=O)CC(=O)NC1CCOC1=O,Shortened the alkyl chain by one carbon,2.189,0.37,2.80841392125585,283.368,Valid
+4,CCCCCCCCC(=O)CC(=O)NC1CCOC1=OCO,Added a polar group to the terminal end,0.0,0.0,0.0,0.0,Invalid
+5,CCCCCCCCCC(=O)CC(=O)NC1CCOC1=OCC(=O)O,Added a carboxyl group,0.0,0.0,0.0,0.0,Invalid
+6,CCCCCCCCCC(=O)CC(=O)NC1CCOC1=OCCS(=O)(=O)O,Added a sulfonic acid group,0.0,0.0,0.0,0.0,Invalid
+7,CCCCCCCCCC(=O)CC(=O)NC1CCNC1=O,Replaced oxazolidinone ring with a different heterocyclic ring,2.58,0.479,2.8303039273358817,296.411,Valid
+8,CCCCCCCCCC(=O)CC(=O)NC1CCNC1=OCO,Added a methoxy group,0.0,0.0,0.0,0.0,Invalid
+9,CCCCCCCCCC(=O)CC(=O)NC1CCOC1(C)=O,Added a methyl group to the oxazolidinone ring,0.0,0.0,0.0,0.0,Invalid
+10,CCCCCCCCCC(=O)CC(=O)NC1CCNC1=O,Replaced oxazolidinone ring with a pyrrolidinone ring,2.58,0.479,2.8303039273358817,296.411,Valid
+11,CCCCCCCCC(=O)CC(=O)NC1CCOC1=OCCO,Added a hydroxyl group to the alkyl chain,0.0,0.0,0.0,0.0,Invalid
+12,CCCCCCCCCC(=O)CC(=O)NC1CCOCC1=O,Replaced oxazolidinone ring with a morpholine ring,1.389,0.34,2.941882755649539,311.4220000000001,Valid
+13,CCCCCCCCCC(=O)CC(=O)NC1CCOCC1(O)=O,Added a hydroxyl group to the morpholine ring,0.0,0.0,0.0,0.0,Invalid
+14,CCCCCCCCCC(=O)CC(=O)NC1CCOCC1(C)=O,Added a methyl group to the morpholine ring,0.0,0.0,0.0,0.0,Invalid
+15,CCCCCCCCC(=O)CC(=O)NC1CCOCC1=OCCO,Added a hydroxyl group to the terminal end of the alkyl chain,0.0,0.0,0.0,0.0,Invalid
+16,CCCCCCCCCC(=O)CC(=O)NC1CCNCC1=O,Replaced oxazolidinone ring with a piperidine ring,2.099,0.592,2.9892879665676535,310.43800000000005,Valid
+17,CCCCCCCCCC(=O)CC(=O)NC1CCNCC1(O)=O,Added a hydroxyl group to the piperidine ring,0.0,0.0,0.0,0.0,Invalid
+18,CCCCCCCCCC(=O)CC(=O)NC1CCNCC1C(=O)O,Added a carboxyl group to the piperidine ring,2.332,0.57,3.2194383530048434,340.46400000000006,Valid
+19,CCCCCCCCC(=O)CC(=O)NC1CCNCC1C(=O)OCCO,Added a hydroxyl group to the terminal end of the alkyl chain,2.709,0.437,3.3344412162304,370.4900000000002,Valid
+20,CCCCCCCCC(=O)CC(=O)NC1CCNCC1C(=O)OCCOCC,Added an ethoxy group to the terminal end of the alkyl chain,2.217,0.492,3.3361045497370156,398.54400000000027,Valid
