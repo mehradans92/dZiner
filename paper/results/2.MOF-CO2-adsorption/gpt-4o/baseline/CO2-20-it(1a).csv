@@ -1,0 +1,22 @@
+Iteration,SMILES,Modification,CO2 Adsorption,Uncertainty,SA Score,Molecular Weight,Validity
+0,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C#N,Initial SMILES,0.885,0.033,3.6902790948109647,430.4240000000002,Valid
+1,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)O)N(C)C#N,Changed one carboxylate group to a carboxylic acid group.,0.835,0.057,3.394523638639228,431.4320000000002,Valid
+2,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)O)N(C)CO,Changed the cyano group to a hydroxyl group.,0.964,0.073,3.3058164830041665,436.4480000000002,Valid
+3,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)OC)C(=O)O)N(C)CO,Changed one of the amino groups to a methoxy group.,1.012,0.079,3.2372296365822173,451.45900000000023,Valid
+4,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)OC)C(=O)S(=O)(=O)[O-])N(C)CO,Changed one of the carboxylate groups to a sulfonate group.,0.955,0.076,3.6619321094633026,514.5160000000003,Valid
+5,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1O)OC)C(=O)S(=O)(=O)[O-])N(C)CO,Changed one of the amino groups to a hydroxyl group.,0.979,0.081,3.656066244078687,515.5000000000003,Valid
+6,Nc1cc(C(=O)[O-])c(cc1c1ccncc1c1c(N)cc(c(c1O)OC)C(=O)S(=O)(=O)[O-])N(C)CO,Changed one of the aromatic rings to a pyridine ring.,0.908,0.083,3.8676354748479183,516.4880000000003,Valid
+7,Nc1cc(C(=O)[O-])c(cc1c1ccncc1c1c(N)cc(c(c1O)OC)C(=O)S(=O)(=O)[O-])N(C)C(O)CO,Changed one of the hydroxyl groups to a methoxy group.,0.912,0.075,4.375190903762008,546.5140000000002,Valid
+8,Nc1cc(C(=O)[O-])c(cc1c1ccncc1c1c(N)cc(c(c1O)OC)C(=O)P(=O)([O-])[O-])N(C)C(O)CO,Changed one of the carboxylate groups to a phosphonate group.,1.133,0.106,4.489111848164141,545.4210000000003,Valid
+9,Nc1cc(C(=O)[O-])c(cc1c1ccncc1c1c(N)cc(c(c1O)OC)C(=O)P(=O)([O-])[O-])N(C)C(O)COC,Changed one of the methoxy groups to an ethoxy group.,1.152,0.107,4.489630367634781,559.4480000000002,Valid
+10,Nc1cc(C(=O)[O-])c(cc1c1ccncc1c1c(N)cc(c(c1O)OC)C(=O)P(=O)([O-])[O-])N(C)C(O)CON,Changed one of the amino groups to a nitro group.,1.124,0.073,4.604786432723538,560.4360000000001,Valid
+11,Nc1cc(C(=O)[O-])c(cc1c1ccncc1c1c(N)cc(c(c1O)OC)C(=O)S(=O)(N)N)N(C)C(O)CON,Changed one of the carboxylate groups to a sulfonamide group.,0.825,0.067,4.752367793670284,562.5850000000002,Valid
+12,Nc1cc(C(=O)[O-])c(cc1c1ccncc1c1c(N)cc(c(c1O)OC)C(=O)S(=O)(N)N)N(C)C(O)CC#N,Changed one of the amino groups to a cyano group.,0.794,0.078,4.710125042190994,556.5810000000001,Valid
+13,Nc1cc(C(=O)[O-])c(cc1c1ccncc1c1c(N)cc(c(c1F)OC)C(=O)S(=O)(N)N)N(C)C(O)CC#N,Changed one of the hydroxyl groups to a fluorine atom.,0.926,0.143,4.712252556983893,558.5720000000001,Valid
+14,Nc1cc(C(=O)[O-])c(cc1c1ccncc1c1c(N)cc(c(c1F)OC(F)(F)F)C(=O)S(=O)(N)N)N(C)C(O)CC#N,Changed one of the methoxy groups to a trifluoromethoxy group.,1.124,0.167,4.808211003821196,612.5419999999999,Valid
+15,Nc1cc(C(=O)[O-])c(cc1c1ccncc1c1c(N)cc(c(c1F)OC(F)(F)F)C(=O)S(=O)(=O)N)N(C)C(O)CC#N,Changed one of the sulfonamide groups to a sulfone group.,1.138,0.158,4.484719943530136,611.51,Valid
+16,Nc1cc(C(=O)[O-])c(cc1c1ccncc1c1c(N)cc(c(c1F)OC(F)(F)F)C(=O)S(=O)(=O)C#N)N(C)C(O)CC#N,Changed one of the nitro groups to a nitrile group.,1.116,0.156,4.620316944241731,621.505,Valid
+17,Nc1cc(C(=O)NO)cc1c1ccncc1c1c(N)cc(c(c1F)OC(F)(F)F)C(=O)S(=O)(=O)C#N)N(C)C(O)CC#N,Changed one of the carboxylate groups to a hydroxamate group.,0.0,0.0,0.0,0.0,Invalid
+18,Nc1cc(C(=O)O)cc1c1ccncc1c1c(N)cc(c(c1F)OC(F)(F)F)C(=O)S(=O)(=O)C#N)N(C)C(O)CC#N,Changed one of the carboxylate groups to a hydroxyl group.,0.0,0.0,0.0,0.0,Invalid
+19,Nc1cc(C(=O)N)cc1c1ccncc1c1c(N)cc(c(c1F)OC(F)(F)F)C(=O)S(=O)(=O)C#N)N(C)C(O)CC#N,Changed one of the carboxylate groups to a carboxamide group.,0.0,0.0,0.0,0.0,Invalid
+20,Nc1cc(C(=O)[O-])c(cc1c1ccncc1c1c(N)cc(c(c1F)OC(F)(F)F)C(=O)S(=O)(OH)C#N)N(C)C(O)CC#N,Changed one of the carboxylate groups to a sulfonic acid group.,0.0,0.0,0.0,0.0,Invalid
