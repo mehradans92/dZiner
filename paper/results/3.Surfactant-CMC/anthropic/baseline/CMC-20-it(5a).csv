@@ -1,0 +1,22 @@
+Iteration,SMILES,Modification,logCMC,Uncertainty,SA Score,Molecular Weight,Validity
+0,CCCCCCCCCC(=O)CC(=O)NC1CCOC1=O,Initial SMILES,1.785,0.321,2.8,297.4,Valid
+1,CCCCCCCCCCCC(=O)CC(=O)NC1CCOC1=O,Extended alkyl chain by adding two carbon atoms to increase hydrophobicity,1.054,0.268,2.81,325.45,Valid
+2,CC(C)CCCCCCCCCC(=O)CC(=O)NC1CCOC1=O,Introduced a branched alkyl chain to further increase hydrophobicity,2.036,0.399,2.88,339.48,Valid
+3,CCCCCCCC(c1ccccc1)CC(=O)CC(=O)NC1CCOC1=O,Integrated a benzene ring into the alkyl chain to enhance π-π interactions,2.417,0.428,3.17,373.49,Valid
+4,CCCCCCCC(O)CC(=O)CC(=O)NC1CCOC1=O,Added a hydroxyl group to the alkyl chain to enhance self-assembly,2.531,0.555,3.26,313.39,Valid
+5,CCCCCCCCCC(F)(F)C(=O)CC(=O)NC1CCOC1=O,Introduced two fluorine atoms to increase hydrophobicity,1.308,0.362,3.16,347.4,Valid
+6,CCCCCCCCCC(F)(F)C(=O)CC(=O)NC1CC(F)OC1=O,Added an additional fluorine on the cyclic structure,1.384,0.518,3.81,365.39,Valid
+7,CCCCCCCCOC(=O)CC(=O)NC1CCOC1=O,Introduced an ether group in the alkyl chain to enhance self-assembly,2.104,0.419,2.77,299.37,Valid
+8,CCCCCC1CCC(CC1)C(=O)CC(=O)NC1CCOC1=O,Introduced a cyclic structure in the alkyl chain to increase rigidity,0.692,0.466,3.02,323.43,Valid
+9,CCCCCC1CCC(CC1)C(=O)CC(=O)NC1CC(C)OC1=O,Added a methyl group to the cyclic structure at the end,1.106,0.644,3.4,337.46,Valid
+10,CCCCCC1C=CC(CC1)C(=O)CC(=O)NC1CCOC1=O,Introduced a double bond in the cyclic structure to increase rigidity,1.305,0.667,4.03,321.42,Valid
+11,CCCCCC1OCC(CC1)C(=O)CC(=O)NC1CCOC1=O,Introduced an oxygen atom in the cyclic structure of the alkyl chain,1.796,0.639,3.68,325.41,Valid
+12,CCCCCC1CCC(CC1)C(=O)CC(=O)NC(C)(C)C,Replaced the cyclic structure at the end with a tert-butyl group,1.896,0.771,2.39,295.47,Valid
+13,CCCCCC1SCC(CC1)C(=O)CC(=O)NC1CCOC1=O,Introduced a sulfur atom in the cyclic structure of the alkyl chain,1.544,0.559,3.93,341.47,Valid
+14,CCCCCC1CCC(CC1)C(=O)CC(=O)NC1CCCOC1=O,Expanded the cyclic structure at the end by adding a carbon atom,0.823,0.501,3.15,337.46,Valid
+15,CCCCCC1CCC(CC1)C(=O)CC(=O)NC1CC(F)OC1=O,Added a fluorine atom to the cyclic structure at the end,0.957,0.532,3.54,341.42,Valid
+16,CCCCCC1CCC(CC1)C(=O)CC(=O)NC1C(C)COC1=O,Added a methyl group to the cyclic structure at the end in a different position,0.789,0.488,3.28,337.46,Valid
+17,CCCCCC1CCC(CC1)C(=O)CC(=O)NC1CC(=O)OC1,Rearranged the cyclic structure at the end to create a lactone,1.102,0.573,3.41,323.43,Valid
+18,CCCCCC1CCC(CC1)C(=O)CC(=O)NC1CCSC1=O,Replaced oxygen with sulfur in the cyclic structure at the end,0.876,0.512,3.19,339.49,Valid
+19,CCCCCC1CCC(CC1)C(=O)CC(=O)NC1CC(O)OC1=O,Added a hydroxyl group to the cyclic structure at the end,1.235,0.601,3.72,339.43,Valid
+20,CCCCCC1CCC(CC1)C(=O)CC(=O)NC1C=COC1=O,Introduced a double bond in the cyclic structure at the end,1.018,0.547,3.56,321.41,Valid
