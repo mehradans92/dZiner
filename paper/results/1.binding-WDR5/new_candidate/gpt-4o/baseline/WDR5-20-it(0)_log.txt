@@ -1,0 +1,520 @@
+
+
+[1m> Entering new AgentExecutor chain...[0m
+[32;1m[1;3mThought: First, I will evaluate the initial SMILES for its chemical feasibility, SA and QED scores, molecular weight, and docking score.
+
+Action: check_validity
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C([N+]([O-])=O)C=C2)CC1[0m
+Observation: [36;1m[1;3m('Valid SMILES', 1.9734562544794656, 0.6560834603688163, 374.82800000000015, 'CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C([N+]([O-])=O)C=C2)CC1')[0m
+Thought:[32;1m[1;3mThe initial SMILES is valid with the following properties:
+- SA Score: 1.97
+- QED Score: 0.66
+- Molecular Weight: 374.83 g/mol
+
+Next, I will predict the docking score for the initial SMILES.
+
+Action: predict_docking_score
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C([N+]([O-])=O)C=C2)CC1[0m
+Observation: [33;1m[1;3m-6.7[0m
+Thought:[32;1m[1;3mThe initial SMILES has a docking score of -6.7. Now, I will make modifications to the molecule to potentially improve its binding affinity. I will start by making small changes to the functional groups and evaluate each modified SMILES.
+
+### Iteration 1
+Thought: I will replace the nitro group ([N+]([O-])=O) with a cyano group (C#N) to see if it improves binding affinity.
+Action: check_validity
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C#N)C=C2)CC1[0m
+Observation: [36;1m[1;3m('Valid SMILES', 1.9981678125580071, 0.9190107454561185, 354.8410000000001, 'CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C#N)C=C2)CC1')[0m
+Thought:[32;1m[1;3mThe modified SMILES is valid with the following properties:
+- SA Score: 1.998
+- QED Score: 0.919
+- Molecular Weight: 354.84 g/mol
+
+Next, I will predict the docking score for the modified SMILES.
+
+Action: predict_docking_score
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C#N)C=C2)CC1[0m
+Observation: [33;1m[1;3m-7.7[0m
+Thought:[32;1m[1;3mThe modified SMILES with a cyano group has a docking score of -7.7, which is an improvement over the initial score. I will continue making modifications to further enhance the binding affinity.
+
+### Iteration 2
+Thought: I will replace the chlorine atom (Cl) on the phenyl ring with a fluorine atom (F) to see if it improves binding affinity.
+Action: check_validity
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC=C3F)=O)C=C(C#N)C=C2)CC1[0m
+Observation: [36;1m[1;3m('Valid SMILES', 2.0168269674875834, 0.9347551137296229, 338.38600000000014, 'CN1CCN(C2=C(NC(C3=CC=CC=C3F)=O)C=C(C#N)C=C2)CC1')[0m
+Thought:[32;1m[1;3mThe modified SMILES is valid with the following properties:
+- SA Score: 2.017
+- QED Score: 0.935
+- Molecular Weight: 338.39 g/mol
+
+Next, I will predict the docking score for the modified SMILES.
+
+Action: predict_docking_score
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC=C3F)=O)C=C(C#N)C=C2)CC1[0m
+Observation: [33;1m[1;3m-7.6[0m
+Thought:[32;1m[1;3mThe modified SMILES with a fluorine atom has a docking score of -7.6, which is slightly worse than the previous modification but still better than the initial score. I will continue making modifications to further enhance the binding affinity.
+
+### Iteration 3
+Thought: I will replace the phenyl ring with a pyridine ring to see if it improves binding affinity.
+Action: check_validity
+Action Input: CN1CCN(C2=C(NC(C3=CC=CN=C3)=O)C=C(C#N)C=C2)CC1[0m
+Observation: [36;1m[1;3m('Valid SMILES', 2.090812068204066, 0.93539865608556, 321.38400000000007, 'CN1CCN(C2=C(NC(C3=CC=CN=C3)=O)C=C(C#N)C=C2)CC1')[0m
+Thought:[32;1m[1;3mThe modified SMILES is valid with the following properties:
+- SA Score: 2.091
+- QED Score: 0.935
+- Molecular Weight: 321.38 g/mol
+
+Next, I will predict the docking score for the modified SMILES.
+
+Action: predict_docking_score
+Action Input: CN1CCN(C2=C(NC(C3=CC=CN=C3)=O)C=C(C#N)C=C2)CC1[0m
+Observation: [33;1m[1;3m-6.8[0m
+Thought:[32;1m[1;3mThe modified SMILES with a pyridine ring has a docking score of -6.8, which is not an improvement over the previous modifications. I will revert to the previous valid SMILES with the best docking score and continue making modifications.
+
+### Iteration 4
+Thought: I will revert to the SMILES from Iteration 1 and add a methoxy group (-OCH3) to the phenyl ring to see if it improves binding affinity.
+Action: check_validity
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C#N)C=C2)CC1[0m
+Observation: [36;1m[1;3m('Valid SMILES', 1.9981678125580071, 0.9190107454561185, 354.8410000000001, 'CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C#N)C=C2)CC1')[0m
+Thought:[32;1m[1;3m### Iteration 4
+Thought: I will revert to the SMILES from Iteration 1 and add a methoxy group (-OCH3) to the phenyl ring to see if it improves binding affinity.
+Action: check_validity
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC(OC)=C3Cl)=O)C=C(C#N)C=C2)CC1[0m
+Observation: [36;1m[1;3m('Valid SMILES', 2.205284666291462, 0.8760318299033352, 384.86700000000013, 'CN1CCN(C2=C(NC(C3=CC=CC(OC)=C3Cl)=O)C=C(C#N)C=C2)CC1')[0m
+Thought:[32;1m[1;3mThe modified SMILES is valid with the following properties:
+- SA Score: 2.205
+- QED Score: 0.876
+- Molecular Weight: 384.87 g/mol
+
+Next, I will predict the docking score for the modified SMILES.
+
+Action: predict_docking_score
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC(OC)=C3Cl)=O)C=C(C#N)C=C2)CC1[0m
+Observation: [33;1m[1;3m-6.9[0m
+Thought:[32;1m[1;3mThe modified SMILES with a methoxy group has a docking score of -6.9, which is not an improvement over the previous best score. I will continue making modifications to further enhance the binding affinity.
+
+### Iteration 5
+Thought: I will replace the methoxy group with a hydroxyl group (-OH) on the phenyl ring to see if it improves binding affinity.
+Action: check_validity
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC(O)=C3Cl)=O)C=C(C#N)C=C2)CC1[0m
+Observation: [36;1m[1;3m('Valid SMILES', 2.259796612751332, 0.8679491573876396, 370.84000000000015, 'CN1CCN(C2=C(NC(C3=CC=CC(O)=C3Cl)=O)C=C(C#N)C=C2)CC1')[0m
+Thought:[32;1m[1;3mThe modified SMILES is valid with the following properties:
+- SA Score: 2.260
+- QED Score: 0.868
+- Molecular Weight: 370.84 g/mol
+
+Next, I will predict the docking score for the modified SMILES.
+
+Action: predict_docking_score
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC(O)=C3Cl)=O)C=C(C#N)C=C2)CC1[0m
+Observation: [33;1m[1;3m-6.9[0m
+Thought:[32;1m[1;3mThe modified SMILES with a hydroxyl group has a docking score of -6.9, which is not an improvement over the previous best score. I will continue making modifications to further enhance the binding affinity.
+
+### Iteration 6
+Thought: I will replace the phenyl ring with a thiophene ring to see if it improves binding affinity.
+Action: check_validity
+Action Input: CN1CCN(C2=C(NC(C3=CC=CS3)=O)C=C(C#N)C=C2)CC1[0m
+Observation: [36;1m[1;3m('Valid SMILES', 2.144489423323485, 0.9418148825478989, 326.4250000000001, 'CN1CCN(C2=C(NC(C3=CC=CS3)=O)C=C(C#N)C=C2)CC1')[0m
+Thought:[32;1m[1;3mThe modified SMILES is valid with the following properties:
+- SA Score: 2.144
+- QED Score: 0.942
+- Molecular Weight: 326.43 g/mol
+
+Next, I will predict the docking score for the modified SMILES.
+
+Action: predict_docking_score
+Action Input: CN1CCN(C2=C(NC(C3=CC=CS3)=O)C=C(C#N)C=C2)CC1[0m
+Observation: [33;1m[1;3m-6.7[0m
+Thought:[32;1m[1;3mThe modified SMILES with a thiophene ring has a docking score of -6.7, which is not an improvement over the previous best score. I will continue making modifications to further enhance the binding affinity.
+
+### Iteration 7
+Thought: I will replace the cyano group (C#N) with an amide group (C(=O)N) to see if it improves binding affinity.
+Action: check_validity
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C(=O)N)C=C2)CC1[0m
+Observation: [36;1m[1;3m('Valid SMILES', 1.921489552688108, 0.8635959899480498, 372.85600000000017, 'CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C(=O)N)C=C2)CC1')[0m
+Thought:[32;1m[1;3mThe modified SMILES is valid with the following properties:
+- SA Score: 1.921
+- QED Score: 0.864
+- Molecular Weight: 372.86 g/mol
+
+Next, I will predict the docking score for the modified SMILES.
+
+Action: predict_docking_score
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C(=O)N)C=C2)CC1[0m
+Observation: [33;1m[1;3m-7.7[0m
+Thought:[32;1m[1;3mThe modified SMILES with an amide group has a docking score of -7.7, which matches the best score so far. I will continue making modifications to further enhance the binding affinity.
+
+### Iteration 8
+Thought: I will replace the chlorine atom (Cl) on the phenyl ring with a trifluoromethyl group (CF3) to see if it improves binding affinity.
+Action: check_validity
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC=C3CF3)=O)C=C(C(=O)N)C=C2)CC1[0m
+Observation: [36;1m[1;3m('Invalid SMILES', 0, 0, 0, 'CN1CCN(C2=C(NC(C3=CC=CC=C3CF3)=O)C=C(C(=O)N)C=C2)CC1')[0m
+Thought:[32;1m[1;3mThe modified SMILES with a trifluoromethyl group is invalid. I will revert to the previous valid SMILES with the best docking score and continue making modifications.
+
+### Iteration 9
+Thought: I will replace the chlorine atom (Cl) on the phenyl ring with a bromine atom (Br) to see if it improves binding affinity.
+Action: check_validity
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC=C3Br)=O)C=C(C(=O)N)C=C2)CC1[0m
+Observation: [36;1m[1;3m('Valid SMILES', 1.9923875505806272, 0.8018224847375862, 417.30700000000024, 'CN1CCN(C2=C(NC(C3=CC=CC=C3Br)=O)C=C(C(=O)N)C=C2)CC1')[0m
+Thought:[32;1m[1;3mThe modified SMILES is valid with the following properties:
+- SA Score: 1.992
+- QED Score: 0.802
+- Molecular Weight: 417.31 g/mol
+
+Next, I will predict the docking score for the modified SMILES.
+
+Action: predict_docking_score
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC=C3Br)=O)C=C(C(=O)N)C=C2)CC1[0m
+Observation: [33;1m[1;3m-7.6[0m
+Thought:[32;1m[1;3mThe modified SMILES with a bromine atom has a docking score of -7.6, which is slightly worse than the best score so far. I will continue making modifications to further enhance the binding affinity.
+
+### Iteration 10
+Thought: I will replace the amide group (C(=O)N) with a sulfonamide group (S(=O)2N) to see if it improves binding affinity.
+Action: check_validity
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(S(=O)2N)C=C2)CC1[0m
+Observation: [36;1m[1;3m('Invalid SMILES', 0, 0, 0, 'CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(S(=O)2N)C=C2)CC1')[0m
+Thought:[32;1m[1;3mThe modified SMILES with a sulfonamide group is invalid. I will revert to the previous valid SMILES with the best docking score and continue making modifications.
+
+### Iteration 11
+Thought: I will replace the amide group (C(=O)N) with a sulfone group (S(=O)2) to see if it improves binding affinity.
+Action: check_validity
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(S(=O)2)C=C2)CC1[0m
+Observation: [36;1m[1;3m('Invalid SMILES', 0, 0, 0, 'CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(S(=O)2)C=C2)CC1')[0m
+Thought:[32;1m[1;3mThe modified SMILES with a sulfone group is invalid. I will revert to the previous valid SMILES with the best docking score and continue making modifications.
+
+### Iteration 12
+Thought: I will replace the amide group (C(=O)N) with a urea group (N(C=O)N) to see if it improves binding affinity.
+Action: check_validity
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(N(C=O)N)C=C2)CC1[0m
+Observation: [36;1m[1;3m('Valid SMILES', 2.4374245448339718, 0.35546831368353565, 387.87100000000015, 'CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(N(C=O)N)C=C2)CC1')[0m
+Thought:[32;1m[1;3mThe modified SMILES is valid with the following properties:
+- SA Score: 2.437
+- QED Score: 0.355
+- Molecular Weight: 387.87 g/mol
+
+Next, I will predict the docking score for the modified SMILES.
+
+Action: predict_docking_score
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(N(C=O)N)C=C2)CC1[0m
+Observation: [33;1m[1;3m-7.2[0m
+Thought:[32;1m[1;3mThe modified SMILES with a urea group has a docking score of -7.2, which is worse than the best score so far. I will continue making modifications to further enhance the binding affinity.
+
+### Iteration 13
+Thought: I will replace the phenyl ring with a benzodioxole ring to see if it improves binding affinity.
+Action: check_validity
+Action Input: CN1CCN(C2=C(NC(C3=CC2OCC3)=O)C=C(C#N)C=C2)CC1[0m
+Observation: [36;1m[1;3m('Invalid SMILES', 0, 0, 0, 'CN1CCN(C2=C(NC(C3=CC2OCC3)=O)C=C(C#N)C=C2)CC1')[0m
+Thought:[32;1m[1;3mThe modified SMILES with a benzodioxole ring is invalid. I will revert to the previous valid SMILES with the best docking score and continue making modifications.
+
+### Iteration 14
+Thought: I will replace the phenyl ring with a naphthalene ring to see if it improves binding affinity.
+Action: check_validity
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC4=CC=CC=C34)=O)C=C(C#N)C=C2)CC1[0m
+Observation: [36;1m[1;3m('Valid SMILES', 2.055691305346423, 0.7634307166403603, 370.4560000000002, 'CN1CCN(C2=C(NC(C3=CC=CC4=CC=CC=C34)=O)C=C(C#N)C=C2)CC1')[0m
+Thought:[32;1m[1;3mThe modified SMILES is valid with the following properties:
+- SA Score: 2.056
+- QED Score: 0.763
+- Molecular Weight: 370.46 g/mol
+
+Next, I will predict the docking score for the modified SMILES.
+
+Action: predict_docking_score
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC4=CC=CC=C34)=O)C=C(C#N)C=C2)CC1[0m
+Observation: [33;1m[1;3m-7.6[0m
+Thought:[32;1m[1;3mThe modified SMILES with a naphthalene ring has a docking score of -7.6, which is slightly worse than the best score so far. I will continue making modifications to further enhance the binding affinity.
+
+### Iteration 15
+Thought: I will replace the cyano group (C#N) with a carboxyl group (C(=O)O) to see if it improves binding affinity.
+Action: check_validity
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C(=O)O)C=C2)CC1[0m
+Observation: [36;1m[1;3m('Valid SMILES', 1.886104094310868, 0.8613548089004948, 373.84000000000015, 'CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C(=O)O)C=C2)CC1')[0m
+Thought:[32;1m[1;3mThe modified SMILES is valid with the following properties:
+- SA Score: 1.886
+- QED Score: 0.861
+- Molecular Weight: 373.84 g/mol
+
+Next, I will predict the docking score for the modified SMILES.
+
+Action: predict_docking_score
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C(=O)O)C=C2)CC1[0m
+Observation: [33;1m[1;3m-7.5[0m
+Thought:[32;1m[1;3mThe modified SMILES with a carboxyl group has a docking score of -7.5, which is slightly worse than the best score so far. I will continue making modifications to further enhance the binding affinity.
+
+### Iteration 16
+Thought: I will replace the phenyl ring with a pyrimidine ring to see if it improves binding affinity.
+Action: check_validity
+Action Input: CN1CCN(C2=C(NC(C3=CC=CN=C3)=O)C=C(C#N)C=C2)CC1[0m
+Observation: [36;1m[1;3m('Valid SMILES', 2.090812068204066, 0.93539865608556, 321.38400000000007, 'CN1CCN(C2=C(NC(C3=CC=CN=C3)=O)C=C(C#N)C=C2)CC1')[0m
+Thought:[32;1m[1;3mThe modified SMILES is valid with the following properties:
+- SA Score: 2.091
+- QED Score: 0.935
+- Molecular Weight: 321.38 g/mol
+
+Next, I will predict the docking score for the modified SMILES.
+
+Action: predict_docking_score
+Action Input: CN1CCN(C2=C(NC(C3=CC=CN=C3)=O)C=C(C#N)C=C2)CC1[0m
+Observation: [33;1m[1;3m-6.8[0m
+Thought:[32;1m[1;3mThe modified SMILES with a pyrimidine ring has a docking score of -6.8, which is not an improvement over the previous best score. I will continue making modifications to further enhance the binding affinity.
+
+### Iteration 17
+Thought: I will replace the phenyl ring with a furan ring to see if it improves binding affinity.
+Action: check_validity
+Action Input: CN1CCN(C2=C(NC(C3=CC=CO3)=O)C=C(C#N)C=C2)CC1[0m
+Observation: [36;1m[1;3m('Valid SMILES', 2.1488027100367706, 0.940229949620529, 310.3570000000001, 'CN1CCN(C2=C(NC(C3=CC=CO3)=O)C=C(C#N)C=C2)CC1')[0m
+Thought:[32;1m[1;3mThe modified SMILES is valid with the following properties:
+- SA Score: 2.149
+- QED Score: 0.940
+- Molecular Weight: 310.36 g/mol
+
+Next, I will predict the docking score for the modified SMILES.
+
+Action: predict_docking_score
+Action Input: CN1CCN(C2=C(NC(C3=CC=CO3)=O)C=C(C#N)C=C2)CC1[0m
+Observation: [33;1m[1;3m-6.7[0m
+Thought:[32;1m[1;3mThe modified SMILES with a furan ring has a docking score of -6.7, which is not an improvement over the previous best score. I will continue making modifications to further enhance the binding affinity.
+
+### Iteration 18
+Thought: I will replace the cyano group (C#N) with a nitro group ([N+]([O-])=O) to see if it improves binding affinity.
+Action: check_validity
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C([N+]([O-])=O)C=C2)CC1[0m
+Observation: [36;1m[1;3m('Valid SMILES', 1.9734562544794656, 0.6560834603688163, 374.82800000000015, 'CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C([N+]([O-])=O)C=C2)CC1')[0m
+Thought:[32;1m[1;3mThe modified SMILES with a nitro group is the same as the initial SMILES. I will continue making modifications to further enhance the binding affinity.
+
+### Iteration 19
+Thought: I will replace the phenyl ring with a benzofuran ring to see if it improves binding affinity.
+Action: check_validity
+Action Input: CN1CCN(C2=C(NC(C3=CC4=C(O3)C=CC=C4)=O)C=C(C#N)C=C2)CC1[0m
+Observation: [36;1m[1;3m('Valid SMILES', 2.2011508139090274, 0.775748737128946, 360.41700000000014, 'CN1CCN(C2=C(NC(C3=CC4=C(O3)C=CC=C4)=O)C=C(C#N)C=C2)CC1')[0m
+Thought:[32;1m[1;3mThe modified SMILES is valid with the following properties:
+- SA Score: 2.201
+- QED Score: 0.776
+- Molecular Weight: 360.42 g/mol
+
+Next, I will predict the docking score for the modified SMILES.
+
+Action: predict_docking_score
+Action Input: CN1CCN(C2=C(NC(C3=CC4=C(O3)C=CC=C4)=O)C=C(C#N)C=C2)CC1[0m
+Observation: [33;1m[1;3m-6.9[0m
+Thought:[32;1m[1;3m### Iteration 20
+Thought: I will replace the phenyl ring with a benzothiophene ring to see if it improves binding affinity.
+Action: check_validity
+Action Input: CN1CCN(C2=C(NC(C3=CC4=CC=CS4)=O)C=C(C#N)C=C2)CC1[0m
+Observation: [36;1m[1;3m('Invalid SMILES', 0, 0, 0, 'CN1CCN(C2=C(NC(C3=CC4=CC=CS4)=O)C=C(C#N)C=C2)CC1')[0m
+Thought:[32;1m[1;3mThought: I know the final answer.
+
+Final Answer: 
+```json
+[
+  {
+    "Iteration": 0,
+    "SMILES": "CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C([N+]([O-])=O)C=C2)CC1",
+    "Modification": "Initial SMILES",
+    "Docking Score": -6.7,
+    "SA Score": 1.97,
+    "QED Score": 0.66,
+    "Molecular Weight": 374.83,
+    "Validity": "Valid"
+  },
+  {
+    "Iteration": 1,
+    "SMILES": "CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C#N)C=C2)CC1",
+    "Modification": "Replaced nitro group with cyano group",
+    "Docking Score": -7.7,
+    "SA Score": 1.998,
+    "QED Score": 0.919,
+    "Molecular Weight": 354.84,
+    "Validity": "Valid"
+  },
+  {
+    "Iteration": 2,
+    "SMILES": "CN1CCN(C2=C(NC(C3=CC=CC=C3F)=O)C=C(C#N)C=C2)CC1",
+    "Modification": "Replaced chlorine atom with fluorine atom",
+    "Docking Score": -7.6,
+    "SA Score": 2.017,
+    "QED Score": 0.935,
+    "Molecular Weight": 338.39,
+    "Validity": "Valid"
+  },
+  {
+    "Iteration": 3,
+    "SMILES": "CN1CCN(C2=C(NC(C3=CC=CN=C3)=O)C=C(C#N)C=C2)CC1",
+    "Modification": "Replaced phenyl ring with pyridine ring",
+    "Docking Score": -6.8,
+    "SA Score": 2.091,
+    "QED Score": 0.935,
+    "Molecular Weight": 321.38,
+    "Validity": "Valid"
+  },
+  {
+    "Iteration": 4,
+    "SMILES": "CN1CCN(C2=C(NC(C3=CC=CC(OC)=C3Cl)=O)C=C(C#N)C=C2)CC1",
+    "Modification": "Added methoxy group to phenyl ring",
+    "Docking Score": -6.9,
+    "SA Score": 2.205,
+    "QED Score": 0.876,
+    "Molecular Weight": 384.87,
+    "Validity": "Valid"
+  },
+  {
+    "Iteration": 5,
+    "SMILES": "CN1CCN(C2=C(NC(C3=CC=CC(O)=C3Cl)=O)C=C(C#N)C=C2)CC1",
+    "Modification": "Replaced methoxy group with hydroxyl group",
+    "Docking Score": -6.9,
+    "SA Score": 2.260,
+    "QED Score": 0.868,
+    "Molecular Weight": 370.84,
+    "Validity": "Valid"
+  },
+  {
+    "Iteration": 6,
+    "SMILES": "CN1CCN(C2=C(NC(C3=CC=CS3)=O)C=C(C#N)C=C2)CC1",
+    "Modification": "Replaced phenyl ring with thiophene ring",
+    "Docking Score": -6.7,
+    "SA Score": 2.144,
+    "QED Score": 0.942,
+    "Molecular Weight": 326.43,
+    "Validity": "Valid"
+  },
+  {
+    "Iteration": 7,
+    "SMILES": "CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C(=O)N)C=C2)CC1",
+    "Modification": "Replaced cyano group with amide group",
+    "Docking Score": -7.7,
+    "SA Score": 1.921,
+    "QED Score": 0.864,
+    "Molecular Weight": 372.86,
+    "Validity": "Valid"
+  },
+  {
+    "Iteration": 8,
+    "SMILES": "CN1CCN(C2=C(NC(C3=CC=CC=C3CF3)=O)C=C(C(=O)N)C=C2)CC1",
+    "Modification": "Replaced chlorine atom with trifluoromethyl group",
+    "Docking Score": 0,
+    "SA Score": 0,
+    "QED Score": 0,
+    "Molecular Weight": 0,
+    "Validity": "Invalid"
+  },
+  {
+    "Iteration": 9,
+    "SMILES": "CN1CCN(C2=C(NC(C3=CC=CC=C3Br)=O)C=C(C(=O)N)C=C2)CC1",
+    "Modification": "Replaced chlorine atom with bromine atom",
+    "Docking Score": -7.6,
+    "SA Score": 1.992,
+    "QED Score": 0.802,
+    "Molecular Weight": 417.31,
+    "Validity": "Valid"
+  },
+  {
+    "Iteration": 10,
+    "SMILES": "CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(S(=O)2N)C=C2)CC1",
+    "Modification": "Replaced amide group with sulfonamide group",
+    "Docking Score": 0,
+    "SA Score": 0,
+    "QED Score": 0,
+    "Molecular Weight": 0,
+    "Validity": "Invalid"
+  },
+  {
+    "Iteration": 11,
+    "SMILES": "CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(S(=O)2)C=C2)CC1",
+    "Modification": "Replaced amide group with sulfone group",
+    "Docking Score": 0,
+    "SA Score": 0,
+    "QED Score": 0,
+    "Molecular Weight": 0,
+    "Validity": "Invalid"
+  },
+  {
+    "Iteration": 12,
+    "SMILES": "CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(N(C=O)N)C=C2)CC1",
+    "Modification": "Replaced amide group with urea group",
+    "Docking Score": -7.2,
+    "SA Score": 2.437,
+    "QED Score": 0.355,
+    "Molecular Weight": 387.87,
+    "Validity": "Valid"
+  },
+  {
+    "Iteration": 13,
+    "SMILES": "CN1CCN(C2=C(NC(C3=CC2OCC3)=O)C=C(C#N)C=C2)CC1",
+    "Modification": "Replaced phenyl ring with benzodioxole ring",
+    "Docking Score": 0,
+    "SA Score": 0,
+    "QED Score": 0,
+    "Molecular Weight": 0,
+    "Validity": "Invalid"
+  },
+  {
+    "Iteration": 14,
+    "SMILES": "CN1CCN(C2=C(NC(C3=CC=CC4=CC=CC=C34)=O)C=C(C#N)C=C2)CC1",
+    "Modification": "Replaced phenyl ring with naphthalene ring",
+    "Docking Score": -7.6,
+    "SA Score": 2.056,
+    "QED Score": 0.763,
+    "Molecular Weight": 370.46,
+    "Validity": "Valid"
+  },
+  {
+    "Iteration": 15,
+    "SMILES": "CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C(=O)O)C=C2)CC1",
+    "Modification": "Replaced cyano group with carboxyl group",
+    "Docking Score": -7.5,
+    "SA Score": 1.886,
+    "QED Score": 0.861,
+    "Molecular Weight": 373.84,
+    "Validity": "Valid"
+  },
+  {
+    "Iteration": 16,
+    "SMILES": "CN1CCN(C2=C(NC(C3=CC=CN=C3)=O)C=C(C#N)C=C2)CC1",
+    "Modification": "Replaced phenyl ring with pyrimidine ring",
+    "Docking Score": -6.8,
+    "SA Score": 2.091,
+    "QED Score": 0.935,
+    "Molecular Weight": 321.38,
+    "Validity": "Valid"
+  },
+  {
+    "Iteration": 17,
+    "SMILES": "CN1CCN(C2=C(NC(C3=CC=CO3)=O)C=C(C#N)C=C2)CC1",
+    "Modification": "Replaced phenyl ring with furan ring",
+    "Docking Score": -6.7,
+    "SA Score": 2.149,
+    "QED Score": 0.940,
+    "Molecular Weight": 310.36,
+    "Validity": "Valid"
+  },
+  {
+    "Iteration": 18,
+    "SMILES": "CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C([N+]([O-])=O)C=C2)CC1",
+    "Modification": "Replaced cyano group with nitro group",
+    "Docking Score": -6.7,
+    "SA Score": 1.973,
+    "QED Score": 0.656,
+    "Molecular Weight": 374.83,
+    "Validity": "Valid"
+  },
+  {
+    "Iteration": 19,
+    "SMILES": "CN1CCN(C2=C(NC(C3=CC4=C(O3)C=CC=C4)=O)C=C(C#N)C=C2)CC1",
+    "Modification": "Replaced phenyl ring with benzofuran ring",
+    "Docking Score": -6.9,
+    "SA Score": 2.201,
+    "QED Score": 0.776,
+    "Molecular Weight": 360.42,
+    "Validity": "Valid"
+  },
+  {
+    "Iteration": 20,
+    "SMILES": "CN1CCN(C2=C(NC(C3=CC4=CC=CS4)=O)C=C(C#N)C=C2)CC1",
+    "Modification": "Replaced phenyl ring with benzothiophene ring",
+    "Docking Score": 0,
+    "SA Score": 0,
+    "QED Score": 0,
+    "Molecular Weight": 0,
+    "Validity": "Invalid"
+  }
+]
+```[0m
+
+[1m> Finished chain.[0m

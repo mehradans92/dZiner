@@ -1,0 +1,462 @@
+
+
+[1m> Entering new AgentExecutor chain...[0m
+[32;1m[1;3mThought: First, I will evaluate the initial SMILES for its chemical feasibility, SA and QED scores, molecular weight, and docking score.
+
+Action: check_validity
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C([N+]([O-])=O)C=C2)CC1
+[0m
+Observation: [36;1m[1;3m('Valid SMILES', 1.9734562544794656, 0.6560834603688163, 374.82800000000015, 'CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C([N+]([O-])=O)C=C2)CC1')[0m
+Thought:[32;1m[1;3mThe initial SMILES is valid with a synthetic accessibility (SA) score of 1.97, a quantitative estimate of drug-likeness (QED) score of 0.66, and a molecular weight of 374.83 g/mol. Next, I will predict the docking score of this initial molecule to assess its binding affinity against WDR5.
+
+Action: predict_docking_score
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C([N+]([O-])=O)C=C2)CC1
+[0m
+Observation: [33;1m[1;3m-6.7[0m
+Thought:[32;1m[1;3mThe initial SMILES has a docking score of -6.7, indicating its binding affinity to WDR5. Now, I will proceed with modifications to the molecule to improve its binding affinity.
+
+### Iteration 1
+Thought: I will start by modifying the nitro group (NO2) on the aromatic ring to an amino group (NH2) to potentially increase hydrogen bonding interactions.
+
+Action: check_validity
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(N)C=C2)CC1
+[0m
+Observation: [36;1m[1;3m('Valid SMILES', 1.919585518922144, 0.8403661234593718, 344.8460000000001, 'CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(N)C=C2)CC1')[0m
+Thought:[32;1m[1;3mThe modified SMILES is valid with a synthetic accessibility (SA) score of 1.92, a QED score of 0.84, and a molecular weight of 344.85 g/mol. Next, I will predict the docking score of this modified molecule to assess its binding affinity against WDR5.
+
+Action: predict_docking_score
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(N)C=C2)CC1
+[0m
+Observation: [33;1m[1;3m-7.3[0m
+Thought:[32;1m[1;3mThe modified SMILES with an amino group (NH2) instead of a nitro group (NO2) has a docking score of -7.3, indicating an improved binding affinity compared to the initial molecule. I will continue making modifications to further enhance the binding affinity.
+
+### Iteration 2
+Thought: I will replace the chlorine (Cl) on the aromatic ring with a fluorine (F) to potentially improve binding interactions and reduce steric hindrance.
+
+Action: check_validity
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC=C3F)=O)C=C(N)C=C2)CC1
+[0m
+Observation: [36;1m[1;3m('Valid SMILES', 1.9390678718633225, 0.8496314110638137, 328.39100000000013, 'CN1CCN(C2=C(NC(C3=CC=CC=C3F)=O)C=C(N)C=C2)CC1')[0m
+Thought:[32;1m[1;3mThe modified SMILES is valid with a synthetic accessibility (SA) score of 1.94, a QED score of 0.85, and a molecular weight of 328.39 g/mol. Next, I will predict the docking score of this modified molecule to assess its binding affinity against WDR5.
+
+Action: predict_docking_score
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC=C3F)=O)C=C(N)C=C2)CC1
+[0m
+Observation: [33;1m[1;3m-7.5[0m
+Thought:[32;1m[1;3mThe modified SMILES with a fluorine (F) instead of a chlorine (Cl) has a docking score of -7.5, indicating an improved binding affinity compared to the previous molecule. I will continue making modifications to further enhance the binding affinity.
+
+### Iteration 3
+Thought: I will replace the phenyl ring with a pyridine ring to introduce a nitrogen atom, which can potentially form additional hydrogen bonds with the target protein.
+
+Action: check_validity
+Action Input: CN1CCN(C2=C(NC(C3=CC=CN=C3)=O)C=C(N)C=C2)CC1
+[0m
+Observation: [36;1m[1;3m('Valid SMILES', 2.016578234512295, 0.8435168907662959, 311.3890000000001, 'CN1CCN(C2=C(NC(C3=CC=CN=C3)=O)C=C(N)C=C2)CC1')[0m
+Thought:[32;1m[1;3mThe modified SMILES is valid with a synthetic accessibility (SA) score of 2.02, a QED score of 0.84, and a molecular weight of 311.39 g/mol. Next, I will predict the docking score of this modified molecule to assess its binding affinity against WDR5.
+
+Action: predict_docking_score
+Action Input: CN1CCN(C2=C(NC(C3=CC=CN=C3)=O)C=C(N)C=C2)CC1
+[0m
+Observation: [33;1m[1;3m-7.2[0m
+Thought:[32;1m[1;3mThe modified SMILES with a pyridine ring instead of a phenyl ring has a docking score of -7.2, which is slightly lower than the previous molecule. I will continue making modifications to further enhance the binding affinity.
+
+### Iteration 4
+Thought: I will replace the secondary amide (NC=O) with a sulfonamide (NS(=O)2) to potentially increase hydrogen bonding interactions and improve binding affinity.
+
+Action: check_validity
+Action Input: CN1CCN(C2=C(NS(=O)(=O)C3=CC=CN=C3)C=C(N)C=C2)CC1
+[0m
+Observation: [36;1m[1;3m('Valid SMILES', 2.192902487247938, 0.8081657145953196, 347.44400000000013, 'CN1CCN(C2=C(NS(=O)(=O)C3=CC=CN=C3)C=C(N)C=C2)CC1')[0m
+Thought:[32;1m[1;3mThe modified SMILES is valid with a synthetic accessibility (SA) score of 2.19, a QED score of 0.81, and a molecular weight of 347.44 g/mol. Next, I will predict the docking score of this modified molecule to assess its binding affinity against WDR5.
+
+Action: predict_docking_score
+Action Input: CN1CCN(C2=C(NS(=O)(=O)C3=CC=CN=C3)C=C(N)C=C2)CC1
+[0m
+Observation: [33;1m[1;3m-6.6[0m
+Thought:[32;1m[1;3mThe modified SMILES with a sulfonamide (NS(=O)2) instead of a secondary amide (NC=O) has a docking score of -6.6, which is worse than the previous molecules. I will revert to the previous valid SMILES with the best binding affinity and retry modifications.
+
+### Iteration 5
+Thought: I will revert to the SMILES from Iteration 2 (fluorine substitution) and introduce a methoxy group (OCH3) to the aromatic ring to potentially enhance binding interactions.
+
+Action: check_validity
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC(OC)=C3F)=O)C=C(N)C=C2)CC1
+[0m
+Observation: [36;1m[1;3m('Valid SMILES', 2.142013261855652, 0.8216760154231285, 358.41700000000014, 'CN1CCN(C2=C(NC(C3=CC=CC(OC)=C3F)=O)C=C(N)C=C2)CC1')[0m
+Thought:[32;1m[1;3mThe modified SMILES is valid with a synthetic accessibility (SA) score of 2.14, a QED score of 0.82, and a molecular weight of 358.42 g/mol. Next, I will predict the docking score of this modified molecule to assess its binding affinity against WDR5.
+
+Action: predict_docking_score
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC(OC)=C3F)=O)C=C(N)C=C2)CC1
+[0m
+Observation: [33;1m[1;3m-7.3[0m
+Thought:[32;1m[1;3mThe modified SMILES with a methoxy group (OCH3) on the aromatic ring has a docking score of -7.3, which is an improvement but not better than the fluorine substitution alone. I will continue making modifications to further enhance the binding affinity.
+
+### Iteration 6
+Thought: I will revert to the SMILES from Iteration 2 (fluorine substitution) and introduce a hydroxyl group (OH) to the aromatic ring to potentially enhance binding interactions through hydrogen bonding.
+
+Action: check_validity
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC(O)=C3F)=O)C=C(N)C=C2)CC1
+[0m
+Observation: [36;1m[1;3m('Valid SMILES', 2.2131839834293903, 0.7432369051263615, 344.3900000000001, 'CN1CCN(C2=C(NC(C3=CC=CC(O)=C3F)=O)C=C(N)C=C2)CC1')[0m
+Thought:[32;1m[1;3mThe modified SMILES is valid with a synthetic accessibility (SA) score of 2.21, a QED score of 0.74, and a molecular weight of 344.39 g/mol. Next, I will predict the docking score of this modified molecule to assess its binding affinity against WDR5.
+
+Action: predict_docking_score
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC(O)=C3F)=O)C=C(N)C=C2)CC1
+[0m
+Observation: [33;1m[1;3m-7.3[0m
+Thought:[32;1m[1;3mThe modified SMILES with a hydroxyl group (OH) on the aromatic ring has a docking score of -7.3, which is the same as the methoxy group modification. I will continue making modifications to further enhance the binding affinity.
+
+### Iteration 7
+Thought: I will revert to the SMILES from Iteration 2 (fluorine substitution) and introduce a cyano group (CN) to the aromatic ring to potentially enhance binding interactions through additional polar interactions.
+
+Action: check_validity
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC(C#N)=C3F)=O)C=C(N)C=C2)CC1
+[0m
+Observation: [36;1m[1;3m('Valid SMILES', 2.3022208487892666, 0.8271468244141524, 353.4010000000001, 'CN1CCN(C2=C(NC(C3=CC=CC(C#N)=C3F)=O)C=C(N)C=C2)CC1')[0m
+Thought:[32;1m[1;3mThe modified SMILES is valid with a synthetic accessibility (SA) score of 2.30, a QED score of 0.83, and a molecular weight of 353.40 g/mol. Next, I will predict the docking score of this modified molecule to assess its binding affinity against WDR5.
+
+Action: predict_docking_score
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC(C#N)=C3F)=O)C=C(N)C=C2)CC1
+[0m
+Observation: [33;1m[1;3m-7.3[0m
+Thought:[32;1m[1;3mThe modified SMILES with a cyano group (CN) on the aromatic ring has a docking score of -7.3, which is the same as the previous modifications. I will continue making modifications to further enhance the binding affinity.
+
+### Iteration 8
+Thought: I will revert to the SMILES from Iteration 2 (fluorine substitution) and introduce a trifluoromethyl group (CF3) to the aromatic ring to potentially enhance binding interactions through additional hydrophobic interactions.
+
+Action: check_validity
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC(C(F)(F)F)=C3F)=O)C=C(N)C=C2)CC1
+[0m
+Observation: [36;1m[1;3m('Valid SMILES', 2.301678473733592, 0.616550276822699, 396.38800000000015, 'CN1CCN(C2=C(NC(C3=CC=CC(C(F)(F)F)=C3F)=O)C=C(N)C=C2)CC1')[0m
+Thought:[32;1m[1;3mThe modified SMILES is valid with a synthetic accessibility (SA) score of 2.30, a QED score of 0.62, and a molecular weight of 396.39 g/mol. Next, I will predict the docking score of this modified molecule to assess its binding affinity against WDR5.
+
+Action: predict_docking_score
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC(C(F)(F)F)=C3F)=O)C=C(N)C=C2)CC1
+[0m
+Observation: [33;1m[1;3m-7.8[0m
+Thought:[32;1m[1;3mThe modified SMILES with a trifluoromethyl group (CF3) on the aromatic ring has a docking score of -7.8, indicating a significant improvement in binding affinity compared to previous modifications. I will continue making modifications to further enhance the binding affinity.
+
+### Iteration 9
+Thought: I will revert to the SMILES from Iteration 8 (trifluoromethyl substitution) and introduce a methyl group (CH3) to the nitrogen of the piperazine ring to potentially enhance hydrophobic interactions.
+
+Action: check_validity
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC(C(F)(F)F)=C3F)=O)C=C(N)C=C2)C(C)C1
+[0m
+Observation: [36;1m[1;3m('Valid SMILES', 2.9776678950696027, 0.5967057435387132, 410.41500000000013, 'CN1CCN(C2=C(NC(C3=CC=CC(C(F)(F)F)=C3F)=O)C=C(N)C=C2)C(C)C1')[0m
+Thought:[32;1m[1;3mThe modified SMILES is valid with a synthetic accessibility (SA) score of 2.98, a QED score of 0.60, and a molecular weight of 410.42 g/mol. Next, I will predict the docking score of this modified molecule to assess its binding affinity against WDR5.
+
+Action: predict_docking_score
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC(C(F)(F)F)=C3F)=O)C=C(N)C=C2)C(C)C1
+[0m
+Observation: [33;1m[1;3m-7.4[0m
+Thought:[32;1m[1;3mThe modified SMILES with a methyl group (CH3) on the nitrogen of the piperazine ring has a docking score of -7.4, which is an improvement but not better than the trifluoromethyl substitution alone. I will continue making modifications to further enhance the binding affinity.
+
+### Iteration 10
+Thought: I will revert to the SMILES from Iteration 8 (trifluoromethyl substitution) and introduce an ethyl group (CH2CH3) to the nitrogen of the piperazine ring to potentially enhance hydrophobic interactions.
+
+Action: check_validity
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC(C(F)(F)F)=C3F)=O)C=C(N)C=C2)C(CC)C1
+[0m
+Observation: [36;1m[1;3m('Valid SMILES', 3.047955152438038, 0.5703300008921289, 424.4420000000002, 'CN1CCN(C2=C(NC(C3=CC=CC(C(F)(F)F)=C3F)=O)C=C(N)C=C2)C(CC)C1')[0m
+Thought:[32;1m[1;3mThe modified SMILES is valid with a synthetic accessibility (SA) score of 3.05, a QED score of 0.57, and a molecular weight of 424.44 g/mol. Next, I will predict the docking score of this modified molecule to assess its binding affinity against WDR5.
+
+Action: predict_docking_score
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC(C(F)(F)F)=C3F)=O)C=C(N)C=C2)C(CC)C1
+[0m
+Observation: [33;1m[1;3m-7.8[0m
+Thought:[32;1m[1;3mThe modified SMILES with an ethyl group (CH2CH3) on the nitrogen of the piperazine ring has a docking score of -7.8, which is the same as the trifluoromethyl substitution alone. I will continue making modifications to further enhance the binding affinity.
+
+### Iteration 11
+Thought: I will revert to the SMILES from Iteration 8 (trifluoromethyl substitution) and introduce a phenyl group (C6H5) to the nitrogen of the piperazine ring to potentially enhance π-π stacking interactions.
+
+Action: check_validity
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC(C(F)(F)F)=C3F)=O)C=C(N)C=C2)C(C1)C6H5
+[0m
+Observation: [36;1m[1;3m('Invalid SMILES', 0, 0, 0, 'CN1CCN(C2=C(NC(C3=CC=CC(C(F)(F)F)=C3F)=O)C=C(N)C=C2)C(C1)C6H5')[0m
+Thought:[32;1m[1;3mThe SMILES with a phenyl group on the nitrogen of the piperazine ring is invalid. I will revert to the SMILES from Iteration 8 (trifluoromethyl substitution) and introduce a benzyl group (C6H5CH2) to the nitrogen of the piperazine ring to potentially enhance π-π stacking interactions.
+
+### Iteration 12
+Thought: I will revert to the SMILES from Iteration 8 (trifluoromethyl substitution) and introduce a benzyl group (C6H5CH2) to the nitrogen of the piperazine ring to potentially enhance π-π stacking interactions.
+
+Action: check_validity
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC(C(F)(F)F)=C3F)=O)C=C(N)C=C2)C(C1)CC6H5
+[0m
+Observation: [36;1m[1;3m('Invalid SMILES', 0, 0, 0, 'CN1CCN(C2=C(NC(C3=CC=CC(C(F)(F)F)=C3F)=O)C=C(N)C=C2)C(C1)CC6H5')[0m
+Thought:[32;1m[1;3mThe SMILES with a benzyl group on the nitrogen of the piperazine ring is also invalid. I will revert to the SMILES from Iteration 8 (trifluoromethyl substitution) and introduce a cyclopropyl group to the nitrogen of the piperazine ring to potentially enhance hydrophobic interactions.
+
+### Iteration 13
+Thought: I will revert to the SMILES from Iteration 8 (trifluoromethyl substitution) and introduce a cyclopropyl group to the nitrogen of the piperazine ring to potentially enhance hydrophobic interactions.
+
+Action: check_validity
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC(C(F)(F)F)=C3F)=O)C=C(N)C=C2)C(C1)C1CC1
+[0m
+Observation: [36;1m[1;3m('Valid SMILES', 3.0749383582321634, 0.5569669404343583, 436.4530000000002, 'CN1CCN(C2=C(NC(C3=CC=CC(C(F)(F)F)=C3F)=O)C=C(N)C=C2)C(C1)C1CC1')[0m
+Thought:[32;1m[1;3mThe modified SMILES is valid with a synthetic accessibility (SA) score of 3.07, a QED score of 0.56, and a molecular weight of 436.45 g/mol. Next, I will predict the docking score of this modified molecule to assess its binding affinity against WDR5.
+
+Action: predict_docking_score
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC(C(F)(F)F)=C3F)=O)C=C(N)C=C2)C(C1)C1CC1
+[0m
+Observation: [33;1m[1;3m-8.0[0m
+Thought:[32;1m[1;3mThe modified SMILES with a cyclopropyl group on the nitrogen of the piperazine ring has a docking score of -8.0, indicating a significant improvement in binding affinity. I will continue making modifications to further enhance the binding affinity.
+
+### Iteration 14
+Thought: I will revert to the SMILES from Iteration 13 (cyclopropyl substitution) and introduce a nitro group (NO2) to the aromatic ring to potentially enhance binding interactions through additional polar interactions.
+
+Action: check_validity
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC(C(F)(F)F)=C3NO2)=O)C=C(N)C=C2)C(C1)C1CC1
+[0m
+Observation: [36;1m[1;3m('Invalid SMILES', 0, 0, 0, 'CN1CCN(C2=C(NC(C3=CC=CC(C(F)(F)F)=C3NO2)=O)C=C(N)C=C2)C(C1)C1CC1')[0m
+Thought:[32;1m[1;3mThe SMILES with a nitro group on the aromatic ring is invalid. I will revert to the SMILES from Iteration 13 (cyclopropyl substitution) and introduce a carboxyl group (COOH) to the aromatic ring to potentially enhance binding interactions through hydrogen bonding.
+
+### Iteration 15
+Thought: I will revert to the SMILES from Iteration 13 (cyclopropyl substitution) and introduce a carboxyl group (COOH) to the aromatic ring to potentially enhance binding interactions through hydrogen bonding.
+
+Action: check_validity
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC(C(F)(F)F)=C3COOH)=O)C=C(N)C=C2)C(C1)C1CC1
+[0m
+Observation: [36;1m[1;3m('Invalid SMILES', 0, 0, 0, 'CN1CCN(C2=C(NC(C3=CC=CC(C(F)(F)F)=C3COOH)=O)C=C(N)C=C2)C(C1)C1CC1')[0m
+Thought:[32;1m[1;3mThe SMILES with a carboxyl group on the aromatic ring is invalid. I will revert to the SMILES from Iteration 13 (cyclopropyl substitution) and introduce a sulfonamide group (SO2NH2) to the aromatic ring to potentially enhance binding interactions through hydrogen bonding.
+
+### Iteration 16
+Thought: I will revert to the SMILES from Iteration 13 (cyclopropyl substitution) and introduce a sulfonamide group (SO2NH2) to the aromatic ring to potentially enhance binding interactions through hydrogen bonding.
+
+Action: check_validity
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC(C(F)(F)F)=C3SO2NH2)=O)C=C(N)C=C2)C(C1)C1CC1
+[0m
+Observation: [36;1m[1;3m('Invalid SMILES', 0, 0, 0, 'CN1CCN(C2=C(NC(C3=CC=CC(C(F)(F)F)=C3SO2NH2)=O)C=C(N)C=C2)C(C1)C1CC1')[0m
+Thought:[32;1m[1;3mThe SMILES with a sulfonamide group on the aromatic ring is invalid. I will revert to the SMILES from Iteration 13 (cyclopropyl substitution) and introduce a hydroxyl group (OH) to the aromatic ring to potentially enhance binding interactions through hydrogen bonding.
+
+### Iteration 17
+Thought: I will revert to the SMILES from Iteration 13 (cyclopropyl substitution) and introduce a hydroxyl group (OH) to the aromatic ring to potentially enhance binding interactions through hydrogen bonding.
+
+Action: check_validity
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC(C(F)(F)F)=C3OH)=O)C=C(N)C=C2)C(C1)C1CC1
+[0m
+Observation: [36;1m[1;3m('Invalid SMILES', 0, 0, 0, 'CN1CCN(C2=C(NC(C3=CC=CC(C(F)(F)F)=C3OH)=O)C=C(N)C=C2)C(C1)C1CC1')[0m
+Thought:[32;1m[1;3mThe SMILES with a hydroxyl group on the aromatic ring is invalid. I will revert to the SMILES from Iteration 13 (cyclopropyl substitution) and introduce a methoxy group (OCH3) to the aromatic ring to potentially enhance binding interactions through hydrogen bonding.
+
+### Iteration 18
+Thought: I will revert to the SMILES from Iteration 13 (cyclopropyl substitution) and introduce a methoxy group (OCH3) to the aromatic ring to potentially enhance binding interactions through hydrogen bonding.
+
+Action: check_validity
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC(C(F)(F)F)=C3OCH3)=O)C=C(N)C=C2)C(C1)C1CC1
+[0m
+Observation: [36;1m[1;3m('Invalid SMILES', 0, 0, 0, 'CN1CCN(C2=C(NC(C3=CC=CC(C(F)(F)F)=C3OCH3)=O)C=C(N)C=C2)C(C1)C1CC1')[0m
+Thought:[32;1m[1;3mThe SMILES with a methoxy group on the aromatic ring is invalid. I will revert to the SMILES from Iteration 13 (cyclopropyl substitution) and introduce a methyl group (CH3) to the aromatic ring to potentially enhance binding interactions through hydrophobic interactions.
+
+### Iteration 19
+Thought: I will revert to the SMILES from Iteration 13 (cyclopropyl substitution) and introduce a methyl group (CH3) to the aromatic ring to potentially enhance binding interactions through hydrophobic interactions.
+
+Action: check_validity
+Action Input: CN1CCN(C2=C(NC(C3=CC=CC(C(F)(F)F)=C3CH3)=O)C=C(N)C=C2)C(C1)C1CC1
+[0m
+Observation: [36;1m[1;3m('Invalid SMILES', 0, 0, 0, 'CN1CCN(C2=C(NC(C3=CC=CC(C(F)(F)F)=C3CH3)=O)C=C(N)C=C2)C(C1)C1CC1')[0m
+Thought:[32;1m[1;3mThe SMILES with a methyl group on the aromatic ring is invalid. I have completed 20 iterations, and the best modification so far is the one from Iteration 13 with a cyclopropyl group on the nitrogen of the piperazine ring.
+
+Thought: I know the final answer.
+Final Answer:
+```json
+[
+    {
+        "Iteration": 0,
+        "SMILES": "CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C([N+]([O-])=O)C=C2)CC1",
+        "Modification": "Initial molecule",
+        "Docking Score": -6.7,
+        "SA Score": 1.97,
+        "QED Score": 0.66,
+        "Molecular Weight": 374.83,
+        "Validity": "Valid"
+    },
+    {
+        "Iteration": 1,
+        "SMILES": "CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(N)C=C2)CC1",
+        "Modification": "Replaced nitro group (NO2) with amino group (NH2)",
+        "Docking Score": -7.3,
+        "SA Score": 1.92,
+        "QED Score": 0.84,
+        "Molecular Weight": 344.85,
+        "Validity": "Valid"
+    },
+    {
+        "Iteration": 2,
+        "SMILES": "CN1CCN(C2=C(NC(C3=CC=CC=C3F)=O)C=C(N)C=C2)CC1",
+        "Modification": "Replaced chlorine (Cl) with fluorine (F)",
+        "Docking Score": -7.5,
+        "SA Score": 1.94,
+        "QED Score": 0.85,
+        "Molecular Weight": 328.39,
+        "Validity": "Valid"
+    },
+    {
+        "Iteration": 3,
+        "SMILES": "CN1CCN(C2=C(NC(C3=CC=CN=C3)=O)C=C(N)C=C2)CC1",
+        "Modification": "Replaced phenyl ring with pyridine ring",
+        "Docking Score": -7.2,
+        "SA Score": 2.02,
+        "QED Score": 0.84,
+        "Molecular Weight": 311.39,
+        "Validity": "Valid"
+    },
+    {
+        "Iteration": 4,
+        "SMILES": "CN1CCN(C2=C(NS(=O)(=O)C3=CC=CN=C3)C=C(N)C=C2)CC1",
+        "Modification": "Replaced secondary amide (NC=O) with sulfonamide (NS(=O)2)",
+        "Docking Score": -6.6,
+        "SA Score": 2.19,
+        "QED Score": 0.81,
+        "Molecular Weight": 347.44,
+        "Validity": "Valid"
+    },
+    {
+        "Iteration": 5,
+        "SMILES": "CN1CCN(C2=C(NC(C3=CC=CC(OC)=C3F)=O)C=C(N)C=C2)CC1",
+        "Modification": "Introduced methoxy group (OCH3) to the aromatic ring",
+        "Docking Score": -7.3,
+        "SA Score": 2.14,
+        "QED Score": 0.82,
+        "Molecular Weight": 358.42,
+        "Validity": "Valid"
+    },
+    {
+        "Iteration": 6,
+        "SMILES": "CN1CCN(C2=C(NC(C3=CC=CC(O)=C3F)=O)C=C(N)C=C2)CC1",
+        "Modification": "Introduced hydroxyl group (OH) to the aromatic ring",
+        "Docking Score": -7.3,
+        "SA Score": 2.21,
+        "QED Score": 0.74,
+        "Molecular Weight": 344.39,
+        "Validity": "Valid"
+    },
+    {
+        "Iteration": 7,
+        "SMILES": "CN1CCN(C2=C(NC(C3=CC=CC(C#N)=C3F)=O)C=C(N)C=C2)CC1",
+        "Modification": "Introduced cyano group (CN) to the aromatic ring",
+        "Docking Score": -7.3,
+        "SA Score": 2.30,
+        "QED Score": 0.83,
+        "Molecular Weight": 353.40,
+        "Validity": "Valid"
+    },
+    {
+        "Iteration": 8,
+        "SMILES": "CN1CCN(C2=C(NC(C3=CC=CC(C(F)(F)F)=C3F)=O)C=C(N)C=C2)CC1",
+        "Modification": "Introduced trifluoromethyl group (CF3) to the aromatic ring",
+        "Docking Score": -7.8,
+        "SA Score": 2.30,
+        "QED Score": 0.62,
+        "Molecular Weight": 396.39,
+        "Validity": "Valid"
+    },
+    {
+        "Iteration": 9,
+        "SMILES": "CN1CCN(C2=C(NC(C3=CC=CC(C(F)(F)F)=C3F)=O)C=C(N)C=C2)C(C)C1",
+        "Modification": "Introduced methyl group (CH3) to the nitrogen of the piperazine ring",
+        "Docking Score": -7.4,
+        "SA Score": 2.98,
+        "QED Score": 0.60,
+        "Molecular Weight": 410.42,
+        "Validity": "Valid"
+    },
+    {
+        "Iteration": 10,
+        "SMILES": "CN1CCN(C2=C(NC(C3=CC=CC(C(F)(F)F)=C3F)=O)C=C(N)C=C2)C(CC)C1",
+        "Modification": "Introduced ethyl group (CH2CH3) to the nitrogen of the piperazine ring",
+        "Docking Score": -7.8,
+        "SA Score": 3.05,
+        "QED Score": 0.57,
+        "Molecular Weight": 424.44,
+        "Validity": "Valid"
+    },
+    {
+        "Iteration": 11,
+        "SMILES": "CN1CCN(C2=C(NC(C3=CC=CC(C(F)(F)F)=C3F)=O)C=C(N)C=C2)C(C1)C6H5",
+        "Modification": "Introduced phenyl group (C6H5) to the nitrogen of the piperazine ring",
+        "Docking Score": 0,
+        "SA Score": 0,
+        "QED Score": 0,
+        "Molecular Weight": 0,
+        "Validity": "Invalid"
+    },
+    {
+        "Iteration": 12,
+        "SMILES": "CN1CCN(C2=C(NC(C3=CC=CC(C(F)(F)F)=C3F)=O)C=C(N)C=C2)C(C1)CC6H5",
+        "Modification": "Introduced benzyl group (C6H5CH2) to the nitrogen of the piperazine ring",
+        "Docking Score": 0,
+        "SA Score": 0,
+        "QED Score": 0,
+        "Molecular Weight": 0,
+        "Validity": "Invalid"
+    },
+    {
+        "Iteration": 13,
+        "SMILES": "CN1CCN(C2=C(NC(C3=CC=CC(C(F)(F)F)=C3F)=O)C=C(N)C=C2)C(C1)C1CC1",
+        "Modification": "Introduced cyclopropyl group to the nitrogen of the piperazine ring",
+        "Docking Score": -8.0,
+        "SA Score": 3.07,
+        "QED Score": 0.56,
+        "Molecular Weight": 436.45,
+        "Validity": "Valid"
+    },
+    {
+        "Iteration": 14,
+        "SMILES": "CN1CCN(C2=C(NC(C3=CC=CC(C(F)(F)F)=C3NO2)=O)C=C(N)C=C2)C(C1)C1CC1",
+        "Modification": "Introduced nitro group (NO2) to the aromatic ring",
+        "Docking Score": 0,
+        "SA Score": 0,
+        "QED Score": 0,
+        "Molecular Weight": 0,
+        "Validity": "Invalid"
+    },
+    {
+        "Iteration": 15,
+        "SMILES": "CN1CCN(C2=C(NC(C3=CC=CC(C(F)(F)F)=C3COOH)=O)C=C(N)C=C2)C(C1)C1CC1",
+        "Modification": "Introduced carboxyl group (COOH) to the aromatic ring",
+        "Docking Score": 0,
+        "SA Score": 0,
+        "QED Score": 0,
+        "Molecular Weight": 0,
+        "Validity": "Invalid"
+    },
+    {
+        "Iteration": 16,
+        "SMILES": "CN1CCN(C2=C(NC(C3=CC=CC(C(F)(F)F)=C3SO2NH2)=O)C=C(N)C=C2)C(C1)C1CC1",
+        "Modification": "Introduced sulfonamide group (SO2NH2) to the aromatic ring",
+        "Docking Score": 0,
+        "SA Score": 0,
+        "QED Score": 0,
+        "Molecular Weight": 0,
+        "Validity": "Invalid"
+    },
+    {
+        "Iteration": 17,
+        "SMILES": "CN1CCN(C2=C(NC(C3=CC=CC(C(F)(F)F)=C3OH)=O)C=C(N)C=C2)C(C1)C1CC1",
+        "Modification": "Introduced hydroxyl group (OH) to the aromatic ring",
+        "Docking Score": 0,
+        "SA Score": 0,
+        "QED Score": 0,
+        "Molecular Weight": 0,
+        "Validity": "Invalid"
+    },
+    {
+        "Iteration": 18,
+        "SMILES": "CN1CCN(C2=C(NC(C3=CC=CC(C(F)(F)F)=C3OCH3)=O)C=C(N)C=C2)C(C1)C1CC1",
+        "Modification": "Introduced methoxy group (OCH3) to the aromatic ring",
+        "Docking Score": 0,
+        "SA Score": 0,
+        "QED Score": 0,
+        "Molecular Weight": 0,
+        "Validity": "Invalid"
+    },
+    {
+        "Iteration": 19,
+        "SMILES": "CN1CCN(C2=C(NC(C3=CC=CC(C(F)(F)F)=C3CH3)=O)C=C(N)C=C2)C(C1)C1CC1",
+        "Modification": "Introduced methyl group (CH3) to the aromatic ring",
+        "Docking Score": 0,
+        "SA Score": 0,
+        "QED Score": 0,
+        "Molecular Weight": 0,
+        "Validity": "Invalid"
+    }
+]
+```[0m
+
+[1m> Finished chain.[0m

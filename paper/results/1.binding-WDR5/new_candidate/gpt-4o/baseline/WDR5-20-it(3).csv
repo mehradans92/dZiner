@@ -1,0 +1,22 @@
+Iteration,SMILES,Modification,Docking Score,SA Score,QED Score,Molecular Weight,Validity
+0,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C([N+]([O-])=O)C=C2)CC1,Initial SMILES,-6.7,1.9734562544794656,0.6560834603688163,374.82800000000015,Valid
+1,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C#N)C=C2)CC1,Replaced the nitro group ([N+]([O-])=O) with a cyano group (C#N),-7.7,1.9981678125580071,0.9190107454561185,354.8410000000001,Valid
+2,CN1CCN(C2=C(NC(C3=CC=CC=C3F)=O)C=C(C#N)C=C2)CC1,Replaced the chlorine atom with a fluorine atom,-7.6,2.0168269674875834,0.9347551137296229,338.38600000000014,Valid
+3,CN1CCN(C2=C(NS(=O)2C3=CC=CC=C3F)C=C(C#N)C=C2)CC1,Replaced the carbonyl group (C=O) with a sulfonyl group (S(=O)2),0.0,0.0,0.0,0.0,Invalid
+4,CN1CCN(C2=C(NC(C3=CC=CC=C3OCH3)=O)C=C(C#N)C=C2)CC1,Replaced the fluorine atom with a methoxy group (-OCH3),0.0,0.0,0.0,0.0,Invalid
+5,CN1CCN(C2=C(NC(C3=CC=CC=C3CF3)=O)C=C(C#N)C=C2)CC1,Replaced the fluorine atom with a trifluoromethyl group (-CF3),0.0,0.0,0.0,0.0,Invalid
+6,CN1CCN(C2=C(NC(C3=CC=CC=C3OH)=O)C=C(C#N)C=C2)CC1,Replaced the fluorine atom with a hydroxyl group (-OH),0.0,0.0,0.0,0.0,Invalid
+7,CN1CCN(C2=C(NC(C3=CC=CC=C3CH3)=O)C=C(C#N)C=C2)CC1,Replaced the fluorine atom with a methyl group (-CH3),0.0,0.0,0.0,0.0,Invalid
+8,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C#N)C=C2)CC1,Reverted to the previous valid SMILES and replaced the fluorine atom with a chlorine atom,-7.7,1.9981678125580071,0.9190107454561185,354.8410000000001,Valid
+9,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(OCH3)C=C2)CC1,Replaced the cyano group (C#N) with a methoxy group (-OCH3),0.0,0.0,0.0,0.0,Invalid
+10,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(OH)C=C2)CC1,Replaced the cyano group (C#N) with a hydroxyl group (-OH),0.0,0.0,0.0,0.0,Invalid
+11,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C([N+]([O-])=O)C=C2)CC1,Reverted to the previous valid SMILES and replaced the cyano group (C#N) with a nitro group ([N+]([O-])=O),-6.7,1.9734562544794656,0.6560834603688163,374.82800000000015,Valid
+12,CN1CCN(C2=C(NC(C3=CC=CC=C3Br)=O)C=C([N+]([O-])=O)C=C2)CC1,Replaced the chlorine atom with a bromine atom,-7.1,2.044354252371983,0.6075861541379152,419.2790000000002,Valid
+13,CN1CCN(C2=C(NC(C3=CC=CC=C3I)=O)C=C([N+]([O-])=O)C=C2)CC1,Replaced the bromine atom with an iodine atom,-7.0,2.121446981560604,0.4256439530315705,466.2790000000002,Valid
+14,CN1CCN(C2=C(NC(C3=CC=CC=C3I)=O)C=C(CF3)C=C2)CC1,Replaced the nitro group ([N+]([O-])=O) with a trifluoromethyl group (-CF3),0.0,0.0,0.0,0.0,Invalid
+15,CN1CCN(C2=C(NC(C3=CC=CC=C3I)=O)C=C(CH3)C=C2)CC1,Replaced the nitro group ([N+]([O-])=O) with a methyl group (-CH3),0.0,0.0,0.0,0.0,Invalid
+16,CN1CCN(C2=C(NC(C3=CC=CC=C3I)=O)C=C(OH)C=C2)CC1,Replaced the nitro group ([N+]([O-])=O) with a hydroxyl group (-OH),0.0,0.0,0.0,0.0,Invalid
+17,CN1CCN(C2=C(NC(C3=CC=CC=C3I)=O)C=C(C#N)C=C2)CC1,Reverted to the previous valid SMILES and replaced the nitro group ([N+]([O-])=O) with a cyano group (C#N),-6.7,2.150327292514671,0.736612812760532,446.2920000000002,Valid
+18,CN1CCN(C2=C(NC(C3=CC=CC=C3F)=O)C=C(C#N)C=C2)CC1,Replaced the iodine atom with a fluorine atom,-7.6,2.0168269674875834,0.9347551137296229,338.38600000000014,Valid
+19,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C#N)C=C2)CC1,Replaced the fluorine atom with a chlorine atom,-7.7,1.9981678125580071,0.9190107454561185,354.8410000000001,Valid
+20,CN1CCN(C2=C(NC(C3=CC=CC=C3Br)=O)C=C(C#N)C=C2)CC1,Replaced the chlorine atom with a bromine atom,-7.1,2.071062937151723,0.8605316279133783,399.2920000000002,Valid

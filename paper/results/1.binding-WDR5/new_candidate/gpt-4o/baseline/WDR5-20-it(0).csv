@@ -1,0 +1,22 @@
+Iteration,SMILES,Modification,Docking Score,SA Score,QED Score,Molecular Weight,Validity
+0,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C([N+]([O-])=O)C=C2)CC1,Initial SMILES,-6.7,1.97,0.66,374.83,Valid
+1,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C#N)C=C2)CC1,Replaced nitro group with cyano group,-7.7,1.998,0.919,354.84,Valid
+2,CN1CCN(C2=C(NC(C3=CC=CC=C3F)=O)C=C(C#N)C=C2)CC1,Replaced chlorine atom with fluorine atom,-7.6,2.017,0.935,338.39,Valid
+3,CN1CCN(C2=C(NC(C3=CC=CN=C3)=O)C=C(C#N)C=C2)CC1,Replaced phenyl ring with pyridine ring,-6.8,2.091,0.935,321.38,Valid
+4,CN1CCN(C2=C(NC(C3=CC=CC(OC)=C3Cl)=O)C=C(C#N)C=C2)CC1,Added methoxy group to phenyl ring,-6.9,2.205,0.876,384.87,Valid
+5,CN1CCN(C2=C(NC(C3=CC=CC(O)=C3Cl)=O)C=C(C#N)C=C2)CC1,Replaced methoxy group with hydroxyl group,-6.9,2.26,0.868,370.84,Valid
+6,CN1CCN(C2=C(NC(C3=CC=CS3)=O)C=C(C#N)C=C2)CC1,Replaced phenyl ring with thiophene ring,-6.7,2.144,0.942,326.43,Valid
+7,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C(=O)N)C=C2)CC1,Replaced cyano group with amide group,-7.7,1.921,0.864,372.86,Valid
+8,CN1CCN(C2=C(NC(C3=CC=CC=C3CF3)=O)C=C(C(=O)N)C=C2)CC1,Replaced chlorine atom with trifluoromethyl group,0.0,0.0,0.0,0.0,Invalid
+9,CN1CCN(C2=C(NC(C3=CC=CC=C3Br)=O)C=C(C(=O)N)C=C2)CC1,Replaced chlorine atom with bromine atom,-7.6,1.992,0.802,417.31,Valid
+10,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(S(=O)2N)C=C2)CC1,Replaced amide group with sulfonamide group,0.0,0.0,0.0,0.0,Invalid
+11,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(S(=O)2)C=C2)CC1,Replaced amide group with sulfone group,0.0,0.0,0.0,0.0,Invalid
+12,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(N(C=O)N)C=C2)CC1,Replaced amide group with urea group,-7.2,2.437,0.355,387.87,Valid
+13,CN1CCN(C2=C(NC(C3=CC2OCC3)=O)C=C(C#N)C=C2)CC1,Replaced phenyl ring with benzodioxole ring,0.0,0.0,0.0,0.0,Invalid
+14,CN1CCN(C2=C(NC(C3=CC=CC4=CC=CC=C34)=O)C=C(C#N)C=C2)CC1,Replaced phenyl ring with naphthalene ring,-7.6,2.056,0.763,370.46,Valid
+15,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C(=O)O)C=C2)CC1,Replaced cyano group with carboxyl group,-7.5,1.886,0.861,373.84,Valid
+16,CN1CCN(C2=C(NC(C3=CC=CN=C3)=O)C=C(C#N)C=C2)CC1,Replaced phenyl ring with pyrimidine ring,-6.8,2.091,0.935,321.38,Valid
+17,CN1CCN(C2=C(NC(C3=CC=CO3)=O)C=C(C#N)C=C2)CC1,Replaced phenyl ring with furan ring,-6.7,2.149,0.94,310.36,Valid
+18,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C([N+]([O-])=O)C=C2)CC1,Replaced cyano group with nitro group,-6.7,1.973,0.656,374.83,Valid
+19,CN1CCN(C2=C(NC(C3=CC4=C(O3)C=CC=C4)=O)C=C(C#N)C=C2)CC1,Replaced phenyl ring with benzofuran ring,-6.9,2.201,0.776,360.42,Valid
+20,CN1CCN(C2=C(NC(C3=CC4=CC=CS4)=O)C=C(C#N)C=C2)CC1,Replaced phenyl ring with benzothiophene ring,0.0,0.0,0.0,0.0,Invalid

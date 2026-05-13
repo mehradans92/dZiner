@@ -1,0 +1,21 @@
+Iteration,SMILES,Modification,Docking Score,SA Score,QED Score,Molecular Weight,Validity
+0,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C([N+]([O-])=O)C=C2)CC1,Initial molecule,-6.7,1.97,0.66,374.83,Valid
+1,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(N)C=C2)CC1,Replaced nitro group (NO2) with amino group (NH2),-7.3,1.92,0.84,344.85,Valid
+2,CN1CCN(C2=C(NC(C3=CC=CC=C3F)=O)C=C(N)C=C2)CC1,Replaced chlorine (Cl) with fluorine (F),-7.5,1.94,0.85,328.39,Valid
+3,CN1CCN(C2=C(NC(C3=CC=CN=C3)=O)C=C(N)C=C2)CC1,Replaced phenyl ring with pyridine ring,-7.2,2.02,0.84,311.39,Valid
+4,CN1CCN(C2=C(NS(=O)(=O)C3=CC=CN=C3)C=C(N)C=C2)CC1,Replaced secondary amide (NC=O) with sulfonamide (NS(=O)2),-6.6,2.19,0.81,347.44,Valid
+5,CN1CCN(C2=C(NC(C3=CC=CC(OC)=C3F)=O)C=C(N)C=C2)CC1,Introduced methoxy group (OCH3) to the aromatic ring,-7.3,2.14,0.82,358.42,Valid
+6,CN1CCN(C2=C(NC(C3=CC=CC(O)=C3F)=O)C=C(N)C=C2)CC1,Introduced hydroxyl group (OH) to the aromatic ring,-7.3,2.21,0.74,344.39,Valid
+7,CN1CCN(C2=C(NC(C3=CC=CC(C#N)=C3F)=O)C=C(N)C=C2)CC1,Introduced cyano group (CN) to the aromatic ring,-7.3,2.3,0.83,353.4,Valid
+8,CN1CCN(C2=C(NC(C3=CC=CC(C(F)(F)F)=C3F)=O)C=C(N)C=C2)CC1,Introduced trifluoromethyl group (CF3) to the aromatic ring,-7.8,2.3,0.62,396.39,Valid
+9,CN1CCN(C2=C(NC(C3=CC=CC(C(F)(F)F)=C3F)=O)C=C(N)C=C2)C(C)C1,Introduced methyl group (CH3) to the nitrogen of the piperazine ring,-7.4,2.98,0.6,410.42,Valid
+10,CN1CCN(C2=C(NC(C3=CC=CC(C(F)(F)F)=C3F)=O)C=C(N)C=C2)C(CC)C1,Introduced ethyl group (CH2CH3) to the nitrogen of the piperazine ring,-7.8,3.05,0.57,424.44,Valid
+11,CN1CCN(C2=C(NC(C3=CC=CC(C(F)(F)F)=C3F)=O)C=C(N)C=C2)C(C1)C6H5,Introduced phenyl group (C6H5) to the nitrogen of the piperazine ring,0.0,0.0,0.0,0.0,Invalid
+12,CN1CCN(C2=C(NC(C3=CC=CC(C(F)(F)F)=C3F)=O)C=C(N)C=C2)C(C1)CC6H5,Introduced benzyl group (C6H5CH2) to the nitrogen of the piperazine ring,0.0,0.0,0.0,0.0,Invalid
+13,CN1CCN(C2=C(NC(C3=CC=CC(C(F)(F)F)=C3F)=O)C=C(N)C=C2)C(C1)C1CC1,Introduced cyclopropyl group to the nitrogen of the piperazine ring,-8.0,3.07,0.56,436.45,Valid
+14,CN1CCN(C2=C(NC(C3=CC=CC(C(F)(F)F)=C3NO2)=O)C=C(N)C=C2)C(C1)C1CC1,Introduced nitro group (NO2) to the aromatic ring,0.0,0.0,0.0,0.0,Invalid
+15,CN1CCN(C2=C(NC(C3=CC=CC(C(F)(F)F)=C3COOH)=O)C=C(N)C=C2)C(C1)C1CC1,Introduced carboxyl group (COOH) to the aromatic ring,0.0,0.0,0.0,0.0,Invalid
+16,CN1CCN(C2=C(NC(C3=CC=CC(C(F)(F)F)=C3SO2NH2)=O)C=C(N)C=C2)C(C1)C1CC1,Introduced sulfonamide group (SO2NH2) to the aromatic ring,0.0,0.0,0.0,0.0,Invalid
+17,CN1CCN(C2=C(NC(C3=CC=CC(C(F)(F)F)=C3OH)=O)C=C(N)C=C2)C(C1)C1CC1,Introduced hydroxyl group (OH) to the aromatic ring,0.0,0.0,0.0,0.0,Invalid
+18,CN1CCN(C2=C(NC(C3=CC=CC(C(F)(F)F)=C3OCH3)=O)C=C(N)C=C2)C(C1)C1CC1,Introduced methoxy group (OCH3) to the aromatic ring,0.0,0.0,0.0,0.0,Invalid
+19,CN1CCN(C2=C(NC(C3=CC=CC(C(F)(F)F)=C3CH3)=O)C=C(N)C=C2)C(C1)C1CC1,Introduced methyl group (CH3) to the aromatic ring,0.0,0.0,0.0,0.0,Invalid
