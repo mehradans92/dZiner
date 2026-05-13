@@ -1,0 +1,19 @@
+Iteration,SMILES,Modification,logCMC,Uncertainty,SA Score,Molecular Weight,Validity
+0,CCCCCCCCCC(=O)CC(=O)NC1CCOC1=O,Initial SMILES,1.785,0.321,2.80403143711424,297.395,Valid
+1,CCCCCCCCCC(=O)CC(=O)NC1CCOC1,Removed =O from the oxirane ring,1.538,0.48,2.7284123885780023,283.412,Valid
+2,CCCCCCCCCC(=O)CC(=O)NC1CCNC1,Replaced oxirane ring with azetidine,2.445,0.57,2.7458123885780026,282.428,Valid
+3,CCCCCCCCCC(=O)CC(=O)NC1CCSC1,Replaced oxirane ring with thiirane,1.612,0.454,2.9356067205618075,299.48,Valid
+4,CCCCCCCCCC(=O)CC(=O)NC1CCOC1C,Added methyl group to oxirane ring,1.513,0.517,3.192256100891467,297.439,Valid
+5,CCCCCCCCCC(=O)CC(=O)NC1CCOC1O,Added hydroxyl group to oxirane ring,1.563,0.546,3.205991954867999,299.411,Valid
+6,CCCCCCCCCC(=O)CC(=O)NC1CCOC1N,Added amine group to oxirane ring,1.941,0.557,3.3761095559110235,298.427,Valid
+7,CCCCCCCCCC(=O)CC(=O)NC1CCOC1Cl,Added chlorine to oxirane ring,1.411,0.501,3.3851823068888596,317.857,Valid
+8,CCCCCCCCCC(=O)CC(=O)NC1CCOC1F,Added fluorine to oxirane ring,1.436,0.472,3.4003708336163694,301.402,Valid
+9,CCCCCCCCCC(=O)CC(=O)NC1CCOC1Br,Added bromine to oxirane ring,1.409,0.487,3.4148928675146752,362.308,Valid
+10,CCCCCCCCCC(=O)CC(=O)NC1CCOC1I,Added iodine to oxirane ring,1.404,0.487,3.4775244190140224,409.308,Valid
+11,CCCCCCCCCC(=O)CC(=O)NC1CCOC1C1=CC=CC=C1,Added phenyl group to oxirane ring,2.103,0.483,3.096615226767808,359.51,Valid
+12,CCCCCCCCCC(=O)CC(=O)NC1CCOC1C1=CC=CC=CC1,Added benzene ring to oxirane ring,1.432,0.786,3.7847471074261936,373.537,Valid
+13,CCCCCCCCCC(=O)CC(=O)NC1CCOC1C2=CC=CC=C2,Added another phenyl group to oxirane ring,2.103,0.483,3.096615226767808,359.51,Valid
+14,CCCCCCCCCC(=O)CC(=O)NC1CCOC1C3=CC=CC=C3,Added another phenyl group to oxirane ring,2.103,0.483,3.096615226767808,359.51,Valid
+15,CCCCCCCCCC(=O)CC(=O)NC1CCOC1C4=CC=CC=C4,Added another phenyl group to oxirane ring,2.103,0.483,3.096615226767808,359.51,Valid
+16,CCCCCCCCCC(=O)CC(=O)NC1CCOC1C5=CC=CC=C5,Added another phenyl group to oxirane ring,2.103,0.483,3.096615226767808,359.51,Valid
+17,CCCCCCCCCC(=O)CC(=O)NC1CCOC1C6=CC=CC=C6,Added another phenyl group to oxirane ring,2.103,0.483,3.096615226767808,359.51,Valid

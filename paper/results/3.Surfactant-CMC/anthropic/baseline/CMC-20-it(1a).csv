@@ -1,0 +1,19 @@
+Iteration,SMILES,Modification,logCMC,Uncertainty,SA Score,Molecular Weight,Validity
+0,CCCCCCCCCC(=O)CC(=O)NC1CCOC1=O,Initial SMILES,1.785,0.321,2.80403143711424,297.39500000000004,Valid
+1,CCCCCCCCCCCC(=O)CC(=O)NC1CCOC1=O,Extended the alkyl chain by adding two carbon atoms to increase hydrophobicity,1.054,0.268,2.8052551515855004,325.4490000000001,Valid
+2,CCCCCCCCCC(CC)(=O)CC(=O)NC1CCOC1=O,"Attempted to add a branched alkyl group, but resulted in an invalid SMILES",0.0,0.0,0.0,0.0,Invalid
+3,CCCCCCCCCC(=O)C(C)C(=O)NC1CCOC1=O,Added a branched alkyl group in a different position,1.448,0.363,3.1812017149196556,311.4220000000001,Valid
+4,CCCCCCCCCC(=O)CC(=O)NC1CCOC1=O.c1ccccc1,"Attempted to add an aromatic ring, but it resulted in a separate molecule",0.0,0.0,2.662471590199937,375.50900000000007,Valid
+5,CCCCCCCCCC(=O)CC(=O)NC1CCOC(c2ccccc2)1=O,"Attempted to incorporate the aromatic ring into the main structure, but resulted in an invalid SMILES",0.0,0.0,0.0,0.0,Invalid
+6,CCCCCCCC(c1ccccc1)CC(=O)CC(=O)NC1CCOC1=O,Added an aromatic ring to the alkyl chain,2.417,0.428,3.1696494973439684,373.49300000000017,Valid
+7,CCCCCCCCCCCC(=O)CC(=O)NC1CCOC(F)1=O,"Attempted to add a fluorine atom to the ring, but resulted in an invalid SMILES",0.0,0.0,0.0,0.0,Invalid
+8,CCCCCCCCCCCC(=O)CC(=O)NC1C(F)COC1=O,Added a fluorine atom to a different position in the molecule,1.218,0.49,3.42807302579474,343.4390000000001,Valid
+9,CCCCCCCCCCCC(=O)CC(=O)NC1C(Cl)COC1=O,Replaced fluorine with chlorine to increase hydrophobicity,1.224,0.5,3.432596791581192,359.89400000000006,Valid
+10,CCCCCCCCCCCC(=O)CC(=O)NC1C(C(F)(F)F)COC1=O,Introduced a trifluoromethyl group to increase hydrophobicity,0.926,0.33,3.4939283644228354,393.4460000000001,Valid
+11,CCCCCCCCCCCC(=O)CC(=O)NC1C(C(F)(F)F)C(F)OC1=O,Added an additional fluorine atom to the ring,0.797,0.423,3.854758220914336,411.43600000000004,Valid
+12,CCCCCCCCCCCC(=O)CC(=O)NC1C(C(F)(F)F)CSC1=O,Replaced the oxygen in the ring with a sulfur atom,0.961,0.365,3.625657678352148,409.51400000000007,Valid
+13,CCCCCCCCCCCC(=O)CC(=O)NC1C(C(F)(F)F)C(C(F)(F)F)OC1=O,Introduced a second trifluoromethyl group,0.855,0.458,3.8978885294077505,461.44300000000004,Valid
+14,CCCCCCCC1CCC(CC1)C(=O)CC(=O)NC1C(C(F)(F)F)COC1=O,Introduced a cyclic structure in the alkyl chain,0.142,0.586,3.6614728126715272,419.48400000000004,Valid
+15,CCCCCCCC1CCC(CC1)C(=O)CC(=O)NC1C(C(F)(F)F)C(F)OC1=O,Added an additional fluorine atom to the ring,0.13,0.632,4.008654658629442,437.474,Valid
+16,CCCCCCCC1CCC(CC1)C(=S)CC(=O)NC1C(C(F)(F)F)C(F)OC1=O,Replaced one carbonyl group with a thiocarbonyl group,0.136,0.617,4.200065915665088,453.54200000000003,Valid
+17,CCCCCC1CCC(CC1)C(=O)CC(=O)NC1C(C(F)(F)F)C2CCC2OC1=O,Introduced a second cyclic structure to increase rigidity,0.069,0.619,4.137237690271102,431.4950000000001,Valid

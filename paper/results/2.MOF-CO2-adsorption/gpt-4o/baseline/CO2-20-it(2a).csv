@@ -1,0 +1,21 @@
+Iteration,SMILES,Modification,CO2 Adsorption,Uncertainty,SA Score,Molecular Weight,Validity
+0,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C#N,Initial SMILES,0.885,0.033,3.6902790948109647,430.4240000000002,Valid
+1,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C#C,Replaced C#N with C#C,0.94,0.038,3.743947431125812,429.4360000000002,Valid
+2,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C=C,Replaced C#N with C=C,1.076,0.082,3.7064710447215186,431.4520000000002,Valid
+3,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C#O,Replaced C#N with C#O,0.0,0.0,0.0,0.0,Invalid
+4,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C#F,Replaced C#N with C#F,0.0,0.0,0.0,0.0,Invalid
+5,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C#Cl,Replaced C#N with C#Cl,0.0,0.0,0.0,0.0,Invalid
+6,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C#Br,Replaced C#N with C#Br,0.0,0.0,0.0,0.0,Invalid
+7,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C#S,Replaced C#N with C#S,0.978,0.064,3.861140633272502,449.4920000000002,Valid
+8,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C#O,Replaced C#N with C#O (retry),0.0,0.0,0.0,0.0,Invalid
+9,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C#Se,Replaced C#N with C#Se,0.0,0.0,0.0,0.0,Invalid
+10,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C#P,Replaced C#N with C#P,1.239,0.141,3.884402171734042,447.3910000000002,Valid
+11,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C#Si,Replaced C#N with C#Si,0.0,0.0,0.0,0.0,Invalid
+12,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C#Ge,Replaced C#N with C#Ge,0.0,0.0,0.0,0.0,Invalid
+13,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C#Sn,Replaced C#N with C#Sn,0.0,0.0,0.0,0.0,Invalid
+14,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C#B,Replaced C#N with C#B,1.026,0.093,3.9074238175301037,427.2290000000002,Valid
+15,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C#Al,Replaced C#N with C#Al,0.0,0.0,0.0,0.0,Invalid
+16,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C#Ga,Replaced C#N with C#Ga,0.0,0.0,0.0,0.0,Invalid
+17,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C#In,Replaced C#N with C#In,0.0,0.0,0.0,0.0,Invalid
+18,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C#Tl,Replaced C#N with C#Tl,0.0,0.0,0.0,0.0,Invalid
+19,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C#Pb,Replaced C#N with C#Pb,0.0,0.0,0.0,0.0,Invalid

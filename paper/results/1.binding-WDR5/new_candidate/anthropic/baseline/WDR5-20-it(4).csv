@@ -1,0 +1,20 @@
+Iteration,SMILES,Modification,Docking Score,SA Score,QED Score,Molecular Weight,Validity
+0,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C([N+]([O-])=O)C=C2)CC1,Initial SMILES,-6.7,1.97,0.66,374.83,Valid
+1,CN1CCN(C2=C(NC(C3=CC=CC=C3F)=O)C=C([N+]([O-])=O)C=C2)CC1,Replaced Cl with F on the phenyl ring,-6.6,0.0,0.0,0.0,Valid
+2,CN1CCN(C2=C(NC(C3=CC=CC=C3Br)=O)C=C([N+]([O-])=O)C=C2)CC1,Replaced Cl with Br on the phenyl ring,-7.1,2.04,0.61,419.28,Valid
+3,CN1CCN(C2=C(NC(C3=CC=C(F)C=C3Br)=O)C=C([N+]([O-])=O)C=C2)CC1,Added F to the bromophenyl ring,-7.0,0.0,0.0,0.0,Valid
+4,CN1CCN(C2=C(NC(C3=CC=CC=C3Br)=O)C=C(N=O)C=C2)CC1,Changed nitro group to nitroso group,-7.3,2.28,0.79,403.28,Valid
+5,CN1CCN(C2=C(NC(C3=CC=CC=C3Br)=O)C=C(N=O)C=C2F)CC1,Added F to the benzene ring with nitroso group,-7.5,2.56,0.76,421.27,Valid
+6,CN1CCN(C2=C(NC(C3=CC=CC=C3I)=O)C=C(N=O)C=C2F)CC1,Replaced Br with I on the phenyl ring,-7.5,0.0,0.0,0.0,Valid
+7,CN1CCN(C2=C(NC(C3=CC=CC=C3Br)=O)C=C(N=O)C(F)=C2F)CC1,Added another F to the benzene ring with nitroso group,-6.6,0.0,0.0,0.0,Valid
+8,CN1CCN(C2=C(NC(C3=CC=CC=C3Br)=O)C=C(N=O)C=C2F)CC1C,Added methyl group to piperazine ring,-7.7,3.17,0.72,435.3,Valid
+9,CN1CCN(C2=C(NC(C3=CC=CC=C3Br)=O)C=C(N=O)C=C2F)C(C)C1,Added another methyl group to piperazine ring,-7.9,3.23,0.72,435.3,Valid
+10,CCN1CCN(C2=C(NC(C3=CC=CC=C3Br)=O)C=C(N=O)C=C2F)C(C)C1,Replaced methyl with ethyl on piperazine ring,-7.0,0.0,0.0,0.0,Valid
+11,CN1CCN(C2=C(NC(C3=CC=CC(F)=C3Br)=O)C=C(N=O)C=C2F)C(C)C1,Added F to bromophenyl ring,-8.1,3.45,0.69,453.29,Valid
+12,CN1CCN(C2=C(NC(C3=CC=C(F)C(F)=C3Br)=O)C=C(N=O)C=C2F)C(C)C1,Added another F to bromophenyl ring,-7.9,0.0,0.0,0.0,Valid
+13,CN1CCN(C2=C(NC(C3=CC=CC(Cl)=C3Br)=O)C=C(N=O)C=C2F)C(C)C1,Replaced F with Cl on bromophenyl ring,-8.1,0.0,0.0,0.0,Valid
+14,CN1CCN(C2=C(NC(C3=CC=CC(CF3)=C3Br)=O)C=C(N=O)C=C2F)C(C)C1,Added CF3 group to bromophenyl ring,0.0,0.0,0.0,0.0,Invalid
+15,CN1CCN(C2=C(NC(C3=CC=CC(OC)=C3Br)=O)C=C(N=O)C=C2F)C(C)C1,Added methoxy group to bromophenyl ring,-7.7,0.0,0.0,0.0,Valid
+16,CN1CCN(C2=C(NC(C3=CC=CC(C#N)=C3Br)=O)C=C(N=O)C=C2F)C(C)C1,Added cyano group to bromophenyl ring,-7.4,0.0,0.0,0.0,Valid
+17,CN1CCN(C2=C(NC(C3=CC=CC(F)=C3Br)=O)C=C(N=O)C=C2Cl)C(C)C1,Replaced F with Cl on benzene ring with nitroso group,-8.0,0.0,0.0,0.0,Valid
+18,CN1CCN(C2=C(NC(C3=CC=CC(F)=C3Br)=O)C=C(N=O)C=C2CF3)C(C)C1,Added CF3 group to benzene ring with nitroso group,0.0,0.0,0.0,0.0,Invalid

@@ -1,0 +1,22 @@
+Iteration,SMILES,Modification,Docking Score,SA Score,QED Score,Molecular Weight,Validity
+0,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C([N+]([O-])=O)C=C2)CC1,Initial SMILES,-6.7,1.97,0.66,374.83,Valid
+1,CN1CCN(C2=C(NC(C3=CC=CC=C3F)=O)C=C([N+]([O-])=O)C=C2)CC1,Replaced chlorine with fluorine on the phenyl ring,-6.6,1.99,0.67,358.37,Valid
+2,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C(C(F)(F)F)C=C2)CC1,Replaced nitro group with trifluoromethyl group,-7.4,2.0,0.84,397.83,Valid
+3,CN1CCN(C2=C(NC(C3=CC=C(OC)C=C3Cl)=O)C=C(C(F)(F)F)C=C2)CC1,Added methoxy group to the phenyl ring,-7.9,2.12,0.79,427.85,Valid
+4,CN1CCC(N2C=C(C(F)(F)F)C=C(NC(C3=CC=C(OC)C=C3Cl)=O)C2)CC1,Replaced piperazine ring with piperidine ring,-7.7,3.02,0.79,429.87,Valid
+5,CN1CCN(C2=C(NC(C3=CC=C(OC)C=C3ClF)=O)C=C(C(F)(F)F)C=C2)CC1,Attempted to add fluorine next to chlorine on phenyl ring,0.0,0.0,0.0,0.0,Invalid
+6,CN1CCN(C2=C(NC(C3=C(F)C=C(OC)C=C3Cl)=O)C=C(C(F)(F)F)C=C2)CC1,Added fluorine to phenyl ring at a different position,-7.8,2.33,0.7,445.84,Valid
+7,CN1CCN(C2=C(NC(C3=CC=C(OCC)C=C3Cl)=O)C=C(C(F)(F)F)C=C2)CC1,Replaced methoxy group with ethoxy group,-7.4,2.17,0.73,441.88,Valid
+8,CN1CCN(C2=C(NC(C3=C(O)C=C(OC)C=C3Cl)=O)C=C(C(F)(F)F)C=C2)CC1,Added hydroxyl group to phenyl ring,-7.9,2.39,0.75,443.85,Valid
+9,CN1CCN(C2=C(NC(C3=C(O)C=C(OC)C=C3Br)=O)C=C(C(F)(F)F)C=C2)CC1,Replaced chlorine with bromine,-7.8,2.43,0.68,488.3,Valid
+10,CN1CCN(C2=C(NC(C3=C(O)C=C(OC)C=C3Cl)=O)C=C(C(F)(F)F)C=C2)CC1C,Added methyl group to piperazine ring,-7.7,2.99,0.71,457.88,Valid
+11,CN1CCN(C2=C(NC(C3=C(O)C=C(OC)C=C3Cl)=O)C=C(C#N)C=C2)CC1,Replaced trifluoromethyl group with cyano group,-7.0,2.4,0.82,400.87,Valid
+12,CN1CCN(C2=C(NC(C3=C(O)C=C(OC)C(N)=C3Cl)=O)C=C(C(F)(F)F)C=C2)CC1,Added amino group to phenyl ring,-7.9,2.63,0.48,458.87,Valid
+13,CN1CCN(C2=C(NC(C3=C(O)C=C(C#C)C(N)=C3Cl)=O)C=C(C(F)(F)F)C=C2)CC1,Replaced methoxy group with ethynyl group,-8.1,2.85,0.38,452.86,Valid
+14,CN1CCN(C2=C(NC(C3=C(O)C=C(C#C)C(N)=C3Cl)=O)C=C(C(F)(F)F)C=C2)CC1CNC,Added methylamino group to piperazine ring,-8.0,3.55,0.29,495.93,Valid
+15,CN1CCN(C2=C(NC(C3=C(O)C=C(C#C)C(N)=C3I)=O)C=C(C(F)(F)F)C=C2)CC1,Replaced chlorine with iodine,-8.0,2.88,0.24,544.31,Valid
+16,CN1CCN(C2=C(NC(C3=C(O)C=C(C#CC)C(N)=C3Cl)=O)C=C(C(F)(F)F)C=C2)CC1,Added methyl group to ethynyl substituent,-7.7,2.93,0.36,466.89,Valid
+17,CN1CCN(C2=C(NC(C3=C(O)C=C(C#C)C(NC)=C3Cl)=O)C=C(C(F)(F)F)C=C2)CC1,Replaced amino group with methylamino group on phenyl ring,-7.8,2.91,0.35,472.89,Valid
+18,CN1CCN(C2=C(NC(C3=C(O)C=C(C#C)C(N)=C3Cl)=O)C=C(OC(F)(F)F)C=C2)CC1,Replaced trifluoromethyl group with trifluoromethoxy group,-7.6,2.88,0.37,468.86,Valid
+19,CN1CCN(C2=C(NC(C3=C(O)C=C(C#C)C(N)=C3Cl)=O)C=C(C(F)(F)F)C=C2)CC1CF,Added fluoromethyl group to piperazine ring,-7.9,3.01,0.35,484.87,Valid
+20,CN1CCN(C2=C(NC(C3=C(O)C=C(C#C)C(N)=C3Cl)=O)C=C(C(F)(F)CF)C=C2)CC1,Replaced one fluorine in trifluoromethyl group with hydrogen,-7.8,2.87,0.39,434.87,Valid

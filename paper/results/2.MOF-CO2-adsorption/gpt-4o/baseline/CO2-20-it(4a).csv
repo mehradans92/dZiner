@@ -1,0 +1,22 @@
+Iteration,SMILES,Modification,CO2 Adsorption,Uncertainty,SA Score,Molecular Weight,Validity
+0,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C#N,Initial SMILES,0.885,0.033,3.69,430.42,Valid
+1,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)O,Changed cyano group (C#N) to carboxyl group (COOH),0.99,0.095,3.49,449.42,Valid
+2,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1O)N)C(=O)[O-])N(C)C(=O)O,Changed one amino group (N) to hydroxyl group (OH),0.987,0.086,3.5,450.41,Valid
+3,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)S(=O)(=O)O,Changed carboxyl group (COOH) to sulfonic acid group (SO3H),0.882,0.073,3.76,513.49,Valid
+4,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)Oc1ccccc1,Added hydroxyl group (OH) to one of the aromatic rings,0.962,0.079,3.39,525.52,Valid
+5,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)O[N+](=O)[O-],Changed one amino group (N) to nitro group (NO2),1.086,0.132,3.76,494.42,Valid
+6,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)OS(=O)(=O)N,Changed nitro group (NO2) to sulfonamide group (SO2NH2),0.848,0.07,3.76,528.5,Valid
+7,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)O[N+](=O)[O-]c1ccccc1O,Added methoxy group (OCH3) to one of the aromatic rings,0.0,0.0,0.0,0.0,Invalid
+8,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)O[N+](=O)[O-]c1ccccc1F,Added fluorine atom (F) to one of the aromatic rings,0.0,0.0,0.0,0.0,Invalid
+9,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)O[N+](=O)[O-]c1ccccc1Cl,Added chlorine atom (Cl) to one of the aromatic rings,0.0,0.0,0.0,0.0,Invalid
+10,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)O[N+](=O)[O-]c1ccccc1C,Added methyl group (CH3) to one of the aromatic rings,0.0,0.0,0.0,0.0,Invalid
+11,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)O[N+](=O)[O-]c1ccccc1C(F)(F)F,Added trifluoromethyl group (CF3) to one of the aromatic rings,0.0,0.0,0.0,0.0,Invalid
+12,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)O[N+](=O)[O-]c1ccccc1Br,Added bromine atom (Br) to one of the aromatic rings,0.0,0.0,0.0,0.0,Invalid
+13,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)O[N+](=O)[O-]c1ccccc1O,Added hydroxyl group (OH) to one of the aromatic rings,0.0,0.0,0.0,0.0,Invalid
+14,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)O[N+](=O)[O-]c1ccccc1C#N,Added cyano group (CN) to one of the aromatic rings,0.0,0.0,0.0,0.0,Invalid
+15,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)O[N+](=O)[O-]c1ccccc1CC,Added ethyl group (CH2CH3) to one of the aromatic rings,0.0,0.0,0.0,0.0,Invalid
+16,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)O[N+](=O)[O-]c1ccccc1c1ccccc1,Added phenyl group (C6H5) to one of the aromatic rings,0.0,0.0,0.0,0.0,Invalid
+17,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)O[N+](=O)[O-]c1ccccc1N,Added amine group (NH2) to one of the aromatic rings,0.0,0.0,0.0,0.0,Invalid
+18,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)O[N+](=O)[O-]c1ccccc1C(=O)O,Added carboxyl group (COOH) to one of the aromatic rings,0.0,0.0,0.0,0.0,Invalid
+19,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)O[N+](=O)[O-]c1ccccc1S(=O)(=O)O,Added sulfonic acid group (SO3H) to one of the aromatic rings,0.0,0.0,0.0,0.0,Invalid
+20,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)O[N+](=O)[O-]c1ccccc1C=O,Added formyl group (CHO) to one of the aromatic rings,0.0,0.0,0.0,0.0,Invalid

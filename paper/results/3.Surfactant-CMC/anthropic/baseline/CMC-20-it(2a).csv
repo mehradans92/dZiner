@@ -1,0 +1,23 @@
+Iteration,SMILES,Modification,logCMC,Uncertainty,SA Score,Molecular Weight,Validity
+0,CCCCCCCCCC(=O)CC(=O)NC1CCOC1=O,Initial SMILES,1.785,0.321,2.8,297.4,Valid
+1,CCCCCCCCCCCC(=O)CC(=O)NC1CCOC1=O,Extended alkyl chain by two carbon atoms to increase hydrophobicity,1.054,0.268,2.81,325.45,Valid
+2,CCCCCCCCCC(CC)C(=O)CC(=O)NC1CCOC1=O,Added a branched alkyl group to increase hydrophobicity,1.378,0.311,3.27,339.48,Valid
+3,CCCCCCCCCC(=O)CC(=O)NC1CCOC(c2ccccc2)=O,Attempted to introduce an aromatic ring,0.0,0.0,0.0,0.0,Invalid
+4,CCCCCCCCCC(=O)CC(=O)Nc1ccc(OC2CCOC2=O)cc1,Introduced an aromatic ring at a different position,1.806,0.536,2.79,389.49,Valid
+5,CCCCCCCCCC(=O)CC(=O)NC1C(F)COC1=O,Introduced a fluorine atom to increase hydrophobicity,1.956,0.484,3.46,315.39,Valid
+6,CCCCCCCCCC(=O)CC(=O)NC1C(CF3)COC1=O,Attempted to introduce a trifluoromethyl group,0.0,0.0,0.0,0.0,Invalid
+7,CCCCCCCCCC(=O)CC(=O)NC(CF3)C1COC1=O,Attempted to introduce a trifluoromethyl group at a different position,0.0,0.0,0.0,0.0,Invalid
+8,CCCCCCCCCC(=O)CC(=O)NC1CCC(OC2=O)C1,Attempted to introduce a cyclic group,0.0,0.0,0.0,0.0,Invalid
+9,CCCCCCCCCC(=O)CC(=O)NC1CCCC1,Replaced the lactone ring with a cyclopentane ring,0.833,0.484,2.05,281.44,Valid
+10,CCCCCCCCCC(=O)CC(=O)NC1CCC(C)C1,Added a methyl group to the cyclopentane ring,2.274,0.522,2.9,295.47,Valid
+11,CCCCCCCCCC(=O)CC(=O)NC1CCC(O)C1,Added a hydroxyl group to the cyclopentane ring,1.849,0.627,2.97,297.44,Valid
+12,CCCCCCCCCC(=O)CC(=O)NC1CCC(Cl)C1,Added a chlorine atom to the cyclopentane ring,1.482,0.593,3.11,315.89,Valid
+13,CCCCCCCCCC(=O)CC(=O)NC1CCC(c2ccccc2)C1,Added a phenyl ring to the cyclopentane,1.892,0.555,2.86,357.54,Valid
+14,CCCCCCC/C=C/CC(=O)CC(=O)NC1CCCC1,Introduced a double bond in the alkyl chain,1.006,0.599,2.42,293.45,Valid
+15,CCCCCC(CC)CC(=O)CC(=O)NC1CCCC1,Introduced a branched alkyl group,1.432,0.552,2.74,281.44,Valid
+16,CCCCCCCCOC(=O)CC(=O)NC1CCCC1,Introduced an ether linkage in the alkyl chain,1.022,0.436,2.02,283.41,Valid
+17,CCCCCCCSCC(=O)CC(=O)NC1CCCC1,Introduced a sulfur atom in the alkyl chain,1.175,0.526,2.3,299.48,Valid
+18,CCCCCC(C1CC1)CC(=O)CC(=O)NC2CCCC2,Introduced a cyclopropyl group in the alkyl chain,0.354,0.719,2.95,293.45,Valid
+19,CCCCCC(C1CC1)CC(=O)CC(=O)NC2CCC(C3CC3)C2,Added an additional cyclopropyl group on the cyclopentane ring,-0.194,0.817,3.6,333.52,Valid
+20,CCCCCC(C1CC1)CC(=O)CC(=O)NC2CCC(C3CC3)C2F,Added a fluorine atom to the cyclopentane ring,-0.201,0.751,4.05,351.51,Valid
+21,CCCCCC(C1CCC1)CC(=O)CC(=O)NC2CCC(C3CC3)C2,Replaced one cyclopropyl group with a cyclobutyl group,-0.351,0.794,3.6,347.54,Valid

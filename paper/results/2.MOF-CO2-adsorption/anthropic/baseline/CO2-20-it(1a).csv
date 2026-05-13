@@ -1,0 +1,22 @@
+Iteration,SMILES,Modification,CO2 Adsorption,Uncertainty,SA Score,Molecular Weight,Validity
+0,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C#N,Initial SMILES,0.885,0.033,3.69,430.42,Valid
+1,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)N,Replaced cyano group (C#N) with an amide group (C(=O)N),0.977,0.071,3.54,448.44,Valid
+2,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)NC,Added a methyl group to the amide (C(=O)NC),0.994,0.072,3.54,462.47,Valid
+3,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)NCO,Added a hydroxyl group to the amide (C(=O)NCO),0.973,0.078,3.64,478.47,Valid
+4,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)N(C)C,Added a dimethylamide group (C(=O)N(C)C),1.009,0.07,3.57,476.49,Valid
+5,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)N(C)CC,Added an ethyl group to the dimethylamide (C(=O)N(C)CC),1.025,0.071,3.62,490.52,Valid
+6,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)N(CC)CC,Replaced both methyl groups with ethyl groups (C(=O)N(CC)CC),1.042,0.072,3.57,504.55,Valid
+7,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)N(CC)CCC,Replaced one ethyl group with a propyl group (C(=O)N(CC)CCC),1.058,0.073,3.58,518.57,Valid
+8,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)N(CCC)CCC,Replaced both ethyl groups with propyl groups (C(=O)N(CCC)CCC),1.074,0.074,3.59,532.6,Valid
+9,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)N(CCC)CCCC,Replaced one propyl group with a butyl group (C(=O)N(CCC)CCCC),1.09,0.075,3.59,546.63,Valid
+10,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)N(CCCC)CCCC,Replaced both propyl groups with butyl groups (C(=O)N(CCCC)CCCC),1.105,0.075,3.58,560.66,Valid
+11,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(CC)C(=O)N(CCCC)CCCC,Replaced the methyl group on the nitrogen with an ethyl group (N(CC)C(=O)N(CCCC)CCCC),1.12,0.076,3.6,574.68,Valid
+12,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(CCC)C(=O)N(CCCC)CCCC,Replaced the ethyl group on the nitrogen with a propyl group (N(CCC)C(=O)N(CCCC)CCCC),1.134,0.076,3.63,588.71,Valid
+13,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(CCCC)C(=O)N(CCCC)CCCC,Replaced the propyl group on the nitrogen with a butyl group (N(CCCC)C(=O)N(CCCC)CCCC),1.147,0.077,3.62,602.74,Valid
+14,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(CCC)C(=O)N(CCC)CCC,Replaced all butyl groups with propyl groups (N(CCC)C(=O)N(CCC)CCC),1.105,0.075,3.63,560.66,Valid
+15,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(CCC)C(=O)N(CCC)CCCC,Replaced one propyl group with a butyl group (N(CCC)C(=O)N(CCC)CCCC),1.12,0.076,3.63,574.68,Valid
+16,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(CC)C(=O)N(CCC)CCC,Replaced one propyl group with an ethyl group (N(CC)C(=O)N(CCC)CCC),1.089,0.074,3.59,546.63,Valid
+17,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(CC)C(=O)N(CC)CCC,Replaced one propyl group with an ethyl group (N(CC)C(=O)N(CC)CCC),1.073,0.073,3.55,532.6,Valid
+18,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(CC)C(=O)N(CC)CC,Replaced the propyl group with an ethyl group (N(CC)C(=O)N(CC)CC),1.057,0.072,3.52,518.57,Valid
+19,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(CCC)C(=O)N(CC)CC,Replaced one ethyl group with a propyl group (N(CCC)C(=O)N(CC)CC),1.073,0.073,3.56,532.6,Valid
+20,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(CCCC)C(=O)N(CC)CC,Replaced the propyl group with a butyl group (N(CCCC)C(=O)N(CC)CC),1.089,0.074,3.58,546.63,Valid

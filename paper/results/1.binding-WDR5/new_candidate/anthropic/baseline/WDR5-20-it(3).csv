@@ -1,0 +1,21 @@
+Iteration,SMILES,Modification,Docking Score,SA Score,QED Score,Molecular Weight,Validity
+0,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C([N+]([O-])=O)C=C2)CC1,Initial SMILES,-6.7,1.97,0.66,374.83,Valid
+1,CN1CCN(C2=C(NC(C3=CC=CC=C3F)=O)C=C([N+]([O-])=O)C=C2)CC1,Replaced chlorine with fluorine on the benzene ring,-6.6,1.99,0.67,358.37,Valid
+2,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C([N+]([O-])=O)C=C2)CC1C,Added a methyl group to the piperazine ring,-7.1,2.6,0.64,388.86,Valid
+3,CN1CCN(C2=C(NC(C3=CC=C(F)C=C3Cl)=O)C=C([N+]([O-])=O)C=C2)CC1C,Added a fluorine atom to the benzene ring adjacent to the chlorine,-7.8,2.71,0.62,406.85,Valid
+4,CN1CCN(C2=C(NC(C3=CC=C(F)C=C3Cl)=O)C=C(C#N)C=C2)CC1C,Replaced nitro group with cyano group,-7.9,2.74,0.87,386.86,Valid
+5,CN1CCN(C2=C(NC(C3=C(OC)C=C(F)C=C3Cl)=O)C=C(C#N)C=C2)CC1C,Added a methoxy group to the benzene ring,-6.6,2.96,0.82,416.88,Valid
+6,CN1CCN(C2=C(NC(C3=CC=C(F)C=C3C(F)(F)F)=O)C=C(C#N)C=C2)CC1C,Replaced chlorine with trifluoromethyl group,-7.6,2.92,0.76,420.41,Valid
+7,CN1CCN(C2=C(NC(C3=CC(C)=C(F)C=C3C(F)(F)F)=O)C=C(C#N)C=C2)CC1C,Added a methyl group to the benzene ring adjacent to the trifluoromethyl group,-7.1,3.07,0.73,434.44,Valid
+8,CN1CCN(C2=C(NC(C3=CC=C(F)C=C3Cl)=O)C=C(C#N)C=C2)C(CO)C1,Added a hydroxymethyl group to the piperazine ring,-6.8,2.92,0.82,402.86,Valid
+9,CN1CCC(F)(C2=C(NC(C3=CC=C(F)C=C3Cl)=O)C=C(C#N)C=C2)CC1,Replaced piperazine ring with a fluorinated piperidine ring,-8.3,2.63,0.84,389.83,Valid
+10,CN1CCC(F)(C2=C(NC(C3=C(C)C=C(F)C=C3Cl)=O)C=C(C#N)C=C2)CC1,Added a methyl group to the benzene ring adjacent to the chlorine,-7.2,2.81,0.8,403.86,Valid
+11,CN1CCC(F)(C2=C(NC(C3=CC=C(F)C=C3Br)=O)C=C(C#N)C=C2)CC1,Replaced chlorine with bromine,-8.3,2.7,0.77,434.28,Valid
+12,CN1C(OC)CC(F)(C2=C(NC(C3=CC=C(F)C=C3Br)=O)C=C(C#N)C=C2)CC1,Added a methoxy group to the piperidine ring,-7.2,3.7,0.72,464.31,Valid
+13,CN1CCC(F)(C2=C(NC(C3=CC(C(F)(F)F)=C(F)C=C3Br)=O)C=C(C#N)C=C2)CC1,Added a trifluoromethyl group to the benzene ring,-7.7,2.95,0.55,502.28,Valid
+14,CN1CCC(F)(C2=C(NC(C3=CC=C(F)C=C3Br)=O)C=C(F)C=C2)CC1,Replaced cyano group with fluorine,-8.0,2.57,0.76,427.26,Valid
+15,CCN1CCC(F)(C2=C(NC(C3=CC=C(F)C=C3Br)=O)C=C(F)C=C2)CC1,Added an ethyl group to the piperidine ring,-7.9,2.56,0.7,441.29,Valid
+16,CN1CCC(F)(C2=C(NC(C3=CC=C(F)C=C3I)=O)C=C(F)C=C2)CC1,Replaced bromine with iodine,-8.1,2.66,0.65,474.26,Valid
+17,CN1CCC(F)(C2=C(NC(C3=C(O)C=C(F)C=C3I)=O)C=C(F)C=C2)CC1,Added a hydroxyl group to the benzene ring,-8.2,2.93,0.63,490.26,Valid
+18,CN1CCC(OC)(C2=C(NC(C3=C(O)C=C(F)C=C3I)=O)C=C(F)C=C2)CC1,Replaced fluorine on piperidine ring with methoxy group,-8.0,2.95,0.62,502.3,Valid
+19,CN1CCC(F)(C2=C(NC(C3=C(C)C=C(F)C=C3I)=O)C=C(F)C=C2)CC1,Added a methyl group to the benzene ring adjacent to iodine,-7.7,2.83,0.62,488.29,Valid

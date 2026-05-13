@@ -1,0 +1,21 @@
+Iteration,SMILES,Modification,CO2 Adsorption,Uncertainty,SA Score,Molecular Weight,Validity
+0,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C#N,Initial structure,0.885,0.033,3.6902790948109647,430.4240000000002,Valid
+1,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)O,Replaced cyano group (C#N) with hydroxyl group (OH),1.017,0.083,3.5748597740379866,421.4130000000002,Valid
+2,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(F)cc(c(c1N)N)C(=O)[O-])N(C)O,Replaced one amino group (N) with a fluorine atom (F),1.517,0.237,3.5418258537414156,424.3880000000002,Valid
+3,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(Cl)cc(c(c1N)N)C(=O)[O-])N(C)O,Replaced another amino group (N) with a chlorine atom (Cl),1.207,0.082,3.544304815743269,440.84300000000025,Valid
+4,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(Br)cc(c(c1N)N)C(=O)[O-])N(C)O,Replaced another amino group (N) with a bromine atom (Br),1.071,0.083,3.5923643152798768,485.2940000000002,Valid
+5,Nc1cc(C(=O)O)c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)O,Replaced one carboxylate group (C(=O)[O-]) with a hydroxyl group (OH),0.939,0.07,3.2513285414151873,422.4210000000002,Valid
+6,Nc1cc(C(=O)C)c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)O,Replaced one carboxylate group (C(=O)[O-]) with a methyl group (CH3),0.976,0.073,3.2833948991538353,420.4490000000002,Valid
+7,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(CN)cc(c(c1N)N)C(=O)[O-])N(C)O,Replaced one amino group (N) with a cyano group (CN),1.037,0.082,3.644522386403093,435.4400000000002,Valid
+8,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(CF3)cc(c(c1N)N)C(=O)[O-])N(C)O,Replaced one amino group (N) with a trifluoromethyl group (CF3),0.0,0.0,0.0,0.0,Invalid
+9,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(OCH3)cc(c(c1N)N)C(=O)[O-])N(C)O,Replaced one amino group (N) with a methoxy group (OCH3),0.0,0.0,0.0,0.0,Invalid
+10,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(NO2)cc(c(c1N)N)C(=O)[O-])N(C)O,Replaced one amino group (N) with a nitro group (NO2),0.0,0.0,0.0,0.0,Invalid
+11,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(SO2)cc(c(c1N)N)C(=O)[O-])N(C)O,Replaced one amino group (N) with a sulfonyl group (SO2),0.0,0.0,0.0,0.0,Invalid
+12,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(CF3)cc(c(c1N)N)C(=O)[O-])N(C)O,Replaced one amino group (N) with a trifluoromethyl group (CF3),0.0,0.0,0.0,0.0,Invalid
+13,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(COOH)cc(c(c1N)N)C(=O)[O-])N(C)O,Replaced one amino group (N) with a carboxyl group (COOH),0.0,0.0,0.0,0.0,Invalid
+14,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(OH)cc(c(c1N)N)C(=O)[O-])N(C)O,Replaced one amino group (N) with a hydroxyl group (OH),0.0,0.0,0.0,0.0,Invalid
+15,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(CHO)cc(c(c1N)N)C(=O)[O-])N(C)O,Replaced one amino group (N) with a formyl group (CHO),0.0,0.0,0.0,0.0,Invalid
+16,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(CF3)cc(c(c1N)N)C(=O)[O-])N(C)O,Replaced one amino group (N) with a trifluoromethyl group (CF3),0.0,0.0,0.0,0.0,Invalid
+17,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(OCH3)cc(c(c1N)N)C(=O)[O-])N(C)O,Replaced one amino group (N) with a methoxy group (OCH3),0.0,0.0,0.0,0.0,Invalid
+18,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(NO2)cc(c(c1N)N)C(=O)[O-])N(C)O,Replaced one amino group (N) with a nitro group (NO2),0.0,0.0,0.0,0.0,Invalid
+19,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(SO2)cc(c(c1N)N)C(=O)[O-])N(C)O,Replaced one amino group (N) with a sulfonyl group (SO2),0.0,0.0,0.0,0.0,Invalid
