@@ -1,0 +1,22 @@
+Iteration,SMILES,Modification,Docking Score,SA Score,QED Score,Molecular Weight,Validity
+0,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C([N+]([O-])=O)C=C2)CC1,Initial SMILES,-6.7,1.97,0.66,374.83,Valid
+1,CN1CCN(C2=C(NC(C3=CC=CC=C3F)=O)C=C([N+]([O-])=O)C=C2)CC1,Replaced chlorine with fluorine on the benzene ring,-6.6,1.99,0.67,358.37,Valid
+2,CN1CCN(C2=C(NC(C3=CC=CC=C3Cl)=O)C=C([N+]([O-])=O)C=C2)CC1C,Added a methyl group to the piperazine ring,-7.1,2.6,0.64,388.86,Valid
+3,CN1CCN(C2=C(NC(C3=CC=C(OC)C=C3Cl)=O)C=C([N+]([O-])=O)C=C2)CC1C,Added a methoxy group to the chlorobenzene ring,-7.6,2.7,0.59,418.88,Valid
+4,CN1CCN(C2=C(NC(C3=CC=C(OC)C=C3Cl)=O)C=CC(C#N)=C2)CC1C,Replaced nitro group with cyano group,-6.9,2.76,0.85,398.89,Valid
+5,CN1CCN(C2=C(NC(C3=CC(F)=C(OC)C=C3Cl)=O)C=C([N+]([O-])=O)C=C2)CC1C,Added fluorine to the benzene ring with the methoxy group,-7.4,2.83,0.57,436.87,Valid
+6,CN1CCN(C2=C(NC(C3=CC=C(OC)C=C3C(F)(F)F)=O)C=C([N+]([O-])=O)C=C2)CC1C,Replaced chlorine with trifluoromethyl group,-7.4,2.89,0.54,452.43,Valid
+7,CN1CCN(C2=C(NC(C3=CC(O)=C(OC)C=C3Cl)=O)C=C([N+]([O-])=O)C=C2)CC1C,Added hydroxyl group to the benzene ring with the methoxy group,-7.6,2.86,0.55,434.88,Valid
+8,CN1CCN(C2=C(NC(C3=CC(O)=C(OCC)C=C3Cl)=O)C=C([N+]([O-])=O)C=C2)CC1C,Replaced methoxy group with ethoxy group,-6.8,2.9,0.51,448.91,Valid
+9,CN1CCN(C2=C(NC(C3=CC(O)=C(OC)C=C3Cl)=O)C=C([N+]([O-])=O)C=C2)CC1CN,Added amino group to the piperazine ring,-6.9,2.99,0.45,449.9,Valid
+10,CN1CCN(C2=C(NC(C3=CC(O)=C(OC)C=C3Cl)=O)C=C(C(F)(F)F)C=C2)CC1C,Replaced nitro group with trifluoromethyl group,-7.4,2.88,0.71,457.88,Valid
+11,CN1CCN(C2=C(NC(C3=C(CC)C(O)=C(OC)C=C3Cl)=O)C=C([N+]([O-])=O)C=C2)CC1C,Added ethyl group to the benzene ring with hydroxyl and methoxy groups,-6.7,3.13,0.49,462.93,Valid
+12,CN1CCN(C2=C(NC(C3=CC(O)=C(OC)C=C3Br)=O)C=C([N+]([O-])=O)C=C2)CC1C,Replaced chlorine with bromine,-6.8,2.92,0.5,479.33,Valid
+13,CN1CCN(C2=C(NC(C3=CC(O)=C(OC)C=C3Cl)=O)C=C([N+]([O-])=O)C=C2)CC1CC(=O)O,Added carboxyl group to the piperazine ring,-7.0,2.99,0.4,478.89,Valid
+14,CN1CCN(C2=C(NC(C3=CC(O)=C(OC)C=C3Cl)=O)C=C(S(N)(=O)=O)C=C2)CC1C,Replaced nitro group with sulfonamide group,-6.5,2.89,0.61,468.96,Valid
+15,CN1CCN(C2=C(NC(C3=CC(O)=C(OC)C=C3Cl)=O)C=C(C(=O)N)C=C2)CC1C,Replaced nitro group with amide group,-7.2,2.81,0.68,432.91,Valid
+16,CN1CCN(C2=C(NC(C3=CC(O)=C(OC)C=C3Cl)=O)C=C(OC(F)(F)F)C=C2)CC1C,Replaced nitro group with trifluoromethoxy group,-7.3,2.95,0.59,473.88,Valid
+17,CN1CCN(C2=C(NC(C3=CC(O)=C(OC)C=C3Cl)=O)C=C(N(C)C)C=C2)CC1C,Replaced nitro group with dimethylamino group,-7.1,2.78,0.72,432.94,Valid
+18,CN1CCN(C2=C(NC(C3=CC(O)=C(OC)C=C3Cl)=O)C=C([N+](=O)[O-])C(F)=C2)CC1C,Added fluorine adjacent to the nitro group,-7.5,2.93,0.52,452.87,Valid
+19,CN1CCN(C2=C(NC(C3=CC(O)=C(OC)C=C3Cl)=O)C(C)=C([N+]([O-])=O)C=C2)CC1C,Added methyl group adjacent to the amide group,-7.2,2.98,0.54,448.91,Valid
+20,CN1CCN(C2=C(NC(C3=CC(O)=C(OC)C=C3Cl)=O)C=C([N+]([O-])=O)C=C2F)CC1C,Added fluorine to the benzene ring with the nitro group,-7.3,2.91,0.53,452.87,Valid
