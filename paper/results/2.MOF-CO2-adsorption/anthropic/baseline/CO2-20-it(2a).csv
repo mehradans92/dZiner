@@ -1,0 +1,22 @@
+Iteration,SMILES,Modification,CO2 Adsorption,Uncertainty,SA Score,Molecular Weight,Validity
+0,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C#N,Initial SMILES,0.885,0.033,3.69,430.42,Valid
+1,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(CC)C#N,Replaced N(C)C#N with N(CC)C#N to increase CO2 adsorption,0.895,0.033,3.73,444.45,Valid
+2,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(CCO)C#N,Replaced N(CC)C#N with N(CCO)C#N to increase CO2 adsorption,0.884,0.036,3.77,460.45,Valid
+3,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)N,Replaced N(C)C#N with N(C)C(=O)N to increase CO2 adsorption,0.977,0.071,3.54,448.44,Valid
+4,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)O,Replaced N(C)C(=O)N with N(C)C(=O)O to increase CO2 adsorption,0.99,0.095,3.49,449.42,Valid
+5,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)NO,Replaced N(C)C(=O)O with N(C)C(=O)NO to increase CO2 adsorption,0.954,0.077,3.63,464.44,Valid
+6,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)NH2,Replaced N(C)C(=O)NO with N(C)C(=O)NH2 to increase CO2 adsorption,0.0,0.0,0.0,0.0,Invalid
+7,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)OC,Replaced N(C)C(=O)O with N(C)C(=O)OC to increase CO2 adsorption,1.009,0.094,3.5,463.45,Valid
+8,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)OCO,Replaced N(C)C(=O)OC with N(C)C(=O)OCO to increase CO2 adsorption,0.986,0.09,3.64,479.45,Valid
+9,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)OCC,Replaced N(C)C(=O)OC with N(C)C(=O)OCC to increase CO2 adsorption,1.027,0.092,3.48,477.48,Valid
+10,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)OCCO,Replaced N(C)C(=O)OCC with N(C)C(=O)OCCO to increase CO2 adsorption,1.004,0.088,3.56,493.48,Valid
+11,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)OC(C)C,Replaced N(C)C(=O)OCC with N(C)C(=O)OC(C)C to increase CO2 adsorption,1.037,0.084,3.55,491.5,Valid
+12,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)OC(C)(C)C,Replaced N(C)C(=O)OC(C)C with N(C)C(=O)OC(C)(C)C to increase CO2 adsorption,1.046,0.076,3.51,505.53,Valid
+13,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)OCC(C)C,Replaced N(C)C(=O)OC(C)(C)C with N(C)C(=O)OCC(C)C to increase CO2 adsorption,1.052,0.081,3.54,505.53,Valid
+14,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)OCCC(C)C,Replaced N(C)C(=O)OCC(C)C with N(C)C(=O)OCCC(C)C to increase CO2 adsorption,1.067,0.078,3.54,519.56,Valid
+15,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)OCCCC,Replaced N(C)C(=O)OCCC(C)C with N(C)C(=O)OCCCC to explore different chain length,1.061,0.079,3.52,505.53,Valid
+16,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)OC1CC1,Replaced N(C)C(=O)OCCCC with N(C)C(=O)OC1CC1 to explore cyclic structures,1.058,0.082,3.57,503.51,Valid
+17,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)OCCCl,Replaced N(C)C(=O)OC1CC1 with N(C)C(=O)OCCCl to explore halogenated groups,1.043,0.085,3.53,497.9,Valid
+18,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)OCCO,Replaced N(C)C(=O)OCCCl with N(C)C(=O)OCCO to explore hydroxyl groups,1.004,0.088,3.56,493.48,Valid
+19,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)OCC=C,Replaced N(C)C(=O)OCCO with N(C)C(=O)OCC=C to explore unsaturated groups,1.031,0.087,3.51,489.49,Valid
+20,Nc1cc(C(=O)[O-])c(cc1c1ccc(cc1)c1c(N)cc(c(c1N)N)C(=O)[O-])N(C)C(=O)OCC#C,Replaced N(C)C(=O)OCC=C with N(C)C(=O)OCC#C to explore alkyne groups,1.019,0.089,3.53,487.47,Valid
