@@ -1,12 +1,12 @@
 # Core packages
 pydantic==2.9.2
 langchain==0.2.17
-langchain-openai
-langchain-community
+langchain-openai #0.1.4
+langchain-community #0.0.34
 langchain-anthropic
-openai
+openai==1.55.3
 numpy==1.26.4
-pandas==2.2.2
+pandas==2.0.0
 matplotlib==3.8.4
 matplotlib-inline==0.1.7
 scipy==1.13.0
@@ -23,6 +23,8 @@ dockstring
 pytest
 
 # Browser automation
+Selenium-Screenshot
+webdriver-manager
 browser-use
 playwright>=1.39.0
 python-dotenv>=1.0.0
